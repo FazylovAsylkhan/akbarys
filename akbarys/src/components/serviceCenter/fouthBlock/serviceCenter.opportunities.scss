@@ -1,0 +1,53 @@
+@import '../../../scss/utils';
+
+.serviceCenterOpportunities {
+  &__wrapper {
+    @include adaptive-value-byX('padding-top', 120, 110, 1920, 1440);
+    @include adaptive-value-byX('padding-bottom', 120, 110, 1920, 1440);
+    grid-column: 1 / span 12;
+    display: flex;
+    flex-direction: column;
+  }
+  &__slider {
+    width: 100%;
+    @include adaptive-value-byX('height', 700, 530, 1920, 1440);
+    position: relative;
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-description {
+      @include adaptive-value-byX('width', 1043, 788, 1920, 1440);
+      @include adaptive-value-byX('margin-bottom', 60, 50, 1920, 1440);
+    }
+  }
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .swiper-slide {
+    flex: 1 0 100%;
+  }
+  &__pagination {
+    position: absolute;
+    right: 192px;
+    top: -180px;
+    @include adaptive-value-byX('top', -180, -160, 1920, 1440);
+  }
+  &__button {
+    &-next,
+    &-prev {
+      @include adaptive-value-byX('top', -176, -156, 1920, 1440);
+      right: 0;
+      z-index: 10;
+      position: absolute;
+      width: 29px;
+      height: 29px;
+      cursor: pointer;
+    }
+    &-prev {
+      transform: rotateY(180deg);
+      right: 84px;
+    }
+  }
+}

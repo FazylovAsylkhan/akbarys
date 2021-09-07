@@ -1,0 +1,39 @@
+@import '../../../scss/utils';
+
+.akbarysAdvantages {
+  &__wrapper {
+    grid-column: 1 / span 12;
+    display: flex;
+    align-items: center;
+  }
+  &__label {
+    @include adaptive-value-byX('padding-top', 80, 70, 1920, 1440);
+    @include adaptive-value-byX('padding-bottom', 140, 114, 1920, 1440);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #e1e1e1;
+    @include adaptive-value-byX('width', 566, 455, 1920, 1440);
+  }
+  &__content {
+    @include adaptive-value-byX('width', 600, 606, 1920, 1440);
+    display: grid;
+    @include adaptive-value-byX('padding-left', 118, 90, 1920, 1440);
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    @include adaptive-value-byX('grid-row-gap', 80, 60, 1920, 1440);
+  }
+  &__title {
+    font-weight: bold;
+    @include adaptive-value-byX('font-size', 288, 200, 1920, 1440);
+    @include adaptive-value-byX('line-height', 351, 244, 1920, 1440);
+  }
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    &-description {
+      margin-top: 15px;
+    }
+  }
+}

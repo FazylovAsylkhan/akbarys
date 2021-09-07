@@ -1,0 +1,50 @@
+@import '../../../scss/utils';
+
+.verificationLaboratoryDescription {
+  height: fit-content;
+  &__wrapper {
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    grid-column: 1 / span 12;
+  }
+  &__content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+  }
+  &__box {
+      &:last-child {
+        @include adaptive-value-byX("margin-top", 120, 110, 1920, 1440);
+      }
+      &-title {
+          margin-bottom: 40px;
+      }
+      &-description {
+        @include adaptive-value-byX("width", 1162, 1060, 1920, 1440);
+          margin-bottom: 60px;
+      }
+      &-img {
+          width: 100%;
+      }
+      &-imgs {
+          display: grid;
+          grid-column-gap: 30px;
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  &__title {
+    grid-column: 1 / span 1;
+  }
+  &__subtitle {
+    grid-column: 2 / span 1;
+  }
+  &__description {
+    grid-column: 2 / span 1;
+    &_changable {
+      grid-column: 2 / span 1;
+      max-width: 577px;
+    }
+  }
+}

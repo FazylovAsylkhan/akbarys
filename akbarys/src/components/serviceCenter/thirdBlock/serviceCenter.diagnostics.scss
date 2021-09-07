@@ -1,0 +1,39 @@
+@import '../../../scss/utils';
+
+.serviceCenterDiagnostics {
+    background: #1564FD;
+    @include adaptive-value-byX('padding-top', 120, 110, 1920, 1440);
+    @include adaptive-value-byX('padding-bottom', 120, 110, 1920, 1440);
+    &__wrapper {
+        grid-column: 1 / span 12;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        .left {
+            grid-column: 1 / span 1;
+        }
+        .right {
+            grid-column: 2 / span 1;
+        }
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__description {
+        width: 100%;
+    }
+    &__items {
+        grid-column: 1 / span 12;
+        @include adaptive-value-byX('height', 202, 158, 1920, 1440);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    &__item {
+        border-left: 1px solid #4584FF;
+        border-right: 1px solid #4584FF;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
