@@ -1,0 +1,51 @@
+@import "./utils";
+
+.pressCenterNews {
+  @include adaptive-value-byX("padding-top", 240, 220, 1920, 1440);
+  &__wrapper {
+    grid-column: 1 / span 12;
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+  }
+  &__title {
+    @include adaptive-value-byX("margin-bottom", 60, 50, 1920, 1440);
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    width: 100%;
+  }
+  &__card {
+    // @include adaptive-value-byX("padding-top", 300, 224, 1920, 1440);
+    position: relative;
+    &:hover {
+      background-color: #1564fd;
+      & .pressCenterNews__card-title,
+      & .pressCenterNews__card-description,
+      & .pressCenterNews__card-button {
+        color: #ffffff;
+      }
+    }
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-body {
+      border: 1px solid #E1E1E1;
+      border-top: none;
+      padding: 40px;
+    }
+    &-head {
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      & img {
+        width: 100%;
+      }
+    }
+    &-button {
+      display: block;
+      @include adaptive-value-byX("margin-top", 30, 20, 1920, 1440);
+    }
+  }
+}

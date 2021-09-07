@@ -1,0 +1,124 @@
+@import "../../../scss/utils";
+
+.akbarysMission {
+  position: relative;
+  @include adaptive-value-byX("height", 508, 490, 1920, 1440);
+  &__wrapper {
+    z-index: 10;
+    grid-column: 1 / span 12;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    @include adaptive-value-byX("width", 566, 424, 1920, 1440);
+  }
+  &__feats {
+    @include adaptive-value-byX("width", 460, 400, 1920, 1440);
+    @include adaptive-value-byX("height", 426, 370, 1920, 1440);
+  }
+  &__text {
+    margin-top: 40px;
+    &:last-child {
+      margin-top: 30px;
+    }
+  }
+  &__body-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__slider {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .swiper {
+      &-wrapper {
+        display: flex;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+      }
+      &-slide {
+        flex: 1 0 100%;
+      }
+    }
+  }
+  &__feats {
+    position: relative;
+    &-1,
+    &-2,
+    &-3 {
+      background-color: transparent;
+      position: absolute;
+      @include adaptive-value-byX("width", 262, 227, 1920, 1440);
+      @include adaptive-value-byX("height", 262, 227, 1920, 1440);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      left: 0;
+      top: 0;
+      border: 2px solid rgba(#fff, 0.1);
+      &::before {
+        content: "";
+        position: absolute;
+        @include adaptive-value-byX("width", 225, 195, 1920, 1440);
+        @include adaptive-value-byX("height", 225, 195, 1920, 1440);
+        border-radius: 100%;
+        background: #ffffff;
+        opacity: 0.1;
+        z-index: 1;
+      }
+    }
+    &-1 {
+      left: 20%;
+      top: 0%;
+      &::after {
+        z-index: 10;
+        content: "Персонал";
+      }
+    }
+    &-2 {
+      left: 0%;
+      top: 40%;
+      &::after {
+        z-index: 10;
+        content: "Качество";
+      }
+    }
+    &-3 {
+      left: 43%;
+      top: 38%;
+      &::after {
+        z-index: 10;
+        content: "Эффективность";
+      }
+    }
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.show.akbarysMission__feats-item {
+  border: 2px solid rgba(#1564fd, 1);
+  z-index: 1000;
+}
+.show.akbarysMission__feats-item::before {
+  background: #1564fd;
+  opacity: 1;
+}

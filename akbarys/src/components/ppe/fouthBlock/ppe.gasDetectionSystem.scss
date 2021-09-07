@@ -1,0 +1,105 @@
+@import "../../../scss/utils";
+
+.gasDetectionSystem {
+  padding: 120px 0;
+  &__wrapper {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    align-items: center;
+  }
+  & rect {
+    pointer-events: none;
+  }
+  &__box {
+    width: 100%;
+    position: relative;
+    &-image {
+      pointer-events: none;
+    }
+  }
+  &__tip {
+    position: absolute;
+    &-text {
+      &.show {
+        display: block;
+      }
+      @include adaptive-value-byX("height", 76, 74, 1920, 1440);
+      @include adaptive-value-byX("width", 256, 246, 1920, 1440);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      background-color: #1564fd;
+      display: none;
+      padding: 20px 25px;
+      padding-bottom: 0;
+    }
+    &-img-1 {
+      right: 0;
+      left: auto;
+      transform: rotateY(180deg);
+    }
+    &-img {
+      z-index: 10;
+      @include adaptive-value-byX("height", 53, 49, 1920, 1440);
+      @include adaptive-value-byX("width", 40, 36, 1920, 1440);
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+    }
+    &-text-0,
+    &-img-0 {
+      @include adaptive-value-byX("top", 515, 315, 1920, 1441);
+      @include adaptive-value-byX("left", 380, 240, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 374, 275, 1440, 1201);
+        @include adaptive-value-byX("left", 280, 215, 1440, 1201);
+      }
+    }
+    &-img-0 {
+      @include adaptive-value-byX("top", 550, 350, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 410, 310, 1440, 1201);
+      }
+    }
+    &-text-1,
+    &-img-1 {
+      @include adaptive-value-byX("top", 665, 415, 1920, 1441);
+      @include adaptive-value-byX("left", 284, 109, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 495, 360, 1440, 1201);
+        @include adaptive-value-byX("left", 165, 72, 1440, 1201);
+      }
+    }
+    &-img-1 {
+      @include adaptive-value-byX("top", 700, 450, 1920, 1441);
+      @include adaptive-value-byX("left", 500, 320, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 530, 395, 1440, 1201);
+        @include adaptive-value-byX("left", 376, 280, 1440, 1201);
+      }
+    }
+  }
+  &__content {
+    &-image {
+      margin: 0 10px;
+    }
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-illustration {
+      margin: 60px 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-text {
+      &.mt {
+        margin-top: 20px;
+      }
+    }
+  }
+}

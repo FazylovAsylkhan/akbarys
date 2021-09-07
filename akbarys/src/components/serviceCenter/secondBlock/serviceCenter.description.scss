@@ -1,0 +1,62 @@
+@import '../../../scss/utils';
+
+.serviceCenterDescription {
+  height: fit-content;
+  &__wrapper {
+    @include adaptive-value-byX("padding-bottom", 90, 80, 1920, 1440);
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+    &_changable {
+      padding-bottom: 60px;
+    }
+    .left {
+      grid-column: 1 / span 1;
+    }
+    .right {
+      grid-column: 2 / span 1;
+    }
+  }
+  &__title {
+    grid-column: 1 / span 1;
+  }
+  &__subtitle {
+    grid-column: 2 / span 1;
+  }
+  &__description {
+    grid-column: 2 / span 1;
+    &_changable {
+      grid-column: 1 / span 1;
+      max-width: 577px;
+    }
+  }
+  &__items {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item {
+    @include adaptive-value-byX("padding-bottom", 40, 30, 1920, 1440);
+    @include adaptive-value-byX("padding-top", 40, 30, 1920, 1440);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #e1e1e1;
+    &:last-child {
+      border-right: 1px solid #e1e1e1;
+    }
+    &-title {
+      font-weight: bold;
+      @include adaptive-value-byX("padding-left", 50, 30, 1920, 1440);
+      @include adaptive-value-byX("margin-bottom", 20, 15, 1920, 1440);
+    }
+    &-icon {
+      margin: 0 auto;
+    }
+    &-description {
+      @include adaptive-value-byX("padding-left", 50, 30, 1920, 1440);
+    }
+  }
+}

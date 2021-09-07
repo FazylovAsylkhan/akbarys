@@ -1,0 +1,34 @@
+@import "../../../scss/utils";
+
+.ppeDescription {
+  height: fit-content;
+  &__wrapper {
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    grid-column: 1 / span 12;
+  }
+  &__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value-byX("grid-column-gap", 150, 120, 1920, 1440);
+    grid-column-gap: 150px;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value-byX("grid-column-gap", 150, 120, 1920, 1440);
+    grid-row-gap: 120px;
+    height: 100%;
+    width: 100%;
+    &-title {
+      margin-bottom: 40px;
+    }
+  }
+  &__title {
+    grid-column: 1 / span 1;
+  }
+  &__subtitle {
+    grid-column: 2 / span 1;
+  }
+}

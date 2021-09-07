@@ -1,0 +1,18 @@
+.politics {
+    padding-top: 240px;
+    &__wrapper {
+        grid-column: 1 / span 12;
+        padding-bottom: 120px;
+    }
+    &__title {
+        margin-bottom: 65px;
+    }
+    &__description {
+      p {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+}
