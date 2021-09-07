@@ -1,0 +1,25 @@
+@import '../../../scss/utils';
+
+.aboutSft {
+  @include adaptive-value-byX('padding-top', 120, 110, 1920, 1440);
+  @include adaptive-value-byX('padding-bottom', 120, 110, 1920, 1440);
+  background-color: #F8F8F8;;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / span 12;
+  }
+  &__subtitle {
+      margin-bottom: 40px;
+      @include adaptive-value-byX('width', 685, 513, 1920, 1440)
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 288px;
+    @include adaptive-value-byX('font-size', 288, 230, 1920, 1440);
+    line-height: 100%;
+  }
+}

@@ -1,0 +1,120 @@
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  &__pagination {
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc((90 / 1920) * 100vw);
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 860px) {
+      display: none;
+    }
+    @media (max-width: 1440px) {
+      left: calc((60 / 1440) * 100vw);
+    }
+    @media (max-width: 1200px) {
+      left: calc((66 / 1200) * 100vw);
+    }
+  }
+  &__bullet {
+    position: relative;
+    margin-bottom: 30px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    @media (max-width: 1440px) {
+      width: 14px;
+      height: 14px;
+      margin-bottom: 25px;
+    }
+  }
+  &__bullet::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 6px;
+    height: 6px;
+    opacity: 0.7;
+    background-color: #fff;
+    border-radius: 50%;
+    @media (max-width: 1440px) {
+      width: 4px;
+      height: 4px;
+    }
+  }
+  &__pagination.dark &__bullet::after {
+    background: #182027;
+  }
+  &__pagination.dark &__bullet_active {
+    border: 1px solid #182027;
+  }
+  &__bullet:last-child {
+    margin-bottom: 0;
+  }
+  &__bullet_active {
+    border: 1px solid #fff;
+    opacity: 0.7;
+    border-radius: 50%;
+  }
+  &__bullet_active.page__bullet_active::after {
+    opacity: 1;
+  }
+  // &__scroll,
+  // .swiper-scrollbar {
+  //   z-index: 50;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: 0.4%;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   height: 100%;
+  // }
+  // &__drag-scroll {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   background-color: rgba(21, 100, 253, 0.5);
+  //   cursor: pointer;
+  // }
+}
+.screen {
+  flex: 1 0 100%;
+  position: relative;
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  &__body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    object-fit: cover;
+    left: 0;
+  }
+}

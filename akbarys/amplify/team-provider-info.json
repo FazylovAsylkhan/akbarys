@@ -1,0 +1,44 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-akbarys-dev-224345-authRole",
+      "UnauthRoleArn": "arn:aws:iam::478245121034:role/amplify-akbarys-dev-224345-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::478245121034:role/amplify-akbarys-dev-224345-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-akbarys-dev-224345-deployment",
+      "UnauthRoleName": "amplify-akbarys-dev-224345-unauthRole",
+      "StackName": "amplify-akbarys-dev-224345",
+      "StackId": "arn:aws:cloudformation:us-east-1:478245121034:stack/amplify-akbarys-dev-224345/5860d120-ec9e-11eb-84c2-120290f41bcd",
+      "AmplifyAppId": "d151jg4xwil6uh"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d151jg4xwil6uh",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "akbarys": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-akbarys-akbarys-02603-authRole",
+      "UnauthRoleArn": "arn:aws:iam::478245121034:role/amplify-akbarys-akbarys-02603-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::478245121034:role/amplify-akbarys-akbarys-02603-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-akbarys-akbarys-02603-deployment",
+      "UnauthRoleName": "amplify-akbarys-akbarys-02603-unauthRole",
+      "StackName": "amplify-akbarys-akbarys-02603",
+      "StackId": "arn:aws:cloudformation:us-east-1:478245121034:stack/amplify-akbarys-akbarys-02603/949ae940-08f6-11ec-bda3-0e14a19417fd",
+      "AmplifyAppId": "d151jg4xwil6uh"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d151jg4xwil6uh",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

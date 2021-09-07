@@ -1,0 +1,22 @@
+@import '../../../scss/utils';
+
+.verificationLaboratoryRequires {
+    @include adaptive-value-byX('padding-top', 120, 110, 1920, 1440);
+    @include adaptive-value-byX('padding-bottom', 120, 110, 1920, 1440);
+    background-color: #1564FD;
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__description {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__wrapper {
+        grid-column: 1 / span 12;
+    }
+    &__content {
+        @include adaptive-value-byX('width', 923, 697, 1920, 1440);
+    }
+}

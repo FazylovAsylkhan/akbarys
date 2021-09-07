@@ -1,0 +1,15 @@
+.ppe {
+  &__subtitle {
+    grid-template-columns: 131px 251px;
+  }
+  @media(max-width: 1920px) {
+    &__subtitle {
+      grid-template-columns: calc(101px + (131 - 101) * ((100vw - 1440px) / (1920 - 1440))) 251px;
+    }
+  }
+  @media(max-width: 1200px) {
+    &__subtitle {
+      grid-template-columns: 101px 251px;
+    }
+  }
+}
