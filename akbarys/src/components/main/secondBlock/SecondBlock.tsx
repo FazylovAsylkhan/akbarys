@@ -53,11 +53,12 @@ const SecondBlock: FC<H2sPreviewProps> = ({content}) => {
             </h3>
               )
             })}
-          </div>
+          </div> 
         </div>
       </div>
       <div className="screen__body">
-        {img ? <GatsbyImage className="screen__image-image" image={img} alt={title} /> : null}
+        {img ? <GatsbyImage className="screen__image" image={img} alt={title} /> : null}
+        <div className="background__header"></div>
       </div>
     </div>
   );

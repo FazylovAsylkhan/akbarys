@@ -1,7 +1,7 @@
 @import "./utils";
 
 .pressCenterNews {
-  @include adaptive-value-byX("padding-top", 240, 220, 1920, 1440);
+  padding-top: 120px;
   &__wrapper {
     grid-column: 1 / span 12;
     @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
@@ -18,21 +18,32 @@
   &__card {
     // @include adaptive-value-byX("padding-top", 300, 224, 1920, 1440);
     position: relative;
-    &:hover {
-      background-color: #1564fd;
-      & .pressCenterNews__card-title,
-      & .pressCenterNews__card-description,
-      & .pressCenterNews__card-button {
-        color: #ffffff;
-      }
-    }
+    min-height: 570px;
+
     &-title {
+      min-height: 50px;
       margin-bottom: 20px;
     }
     &-body {
-      border: 1px solid #E1E1E1;
+      position: relative;
+      border: 1px solid #e1e1e1;
       border-top: none;
       padding: 40px;
+      padding-right: 20px;
+      min-height: 264px;
+      &:hover {
+        background-color: #1564fd;
+        & .pressCenterNews__card-title,
+        & .pressCenterNews__card-description,
+        & .pressCenterNews__card-button {
+          color: #ffffff;
+        }
+      }
+      & .pressCenterNews__card-button {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+      }
     }
     &-head {
       width: 100%;

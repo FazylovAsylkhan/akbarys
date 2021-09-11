@@ -1,6 +1,7 @@
 @import '../../../scss/utils';
 
 .akbarysPreview {
+  position: relative;
   @include adaptive-value-byX('height', 800, 680, 1920, 1440);
   padding-top: calc((243 / 1002) * 100vh);
   &__wrapper {

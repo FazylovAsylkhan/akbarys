@@ -23,13 +23,14 @@ const MainAkbarys:FC<MainAkbarysProps> = ({content}) => {
           <h1 className="mainAkbarys__title main-title white">
             {title}
           </h1>
-          <p className="mainAkbarys__description main-description white_dark">
+          <p className="mainAkbarys__description main-description white_dark mainText-1">
             {description}
           </p>
         </div>
       </div>
       <div className="screen__body">
         {img ? <GatsbyImage className="screen__image" image={img} alt={title} /> : null}
+        <div className="background__header"></div>
       </div>
     </div>
   );

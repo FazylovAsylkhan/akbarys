@@ -45,6 +45,7 @@ const H2sPreview: FC<H2sPreviewProps> = ({content}) => {
       </div>
       <div className="h2sPreview__body">
         {img ? <GatsbyImage className="h2sPreview__body-image" image={img} alt={title} /> : null}
+        <div className="background__header"></div>
       </div>
     </div>
   );

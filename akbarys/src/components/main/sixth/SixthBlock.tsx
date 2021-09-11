@@ -1,24 +1,24 @@
-import './sixthBlock.scss';
+import "./sixthBlock.scss"
 
-import { Link } from '@reach/router';
-import { StaticImage } from 'gatsby-plugin-image';
-import * as React from 'react';
-import { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from "@reach/router"
+import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react"
+import { useRef } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
 
-import data from '../../../utils/constants';
+import data from "../../../utils/constants"
 import {
   hideSlides,
   initNav,
   showPagination,
   showSlide,
   validationNav,
-} from '../../../utils/mainUtils';
+} from "../../../utils/mainUtils"
 
 const SixthBlock = () => {
-  const currentSlidesRef = useRef<Element[] | null>(null);
+  const currentSlidesRef = useRef<Element[] | null>(null)
 
-  const sixthBlock: any = data.pages.main.blocks[5];
+  const sixthBlock: any = data.pages.main.blocks[5]
   return (
     <div className="projects">
       <div className="screen__content container">
@@ -38,22 +38,22 @@ const SixthBlock = () => {
             navigation
             effect="slide"
             pagination={{
-              type: 'fraction',
+              type: "fraction",
             }}
-            onAfterInit={(swiper) => {
-              currentSlidesRef.current = swiper.slides as unknown as Element[];
-              initNav(swiper, 'projects');
-              showPagination(swiper);
-              validationNav(swiper);
+            onAfterInit={swiper => {
+              currentSlidesRef.current = swiper.slides as unknown as Element[]
+              initNav(swiper, "projects")
+              showPagination(swiper)
+              validationNav(swiper)
             }}
-            onSlideChange={(swiper) => {
-              const slides = currentSlidesRef.current;
+            onSlideChange={swiper => {
+              const slides = currentSlidesRef.current
               if (slides) {
-                hideSlides(slides, swiper, 'projects__content');
-                showSlide(slides, swiper, 'projects__advantages');
+                hideSlides(slides, swiper, "projects__content")
+                showSlide(slides, swiper, "projects__advantages")
               }
-              validationNav(swiper);
-              showPagination(swiper);
+              validationNav(swiper)
+              showPagination(swiper)
             }}
           >
             <SwiperSlide className="projects__slide">
@@ -63,53 +63,52 @@ const SixthBlock = () => {
                   placeholder="dominantColor"
                   src="../../../images/projects1.jpg"
                   alt="projects1"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
+                  quality={50}
+                  formats={["auto", "webp", "avif"]}
                 />
                 <div className="projects__content-box">
                   <h4 className="projects__content-title title-2 black">
-                    Казахстан - North Caspian Operating Company N.V.
+                    Тенгизшевройл
                   </h4>
                   <p className="projects__content-description text-1 gray">
-                    Месторождение Кашаган входит в топ 10 крупнейших
-                    месторождений мира, а так же является крупнейшим
-                    месторождением на море.
+                    «Тенгизшевройл» (ТШО) - казахстанское партнерство, которое
+                    занимается разведкой, разработкой, добычей и сбытом сырой
+                    нефти, сжиженного нефтяного газа, сухого газа и серы. ТШО
+                    ведет свою деятельность в соответствии с мировыми
+                    стандартами безопасности и охраны окружающей среды.
                   </p>
-                  {/* <Link className="button projects__button" to="/">
-                    Открыть проект
-                  </Link> */}
                 </div>
                 <div className="projects__advantages">
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.first.digit}
+                      5004
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.first.description}
+                      LTI Days
                     </span>
                   </h3>
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.second.digit}
+                      158
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.second.description}
+                      Человек задействовано
                     </span>
                   </h3>
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.third.digit}
+                      18
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.third.description}
+                      Eдиниц оборудования
                     </span>
                   </h3>
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.fourth.digit}
+                      102000
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.fourth.description}
+                      Человеко-часов
                     </span>
                   </h3>
                 </div>
@@ -122,171 +121,51 @@ const SixthBlock = () => {
                   placeholder="dominantColor"
                   src="../../../images/projects2.jpg"
                   alt="projects2"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
+                  quality={50}
+                  formats={["auto", "webp", "avif"]}
                 />
                 <div className="projects__content-box">
                   <h4 className="projects__content-title title-2 black">
-                    Казахстан - North Caspian Operating Company N.V.
+                    Карачаганак Петролеум Оперейтин Б.В.
                   </h4>
                   <p className="projects__content-description text-1 gray">
-                    Месторождение Кашаган входит в топ 10 крупнейших
-                    месторождений мира, а так же является крупнейшим
-                    месторождением на море.
+                    Карачаганак - одно из крупнейших в мире месторождение
+                    нефтегазового конденсата в Западно-Казахстанcкой области
+                    Республики Казахстан, расположенным в 16 километрах от
+                    города Аксая
                   </p>
-                  {/* <Link className="button projects__button" to="/">
-                    Открыть проект
-                  </Link> */}
                 </div>
                 <div className="projects__advantages">
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.first.digit}
+                    5006
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.first.description}
+                    LTI Days
                     </span>
                   </h3>
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.second.digit}
+                    120
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.second.description}
+                    Человек задействовано
                     </span>
                   </h3>
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.third.digit}
+                    14
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.third.description}
+                    Eдиниц оборудования
                     </span>
                   </h3>
                   <h3 className="projects__advantages-item">
                     <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.fourth.digit}
+                    92250
                     </span>
                     <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.fourth.description}
-                    </span>
-                  </h3>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__content">
-                <StaticImage
-                  className="projects__content-image"
-                  placeholder="dominantColor"
-                  src="../../../images/projects2.jpg"
-                  alt="projects2"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
-                />
-                <div className="projects__content-box">
-                  <h4 className="projects__content-title title-2 black">
-                    Казахстан - North Caspian Operating Company N.V.
-                  </h4>
-                  <p className="projects__content-description text-1 gray">
-                    Месторождение Кашаган входит в топ 10 крупнейших
-                    месторождений мира, а так же является крупнейшим
-                    месторождением на море.
-                  </p>
-                  {/* <Link className="button projects__button" to="/">
-                    Открыть проект
-                  </Link> */}
-                </div>
-                <div className="projects__advantages">
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.first.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.first.description}
-                    </span>
-                  </h3>
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.second.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.second.description}
-                    </span>
-                  </h3>
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.third.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.third.description}
-                    </span>
-                  </h3>
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.fourth.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.fourth.description}
-                    </span>
-                  </h3>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__content">
-                <StaticImage
-                  className="projects__content-image"
-                  placeholder="dominantColor"
-                  src="../../../images/projects2.jpg"
-                  alt="projects2"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
-                />
-                <div className="projects__content-box">
-                  <h4 className="projects__content-title title-2 black">
-                    Казахстан - North Caspian Operating Company N.V.
-                  </h4>
-                  <p className="projects__content-description text-1 gray">
-                    Месторождение Кашаган входит в топ 10 крупнейших
-                    месторождений мира, а так же является крупнейшим
-                    месторождением на море.
-                  </p>
-                  {/* <Link className="button projects__button" to="/">
-                    Открыть проект
-                  </Link> */}
-                </div>
-                <div className="projects__advantages">
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.first.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.first.description}
-                    </span>
-                  </h3>
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.second.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.second.description}
-                    </span>
-                  </h3>
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.third.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.third.description}
-                    </span>
-                  </h3>
-                  <h3 className="projects__advantages-item">
-                    <span className="projects__content-subtitle text-3 black">
-                      {sixthBlock.advantages.fourth.digit}
-                    </span>
-                    <span className="projects__content-description text-1 gray">
-                      {sixthBlock.advantages.fourth.description}
+                    Человеко-часов
                     </span>
                   </h3>
                 </div>
@@ -296,7 +175,7 @@ const SixthBlock = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SixthBlock;
+export default SixthBlock

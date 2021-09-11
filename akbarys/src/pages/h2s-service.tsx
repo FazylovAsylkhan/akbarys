@@ -10,6 +10,7 @@ import LayoutAdditional from '../components/layer/layerAdditional';
 import Seo from '../components/seo';
 import data from '../utils/constants';
 import { graphql } from 'gatsby';
+import Plug from '../components/plug/plug';
 
 const H2sService = (props: any) => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const H2sService = (props: any) => {
       <GasDetectionSystem/>
       <H2sIso />
       <H2sAboutSft />
+      <Plug />
     </LayoutAdditional>
   );
 };

@@ -23,6 +23,7 @@
       }
       &-description {
         @include adaptive-value-byX("width", 1162, 1060, 1920, 1440);
+        width: 100%;
           margin-bottom: 60px;
       }
       &-img {

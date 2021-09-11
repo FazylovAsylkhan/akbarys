@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import LayoutAdditional from "../components/layer/layerAdditional"
 import Seo from "../components/seo"
 import "../scss/pressCenter.scss"
+import Plug from "../components/plug/plug"
 
 const PressCenter = (props: any) => {
   useEffect(() => {
@@ -57,6 +58,7 @@ const PressCenter = (props: any) => {
         <div className="line"></div>
       </div>
       <div></div>
+      <Plug />
     </LayoutAdditional>
   )
 }

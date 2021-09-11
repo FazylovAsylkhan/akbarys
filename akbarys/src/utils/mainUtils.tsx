@@ -2,7 +2,6 @@ import SwiperCore from 'swiper';
 
 import ArrowDark from '../static/arrow-dark.svg';
 import ArrowLight from '../static/arrow-light.svg';
-import { HeaderTypes } from '../types/mainTypes';
 
 function isSpecialScreen(pageSlider: SwiperCore) {
   if (
@@ -39,24 +38,18 @@ function isSpecialScreen(pageSlider: SwiperCore) {
 
 export function changeMenuHeader(
   swiper: SwiperCore,
-  stateHeaderColor: [
-    HeaderTypes,
-    React.Dispatch<React.SetStateAction<HeaderTypes>>,
-  ],
   paginationElement: Element | null,
 ) {
-  const [headerColor, setHeaderColor] = stateHeaderColor;
 
   if (isSpecialScreen(swiper) && paginationElement) {
     paginationElement.classList.add('dark');
-    setHeaderColor(HeaderTypes.DARK);
+    document.querySelector('header')?.classList.add("header_dark")
   } else if (
     !isSpecialScreen(swiper)
-    && headerColor !== HeaderTypes.LIGHT
     && paginationElement
   ) {
-    setHeaderColor(HeaderTypes.LIGHT);
     paginationElement.classList.remove('dark');
+    document.querySelector('header')?.classList.remove("header_dark")
   }
 }
 

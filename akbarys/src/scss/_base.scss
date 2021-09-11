@@ -34,8 +34,8 @@
     @media (max-width: 1920px) {
       margin-right: 0;
     }
-    @media (max-width: 1248px) {
-      margin-left: 150px;
+    @media (max-width: 1200px) {
+      margin-left: 180px;
     }
   }
 }
@@ -60,16 +60,19 @@ body {
   }
 }
 
-@media screen and (min-width: 1201px) {
+::-webkit-scrollbar-thumb {
+  background: $blue;
+}
+.header {
   ::-webkit-scrollbar-thumb {
-    background: $blue;
+    background: #3F3F3F;
   }
-  ::-webkit-scrollbar {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(#000, 0.5);
-  }
+}
+::-webkit-scrollbar {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(#000, 0.5);
 }
 
 .button {

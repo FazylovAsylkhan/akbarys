@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 
 import LayoutAdditional from '../components/layer/layerAdditional';
+import Plug from '../components/plug/plug';
 import Seo from '../components/seo';
 import SftPreview from '../components/sft/firstBlock/sft.preview';
 import SftRequires from '../components/sft/fivthBlock/sft.requires';
@@ -25,6 +26,7 @@ const sftService = () => {
       <SftSourFluidTreatment />
       <SftRequires />
       <SftPartners />
+      <Plug />
     </LayoutAdditional>
   );
 };

@@ -1,43 +1,49 @@
-import React, { useRef, useState } from 'react';
-import { graphql } from 'gatsby';
+import React, { useRef } from "react"
+import { globalHistory } from "@reach/router"
+import { graphql } from "gatsby"
 import SwiperCore, {
   EffectCoverflow,
   Keyboard,
   Mousewheel,
   Navigation,
   Pagination,
-} from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+} from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
 
-import Header from '../components/header/header';
-import Seo from '../components/seo';
-import SecondBlock from '../components/main/secondBlock/SecondBlock';
-import { HeaderTypes, PaginationProps } from '../types/mainTypes';
-import { changeMenuHeader, setEffects } from '../utils/mainUtils';
-import '../scss/mainStyle.scss';
-import NinthBlock from '../components/main/ninthBlok/NinthBlock';
-import EighthBlock from '../components/main/eighthBlock/EighthBlock';
-import SeventhBlock from '../components/main/seventhBlock/SeventhBlock';
-import SixthBlock from '../components/main/sixth/SixthBlock';
-import FivthBlock from '../components/main/fivthBlock/FivthBlock';
-import ThirdBlock from '../components/main/thirdBlock/ThirdBlock';
-import MainAkbarys from '../components/main/firstBlock/mainAkbarys';
+import Header from "../components/header/header"
+import Seo from "../components/seo"
+import SecondBlock from "../components/main/secondBlock/SecondBlock"
+import { PaginationProps } from "../types/mainTypes"
+import { changeMenuHeader, setEffects } from "../utils/mainUtils"
+import "../scss/mainStyle.scss"
+import NinthBlock from "../components/main/ninthBlok/NinthBlock"
+import EighthBlock from "../components/main/eighthBlock/EighthBlock"
+import SeventhBlock from "../components/main/seventhBlock/SeventhBlock"
+import SixthBlock from "../components/main/sixth/SixthBlock"
+import FivthBlock from "../components/main/fivthBlock/FivthBlock"
+import ThirdBlock from "../components/main/thirdBlock/ThirdBlock"
+import MainAkbarys from "../components/main/firstBlock/mainAkbarys"
+import Plug from "../components/plug/plug"
 
 const IndexPage = (props: any) => {
-  const pageSliderRef = useRef<Element | null>(null);
-  const stateHeaderColor = useState(HeaderTypes.LIGHT);
-  const [headerColor] = stateHeaderColor;
-  const { pagination } = (Pagination as PaginationProps).params;
-  pagination.el = 'page__pagination';
-  pagination.clickable = true;
-  pagination.bulletClass = 'page__bullet';
-  pagination.bulletActiveClass = 'page__bullet_active';
-  pagination.bulletElement = 'div';
+  let currentPage = ""
+  globalHistory.listen(({ action }) => {
+    if (action === "PUSH") {
+      currentPage = globalHistory.location.href.split("/")[3]
+    }
+  })
+  const pageSliderRef = useRef<Element | null>(null)
+  const { pagination } = (Pagination as PaginationProps).params
+  pagination.el = "page__pagination"
+  pagination.clickable = true
+  pagination.bulletClass = "page__bullet"
+  pagination.bulletActiveClass = "page__bullet_active"
+  pagination.bulletElement = "div"
   const showActiveLink = () => {
     pageSliderRef.current
-      ?.querySelector('.header__link')
-      ?.classList.add('active');
-  };
+      ?.querySelector(".header__link")
+      ?.classList.add("active")
+  }
 
   SwiperCore.use([
     Mousewheel,
@@ -45,10 +51,10 @@ const IndexPage = (props: any) => {
     Pagination,
     Navigation,
     EffectCoverflow,
-  ]);
+  ])
 
-  
-  const { firstBlock, secondBlock } = props.data.markdownRemark.frontmatter.contentPage.main
+  const { firstBlock, secondBlock } =
+    props.data.markdownRemark.frontmatter.contentPage.main
 
   return (
     <Swiper
@@ -67,32 +73,47 @@ const IndexPage = (props: any) => {
       pagination
       scrollbar
       simulateTouch={false}
-      onAfterInit={(swiper) => {
-        pageSliderRef.current = swiper.el as unknown as Element;
-        const parentSliderWrapper = swiper.el.querySelector('.swiper-wrapper');
-        parentSliderWrapper?.classList.add('page__wrapper');
-        const paginationElemeny = swiper.el.querySelector('.swiper-pagination');
-        paginationElemeny?.classList.add('page__pagination');
-        showActiveLink();
+      onAfterInit={swiper => {
+        pageSliderRef.current = swiper.el as unknown as Element
+        const parentSliderWrapper = swiper.el.querySelector(".swiper-wrapper")
+        parentSliderWrapper?.classList.add("page__wrapper")
+        const paginationElemeny = swiper.el.querySelector(".swiper-pagination")
+        paginationElemeny?.classList.add("page__pagination")
+        showActiveLink()
+
+        document.addEventListener("click", () => {
+          const header = document.querySelector("header")
+          if (swiper.mousewheel) {
+            if (header?.classList.contains("active")) {
+              swiper.allowTouchMove = false
+              swiper.mousewheel.disable()
+            } else {
+              swiper.allowTouchMove = true
+              swiper.mousewheel.enable()
+            }
+          }
+        })
+        swiper.allowTouchMove = false
       }}
-      onBeforeInit={(pageSlider) => {
-        const swiper = pageSlider;
-        swiper.params.slideToClickedSlide = false;
-        swiper.params.simulateTouch = false;
+      onBeforeInit={pageSlider => {
+        const swiper = pageSlider
+        swiper.params.slideToClickedSlide = false
+        swiper.params.simulateTouch = false
       }}
-      onInit={(pageSlider) => {
-        const swiper = pageSlider;
-        swiper.params.slideToClickedSlide = false;
+      onInit={pageSlider => {
+        const swiper = pageSlider
+        swiper.params.slideToClickedSlide = false
       }}
-      onSlideChange={(swiper) => {
-        const paginationElement = document.body.querySelector('.swiper-pagination');
-        changeMenuHeader(swiper, stateHeaderColor, paginationElement);
-        const pageSlider = pageSliderRef.current;
-        if (pageSlider) setEffects(pageSlider, swiper);
+      onSlideChange={swiper => {
+        const paginationElement =
+          document.body.querySelector(".swiper-pagination")
+        changeMenuHeader(swiper, paginationElement)
+        const pageSlider = pageSliderRef.current
+        if (pageSlider) setEffects(pageSlider, swiper)
       }}
     >
       <Seo title="Главная" />
-      <Header color={headerColor} />
+      <Header />
       <SwiperSlide className="page__screen screen">
         <MainAkbarys content={firstBlock} />
       </SwiperSlide>
@@ -117,15 +138,18 @@ const IndexPage = (props: any) => {
       <SwiperSlide className="page__screen screen">
         <NinthBlock />
       </SwiperSlide>
+      <Plug />
     </Swiper>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const query = graphql`
   query {
-    markdownRemark(frontmatter: {contentPage: {main: {lang: {eq: "ru"}}}}) {
+    markdownRemark(
+      frontmatter: { contentPage: { main: { lang: { eq: "ru" } } } }
+    ) {
       frontmatter {
         contentPage {
           main {

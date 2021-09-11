@@ -1,10 +1,10 @@
 // import { handlerSubmit, resetInput } from '../../utils/mainUtils';
-import './footer.scss';
+import "./footer.scss"
 
-import { Link } from 'gatsby';
-import * as React from 'react';
+import * as React from "react"
+import { Link } from "gatsby"
 
-import data from '../../utils/constants';
+import data from "../../utils/constants"
 
 interface LinksProps {
   text: string
@@ -12,22 +12,24 @@ interface LinksProps {
 }
 
 const Footer = () => {
-  const {
-    firstList, secondList, thirdList, fourthList,
-  } = data.footerContent;
+  const { firstList, secondList, thirdList, fourthList } = data.footerContent
 
   const getLinks = (links: LinksProps[]) => {
-    const copyLinks = links.slice();
-    const linksElements = copyLinks.map((link) => (
+    const copyLinks = links.slice()
+    const linksElements = copyLinks.map(link => (
       <li className="footer__list-item" key={link.text}>
-        <Link className="footer__link" to={link.url}>
-          {link.text}
-        </Link>
+        {link.text === "Akbarys Protection" ? (
+          <a className="footer__link"  href={link.url}>{link.text}</a>
+        ) : (
+          <Link className="footer__link" to={link.url}>
+            {link.text}
+          </Link>
+        )}
       </li>
-    ));
+    ))
 
-    return linksElements;
-  };
+    return linksElements
+  }
 
   return (
     <footer className="footer">
@@ -63,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer__copyright">
-        <div className="container" style={{ height: '100%' }}>
+        <div className="container" style={{ height: "100%" }}>
           <div className="footer__copyright-wrapper">
             <p className="footer__copyright-text">Дизайн сайта - QLAB</p>
             <p className="footer__copyright-text">
@@ -76,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

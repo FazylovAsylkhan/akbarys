@@ -8,6 +8,7 @@ import CareerOffer from '../components/career/thirdBlock/career.offer';
 import LayoutAdditional from '../components/layer/layerAdditional';
 import Seo from '../components/seo';
 import { graphql } from 'gatsby';
+import Plug from '../components/plug/plug';
 
 const Career = (props: any) => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const Career = (props: any) => {
       <CareerDescription content={secondBlock} />
       <AkbarysMission content={thirdBlock} />
       <CareerOffer />
+      <Plug />
     </LayoutAdditional>
   );
 };

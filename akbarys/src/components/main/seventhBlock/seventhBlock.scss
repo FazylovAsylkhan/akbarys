@@ -1,6 +1,6 @@
 .mainDevelopment {
   &__wrapper {
-    margin-top: calc((220 / 1002) * 100vh);
+    margin-top: calc((300 / 1002) * 100vh);
     grid-column: 1 / span 12;
   }
   &__content {
@@ -16,7 +16,7 @@
   }
   &__stages {
     width: 100%;
-    margin-top: calc((95 / 1002) * 100vh);
+    margin-top: calc((200 / 1002) * 100vh);
     display: flex;
     justify-content: space-between;
   }

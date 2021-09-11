@@ -9,8 +9,8 @@ import { Helmet } from "react-helmet"
 
 const SinglePost = ({ data }) => {
   const { html } = data.markdownRemark
-  const { title, date, image } = data.markdownRemark.frontmatter.contentPost
-  const img = getImage(image)
+  const { title, date, imagePreview } = data.markdownRemark.frontmatter.contentPost
+  const img = getImage(imagePreview)
   React.useEffect(() => {
     const body = document.querySelector(`.singlePost__body`)
     body
@@ -78,12 +78,12 @@ export const query = graphql`
           title
           url
           date
-          image {
+          imagePreview {
             childImageSharp {
               gatsbyImageData(
                 formats: [AVIF, WEBP, JPG]
                 placeholder: DOMINANT_COLOR
-                quality: 50
+                quality: 95
               )
             }
           }

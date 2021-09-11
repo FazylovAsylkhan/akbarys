@@ -10,6 +10,7 @@ import AkbarysMission from '../components/akbarys/fouthBlock/akbarys.mission';
 import AkbarysProtection from '../components/akbarys/seventhBlock/akbarys.protection';
 import LayoutAdditional from '../components/layer/layerAdditional';
 import Seo from '../components/seo';
+import Plug from '../components/plug/plug';
 
 const AboutAkbarys = (props: any) => {
   const { firstBlock, secondBlock, thirdBlock, fouthBlock } = props.data.markdownRemark.frontmatter.contentPage.akbarysAbout
@@ -25,6 +26,7 @@ const AboutAkbarys = (props: any) => {
         <AkbarysAchievements />
         <AkbarysProtection />
         <AkbarysCareer />
+      <Plug />
       </LayoutAdditional>
     </div>
   );

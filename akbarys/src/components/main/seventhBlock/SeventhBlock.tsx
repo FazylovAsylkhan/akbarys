@@ -9,7 +9,7 @@ const SeventhBlock = () => {
 
   return (
     <div className="mainDevelopment">
-      <div className="screen__content container mainDevelopment__wrapper">
+      <div className="screen__content container">
         <div className="mainDevelopment__wrapper">
           <div className="mainDevelopment__content">
             <h2 className="mainDevelopment__title white">{`${seventhBlock.title}`}</h2>
@@ -44,6 +44,7 @@ const SeventhBlock = () => {
           quality={50}
           formats={['auto', 'webp', 'avif']}
         />
+        <div className="background__header"></div>
       </div>
     </div>
   );

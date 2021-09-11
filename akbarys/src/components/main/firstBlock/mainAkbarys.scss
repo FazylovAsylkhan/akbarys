@@ -1,6 +1,6 @@
 @import "../../../scss//utils";
 .mainAkbarys {
-  padding-top: calc((700 / 1002) * 100vh);
+  padding-top: calc((650 / 1002) * 100vh);
   &__img {
     position: absolute;
     top: 0;
@@ -8,24 +8,23 @@
     height: 100vh;
   }
   &__wrapper {
-    grid-column: 1 / span 5;
-    padding-right: 40px;
+    grid-column: 1 / span 12;
   }
   &__description {
     margin-top: 20px;
+    max-width: 482px;
   }
   &__button {
     margin-top: calc((60 / 1002) * 100vh);
   }
-  @media (max-width: 1732px) {
-    &__wrapper {
-      padding-right: 0;
+  @media (max-width: 1665px) {
+    &__description {
+      max-width: 438px;
     }
   }
-  @media (max-width: 1558px) {
-    &__wrapper {
-      grid-column: 1 / span 6;
-      padding-right: 50px;
+  @media (max-width: 1448px) {
+    &__description {
+      max-width: 397px;
     }
   }
   @media (max-width: 1440px) {
@@ -33,91 +32,41 @@
     &__button {
       margin-top: calc((40 / 760) * 100vh);
     }
-    &__wrapper {
-      padding-right: 80px;
+  }
+  @media (max-width: 1188px) {
+    &__description {
+      max-width: 440px;
     }
   }
-  @media (max-width: 1358px) {
-    &__wrapper {
-      grid-column: 1 / span 7;
-      padding-right: 122px;
-    }
-  }
-  @media (max-width: 1286px) {
-    &__wrapper {
-      padding-right: 80px;
-    }
-  }
-  @media (max-width: 1214px) {
-    &__wrapper {
-      padding-right: 38px;
-    }
-  }
-  @media (max-width: 1200px) {
-    &__wrapper {
-      grid-column: 1 / span 6;
-      padding-right: 9px;
-    }
-  }
-  @media (max-width: 1109px) {
-    &__wrapper {
-      grid-column: 1 / span 7;
-      padding-right: calc((16 / 1109) * 100vw);
-    }
-  }
-  @media (max-width: 1093px) {
-    &__wrapper {
-      padding-right: calc((16 / 1093) * 100vw);
-    }
-  }
-  @media (max-width: 1026px) {
-    &__wrapper {
-      padding-right: 0;
-    }
-  }
-  @media (max-width: 985px) {
-    &__wrapper {
-      grid-column: 1 / span 8;
-      padding-right: calc((5 / 985) * 100vw);
-    }
-  }
-  @media (max-width: 901px) {
-    &__wrapper {
-      grid-column: 1 / span 9;
+  @media (max-width: 1027px) {
+    &__description {
+      max-width: 486px;
     }
   }
   @media (max-width: 860px) {
     padding-top: calc((843 / 1200) * 100vh);
     &__wrapper {
-      grid-column: 1 / span 6;
-      padding-right: 0;
+      grid-column: 1 / span 8;
     }
     &__button {
       margin-top: calc((60 / 1200) * 100vh);
     }
+    &__description {
+      max-width: 484px;
+    }
   }
-  @media (max-width: 731px) {
-    &__wrapper {
-      grid-column: 1 / span 7;
-      padding-right: calc((17 / 731) * 100vw);
+  @media (max-width: 750px) {
+    &__description {
+      max-width: 533px;
+    }
+  }
+  @media (max-width: 640px) {
+    &__description {
+      max-width: 482px;
     }
   }
   @media (max-width: 640px) {
     padding-top: calc((783 / 1140) * 100vh);
-    &__wrapper {
-      grid-column: 1 / span 6;
-      padding-right: calc((104 / 640) * 100vw);
-    }
-  }
-  @media (max-width: 464px) {
-    &__wrapper {
-      padding-right: calc((30 / 459) * 100vw);
-    }
-  }
-  @media (max-width: 325px) {
-    &__wrapper {
-      padding-right: 0;
-    }
   }
 }
 
@@ -133,4 +82,14 @@
   to {
     opacity: 1;
   }
+}
+
+.background__header {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }

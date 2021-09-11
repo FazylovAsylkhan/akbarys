@@ -1,6 +1,7 @@
 @import '../../../scss/utils';
 
 .verificationLaboratoryPreview {
+  position: relative;
   @include adaptive-value-byX('height', 800, 680, 1920, 1440);
   padding-top: 242px;
   &__wrapper {

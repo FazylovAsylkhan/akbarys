@@ -19,12 +19,3 @@ export interface ScrollbarProps {
     }
   }
 }
-
-export enum HeaderTypes {
-  DARK,
-  LIGHT,
-}
-
-export interface HeaderProps {
-  color: HeaderTypes
-}

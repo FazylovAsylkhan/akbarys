@@ -3,6 +3,7 @@
 .careerPreview {
   @include adaptive-value-byX('height', 800, 680, 1920, 1440);
   padding-top: calc((243 / 1002) * 100vh);
+  position: relative;
   &__wrapper {
       grid-column: 1 / span 12;
       width: fit-content;

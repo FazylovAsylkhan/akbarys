@@ -1,6 +1,7 @@
 @import '../../../scss//utils';
 
 .serviceCenter {
+  position: relative;
   @include adaptive-value-byX("height", 800, 680, 1920, 1440);
   @include adaptive-value-byX("padding-top", 687, 502, 1920, 1440);
   &__wrapper {

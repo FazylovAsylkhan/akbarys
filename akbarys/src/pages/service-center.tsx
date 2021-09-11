@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 
 import LayoutAdditional from '../components/layer/layerAdditional';
+import Plug from '../components/plug/plug';
 import Seo from '../components/seo';
 import ServiceCenterPreview from '../components/serviceCenter/firstBlock/serviceCenter,preview';
 import ServiceCenterOpportunities from '../components/serviceCenter/fouthBlock/serviceCenter.opportunities';
@@ -22,6 +23,7 @@ const ServiceCenter = () => {
       <ServiceCenterDescription />
       <ServiceCenterDiagnostics />
       <ServiceCenterOpportunities />
+      <Plug />
     </LayoutAdditional>
   );
 };

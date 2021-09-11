@@ -242,9 +242,21 @@
 }
 .text-header {
   font-weight: 500;
-  @include adaptive-value-byX("font-size", 18, 14, 1920, 1440);
   line-height: 120%;
   letter-spacing: 0.012em;
+  font-size: 18px;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 18, 14, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1040px) {
+    font-size: 20px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 20, 15, 640, 320);
+  }
 }
 .swiper-pagination-fraction {
   font-weight: 500;
@@ -294,4 +306,30 @@
     font-size: 30px;
     line-height: 37px;
   }
+}
+
+.mainText-1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 22, 18, 1920, 1441);
+  }
+  @media (max-width: 1440px) {
+    font-size: 18px;
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("font-size", 18, 22, 1200, 861);
+  }
+  @media (max-width: 860px) {
+    font-size: 22px;
+  } 
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 22, 15, 640, 320);
+  } 
+  @media (max-width: 320px) {
+    font-size: 15px;
+  }
+
 }

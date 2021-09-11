@@ -1,22 +1,22 @@
-import './h2s.aboutSft.scss';
+import "./h2s.aboutSft.scss"
 
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import * as React from 'react';
-import { useRef } from 'react';
-import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react"
+import { useRef } from "react"
+import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
 
-import showPaginationBackground from '../../../utils/h2s';
+import showPaginationBackground from "../../../utils/h2s"
 import {
   initNav,
   showPagination,
   validationNav,
-} from '../../../utils/mainUtils';
+} from "../../../utils/mainUtils"
 
 const H2sAboutSft = () => {
-  const currentSlidesRef = useRef<Element[] | null>(null);
-  SwiperCore.use([Pagination, Navigation, EffectFade]);
+  const currentSlidesRef = useRef<Element[] | null>(null)
+  SwiperCore.use([Pagination, Navigation, EffectFade])
   return (
     <div className="h2sAboutSft">
       <div className="container">
@@ -38,22 +38,22 @@ const H2sAboutSft = () => {
             navigation
             effect="fade"
             pagination={{
-              type: 'fraction',
+              type: "fraction",
             }}
-            onAfterInit={(swiper) => {
-              currentSlidesRef.current = swiper.slides as unknown as Element[];
-              initNav(swiper, 'h2sAboutSft');
-              showPagination(swiper);
+            onAfterInit={swiper => {
+              currentSlidesRef.current = swiper.slides as unknown as Element[]
+              initNav(swiper, "h2sAboutSft")
+              showPagination(swiper)
               if (currentSlidesRef.current) {
-                showPaginationBackground(swiper, currentSlidesRef.current);
+                showPaginationBackground(swiper, currentSlidesRef.current)
               }
-              validationNav(swiper);
+              validationNav(swiper)
             }}
-            onSlideChange={(swiper) => {
-              validationNav(swiper);
-              showPagination(swiper);
+            onSlideChange={swiper => {
+              validationNav(swiper)
+              showPagination(swiper)
               if (currentSlidesRef.current) {
-                showPaginationBackground(swiper, currentSlidesRef.current);
+                showPaginationBackground(swiper, currentSlidesRef.current)
               }
             }}
           >
@@ -64,23 +64,23 @@ const H2sAboutSft = () => {
                   placeholder="dominantColor"
                   src="../../../images/h2sService/h2s-img-1.jpg"
                   alt="projects1"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
+                  quality={50}
+                  formats={["auto", "webp", "avif"]}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
-                    Услуги комплексоного решения
+                    Комплексное обесепечние газовой безопасности
                   </h4>
                   <h3 className="h2sAboutSft__content-title title-2 black">
-                    Нейтрализация сероводорода в процессе нефте и газодобычи
+                    Обучение по Курсу H2S
                   </h3>
 
                   <p className="h2sAboutSft__content-description text-5 gray">
-                    Добыча углеводородов связана со многими опасными факторами.
+                    Задачей курса является предоставление информации о свойствах
+                    и опасности сероводорода, о его воздействия на человека, а
+                    также об использовании средств защиты органов дыхания, при
+                    воздействии сероводорода
                   </p>
-                  <Link className="button h2sAboutSft__button" to="/">
-                    подробнее
-                  </Link>
                   <div className="h2sAboutSft__digit"></div>
                 </div>
               </div>
@@ -90,27 +90,24 @@ const H2sAboutSft = () => {
                 <StaticImage
                   className="h2sAboutSft__content-image"
                   placeholder="dominantColor"
-                  src="../../../images/projects1.jpg"
+                  src="../../../images/h2sService/h2s-img-2.jpg"
                   alt="projects1"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
+                  quality={50}
+                  formats={["auto", "webp", "avif"]}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
-                    Услуги комплексоного решения
+                    Комплексное обесепечние газовой безопасности
                   </h4>
                   <h3 className="h2sAboutSft__content-title title-2 black">
-                    Казахстан - North Caspian Operating Company N.V.
+                    Практическое применение СИЗОД
                   </h3>
 
                   <p className="h2sAboutSft__content-description text-5 gray">
-                    Добыча углеводородов связана со многими опасными факторами.
-                    Одним из значимых, является наличие в пластах токсичных
-                    газов: H2S, SO2, CO, CO2 и CH4.
+                    Персоналу необходимо иметь практические навыки применения
+                    СИЗОД. Для этих целей проводятся курсы а так же ежедневные
+                    учебно-практические занятия с персоналом.
                   </p>
-                  <Link className="button h2sAboutSft__button" to="/">
-                    подробнее
-                  </Link>
                   <div className="h2sAboutSft__digit"></div>
                 </div>
               </div>
@@ -120,24 +117,51 @@ const H2sAboutSft = () => {
                 <StaticImage
                   className="h2sAboutSft__content-image"
                   placeholder="dominantColor"
-                  src="../../../images/projects2.jpg"
+                  src="../../../images/h2sService/h2s-img-3.jpg"
                   alt="projects1"
-                  quality={95}
-                  formats={['auto', 'webp', 'avif']}
+                  quality={50}
+                  formats={["auto", "webp", "avif"]}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
-                    Услуги комплексоного решения
+                    Комплексное обесепечние газовой безопасности
                   </h4>
                   <h3 className="h2sAboutSft__content-title title-2 black">
-                    Нейтрализация сероводорода в процессе нефте и газодобычи
+                    Учебно-тренировочные занятия
                   </h3>
                   <p className="h2sAboutSft__content-description text-5 gray">
-                    Добыча углеводородов связана со многими опасными факторами.
+                    Проведения учебно-тренировочных занятий с персоналом по
+                    выработке практических навыков выполнения действий при
+                    использовании СИЗОД в аварийной ситуации. УТЗ проводятся
+                    согласно утвержденному графику.
                   </p>
-                  <Link className="button h2sAboutSft__button" to="/">
-                    подробнее
-                  </Link>
+                  <div className="h2sAboutSft__digit"></div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="h2sAboutSft__slide">
+              <div className="h2sAboutSft__content">
+                <StaticImage
+                  className="h2sAboutSft__content-image"
+                  placeholder="dominantColor"
+                  src="../../../images/h2sService/h2s-img-4.jpg"
+                  alt="projects1"
+                  quality={50}
+                  formats={["auto", "webp", "avif"]}
+                />
+                <div className="h2sAboutSft__content-box">
+                  <h4 className="h2sAboutSft__content-subtitle text-6 gray">
+                  Комплексное обесепечние газовой безопасности
+                  </h4>
+                  <h3 className="h2sAboutSft__content-title title-2 black">
+                  Аудиты и инспекции
+                  </h3>
+                  <p className="h2sAboutSft__content-description text-5 gray">
+                    Аудиты и инспекции помогают руководству проверять состояние
+                    бизнеса и достоверность отчётности. Главная цель аудита —
+                    выявить риски и усовершенствовать процессы после
+                    консультации аудитора.
+                  </p>
                   <div className="h2sAboutSft__digit"></div>
                 </div>
               </div>
@@ -146,7 +170,7 @@ const H2sAboutSft = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default H2sAboutSft;
+export default H2sAboutSft

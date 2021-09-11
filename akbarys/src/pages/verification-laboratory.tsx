@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 
 import LayoutAdditional from '../components/layer/layerAdditional';
+import Plug from '../components/plug/plug';
 import Seo from '../components/seo';
 import VerificationLaboratoryPreview from '../components/verificationLaboratory/firstBlock/verificationLaboratory.preview';
 import VerificationLaboratoryAchievements from '../components/verificationLaboratory/fouthBlock/verificationLaboratory.achievements';
@@ -22,6 +23,7 @@ const VerificationLaboratory = () => {
       <VerificationLaboratoryDescription />
       <VerificationLaboratoryRequires />
       <VerificationLaboratoryAchievements />
+      <Plug />
     </LayoutAdditional>
   );
 };

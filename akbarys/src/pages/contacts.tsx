@@ -5,6 +5,7 @@ import ContactsPreview from '../components/contacts/firstBlock/contacts.preview'
 import ContactsDescription from '../components/contacts/secondBlock/contacts.description';
 import ContactsForm from '../components/contacts/thirdBlock/contacts.form';
 import LayoutAdditional from '../components/layer/layerAdditional';
+import Plug from '../components/plug/plug';
 import Seo from '../components/seo';
 
 const Contacts = () => {
@@ -19,6 +20,7 @@ const Contacts = () => {
       <ContactsPreview />
       <ContactsDescription />
       <ContactsForm />
+      <Plug />
     </LayoutAdditional>
   );
 };

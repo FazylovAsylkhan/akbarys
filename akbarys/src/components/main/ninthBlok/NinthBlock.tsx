@@ -33,6 +33,7 @@ const NinthBlock = () => {
           quality={95}
           formats={['auto', 'webp', 'avif']}
         />
+        <div className="background__header"></div>
       </div>
     </div>
   );

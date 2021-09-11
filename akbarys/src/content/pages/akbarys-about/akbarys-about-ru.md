@@ -8,7 +8,7 @@ contentPage:
           {
             title: Akbarys — ведущий поставщик услуг нефтегазовой отрасли,
             description: Вперед к достижениям вместе с нами!,
-            subtitle: { digit: 95%, text: Казахстанский национальный капитал },
+            subtitle: { digit: 100%, text: Казахстанский национальный капитал },
             image: ../../../images/akbarys/akbarys.jpg,
           },
         secondBlock:

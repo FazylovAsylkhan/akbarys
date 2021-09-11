@@ -1,13 +1,13 @@
-import '../../scss/mainStyle.scss';
-
 import React, { FC } from 'react';
 
+import Header from '../../components/header/header';
 import FooterAdditional from '../../components/footer/footerAddiitional';
-import HeaderAdditional from '../../components/header/headerAdditional';
+import '../../scss/mainStyle.scss';
 
 const LayoutAdditional: FC = ({ children }) => (
   <>
-    <HeaderAdditional />
+    <Header isAdditional={false} />
+    <Header isAdditional={true} />
     {children}
     <FooterAdditional />
   </>
