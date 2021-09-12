@@ -8,10 +8,10 @@ import LightLogo from "../../images/logo-light.svg"
 import "./header.scss"
 
 interface HeaderProps {
-  isAdditional: boolean
+  isAdditional?: boolean
 }
 const Header: FC<HeaderProps> = ({ isAdditional }) => {
-  const showMenu = (isAdditional: boolean) => {
+  const showMenu = (isAdditional: boolean | undefined) => {
     const header = document.querySelectorAll("header")
     if (isAdditional) {
       header[1]?.classList.toggle("active")

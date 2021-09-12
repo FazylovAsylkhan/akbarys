@@ -63,7 +63,9 @@
       height: calc((440 / 1002) * 100vh);
       &-box {
         padding-top: calc((58 / 1002) * 100vh);
+        padding-top: 58px;
         padding-left: calc((60 / 1920) * 100vw);
+        padding-left: 60px;
         @include adaptive-value-byX("height", 300, 230, 1920, 1440);
         @include adaptive-value-byX("width", 600, 470, 1920, 1440);
       }
@@ -95,7 +97,7 @@
     &__content {
       height: calc((340 / 760) * 100vh);
       &-box {
-        padding-top: calc((30 / 760) * 100vh);
+        padding-top: calc((40 / 760) * 100vh);
         padding-left: calc((40 / 1440) * 100vw);
         width: 470px;
         @include adaptive-value-byX("height", 230, 200, 1440, 1200);

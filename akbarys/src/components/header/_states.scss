@@ -68,18 +68,20 @@ body.touch {
   .header_dark .header__burger span {
     background-color: #1564FD;
   }
-  .header__menu {
-    transition: opacity 0.1s ease;
-  }
-  .active .header__menu {
-    transition: transform 1s ease;
-  }
-  .header.header_transparent.additional {
-    transform: translateY(0%);
-    opacity: 1;
-    position: absolute;
-    &::before {
-      background-color:transparent;
+  @media(max-width: 1040px) {
+    .header.header_transparent.additional {
+      transform: translateY(0%);
+      opacity: 1;
+      position: absolute;
+      &::before {
+        background-color:transparent;
+      }
+    }
+    .header__menu {
+      transition: opacity 0.1s ease;
+    }
+    .active .header__menu {
+      transition: transform 1s ease;
     }
   }
 }

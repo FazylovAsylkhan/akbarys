@@ -3,15 +3,15 @@ import "./plug.scss"
 
 const Plug = () => {
     
-    React.useEffect(() => {
-        if (
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-              navigator.userAgent
-            )
-          ) {
-            document.querySelector(".plug")?.classList.add("active")
-          }
-    }, [])
+    // React.useEffect(() => {
+    //     if (
+    //         /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    //           navigator.userAgent
+    //         )
+    //       ) {
+    //         document.querySelector(".plug")?.classList.add("active")
+    //       }
+    // }, [])
   return (
     <div className="plug">
       <h3 className="title-2 black">Мобильная и планшетная версия сайта</h3>

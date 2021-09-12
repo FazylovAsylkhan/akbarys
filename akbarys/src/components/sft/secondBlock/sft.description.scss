@@ -37,10 +37,14 @@
       margin-bottom: 20px;
     }
     &__item {
-      padding: 70px 0;
+      padding: 50px 0;
       display: flex;
       @include adaptive-value-byX('padding-left', 50, 20, 1920, 1440);
-      @include adaptive-value-byX('padding-right', 50, 20, 1920, 1440);
+      @include adaptive-value-byX('padding-right', 30, 4, 1920, 1440);
+      @media(max-width: 1440px) {
+        padding-left: 20px;
+        padding-right: 4px;
+      }
       flex-direction: column;
       border-left: 1px solid #e1e1e1;
       border-top: 1px solid #e1e1e1;

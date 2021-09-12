@@ -50,7 +50,7 @@
     &-next,
     &-prev {
       bottom: 0;
-      right: 30%;
+      right: 24%;
       z-index: 10;
       position: absolute;
       width: 29px;
@@ -59,7 +59,7 @@
     }
     &-prev {
       transform: rotateY(180deg);
-      right: 35%;
+      right: 30%;
     }
   }
   &__slider {
@@ -70,7 +70,7 @@
   &__pagination {
     bottom: 0;
     position: absolute;
-    right: 43%;
+    right: 36%;
   }
   &__slider-wrapper {
     display: flex;
