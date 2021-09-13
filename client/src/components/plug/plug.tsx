@@ -3,19 +3,19 @@ import "./plug.scss"
 
 const Plug = () => {
     
-    // React.useEffect(() => {
-    //     if (
-    //         /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    //           navigator.userAgent
-    //         )
-    //       ) {
-    //         document.querySelector(".plug")?.classList.add("active")
-    //       }
-    // }, [])
+    React.useEffect(() => {
+        if (
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+              navigator.userAgent
+            )
+          ) {
+            document.querySelector(".plug")?.classList.add("active")
+          }
+    }, [])
   return (
     <div className="plug">
       <h3 className="title-2 black">Мобильная и планшетная версия сайта</h3>
-      <h3 className="title-2 black">находиться в разработке</h3>
+      <h3 className="title-2 black">находится в разработке</h3>
       <h2 className="title-1 black mt">Просим вас открыть данный сайт</h2>
       <h2 className="title-1 black">на другом устройстве</h2>
       <h3 className="title-3 black mt2">Контакты:</h3>

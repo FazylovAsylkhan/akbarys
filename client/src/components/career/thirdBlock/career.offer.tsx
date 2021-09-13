@@ -14,16 +14,53 @@ function downloadURI(uri: string, name: string) {
   link.click()
   document.body.removeChild(link)
 }
-async function handlerSubmit() {
+function getSubjectData(name: string) {
+  const today = new Date()
+  const dd = String(today.getDate()).padStart(2, "0")
+  const mm = String(today.getMonth() + 1).padStart(2, "0") //January is 0!
+  const yyyy = today.getFullYear()
+  const currentDate = mm + "/" + dd + "/" + yyyy
+
+	const hour = today.getHours() > 12 ? today.getHours() - 12 : (today.getHours() < 10 ? "0" + today.getHours() : today.getHours())
+	const minute = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes()
+  const currentTime = hour + ":" + minute
+	
+
+  return `Сайт Akbarys. Сообщение от ${name}. Дата: ${currentDate} / ${currentTime}` 
+}
+async function handlerSubmit(uriState: string) {
   const form = document.querySelector(".careerForm__form") as HTMLFormElement
   const error = formValidate(form as HTMLElement)
+  const inputName = document.querySelector('#careerFormName') as HTMLInputElement
+  const inputEmail = document.querySelector('#careerFormEmail') as HTMLInputElement
+  const inputMessage = document.querySelector('#careerFormMessage') as HTMLInputElement
+  const formData ={
+    name: inputName.value,
+    email: inputEmail.value,
+    message: inputMessage.value,
+    link: uriState
+  }
 
   const formDate = new FormData(form)
   if (error === 0) {
+    document.body.style.overflowY = "hidden"
     form.classList.add("sending")
-    const response = await fetch("sendmail.php", {
+    const response = await fetch("https://6a2gmcyh8c.execute-api.us-east-1.amazonaws.com/development/sendMail", {
+      headers: {
+        "Content-Type": "application/json",
+      },
       method: "POST",
-      body: formDate,
+      body: JSON.stringify({
+        bccEmailAddresses: [],
+        ccEmailAddresses: [],
+        toEmailAddresses: ["fazylov.asylkhan@gmail.com"],
+        bodyData: formData,
+        bodyCharset: "UTF-8",
+        subjectdata: getSubjectData(formData.name),
+        subjectCharset: "UTF-8",
+        sourceEmail: "web@akbarys.kz",
+        replyToAddresses: ["fazylov.asylkhan@gmail.com"],
+      }),
     })
     if (response.ok) {
       const result = await response.json()
@@ -36,7 +73,6 @@ async function handlerSubmit() {
       const header = document.querySelector("header") as HTMLElement
       header.classList.remove("show")
       alert.nextElementSibling?.classList.add("show")
-      document.body.style.overflowY = "hidden"
       alert.nextElementSibling?.addEventListener("click", e => {
         const elementTarget = e.target as HTMLDivElement
         if (elementTarget.classList.contains("careerForm__alert-button")) {
@@ -67,6 +103,7 @@ async function handlerSubmit() {
 }
 
 const CareerForm = () => {
+  const [uriState, setUriState] = React.useState('')
   useEffect(() => {
     const checkboxWrapperClass = "careerForm__form-checkbox"
     const checkboxBtnClass = "careerForm__form-checkbox-button"
@@ -109,6 +146,7 @@ const CareerForm = () => {
           reader.onload = e => {
             const json = JSON.stringify({ dataURL: reader.result })
             const fileURL = JSON.parse(json).dataURL
+            setUriState(fileURL)
             // downloadURI(fileURL, 'asylkhan')
           }
         } else {
@@ -240,7 +278,7 @@ const CareerForm = () => {
             <button
               type="submit"
               className="button careerForm__form-button"
-              onClick={() => handlerSubmit()}
+              onClick={() => handlerSubmit(uriState)}
             >
               Отправить
             </button>
