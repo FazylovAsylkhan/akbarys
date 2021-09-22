@@ -1,31 +1,41 @@
 import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { FC } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './contacts.preview.scss';
 
-const ContactsPreview = () => (
-  <div className="contactsPreview">
-    <div className="contactsPreview__content container">
-      <div className="contactsPreview__wrapper">
-        <h2 className="contactsPreview__title title-1 white">
-          Контактная информация
-        </h2>
-        <p className="contactsPreview__title-description text-6 white">
-          Мы всегда на связи
-        </p>
+interface ContactsPreviewProps {
+  content: any
+}
+
+const ContactsPreview: FC<ContactsPreviewProps> = ({ content }) => {
+  const { title, description, image } = content;
+  const img = getImage(image);
+
+  return (
+    <div className="contactsPreview">
+      <div className="contactsPreview__content container">
+        <div className="contactsPreview__wrapper">
+          <h2 className="contactsPreview__title title-1 white">
+            {title}
+          </h2>
+          <p className="contactsPreview__title-description text-6 white">
+            {description}
+          </p>
+        </div>
+      </div>
+      <div className="contactsPreview__body">
+        {img ? (
+          <GatsbyImage
+            className="contactsPreview__body-image"
+            image={img}
+            alt={title}
+          />
+        ) : null}
+        <div className="background__header"></div>
       </div>
     </div>
-    <div className="contactsPreview__body">
-      <StaticImage
-        className="contactsPreview__body-image"
-        placeholder="dominantColor"
-        src="../../../images/contacts/contactsPreview.jpg"
-        alt="akbarys"
-        quality={95}
-        formats={['auto', 'webp', 'avif']}
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 export default ContactsPreview;

@@ -1,0 +1,19 @@
+{
+  "lang": "kz",
+  "url": "kz",
+  "firstBlock": {
+    "title": "AKBARYS",
+    "description": "Qazaqstan, TMD jáne taıaý shetel aýmaǵyndaǵy gaz qaýipsizdigi jónindegi qyzmetterdi jetekshi jetkizýshi",
+    "image": "../../images/main/akbarys.jpg"
+  },
+  "secondBlock": {
+    "title": "Munaı-gaz ındýstrıasyndaǵy qaýipsizdik jónindegi keshendi sheshimder",
+    "description": "Bizben birge jetistikterge jetińiz!",
+    "button": { "url": "/h2s-service/", "text": "Подробнее" },
+    "subtitles": [
+      { "digit": "15", "text": "Qyzmet jyldary" },
+      { "digit": "67", "text": "Iske asyrylǵan jobalar" }
+    ],
+    "image": "../../images/main/h2s.jpg"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "lang": "ru",
+  "url": "verification-laboratory",
+  "seo": {
+      "title": "Поверочные лаборатории"
+  },
+  "firstBlock": {
+    "title": "Поверочные лаборатории",
+    "subtitles": [
+      { "digit": "8", "description": "Специалистов" },
+      { "digit": "23", "description": "Вида лаболаторных испытании" }
+    ],
+    "image": "../../../images/verificationLaboratory/preview.jpg"
+  }
+}

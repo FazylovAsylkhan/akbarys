@@ -17,7 +17,7 @@
     }
   }
   &__items {
-    @include adaptive-value-byX("height", 520, 500, 1920, 1440);
+    // @include adaptive-value-byX("height", 520, 500, 1920, 1440);
     @include adaptive-value-byX("margin-top", 84, 69, 1920, 1440);
     overflow: hidden;
     &.show {
@@ -32,6 +32,9 @@
     cursor: pointer;
     &:first-child {
       margin-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
     }
     &:hover &-link {
       color: #1665fd;

@@ -1,0 +1,42 @@
+{
+    "lang": "kz",
+    "url": "service-center/kz",
+    "firstBlock": {
+      "title": "Servıs ortalyǵy",
+      "subtitle": "Bizben birge jetistikterge jetińiz!",
+      "image": "../../../images/serviceCenter/serviceCenter.jpg"
+    },
+    "secondBlock": {
+      "h1": "Servıs ortalyǵy",
+      "description": [
+        {
+          "title": "Ýaqytyly qyzmet kórsetý-senimdilik kepili",
+          "text": [
+            "Merzimdi jáne shuǵyl jóndeý jumystaryn oryndaý úshin Akbarys-te servıstik ortalyq uıymdastyryldy."
+          ]
+        },
+        {
+          "title": "Siz senimdi qoldasyz",
+          "text": [
+            "Akbarys servıstik ortalyǵy óz jabdyqtaryna ǵana emes, tapsyrys berýshilerdiń jabdyqtaryna da kásibı servıstik jáne tehnıkalyq qyzmet kórsetedi. Kompanıa qyzmetkerleri jabdyq óndirýshisimen sertıfıkattalǵan",
+            "«Akbarys» servıstik qyzmet kórsetýge qatysatyn barlyq tehnıkalyq quraldar ÓAJ kestesine jáne paıdalaný qujattamasyna sáıkes merzimdi tekserýden jáne tehnıkalyq qyzmet kórsetýden ótedi."
+          ]
+        },
+        {
+          "title": "Виды сервисных работ",
+          "text": ["Мы выполняем обслуживание:"]
+        }
+      ],
+      "typesOfWork": {
+        "title": "Servıstik jumys túrleri",
+        "description": "Biz qyzmet kórsetemiz:",
+        "stages": [
+          "Tynys alý <br /> apparattary",
+          "Gaz deteksıasy <br /> júıeleri",
+          "Áýe <br /> kompresorlar",
+          "Eskertý <br /> júıeleri"
+        ]
+      }
+    }
+  }
+  

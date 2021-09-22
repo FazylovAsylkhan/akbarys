@@ -1,23 +1,12 @@
-import * as React from "react"
-import { FC } from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import "./akbarys.preview.scss"
+import * as React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import './akbarys.preview.scss';
 
-interface AkBarysPreviewProps {
-  content: {
-    subtitle: {
-      digit: string
-      text: string
-    }
-    description: string
-    title: string
-    image: any
-  };
-}
-
-const AkBarysPreview: FC<AkBarysPreviewProps> = ({content}) => {
-  const {title, description, subtitle, image} = content
-  const img = getImage(image)
+const AkBarysPreview = (props: any) => {
+  const {
+    title, description, subtitle, image,
+  } = props.content;
+  const img = getImage(image);
   return (
     <div className="akbarysPreview">
       <div className="akbarysPreview__content container">
@@ -40,6 +29,6 @@ const AkBarysPreview: FC<AkBarysPreviewProps> = ({content}) => {
         {img ? <GatsbyImage className="akbarysPreview__body-image" image={img} alt={title} /> : null}
       </div>
     </div>
-  )
-}
-export default AkBarysPreview
+  );
+};
+export default AkBarysPreview;

@@ -82,7 +82,7 @@
     font-size: 34px;
   }
   @media (max-width: 640px) {
-    @include adaptive-value-byX("font-size", 34, 24, 640, 320);
+    @include adaptive-value-byX("font-size", 34, 22, 640, 320);
   }
 }
 .title-2 {

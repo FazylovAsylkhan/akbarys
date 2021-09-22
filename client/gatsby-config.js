@@ -3,7 +3,7 @@ module.exports = {
     title: `Акбарыс`,
     description: `Ведущий поставщик услуг по газовой безопасности на территории Казахстана, СНГ и Ближнего Зарубежья`,
     author: `fazylov.asylkhan@gmail.com`,
-    siteUrl: `https://dev.d151jg4xwil6uh.amplifyapp.com/`,
+    siteUrl: `https://akbarys.kz/`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     'swiper',
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,10 +23,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     {

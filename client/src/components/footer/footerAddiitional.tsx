@@ -1,21 +1,29 @@
-import './footerAdditional.scss';
-
-import { Link } from 'gatsby';
 import * as React from 'react';
+import { FC } from 'react';
+import { Link } from 'gatsby';
+import './footerAdditional.scss';
 
 import InstagramImg from '../../images/instagram.svg';
 import LinkedIn from '../../images/linkedIn.svg';
 import LogoImg from '../../images/logo-dark.svg';
 import Youtube from '../../images/youtube.svg';
-import data from '../../utils/constants';
 
 interface LinksProps {
   text: string
   url: string
 }
 
-const FooterAdditional = () => {
-  const { firstList, secondList, thirdList } = data.footerContent;
+interface FooterProps {
+  data: any
+}
+
+const FooterAdditional: FC<FooterProps> = ({ data }) => {
+  const {
+    subMenu, description, social, politics,
+  } = data;
+  const firstList = subMenu[0];
+  const secondList = subMenu[1];
+  const thirdList = subMenu[2];
 
   const getLinks = (links: LinksProps[]) => {
     const copyLinks = links.slice();
@@ -58,20 +66,20 @@ const FooterAdditional = () => {
               className="footerAdditional__content-description text-6 gray"
               style={{ fontWeight: 500 }}
             >
-              Ведущий поставщик услуг по газовой безопасности на территории Казахстана, СНГ и Ближнего Зарубежья
+              {description}
             </div>
             <div className="footerAdditional__content-social">
               <div className="footerAdditional__content-social-title text-6 gray">
-                Мы в социальных сетях:
+                {social.title}
               </div>
               <div className="footerAdditional__content-social-icons">
-                <Link to="/">
+                <Link to={social.links[0]}>
                   <InstagramImg className="footerAdditional__content-social-icon" />
                 </Link>
-                <Link to="/">
+                <Link to={social.links[1]}>
                   <LinkedIn className="footerAdditional__content-social-icon" />
                 </Link>
-                <Link to="/">
+                <Link to={social.links[2]}>
                   <Youtube className="footerAdditional__content-social-icon" />
                 </Link>
               </div>
@@ -83,13 +91,21 @@ const FooterAdditional = () => {
         <div className="container" style={{ height: '100%' }}>
           <div className="footerAdditional__copyright-wrapper">
             <p className="footerAdditional__copyright-text">
-              Дизайн сайта - QLAB
+              <Link
+                className="footerAdditional__copyright-link"
+                to={politics.links[0].url}
+              >
+                {politics.links[0].text}
+              </Link>
             </p>
             <p className="footerAdditional__copyright-text">
-              <Link className="footerAdditional__copyright-link" to="/politics">
-                Политика конфиденциальности
+              <Link
+                className="footerAdditional__copyright-link"
+                to={politics.links[1].url}
+              >
+                {politics.links[1].text}
               </Link>
-              ТОО «Akbarys» 2021 ©
+              {politics.title}
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
-import './verificationLaboratory.requires.scss';
-
 import * as React from 'react';
+
+import './verificationLaboratory.requires.scss';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const VerificationLaboratoryRequires = () => (
   <div className="verificationLaboratoryRequires">
@@ -8,19 +9,34 @@ const VerificationLaboratoryRequires = () => (
       <div className="verificationLaboratoryRequires__wrapper">
         <div className="verificationLaboratoryRequires__content">
           <h3 className="verificationLaboratoryRequires__title title-1">
-            Законодательные требования
+            Аккредитовано NCA
           </h3>
           <p className="verificationLaboratoryRequires__description text-5">
-            Требования к утилизации сероводорода определены в Приказе Министра
-            по инвестициям и развитию РК от 30.12.2014 г. № 355 «Об утверждении
-            Правил обеспечения промышленной безопасности для опасных
-            производственных объектов нефтяной и газовой отраслей
-            промышленности».
+            Лаборатория аккредитована на соответствие ГОСТ ИСО/МЭК 17025-2009
+            «Общие требования к компетентности испытательных и калибровочных
+            лабораторий» национальным органом по аккредитации в области оценки
+            соответствия ТОО «Национальный центр аккредитации». Аттестат
+            аккредитации № KZ.П.09.1363 от 18 февраля 2018 г.
           </p>
-          <p className="verificationLaboratoryRequires__description text-5">
-            Согласно нормативных документов, не допускается выброс в атмосферу
-            вредных веществ, в том числе газов, без их нейтрализации и сжигания.
-          </p>
+        </div>
+
+        <div className="verificationLaboratoryRequires__images">
+          <StaticImage
+            className="verificationLaboratoryRequires__image"
+            placeholder="dominantColor"
+            src="../../../images/verificationLaboratory/nca.jpg"
+            alt="nca"
+            quality={95}
+            formats={['auto', 'webp', 'avif']}
+          />
+          <StaticImage
+            className="verificationLaboratoryRequires__image"
+            placeholder="dominantColor"
+            src="../../../images/verificationLaboratory/mra.jpg"
+            alt="mra"
+            quality={95}
+            formats={['auto', 'webp', 'avif']}
+          />
         </div>
       </div>
     </div>

@@ -1,0 +1,33 @@
+{
+  "lang": "kz",
+  "url": "contacts/kz",
+  "firstBlock": {
+    "title": "Baılanys aqparaty",
+    "description": "Biz árqashan baılanystamyz",
+    "image": "../../../images/contacts/contactsPreview.jpg"
+  },
+  "secondBlock": {
+    "contacts": [
+      {
+        "title": "Akbarys bas keńsesi",
+        "text": [
+          "Qazaqstan Respýblıkasy, Oral qalasy,",
+          "sharýashylyq kóshesi, 15",
+          "+7 (771) 949 90 11",
+          "info@akbarys.kz",
+          "akbarys.kz"
+        ]
+      },
+      {
+        "title": "Akbarys Protection Zaýyty",
+        "text": [
+          "Qazaqstan Respýblıkasy, Nursultan qalasy,",
+          "92-shi, 5, Almaty aýd.",
+          "+7 (7172) 67‒70‒39",
+          "+7 (7172) 67‒70‒38",
+          "akbarys-protection.kz"
+        ]
+      }
+    ]
+  }
+}

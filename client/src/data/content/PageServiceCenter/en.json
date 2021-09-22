@@ -1,0 +1,38 @@
+{
+    "lang": "en",
+    "url": "service-center/en",
+    "firstBlock": {
+      "title": "Service center",
+      "subtitle": "Forward to achievements with us!",
+      "image": "../../../images/serviceCenter/serviceCenter.jpg"
+    },
+    "secondBlock": {
+      "h1": "Service center",
+      "description": [
+        {
+          "title": "Timely maintenance is the key to reliability",
+          "text": [
+            "A service center is organized in QHSE Akbarys to perform periodic and emergency repairs."
+          ]
+        },
+        {
+          "title": "You are in good hands",
+          "text": [
+            "The Akbarys service center performs professional service and maintenance not only of its own equipment, but also of the equipment of customers. The company's employees are certified by the equipment manufacturer",
+            "All technical means involved in the maintenance of Akbarys LLP undergo periodic inspection and maintenance in accordance with the PPR schedule and operational documentation."
+          ]
+        }
+      ],
+      "typesOfWork": {
+        "title": "Types of service work",
+        "description": "We perform maintenance:",
+        "stages": [
+          "Breathing <br /> apparatus",
+          "Gas detection <br /> systems",
+          "Air <br /> compressors",
+          "Notification <br /> systems"
+        ]
+      }
+    }
+  }
+  

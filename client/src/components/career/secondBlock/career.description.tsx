@@ -1,7 +1,7 @@
-import * as React from "react"
-import { FC, useEffect } from "react"
-import id from "../../../utils/randomId"
-import "./career.description.scss"
+import * as React from 'react';
+import { FC, useEffect } from 'react';
+import id from '../../../utils/randomId';
+import './career.description.scss';
 
 interface Opportunity {
   digit: string
@@ -18,33 +18,33 @@ interface CareerDescriptionProps {
 }
 
 const CareerDescription: FC<CareerDescriptionProps> = ({ content }) => {
-  const { title, subtitle, opportunities } = content
+  const { title, subtitle, opportunities } = content;
   useEffect(() => {
     const itemsWrapper = document.querySelector(
-      ".careerDescription__benefits-list"
-    )
+      '.careerDescription__benefits-list',
+    );
     const items = document.querySelectorAll(
-      ".careerDescription__benefits-list-item"
-    )
+      '.careerDescription__benefits-list-item',
+    );
     const contents = document.querySelectorAll(
-      ".careerDescription__benefits-item"
-    )
-    itemsWrapper?.addEventListener("mouseover", event => {
-      const element = event.target as HTMLElement
-      if (element.classList.contains("careerDescription__benefits-list-item")) {
-        items.forEach(e => e.classList.remove("show"))
-        element.classList.add("show")
-        const numberItem = +element.classList[1].slice(-1)
-        contents.forEach(e => e.classList.remove("show"))
-        contents[numberItem].classList.add("show")
+      '.careerDescription__benefits-item',
+    );
+    itemsWrapper?.addEventListener('mouseover', (event) => {
+      const element = event.target as HTMLElement;
+      if (element.classList.contains('careerDescription__benefits-list-item')) {
+        items.forEach((e) => e.classList.remove('show'));
+        element.classList.add('show');
+        const numberItem = +element.classList[1].slice(-1);
+        contents.forEach((e) => e.classList.remove('show'));
+        contents[numberItem].classList.add('show');
       } else {
-        items.forEach(e => e.classList.remove("show"))
+        items.forEach((e) => e.classList.remove('show'));
       }
-    })
+    });
     document
-      .querySelector(".careerDescription__benefits-item")
-      ?.classList.add("show")
-  }, [])
+      .querySelector('.careerDescription__benefits-item')
+      ?.classList.add('show');
+  }, []);
 
   return (
     <div className="careerDescription ">
@@ -64,8 +64,7 @@ const CareerDescription: FC<CareerDescriptionProps> = ({ content }) => {
           <div className="careerDescription__benefits ">
             <div className="careerDescription__benefits-box">
               <div className="careerDescription__benefits-wrapper">
-                {opportunities.map(opportunity => {
-                  return (
+                {opportunities.map((opportunity) => (
                     <div className="careerDescription__benefits-item" key={id()}>
                       <h2 className="careerDescription__benefits-box-title text-6 black">
                         {opportunity.title}
@@ -74,8 +73,7 @@ const CareerDescription: FC<CareerDescriptionProps> = ({ content }) => {
                         {opportunity.description}
                       </p>
                     </div>
-                  )
-                })}
+                ))}
               </div>
             </div>
             <ul className="careerDescription__benefits-list">
@@ -116,7 +114,7 @@ const CareerDescription: FC<CareerDescriptionProps> = ({ content }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CareerDescription
+export default CareerDescription;

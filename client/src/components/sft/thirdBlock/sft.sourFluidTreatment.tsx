@@ -1,8 +1,7 @@
-import './sft.sourFluidTreatment.scss';
-
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import { useEffect } from 'react';
+import './sft.sourFluidTreatment.scss';
 
 import TIP_IMG from '../../../images/tip.svg';
 

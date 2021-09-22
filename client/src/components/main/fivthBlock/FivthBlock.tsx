@@ -19,7 +19,7 @@ const FivthBlock = () => {
               className="about__content-image"
               placeholder="dominantColor"
               src="../../../images/about.jpg"
-              alt="about" 
+              alt="about"
               quality={50}
               formats={['auto', 'webp', 'avif']}
             />

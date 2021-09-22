@@ -15,7 +15,7 @@ const AkbarysCareer = () => (
         <p className="akbarysCareer__content-title-description text-1 white_dark">
           Вперед к достижениям вместе с нами
         </p>
-        <Link className="button akbarysCareer__content-button" to="/">
+        <Link className="button akbarysCareer__content-button" to="/career">
           Оставить заявку
         </Link>
         <h3 className="akbarysCareer__content-subtitle text-2 white">400+</h3>

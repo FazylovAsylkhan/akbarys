@@ -40,16 +40,15 @@ export function changeMenuHeader(
   swiper: SwiperCore,
   paginationElement: Element | null,
 ) {
-
   if (isSpecialScreen(swiper) && paginationElement) {
     paginationElement.classList.add('dark');
-    document.querySelector('header')?.classList.add("header_dark")
+    document.querySelector('header')?.classList.add('header_dark');
   } else if (
     !isSpecialScreen(swiper)
     && paginationElement
   ) {
     paginationElement.classList.remove('dark');
-    document.querySelector('header')?.classList.remove("header_dark")
+    document.querySelector('header')?.classList.remove('header_dark');
   }
 }
 

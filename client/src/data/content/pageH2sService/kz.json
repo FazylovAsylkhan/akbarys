@@ -1,0 +1,26 @@
+{
+  "url": "h2s-service/kz",
+  "lang": "kz",
+  "firstBlock": {
+    "title": "Munaı-gaz ındýstrıasyndaǵy qaýipsizdik jónindegi keshendi sheshimder",
+    "description": "Bizben birge jetistikterge jetińiz!",
+    "subtitles": [
+      { "digit": "15", "text": "Qyzmet jyldary" },
+      { "digit": "67", "text": "Iske asyrylǵan jobalar" }
+    ],
+    "image": "../../../images/h2sService/preview.jpg"
+  },
+  "secondBlock": {
+    "h1": "Qaýipsizdik boıynsha keshendi sheshimder",
+    "first": {
+      "title": "Kópjyldyq tájirıbe",
+      "subtitle": "Negizi qalanǵan sátten bastap biz kúkirtsýtektiń paıda bolýymen baılanysty avarıalyq jaǵdaılarda qyzmetterdiń jetekshi jáne tıimdi jetkizýshileriniń birine aınaldyq.",
+      "description": "Tehnologıa ómirge qaýipti jáne qıyn jaǵdaıdaǵy barlyq jumysshylarǵa úılerine, otbasylaryna qaýipsiz oralýǵa kómektesetin bolashaqty kóremiz. Biz ózimizdiń negizgi naryǵymyzda ózimizdiń myqty jaqtarymyzdy ulǵaıtyp, ónerkásiptik qaýipsizdik salasynda bizdiń tehnologıalarymyz, tájirıbemiz ben bilimimiz qajet jańa salalarǵa keńeıetin bolamyz."
+    },
+    "second": {
+      "title": "Gaz qaýipsizdigi boıynsha qyzmetterdiń keń spektri",
+      "description1": "«Akbarys» kompanıalar toby - TMD jáne jaqyn shetel aýmaǵynda gaz qaýipsizdigi boıynsha qyzmetterdi jetekshi jetkizýshi bolyp tabylady.",
+      "description2": "Bizdiń tájirıbemiz H2S joǵary konsentrasıasy bar jáne SO2, CO, CO2 jáne CH4 sıaqty eń kóp taralǵan ýly gazdardaǵy operasıalardyń keń spektrin qamtıdy."
+    }
+  }
+}

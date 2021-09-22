@@ -1,8 +1,8 @@
-import './pressCenter.news.scss';
-
+import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import * as React from 'react';
+
+import './pressCenter.news.scss';
 
 const PressCenterNews = () => (
   <div className="pressCenterNews">

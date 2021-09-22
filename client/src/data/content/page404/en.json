@@ -1,0 +1,14 @@
+{
+  "lang": "en",
+  "url": "404/en",
+  "seo": {
+    "title": "Page not found. 404"
+  },
+  "firstBlock": {
+    "title": "Sorry, the page was not found",
+    "button": {
+      "url": "/",
+      "text": "Go home"
+    }
+  }
+}

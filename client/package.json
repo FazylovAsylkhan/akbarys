@@ -7,6 +7,7 @@
   "dependencies": {
     "cordova-res": "^0.15.3",
     "gatsby": "^3.13.0",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",
     "gatsby-plugin-offline": "^4.10.0",
@@ -16,6 +17,7 @@
     "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.13.0",
+    "gatsby-transformer-json": "^3.13.0",
     "gatsby-transformer-remark": "^4.10.0",
     "gatsby-transformer-sharp": "^3.13.0",
     "gatsby-transformer-sqip": "^3.13.0",

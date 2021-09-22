@@ -1,0 +1,47 @@
+{
+    "lang": "kz",
+    "url": "career/kz",
+    "firstBlock": {
+      "title": {
+        "firstRow": "Akbarys mansaby",
+        "secondRow": "Úlken komandanyń bir bóligi bol!"
+      },
+      "description": "Bizben birge jetistikterge jetińiz!",
+      "subtitle": { "digit": "400+", "text": "Qyzmetkerler bizben jumys isteýde" },
+      "image": "../../../images/career/careerPreview.jpg"
+    },
+    "secondBlock": {
+      "title": "Bizdiń qundylyqtarymyz",
+      "subtitle": "Adamdar-bizdiń kúsh-qýatymyz jáne bolashaqtaǵy tabystarymyzdy anyqtaıtyn basty kapıtalymyz",
+      "opportunities": [
+        {
+          "digit": "01",
+          "title": "Kásibı damýy",
+          "description": "Akbarys qyzmetkerlerdiń qajetti bilim men kásibı daǵdylardy ıgerýine baǵyttalǵan kadrlardy daıarlaý júıesi jumys isteıdi. Maqsaty úzdik tájirıbelerdi anyqtaýǵa jáne taratýǵa, problemalarmen jedel almasýǵa jáne olardy sheshýdiń ońtaıly joldaryn birlesip tabýǵa múmkindik beretin bilimdi basqarýdyń korporatıvtik júıesin qurý bolyp tabylady."
+        },
+        {
+          "digit": "02",
+          "title": "Jas mamandardy qoldaý",
+          "description": "Jas mamandardy qoldaý personaldy basqarý saıasatynyń basym baǵyttarynyń biri bolyp tabylady. Búgingi tańda kompanıa qyzmetkerleriniń jalpy sanynda 30 jasqa deıingi qyzmetkerlerdiń úlesi shamamen 40% quraıdy%"
+        },
+        {
+          "digit": "03",
+          "title": "Yntalandyrý jáne jeńildikter júıesi",
+          "description": "Biz mynadaı múmkindikterdi usynamyz: biregeı jáne iri jobalarǵa qatysý, Kásibı damý jáne mansaptyq ósý, ózin-ózi iske asyrý"
+        }
+      ]
+    },
+    "thirdBlock": {
+      "title": "Bizdiń mısıamyz",
+      "description": [
+        "Biz tapsyrys berýshilerdiń mindetterin eń jaqsy sapamen jáne eń jaqsy tıimdilikpen sátti sheshe alatyn ıntegrasıalanǵan servıstik kompanıa qurý úshin bir maqsatpen biriktirilgen pikirles uıymbyz.",
+        "Bizdiń qyzmetkerler bıikterge jetkende, kemeldilikke shek qoımaıtyn jáne Akbarys osyndaı kemeldilikke barlyq jaǵdaı jasaıtyn bizdiń basty qundylyǵymyz bolyp tabylady."
+      ],
+      "images": [
+        "../../../images/akbarys/item-1.jpg",
+        "../../../images/akbarys/item-2.jpg",
+        "../../../images/akbarys/item-3.jpg"
+      ]
+    }
+  }
+  

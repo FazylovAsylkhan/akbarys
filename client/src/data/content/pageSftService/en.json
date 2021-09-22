@@ -1,0 +1,30 @@
+{
+    "lang": "en",
+    "url": "sft-service/en",
+    "firstBlock": {
+      "title": "Neutralization of hydrogen sulfide in the process of oil and gas production",
+      "subtitles": [
+        { "digit": "47", "description": "Tons of hydrogen sulfide neutralized" },
+        { "digit": "59", "description": "Projects implemented" }
+      ],
+      "image": "../../../images/h2s.jpg"
+    },
+    "secondBlock": {
+      "h1": "Neutralization of hydrogen sulfide in the process of oil and gas production",
+      "first": {
+        "title": "Odorless, no emissions",
+        "subtitle": "Akbarys offers solutions for the neutralization of hydrogen sulfide by providing a closed system for the storage and treatment of reservoir water."
+      },
+      "second": {
+        "title": "We provide security",
+        "description": "The activity of Akbarys is based on a systematic approach to ensuring security",
+        "stages": [
+          "No emissions and odors",
+          "Placement on a small area",
+          "Compact and capacious storage",
+          "Economic efficiency"
+        ]
+      }
+    }
+  }
+  

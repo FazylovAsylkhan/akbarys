@@ -1,17 +1,16 @@
-import * as React from "react"
-import "./plug.scss"
+import * as React from 'react';
+import './plug.scss';
 
 const Plug = () => {
-    
-    React.useEffect(() => {
-        if (
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-              navigator.userAgent
-            )
-          ) {
-            document.querySelector(".plug")?.classList.add("active")
-          }
-    }, [])
+  React.useEffect(() => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent,
+      )
+    ) {
+      document.querySelector('.plug')?.classList.add('active');
+    }
+  }, []);
   return (
     <div className="plug">
       <h3 className="title-2 black">Мобильная и планшетная версия сайта</h3>
@@ -25,7 +24,7 @@ const Plug = () => {
       <p className="text-1 gray mt3">+7 705 790 48 56</p>
       <p className="text-1 gray mt3">info@akbarys.kz</p>
     </div>
-  )
-}
+  );
+};
 
-export default Plug
+export default Plug;

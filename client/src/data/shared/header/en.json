@@ -1,0 +1,47 @@
+{
+  "lang": "en",
+  "subMenu": [
+    {
+      "title": "Company",
+      "links": [
+        { "text": "Main", "url": "/en" },
+        {
+          "text": "About the company",
+          "url": "/akbarys-about/en"
+        },
+        {
+          "text": "Career",
+          "url": "/career/en"
+        },
+        {
+          "text": "Press Center",
+          "url": "/press-center/en"
+        }
+      ]
+    },
+    {
+      "title": "Decision",
+      "links": [
+        { "text": "Gas safety", "url": "/h2s-service/en" },
+        {
+          "text": "Neutralization of hydrogen sulfide",
+          "url": "/sft-service/en"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Laboratory",
+      "url": "/verification-laboratory/en"
+    },
+    {
+      "text": "Service center",
+      "url": "/service-center/en"
+    },
+    {
+      "text": "Contacts",
+      "url": "/contacts/en"
+    }
+  ]
+}

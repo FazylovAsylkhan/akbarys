@@ -1,0 +1,16 @@
+{
+    "lang": "kz",
+    "url": "verification-laboratory/kz",
+    "seo": {
+        "title": "Tekserý zerthanalary"
+    },
+    "firstBlock": {
+      "title": "Tekserý zerthanalary",
+      "subtitles": [
+        { "digit": "8", "description": "Mamandar" },
+        { "digit": "23", "description": "Zerthanalyq synaqtardyń túrleri" }
+      ],
+      "image": "../../../images/verificationLaboratory/preview.jpg"
+    }
+  }
+  

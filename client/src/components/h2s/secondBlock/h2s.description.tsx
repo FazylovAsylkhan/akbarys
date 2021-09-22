@@ -1,15 +1,21 @@
-import './h2s.description.scss';
-
 import * as React from 'react';
 import { FC } from 'react';
+import h2s1 from '../../../images/h2sService/h2s-1.svg';
+import h2s2 from '../../../images/h2sService/h2s-2.svg';
+import h2s3 from '../../../images/h2sService/h2s-3.svg';
+import h2s4 from '../../../images/h2sService/h2s-4.svg';
+import h2s5 from '../../../images/h2sService/h2s-5.svg';
+import './h2s.description.scss';
 
 interface H2sDescriptionProps {
-  data: any
+  content: any
 }
 
-const H2sDescription: FC<H2sDescriptionProps> = ({ data }) => {
+const H2sDescription: FC<H2sDescriptionProps> = ({ content }) => {
+  const { h1, first, second } = content;
+  const images = [h2s1, h2s2, h2s3, h2s4, h2s5];
   const getPartnersImagesElements = () => {
-    const copyImages: Function[] = data.images.slice();
+    const copyImages: Function[] = images.slice();
     const imagesElements = copyImages.map((Image, index) => (
       <div className="h2sDescription__item" key={`image${index}`}>
         {<Image />}
@@ -20,16 +26,16 @@ const H2sDescription: FC<H2sDescriptionProps> = ({ data }) => {
   return (
     <div className="h2sDescription">
       <div className="container">
-        <h1 className="transparent">{data.h1}</h1>
+        <h1 className="transparent">{h1}</h1>
         <div className="h2sDescription__wrapper">
           <h2 className="h2sDescription__title title-1 black">
-            {data.first.title}
+            {first.title}
           </h2>
           <h3 className="h2sDescription__subtitle text-4 black">
-            {data.first.subtitle}
+            {first.subtitle}
           </h3>
           <p className="h2sDescription__description text-1 gray">
-            {data.first.description}
+            {first.description}
           </p>
         </div>
       </div>
@@ -37,13 +43,13 @@ const H2sDescription: FC<H2sDescriptionProps> = ({ data }) => {
       <div className="container">
         <div className="h2sDescription__wrapper">
           <h2 className="h2sDescription__title title-1 black">
-            {data.second.title}
+            {second.title}
           </h2>
           <p className="h2sDescription__description text-1 gray h2sDescription__description_changable">
-            {data.second.description1}
+            {second.description1}
           </p>
           <p className="h2sDescription__description text-1 gray">
-            {data.second.description2}
+            {second.description2}
           </p>
         </div>
       </div>

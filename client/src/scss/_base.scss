@@ -1,4 +1,5 @@
 @import "./vars";
+@import "../scss/utils";
 
 .container {
   margin: 0 auto;
@@ -65,7 +66,7 @@ body {
 }
 .header {
   ::-webkit-scrollbar-thumb {
-    background: #3F3F3F;
+    background: #3f3f3f;
   }
 }
 ::-webkit-scrollbar {
@@ -100,6 +101,16 @@ body {
   @media (max-width: 860px) {
     width: 220px;
     height: 52px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("width", 220, 150, 640, 320);
+    @include adaptive-value-byX("height", 52, 39, 640, 320);
+    @include adaptive-value-byX("font-size", 14, 12, 640, 320);
+  }
+  @media (max-width: 320px) {
+    height: 39px;
+    width: 150px;
+    font-size: 12px;
   }
   &:hover {
     background: #1149b5;

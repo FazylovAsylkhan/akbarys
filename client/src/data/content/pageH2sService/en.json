@@ -1,0 +1,26 @@
+{
+  "url": "h2s-service/en",
+  "lang": "en",
+  "firstBlock": {
+    "title": "Comprehensive security solutions in the oil and gas industry",
+    "description": "Forward to achievements with us!",
+    "subtitles": [
+      { "digit": "15", "text": "Years of activity" },
+      { "digit": "67", "text": "Projects implemented" }
+    ],
+    "image": "../../../images/h2sService/preview.jpg"
+  },
+  "secondBlock": {
+    "h1": "Comprehensive security solutions",
+    "first": {
+      "title": "Many years of experience",
+      "subtitle": "Since its foundation, we have become one of the leading and effective providers of services in emergency situations related to the manifestation of hydrogen sulfide.",
+      "description": "We see a future in which technologies can help all workers who are in dangerous and life-critical situations to safely return home to their families. We will build on our strengths in our core market and expand into new industries that need our technologies, experience and knowledge in the field of industrial safety."
+    },
+    "second": {
+      "title": "A wide range of gas safety services",
+      "description1": "The Akbarys Group of Companies is a leading provider of gas safety services in the CIS and neighboring countries.",
+      "description2": "Our experience covers a wide range of operations in areas with high concentrations of H2S and the most common toxic gases, such as SO2, CO, CO2 and CH4."
+    }
+  }
+}

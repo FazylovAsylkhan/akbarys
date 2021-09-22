@@ -36,7 +36,7 @@ const data = {
     },
     sft: {
       blocks: [sftDescription],
-    }
+    },
   },
 };
 

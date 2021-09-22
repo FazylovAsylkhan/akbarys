@@ -1,0 +1,14 @@
+{
+  "lang": "kz",
+  "url": "404/kz",
+  "seo": {
+    "title": "Bet tabylmady. 404"
+  },
+  "firstBlock": {
+    "title": "Keshirińiz, bet tabylmady!",
+    "button": {
+      "url": "/",
+      "text": "Basty betke"
+    }
+  }
+}

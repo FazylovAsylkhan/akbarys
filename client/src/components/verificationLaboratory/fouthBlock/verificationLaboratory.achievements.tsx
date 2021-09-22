@@ -1,11 +1,17 @@
-import './verificationLaboratory.achievements.scss';
-
 import * as React from 'react';
 import { useEffect } from 'react';
 
 import EyeImg from '../../../images/eye.svg';
-import ArrowImg from '../../../images/toggle-arrow.svg';
 
+import certificate1 from '../../../static/eiikqegw.pdf';
+import certificate2 from '../../../static/wmssygkj.pdf';
+
+import './verificationLaboratory.achievements.scss';
+
+function openCertificate(id: string) {
+  const link = document.getElementById(id) as HTMLLinkElement;
+  link.click();
+}
 const VerificationLaboratoryAchievements = () => {
   useEffect(() => {
     const arrow = document.querySelector(
@@ -33,118 +39,67 @@ const VerificationLaboratoryAchievements = () => {
         <div className="verificationLaboratoryAchievements__wrapper">
           <div className="verificationLaboratoryAchievements__content">
             <h2 className="verificationLaboratoryAchievements__content-title title-1 black">
-              Достижения и сертификаты
+              Разрешительные документы
             </h2>
             <div className="verificationLaboratoryAchievements__content-description text-1 gray">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
-              massa sed ipsum in eros sit. Nibh sapien sed id laoreet.
+              Поверки средств измерений проводится не только в соответствии с
+              требованиями ГОСТ ИСО/МЭК 17025-2009 «Общие требования к
+              компетентности испытательных и калибровочных лабораторий», но и на
+              основании Законов Республики Казахстан (ЗРК) «Об обеспечении
+              единства измерений» и «Об аккредитации в области оценки
+              соответствия».
             </div>
           </div>
+
           <div className="verificationLaboratoryAchievements__items">
             <div
               className="verificationLaboratoryAchievements__item"
-              onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-              }
+              onClick={() => openCertificate('certificate1')}
             >
-              <h3 className="verificationLaboratoryAchievements__item-link text-6 gray">
-                Сертификат СТО РК №2131234
-              </h3>
+              <a
+                href={certificate1}
+                target="_blank"
+                rel="noreferrer"
+                id="certificate1"
+                style={{ display: 'block' }}
+                className="verificationLaboratoryAchievements__item-link text-6 gray"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Аккредитация поверочной лаборатории
+              </a>
               <span
                 className="verificationLaboratoryAchievements__item-description text-1"
                 style={{ color: '#C4C4C4' }}
               >
-                (.pdf 1.2мб)
+                Поверочная лаборатория имеет аккредитацию на соответствие
+                требованиям ГОСТ ISO/IEC 17025-2019
               </span>
               <EyeImg className="verificationLaboratoryAchievements__item-img" />
             </div>
             <div
               className="verificationLaboratoryAchievements__item"
-              onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-              }
+              onClick={() => openCertificate('certificate2')}
             >
-              <h3 className="verificationLaboratoryAchievements__item-link text-6 gray">
-                Сертификат СТО РК №2131234
-              </h3>
+              <a
+                href={certificate2}
+                target="_blank"
+                rel="noreferrer"
+                id="certificate2"
+                style={{ display: 'block' }}
+                className="verificationLaboratoryAchievements__item-link text-6 gray"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Аккредитация калибровочной лаборатории
+              </a>
               <span
                 className="verificationLaboratoryAchievements__item-description text-1"
                 style={{ color: '#C4C4C4' }}
               >
-                (.pdf 1.2мб)
+                Калибровочная лаборатория имеет аккредитацию на соответствие
+                требованиям ГОСТ ISO/IEC 17025-2019
               </span>
               <EyeImg className="verificationLaboratoryAchievements__item-img" />
             </div>
-            <div
-              className="verificationLaboratoryAchievements__item"
-              onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-              }
-            >
-              <h3 className="verificationLaboratoryAchievements__item-link text-6 gray">
-                Сертификат СТО РК №2131234
-              </h3>
-              <span
-                className="verificationLaboratoryAchievements__item-description text-1"
-                style={{ color: '#C4C4C4' }}
-              >
-                (.pdf 1.2мб)
-              </span>
-              <EyeImg className="verificationLaboratoryAchievements__item-img" />
-            </div>
-            <div
-              className="verificationLaboratoryAchievements__item"
-              onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-              }
-            >
-              <h3 className="verificationLaboratoryAchievements__item-link text-6 gray">
-                Сертификат СТО РК №2131234
-              </h3>
-              <span
-                className="verificationLaboratoryAchievements__item-description text-1"
-                style={{ color: '#C4C4C4' }}
-              >
-                (.pdf 1.2мб)
-              </span>
-              <EyeImg className="verificationLaboratoryAchievements__item-img" />
-            </div>
-            <div
-              className="verificationLaboratoryAchievements__item"
-              onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-              }
-            >
-              <h3 className="verificationLaboratoryAchievements__item-link text-6 gray">
-                Сертификат СТО РК №2131234
-              </h3>
-              <span
-                className="verificationLaboratoryAchievements__item-description text-1"
-                style={{ color: '#C4C4C4' }}
-              >
-                (.pdf 1.2мб)
-              </span>
-              <EyeImg className="verificationLaboratoryAchievements__item-img" />
-            </div>
-            <div
-              className="verificationLaboratoryAchievements__item"
-              onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-              }
-            >
-              <h3 className="verificationLaboratoryAchievements__item-link text-6 gray">
-                Сертификат СТО РК №2131234
-              </h3>
-              <span
-                className="verificationLaboratoryAchievements__item-description text-1"
-                style={{ color: '#C4C4C4' }}
-              >
-                (.pdf 1.2мб)
-              </span>
-              <EyeImg className="verificationLaboratoryAchievements__item-img" />
-            </div>
-          </div>
-          <div className="verificationLaboratoryAchievements__toggle">
-            <span className="verificationLaboratoryAchievements__toggle-text text-6 blue">
-              Раскрыть
-            </span>
-            {
-              <ArrowImg className="verificationLaboratoryAchievements__toggle-arrow" />
-            }
           </div>
         </div>
       </div>

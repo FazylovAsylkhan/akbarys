@@ -5,6 +5,9 @@
   &__wrapper {
     @include adaptive-value-byX("padding-bottom", 90, 80, 1920, 1440);
     @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    &.paddingTop {
+      padding-top: 0;
+    }
     grid-column: 1 / span 12;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,0 +1,16 @@
+{
+    "lang": "en",
+    "url": "verification-laboratory/en",
+    "seo": {
+        "title": "Verification laboratories"
+    },
+    "firstBlock": {
+      "title": "Verification laboratories",
+      "subtitles": [
+        { "digit": "8", "description": "Specialists" },
+        { "digit": "23", "description": "Types of laboratory tests" }
+      ],
+      "image": "../../../images/verificationLaboratory/preview.jpg"
+    }
+  }
+  

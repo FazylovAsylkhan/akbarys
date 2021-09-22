@@ -1,22 +1,19 @@
-import "./h2s.aboutSft.scss"
-
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import * as React from "react"
-import { useRef } from "react"
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
-
-import showPaginationBackground from "../../../utils/h2s"
+import * as React from 'react';
+import { useRef } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import showPaginationBackground from '../../../utils/h2s';
 import {
   initNav,
   showPagination,
   validationNav,
-} from "../../../utils/mainUtils"
+} from '../../../utils/mainUtils';
+import './h2s.aboutSft.scss';
 
 const H2sAboutSft = () => {
-  const currentSlidesRef = useRef<Element[] | null>(null)
-  SwiperCore.use([Pagination, Navigation, EffectFade])
+  const currentSlidesRef = useRef<Element[] | null>(null);
+  SwiperCore.use([Pagination, Navigation, EffectFade]);
   return (
     <div className="h2sAboutSft">
       <div className="container">
@@ -38,22 +35,22 @@ const H2sAboutSft = () => {
             navigation
             effect="fade"
             pagination={{
-              type: "fraction",
+              type: 'fraction',
             }}
-            onAfterInit={swiper => {
-              currentSlidesRef.current = swiper.slides as unknown as Element[]
-              initNav(swiper, "h2sAboutSft")
-              showPagination(swiper)
+            onAfterInit={(swiper) => {
+              currentSlidesRef.current = swiper.slides as unknown as Element[];
+              initNav(swiper, 'h2sAboutSft');
+              showPagination(swiper);
               if (currentSlidesRef.current) {
-                showPaginationBackground(swiper, currentSlidesRef.current)
+                showPaginationBackground(swiper, currentSlidesRef.current);
               }
-              validationNav(swiper)
+              validationNav(swiper);
             }}
-            onSlideChange={swiper => {
-              validationNav(swiper)
-              showPagination(swiper)
+            onSlideChange={(swiper) => {
+              validationNav(swiper);
+              showPagination(swiper);
               if (currentSlidesRef.current) {
-                showPaginationBackground(swiper, currentSlidesRef.current)
+                showPaginationBackground(swiper, currentSlidesRef.current);
               }
             }}
           >
@@ -65,7 +62,7 @@ const H2sAboutSft = () => {
                   src="../../../images/h2sService/h2s-img-1.jpg"
                   alt="projects1"
                   quality={50}
-                  formats={["auto", "webp", "avif"]}
+                  formats={['auto', 'webp', 'avif']}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
@@ -93,7 +90,7 @@ const H2sAboutSft = () => {
                   src="../../../images/h2sService/h2s-img-2.jpg"
                   alt="projects1"
                   quality={50}
-                  formats={["auto", "webp", "avif"]}
+                  formats={['auto', 'webp', 'avif']}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
@@ -120,7 +117,7 @@ const H2sAboutSft = () => {
                   src="../../../images/h2sService/h2s-img-3.jpg"
                   alt="projects1"
                   quality={50}
-                  formats={["auto", "webp", "avif"]}
+                  formats={['auto', 'webp', 'avif']}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
@@ -147,14 +144,14 @@ const H2sAboutSft = () => {
                   src="../../../images/h2sService/h2s-img-4.jpg"
                   alt="projects1"
                   quality={50}
-                  formats={["auto", "webp", "avif"]}
+                  formats={['auto', 'webp', 'avif']}
                 />
                 <div className="h2sAboutSft__content-box">
                   <h4 className="h2sAboutSft__content-subtitle text-6 gray">
-                  Комплексное обесепечние газовой безопасности
+                    Комплексное обесепечние газовой безопасности
                   </h4>
                   <h3 className="h2sAboutSft__content-title title-2 black">
-                  Аудиты и инспекции
+                    Аудиты и инспекции
                   </h3>
                   <p className="h2sAboutSft__content-description text-5 gray">
                     Аудиты и инспекции помогают руководству проверять состояние
@@ -170,7 +167,7 @@ const H2sAboutSft = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default H2sAboutSft
+export default H2sAboutSft;

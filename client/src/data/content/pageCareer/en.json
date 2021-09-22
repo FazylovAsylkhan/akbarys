@@ -1,0 +1,47 @@
+{
+    "lang": "en",
+    "url": "career/en",
+    "firstBlock": {
+      "title": {
+        "firstRow": "Career in Akbarys",
+        "secondRow": "Be a part of a big team!"
+      },
+      "description": "Forward to achievements with us!",
+      "subtitle": { "digit": "400+", "text": "Employees are already working with us" },
+      "image": "../../../images/career/careerPreview.jpg"
+    },
+    "secondBlock": {
+      "title": "Our values",
+      "subtitle": "People are our energy and the main capital that determine further success",
+      "opportunities": [
+        {
+          "digit": "01",
+          "title": "Professional development",
+          "description": "Akbarys operates a personnel training system aimed at acquiring the necessary knowledge and professional skills by employees. The goal is to build a Corporate knowledge management system that allows you to identify and disseminate best practices, quickly exchange problems and jointly find the best ways to solve them."
+        },
+        {
+          "digit": "02",
+          "title": "Support for young professionals",
+          "description": "Support for young professionals is one of the priority areas of the Personnel Management Policy. Today, the share of employees under 30 years of age in the total number of employees of the Company is about 40%"
+        },
+        {
+          "digit": "03",
+          "title": "Motivation and benefits system",
+          "description": "We offer the following opportunities: participation in unique and large projects, professional development and career growth, self-realization"
+        }
+      ]
+    },
+    "thirdBlock": {
+      "title": "Our mission",
+      "description": [
+        "We are an organization of like-minded people united by one goal to create an Integrated Service Company that can successfully solve Customer problems with the best quality and best efficiency.",
+        "Our Employees are our main value, who, reaching heights, know no limit to perfection and Akbarys creates all the conditions for such perfection."
+      ],
+      "images": [
+        "../../../images/akbarys/item-1.jpg",
+        "../../../images/akbarys/item-2.jpg",
+        "../../../images/akbarys/item-3.jpg"
+      ]
+    }
+  }
+  

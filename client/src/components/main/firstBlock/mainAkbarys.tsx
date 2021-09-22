@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { FC } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './mainAkbarys.scss';
 
@@ -12,10 +12,10 @@ interface MainAkbarysProps {
   };
 }
 
-const MainAkbarys:FC<MainAkbarysProps> = ({content}) => {
-  const { title, description, image} = content
-  const img = getImage(image)
-  
+const MainAkbarys:FC<MainAkbarysProps> = ({ content }) => {
+  const { title, description, image } = content;
+  const img = getImage(image);
+
   return (
     <div className="mainAkbarys">
       <div className="screen__content container">

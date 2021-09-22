@@ -1,22 +1,22 @@
-import * as React from "react"
-import { FC } from "react"
-import id from "../../../utils/randomId"
-import "./akbarys.advantages.scss"
+import * as React from 'react';
+import { FC } from 'react';
+import id from '../../../utils/randomId';
+import './akbarys.advantages.scss';
 
-interface advantage {
+interface Advantage {
   digit: number
   text: string
 }
 
 interface AkbarysAdvantagesProps {
   content: {
-    preview: advantage
-    advantages: advantage[]
+    preview: Advantage
+    advantages: Advantage[]
   }
 }
 
 const AkbarysAdvantages: FC<AkbarysAdvantagesProps> = ({ content }) => {
-  const { preview, advantages } = content
+  const { preview, advantages } = content;
   return (
     <div className="akbarysAdvantages container">
       <div className="akbarysAdvantages__wrapper">
@@ -27,8 +27,7 @@ const AkbarysAdvantages: FC<AkbarysAdvantagesProps> = ({ content }) => {
           </div>
         </div>
         <div className="akbarysAdvantages__content">
-          {advantages.map((advantage) => {
-            return (
+          {advantages.map((advantage) => (
               <h3
                 key={id()}
                 className="akbarysAdvantages__subtitle"
@@ -40,12 +39,11 @@ const AkbarysAdvantages: FC<AkbarysAdvantagesProps> = ({ content }) => {
                   {advantage.text}
                 </span>
               </h3>
-            )
-          })}
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AkbarysAdvantages
+export default AkbarysAdvantages;

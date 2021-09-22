@@ -1,0 +1,45 @@
+{
+  "lang": "kz",
+  "url": "akbarys-about/kz",
+  "firstBlock": {
+    "title": "Akbarys-munaı-gaz salasynyń jetekshi qyzmet jetkizýshisi",
+    "description": "Bizben birge jetistikterge jetińiz!",
+    "subtitle": {
+      "digit": "100%",
+      "text": "Qazaqstan ulttyq kapıtaly"
+    },
+    "image": "../../../images/akbarys/akbarys.jpg"
+  },
+  "secondBlock": {
+    "title": "Kompanıa týraly",
+    "description": [
+      "Munaı-gaz ken oryndarynda jumys isteýdegi asa qaýipti faktorlar men kúrdeli problemalardyń biri ýytty jáne jarylys qaýpi bar gazdar bolyp tabylady jáne mundaı syn-tegeýrinderge turaqty daıyndyqtyń mańyzy zor. Osyndaı jaǵdaılarda qaýipsizdikti qamtamasyz etý bizdiń barlyq qyzmetimizdiń irgetasy bolyp tabylady.. Bizdiń qyzmetimizdiń negizgi baǵyttary men maqsattary-atmosferadaǵy gazdardyń konsentrasıasyn erterek anyqtaý",
+      "personaldyń densaýlyǵyna teris áser etýge jol bermeý jáne tehnogendik apattardyń damýyna jol bermeý.",
+      "Bizdiń servıs degenimiz ne?",
+      "H2S Akbarys qorǵaý servısi kásibı qyzmetter men ınovasıalyq sheshimder kesheni bolyp tabylady, oǵan sýpervaızıngten, gaz tabý júıelerinen, ýaqtyly habarlaý júıelerinen, jeke qorǵanys quraldarynan jáne tynys alý aýasyn berý júıelerinen, jabdyqtalǵan jınaý jáne jergilikti jerde jasyrý oryndarynan, sondaı-aq oqytýdan jáne turaqty oqý-jattyǵý sabaqtarynan, obektige qoljetimdilikti baqylaýdan turatyn negizgi tosqaýyldardy iske asyrý kiredi.",
+      "«Aqbarys» kompanıalar toby - TMD aýmaǵyndaǵy gaz qaýipsizdigi boıynsha qyzmetterdiń jetekshi jetkizýshisi bolyp tabylady. Bizdiń tájirıbemiz H2S joǵary konsentrasıasy bar aýdandardaǵy jer ústi jáne teńiz jobalary sheńberindegi operasıalardyń keń spektrin qamtıdy."
+    ],
+    "image": "../../../images/akbarys/akbarys-about.jpg"
+  },
+  "thirdBlock": {
+    "preview": { "digit": "125", "text": "Iske asyrylǵan jobalar" },
+    "advantages": [
+      { "digit": "15", "text": "Tabysty jumys jyldary" },
+      { "digit": "400+", "text": "Kompanıa shtaty" },
+      { "digit": "2500", "text": "Gıdrotestov ótkizildi" },
+      { "digit": "25 млн", "text": "Qaýipsiz adam saǵaty" }
+    ]
+  },
+  "fouthBlock": {
+    "title": "Bizdiń mısıamyz",
+    "description": [
+      "Biz tapsyrys berýshilerdiń mindetterin eń jaqsy sapamen jáne eń jaqsy tıimdilikpen sátti sheshe alatyn ıntegrasıalanǵan servıstik kompanıa qurý úshin bir maqsatpen biriktirilgen pikirles uıymbyz.",
+      "Bizdiń qyzmetkerler bıikterge jetkende, kemeldilikke shek qoımaıtyn jáne QHSE-Akbarys osyndaı kemeldilikke barlyq jaǵdaı jasaıtyn bizdiń basty qundylyǵymyz bolyp tabylady."
+    ],
+    "images": [
+      "../../../images/akbarys/item-1.jpg",
+      "../../../images/akbarys/item-2.jpg",
+      "../../../images/akbarys/item-3.jpg"
+    ]
+  }
+}

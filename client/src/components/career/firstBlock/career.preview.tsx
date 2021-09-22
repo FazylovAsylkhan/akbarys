@@ -1,7 +1,7 @@
-import * as React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import "./career.preview.scss"
-import { FC } from "react"
+import * as React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import './career.preview.scss';
+import { FC } from 'react';
 
 interface CareerPreviewProps {
   content: {
@@ -18,9 +18,11 @@ interface CareerPreviewProps {
   }
 }
 
-const CareerPreview: FC<CareerPreviewProps> = ({content}) => {
-  const {title, description, subtitle, image} = content
-  const img = getImage(image)
+const CareerPreview: FC<CareerPreviewProps> = ({ content }) => {
+  const {
+    title, description, subtitle, image,
+  } = content;
+  const img = getImage(image);
   return (
     <div className="careerPreview">
       <div className="careerPreview__content container">
@@ -42,6 +44,6 @@ const CareerPreview: FC<CareerPreviewProps> = ({content}) => {
         {img ? <GatsbyImage className="akbarysPreview__body-image" image={img} alt={title.firstRow} /> : null}
       </div>
     </div>
-  )
-}
-export default CareerPreview
+  );
+};
+export default CareerPreview;

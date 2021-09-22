@@ -1,0 +1,47 @@
+{
+  "lang": "kz",
+  "subMenu": [
+    {
+      "title": "Kompanıa",
+      "links": [
+        { "text": "Basty bet", "url": "/kz" },
+        {
+          "text": "Kompanıa týraly",
+          "url": "/akbarys-about/kz"
+        },
+        {
+          "text": "Mansap",
+          "url": "/career/kz"
+        },
+        {
+          "text": "Baspasóz ortalyǵy",
+          "url": "/press-center/kz"
+        }
+      ]
+    },
+    {
+      "title": "Sheshim",
+      "links": [
+        { "text": "Gaz qaýipsizdigi", "url": "/h2s-service/kz" },
+        {
+          "text": "Kúkirtsýtekti beıtaraptandyrý",
+          "url": "/sft-service/kz"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Zerthana",
+      "url": "/verification-laboratory/kz"
+    },
+    {
+      "text": "Servıs ortalyǵy",
+      "url": "/service-center/kz"
+    },
+    {
+      "text": "Baılanystar",
+      "url": "/contacts/kz"
+    }
+  ]
+}

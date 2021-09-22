@@ -1,8 +1,6 @@
-import './akbarys.protection.scss';
-
-import { Link } from '@reach/router';
 import * as React from 'react';
 import LogoProtection from '../../../images/akbarysProtection.svg';
+import './akbarys.protection.scss';
 
 const AkbarysProtection = () => (
   <div className="akbarysProtection">
@@ -17,9 +15,9 @@ const AkbarysProtection = () => (
             производителей товаров необходимых в нефтегазовой отрасли, под
             руководством и инициативе ТОО Тенгизшевройл, а также поддержке
             компании Карачаганак Петролеум Оперейтинг б.в. Казахстанская
-            компания ТОО «QHSE-Akbarys» инвестировала в создание нового
-            предприятия и строительство завода по производству эвакуационных
-            спасательных капюшонов NH15-K.
+            компания «Akbarys» инвестировала в создание нового предприятия и
+            строительство завода по производству эвакуационных спасательных
+            капюшонов NH15-K.
           </p>
           <p className="akbarysProtection__content-text text-1 white">
             9 августа 2019 г . в г. Нур-Султан состоялось торжественное открытие
@@ -36,16 +34,16 @@ const AkbarysProtection = () => (
             Общая сумма инвестиций в проект, который стартовал в 2017 году,
             составила около 1 млрд. тенге.
           </p>
-          <Link
+          <a
             className="button akbarysProtection__content-button blue"
             style={{ background: '#fff' }}
-            to="/"
+            href="https://akbarys-protection.kz/ru"
           >
             Перейти на сайт
-          </Link>
+          </a>
         </div>
         <div className="akbarysProtection__logo">
-          <LogoProtection/>
+          <LogoProtection />
         </div>
       </div>
     </div>

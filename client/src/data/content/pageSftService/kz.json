@@ -1,0 +1,30 @@
+{
+    "lang": "kz",
+    "url": "sft-service/kz",
+    "firstBlock": {
+      "title": "Munaı jáne gaz óndirý prosesinde kúkirtti sýtekti beıtaraptandyrý",
+      "subtitles": [
+        { "digit": "47", "description": "Tonna kúkirtsýtegi beıtaraptandyryldy" },
+        { "digit": "59", "description": "Iske asyrylǵan jobalar" }
+      ],
+      "image": "../../../images/h2s.jpg"
+    },
+    "secondBlock": {
+      "h1": "Munaı jáne gaz óndirý prosesinde kúkirtti sýtekti beıtaraptandyrý",
+      "first": {
+        "title": "Iissiz, shyǵaryndylarsyz «Akbarys»",
+        "subtitle": "«Akbarys» kompanıasy qoınaýqattyq sýlardy saqtaý men óńdeýdiń tuıyq júıesin usyný arqyly kúkirtsýtekti beıtaraptandyrý boıynsha sheshimderdi usynady."
+      },
+      "second": {
+        "title": "Biz qaýipsizdikti qamtamasyz etemiz",
+        "description": "Akbarys qyzmetiniń negizinde qaýipsizdikti qamtamasyz etýdiń júıeli tásili jatyr",
+        "stages": [
+          "Shyǵaryndylar men ıisterdiń bolmaýy",
+          "Shaǵyn alańǵa ornalastyrý",
+          "Yqsham jáne syıymdy saqtaý",
+          "Ekonomıkalyq tıimdilik"
+        ]
+      }
+    }
+  }
+  

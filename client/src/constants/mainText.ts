@@ -1,4 +1,3 @@
-
 import Partners1 from '../images/partners/partners1.svg';
 import Partners2 from '../images/partners/partners2.svg';
 import Partners3 from '../images/partners/partners3.svg';
@@ -61,7 +60,7 @@ export const about = {
   content: {
     title: 'Быть лучшими, направлять на успех!',
     description:
-      'QHSE-Akbarys является компанией со 100% Казахстанским содержанием, осуществляющим деятельность в области защиты персонала от сероводорода.',
+      'Akbarys является компанией со 100% Казахстанским содержанием, осуществляющим деятельность в области защиты персонала от сероводорода.',
   },
   advantages: {
     first: {

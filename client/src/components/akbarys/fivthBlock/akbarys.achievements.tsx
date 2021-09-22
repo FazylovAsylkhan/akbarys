@@ -5,7 +5,17 @@ import { useEffect } from 'react';
 
 import EyeImg from '../../../images/eye.svg';
 import ArrowImg from '../../../images/toggle-arrow.svg';
+import certificate1 from '../../../static/argjkyrg.pdf';
+import certificate2 from '../../../static/vzksxnwu.pdf';
+import certificate3 from '../../../static/dfmJqwmb.pdf';
+import certificate4 from '../../../static/vzivbfau.pdf';
+import certificate5 from '../../../static/jnmkvjtb.pdf';
+import certificate6 from '../../../static/ukcatdbd.pdf';
 
+function openCertificate(id: string) {
+  const link = document.getElementById(id) as HTMLLinkElement;
+  link.click();
+}
 const AkbarysAchievements = () => {
   useEffect(() => {
     const arrow = document.querySelector('.akbarysAchievments__toggle');
@@ -29,104 +39,155 @@ const AkbarysAchievements = () => {
             Достижения и сертификаты
           </h2>
           <div className="akbarysAchievments__content-description text-1 gray">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae massa
-            sed ipsum in eros sit. Nibh sapien sed id laoreet.
+            Каждый день мы стремимся повышать качество наших услуг, улучшать
+            профессиональные навыки наших сотрудников и вносить свой вклад в
+            развитие региона и страны в целом.
           </div>
         </div>
         <div className="akbarysAchievments__items">
           <div
             className="akbarysAchievments__item"
-            onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-            }
+            onClick={() => openCertificate('certificate1')}
           >
-            <h3 className="akbarysAchievments__item-link text-6 gray">
-              Сертификат СТО РК №2131234
-            </h3>
+            <a
+              href={certificate1}
+              target="_blank"
+              rel="noreferrer"
+              id="certificate1"
+              style={{ display: 'block' }}
+              className="akbarysAchievments__item-link text-6 gray"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Лучший Подрядчик КПО
+            </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              (.pdf 1.2мб)
+              Награда Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2018
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
+
           <div
             className="akbarysAchievments__item"
-            onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-            }
+            onClick={() => openCertificate('certificate3')}
           >
-            <h3 className="akbarysAchievments__item-link text-6 gray">
-              Сертификат СТО РК №2131234
-            </h3>
+            <a
+              href={certificate3}
+              target="_blank"
+              rel="noreferrer"
+              id="certificate3"
+              style={{ display: 'block' }}
+              className="akbarysAchievments__item-link text-6 gray"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Ежегодная премия HSE
+            </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              (.pdf 1.2мб)
+              Награда KPO B. V. за заслуги 2017
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
+
           <div
             className="akbarysAchievments__item"
-            onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-            }
+            onClick={() => openCertificate('certificate2')}
           >
-            <h3 className="akbarysAchievments__item-link text-6 gray">
-              Сертификат СТО РК №2131234
-            </h3>
+            <a
+              href={certificate2}
+              target="_blank"
+              rel="noreferrer"
+              id="certificate2"
+              style={{ display: 'block' }}
+              className="akbarysAchievments__item-link text-6 gray"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Лауреат ПАРЫЗ-2016
+            </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              (.pdf 1.2мб)
+              Награда в номинации «Лучшее предприятие в области охраны труда и
+              техники безопасности»
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
+
           <div
             className="akbarysAchievments__item"
-            onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-            }
+            onClick={() => openCertificate('certificate4')}
           >
-            <h3 className="akbarysAchievments__item-link text-6 gray">
-              Сертификат СТО РК №2131234
-            </h3>
+            <a
+              href={certificate4}
+              target="_blank"
+              rel="noreferrer"
+              id="certificate4"
+              style={{ display: 'block' }}
+              className="akbarysAchievments__item-link text-6 gray"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Сертификат доверия
+            </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              (.pdf 1.2мб)
+              “Сертификатом доверия” о соблюдении требований охраны труда
+              работников.
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
+
           <div
             className="akbarysAchievments__item"
-            onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-            }
+            onClick={() => openCertificate('certificate5')}
           >
-            <h3 className="akbarysAchievments__item-link text-6 gray">
-              Сертификат СТО РК №2131234
-            </h3>
+            <a
+              href={certificate5}
+              target="_blank"
+              rel="noreferrer"
+              id="certificate5"
+              style={{ display: 'block' }}
+              className="akbarysAchievments__item-link text-6 gray"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Лучший Подрядчик KPO B. V.
+            </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              (.pdf 1.2мб)
+              Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2016г
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
+
           <div
             className="akbarysAchievments__item"
-            onClick={() => window.open('https://app.rs.school/certificate/ekv8kixa')
-            }
+            onClick={() => openCertificate('certificate6')}
           >
-            <h3 className="akbarysAchievments__item-link text-6 gray">
-              Сертификат СТО РК №2131234
-            </h3>
+            <a
+              href={certificate6}
+              target="_blank"
+              rel="noreferrer"
+              id="certificate6"
+              style={{ display: 'block' }}
+              className="akbarysAchievments__item-link text-6 gray"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Лучший показатель 2015
+            </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              (.pdf 1.2мб)
+              Лучший показатель 2015 года в области ОТ, ТБ и ООС среди подрядных
+              организаций
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
