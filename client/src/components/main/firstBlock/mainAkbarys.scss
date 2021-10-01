@@ -1,6 +1,12 @@
 @import "../../../scss//utils";
 .mainAkbarys {
-  padding-top: calc((650 / 1002) * 100vh);
+  padding-top: 580px;
+  .mainText-2 {
+    font-weight: 500;
+  }
+  @media (max-width: 1920px) {
+    padding-top: calc((580 / 1002) * 100vh);
+  }
   &__img {
     position: absolute;
     top: 0;
@@ -14,9 +20,6 @@
     margin-top: 20px;
     max-width: 482px;
   }
-  &__button {
-    margin-top: calc((60 / 1002) * 100vh);
-  }
   @media (max-width: 1665px) {
     &__description {
       max-width: 438px;
@@ -28,10 +31,10 @@
     }
   }
   @media (max-width: 1440px) {
-    padding-top: calc((500 / 760) * 100vh);
-    &__button {
-      margin-top: calc((40 / 760) * 100vh);
-    }
+    padding-top: calc((485 / 760) * 100vh);
+  }
+  @media (max-width: 1200px) {
+    padding-top: calc((406 / 720) * 100vh);
   }
   @media (max-width: 1188px) {
     &__description {
@@ -44,12 +47,9 @@
     }
   }
   @media (max-width: 860px) {
-    padding-top: calc((843 / 1200) * 100vh);
+    padding-top: calc((828 / 1200) * 100vh);
     &__wrapper {
       grid-column: 1 / span 8;
-    }
-    &__button {
-      margin-top: calc((60 / 1200) * 100vh);
     }
     &__description {
       max-width: 484px;
@@ -61,12 +61,13 @@
     }
   }
   @media (max-width: 640px) {
+    padding-top: calc((600 / 1000) * 100vh);
     &__description {
       max-width: 482px;
     }
   }
-  @media (max-width: 640px) {
-    padding-top: calc((783 / 1140) * 100vh);
+  @media (max-width: 500px) {
+    padding-top: calc((280 / 520) * 100vh);
   }
 }
 

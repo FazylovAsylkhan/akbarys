@@ -1,61 +1,177 @@
+@import "../../../scss/utils";
+
 .h2sDescription {
-    height: fit-content;
-    &__wrapper {
-      padding: 120px 0;
-      grid-column: 1 / span 12;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 30px;
-      grid-row-gap: 40px;
-    }
-    &__title {
+  height: fit-content;
+  &__wrapper {
+    padding: 120px 0;
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+  }
+  &__title {
+    grid-column: 1 / span 1;
+  }
+  &__subtitle {
+    grid-column: 2 / span 1;
+  }
+  &__description {
+    grid-column: 2 / span 1;
+    &_changable {
       grid-column: 1 / span 1;
+      max-width: 577px;
     }
-    &__subtitle {
-      grid-column: 2 / span 1;
+  }
+  &__items {
+    display: grid;
+    grid-column: 1 / span 12;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #e1e1e1;
+    height: 200px;
+    &:first-child svg path {
+      fill: #1564fd;
     }
-    &__description {
-      grid-column: 2 / span 1;
-      &_changable {
-        grid-column: 1 / span 1;
-        max-width: 577px;
-      }
+    &:last-child {
+      border-right: 1px solid #e1e1e1;
     }
-    &__items {
-      display: grid;
-      grid-column: 1 / span 12;
-      grid-template-columns: repeat(5, 1fr);
+    &:nth-child(1) svg {
+      width: 131px;
     }
+    &:nth-child(2) svg {
+      width: 136px;
+    }
+    &:nth-child(3) svg {
+      width: 99px;
+    }
+    &:nth-child(4) svg {
+      width: 94px;
+    }
+    &:nth-child(5) svg {
+      width: 143px;
+    }
+  }
+  @media (max-width: 1920px) {
     &__item {
-      padding: 70px 0;
-      display: flex;
-      justify-content: center;
-      border-left: 1px solid #e1e1e1;
-      &:first-child svg path {
-        fill: #1564FD;
+      @include adaptive-value-byX("height", 200, 170, 1920, 1440);
+      &:nth-child(1) svg {
+        @include adaptive-value-byX("width", 131, 116, 1920, 1440);
       }
-      &:last-child {
-        border-right: 1px solid #e1e1e1;
+      &:nth-child(2) svg {
+        @include adaptive-value-byX("width", 136, 121, 1920, 1440);
       }
-      &:nth-child(1) {
-        grid-column: 1 / span 1;
+      &:nth-child(3) svg {
+        @include adaptive-value-byX("width", 99, 88, 1920, 1440);
       }
-      &:nth-child(2) {
-        grid-column: 2 / span 1;
+      &:nth-child(4) svg {
+        @include adaptive-value-byX("width", 94, 84, 1920, 1440);
       }
-      &:nth-child(3) {
-        grid-column: 3 / span 1;
-      }
-      &:nth-child(4) {
-        grid-column: 4 / span 1;
+      &:nth-child(5) svg {
+        @include adaptive-value-byX("width", 143, 127, 1920, 1440);
       }
     }
   }
-  .line {
-    width: 100%;
-    height: 1px;
-    background-color: #e1e1e1;
+  @media (max-width: 1440px) {
+    &__item {
+      @include adaptive-value-byX("height", 170, 130, 1440, 1200);
+      &:nth-child(1) svg {
+        @include adaptive-value-byX("width", 116, 87, 1440, 1200);
+      }
+      &:nth-child(2) svg {
+        @include adaptive-value-byX("width", 121, 90, 1440, 1200);
+      }
+      &:nth-child(3) svg {
+        @include adaptive-value-byX("width", 88, 66, 1440, 1200);
+      }
+      &:nth-child(4) svg {
+        @include adaptive-value-byX("width", 84, 63, 1440, 1200);
+      }
+      &:nth-child(5) svg {
+        @include adaptive-value-byX("width", 127, 95, 1440, 1200);
+      }
+    }
   }
-  .h2sPage {
-    height: fit-content;
+  @media (max-width: 1200px) {
+    &__item {
+      @include adaptive-value-byX("height", 130, 94, 1200, 860);
+      &:nth-child(1) svg {
+        @include adaptive-value-byX("width", 87, 65, 1200, 860);
+      }
+      &:nth-child(2) svg {
+        @include adaptive-value-byX("width", 90, 68, 1200, 860);
+      }
+      &:nth-child(3) svg {
+        @include adaptive-value-byX("width", 66, 50, 1200, 860);
+      }
+      &:nth-child(4) svg {
+        @include adaptive-value-byX("width", 63, 47, 1200, 860);
+      }
+      &:nth-child(5) svg {
+        @include adaptive-value-byX("width", 95, 72, 1200, 860);
+      }
+    }
   }
+  @media (max-width: 1040px) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper,
+    &__items {
+      grid-column: 1 / span 8;
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper,
+    &__items {
+      grid-column: 1 / span 6;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+  }
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+}
+.h2sPage {
+  height: fit-content;
+}

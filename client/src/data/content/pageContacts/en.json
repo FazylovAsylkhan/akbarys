@@ -1,6 +1,8 @@
 {
   "lang": "en",
   "url": "contacts/en",
+  "h1": "Contact information",
+  "langButtonsLinks": ["/contacts", "/contacts/kz", "/contacts/en"],
   "firstBlock": {
     "title": "Contact information",
     "description": "We are always in touch",

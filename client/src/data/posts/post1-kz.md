@@ -4,6 +4,13 @@ contentPost:
     lang: kz,
     url: akbarys-in-orenburg/kz,
     title: Akbarys H2S service prezentasıasy 2021,
+    h1: "Akbarys H2S service prezentasıasy 2021",
+    langButtonsLinks:
+      [
+        "/akbarys-in-orenburg",
+        "/akbarys-in-orenburg/kz",
+        "/akbarys-in-orenburg/en",
+      ],
     description: Akbarys Orynbor qalasynda qyzmetterdiń tusaýkeserin ótkizdi...,
     date: 30 maýsym 2021 ,
     image: ../../images/pressCenter/item-1.jpg,

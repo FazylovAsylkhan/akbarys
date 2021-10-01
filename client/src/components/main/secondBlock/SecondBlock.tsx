@@ -33,7 +33,7 @@ const SecondBlock: FC<H2sProps> = ({ content }) => {
     <div className="h2s">
       <div className="screen__content container">
         <div className="h2s__wrapper">
-          <h2 className="h2s__title title-1 white">{title}</h2>
+          <h2 className="h2s__title mainText_additional-3 white">{title}</h2>
           <Link
             className="button  h2s__button
             "
@@ -44,10 +44,10 @@ const SecondBlock: FC<H2sProps> = ({ content }) => {
           <div className="h2s__box">
           {subtitles.map((subtitle) => (
                 <h3 className="h2s__subtitle" key={id()}>
-              <span className="h2s__subtitle-digit text-2 white">
+              <span className="h2s__subtitle-digit mainText-4 white">
                 {subtitle.digit}
               </span>
-              <span className="h2s__subtitle-description text-1 white_dark">
+              <span className="h2s__subtitle-description mainText-5 white_dark">
                 {subtitle.text}
               </span>
             </h3>

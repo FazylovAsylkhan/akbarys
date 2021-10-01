@@ -1,107 +1,121 @@
-import * as React from 'react';
-import './verificationLaboratory.description.scss';
+import * as React from "react"
+import { FC } from "react"
+import id from "../../../utils/randomId"
+import "./verificationLaboratory.description.scss"
 
-const VerificationLaboratoryDescription = () => (
-  <div className="verificationLaboratoryDescription">
-    <h1 className="transparent">Поверочные лаборатории QHSE Akbarys</h1>
-    <div className="container">
-      <div className="verificationLaboratoryDescription__wrapper">
-        <div className="verificationLaboratoryDescription__content">
-          <h2 className="verificationLaboratoryDescription__title title-1 black">
-            Точность измерения – залог безопасности
-          </h2>
-          <h3 className="verificationLaboratoryDescription__subtitle text-4 black">
-            Для калибровки и поверки средств измерительной техники (СИТ), в
-            компании Akbarys организована собственная лаборатория
-          </h3>
-          <p className="verificationLaboratoryDescription__description text-1 gray verificationLaboratoryDescription__description_changable">
-            Лаборатория осуществляет услуги по первичной и периодической поверке
-            газоаналитического оборудования и калибровке всех видов приборов,
-            включающих в себя стационарные, переносные и портативные
-            газоаналитические средства измерений (газоанализаторы,
-            газосигнализаторы, детекторы и датчики) для контроля содержания
-            концентрации одного или нескольких веществ в воздухе или газовых
-            средах.
-          </p>
-        </div>
-      </div>
-    </div>
+interface VerificationLaboratoryDescriptionProps {
+  content: any
+}
 
-    <div className="line"></div>
-    <div className="container">
-      <div className="serviceCenterDescription__items">
-        <div className="serviceCenterDescription__item">
-          <h4 className="serviceCenterDescription__item-title title-1 black">
-            01
+const VerificationLaboratoryDescription: FC<VerificationLaboratoryDescriptionProps> =
+  ({ content }) => {
+    const { title, description, subtitle, items, texts } = content
+    const getItemElement = (title: string, description: string) => {
+      return (
+        <div className="verificationLaboratoryDescription__item" key={id()}>
+          <h4 className="verificationLaboratoryDescription__item-title title-1 black">
+            {title}
           </h4>
-          <p className="serviceCenterDescription__item-description text-7 black">
-            Современное
-            <br /> оборудование
-          </p>
+          <p
+            className="verificationLaboratoryDescription__item-description text-7 black"
+            dangerouslySetInnerHTML={{ __html: description}}
+          ></p>
         </div>
-        <div className="serviceCenterDescription__item">
-          <h4 className="serviceCenterDescription__item-title title-1 black">
-            02
-          </h4>
-          <p className="serviceCenterDescription__item-description text-7 black">
-            Опытный <br /> персонал
-          </p>
+      )
+    }
+    const getWithoutBrStr = (str: string): string => {
+      const reg = / <br \/>/gi
+      return str.replace(reg, '')
+    }
+    return (
+      <div className="verificationLaboratoryDescription">
+        <div className="container">
+          <div className="verificationLaboratoryDescription__wrapper">
+            <h2 className="verificationLaboratoryDescription__title title-1 black">
+              {title}
+            </h2>
+            <h3 className="verificationLaboratoryDescription__subtitle text-4 right black">
+              {subtitle}
+            </h3>
+            <p className="verificationLaboratoryDescription__description text-1 right gray">
+              {description}
+            </p>
+          </div>
         </div>
-        <div className="serviceCenterDescription__item">
-          <h4 className="serviceCenterDescription__item-title title-1 black">
-            03
-          </h4>
-          <p className="serviceCenterDescription__item-description text-7 black">
-            Поверенный <br /> инструмент
-          </p>
-        </div>
-        <div className="serviceCenterDescription__item">
-          <h4 className="serviceCenterDescription__item-title title-1 black">
-            04
-          </h4>
-          <p className="serviceCenterDescription__item-description text-7 black">
-            Достоверные <br /> результаты
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <div className="line"></div>
-    <div className="container">
-      <div className="serviceCenterDescription__wrapper">
-        <h2 className="serviceCenterDescription__title title-1 black">
-          Современное оборудование
-        </h2>
-        <p className="serviceCenterDescription__description text-1 gray left">
-          Лаборатория оснащена современным оборудованием ведущих отечественных и
-          мировых производителей, в которой в процессе поверки применяются
-          сертифицированные поверочные газовые смеси.
-        </p>
-        <p className="serviceCenterDescription__description text-1 gray right">
-          Располагает средствами поверки, состоящими из исходных и измерительных
-          принадлежностей, позволяющими проводить поверки в соответствии с
-          областью аккредитации. При этом учитываются условия их работы,
-          установленные в технической (эксплуатационной) документации и
-          определен персонал, осуществляющий обслуживание средств поверки.
-        </p>
-      </div>
-      <div className="serviceCenterDescription__wrapper paddingTop">
-        <h2 className="serviceCenterDescription__title title-1 black">
-          Квалифицированный персонал
-        </h2>
-        <p className="serviceCenterDescription__description text-1 gray left">
-          В составе лаборатории работают 8 специалистов, имеющих квалификацию
-          «Поверитель средств физико-химических измерений».
-        </p>
-        <p className="serviceCenterDescription__description text-1 gray right">
-          Сотрудники поверочной лаборатории - квалифицированные поверители,
-          которые проходят периодическую аттестацию и повышают свой
-          профессиональный уровень в области метрологического обеспечения.
-        </p>
-      </div>
-    </div>
-    <div className="line"></div>
-  </div>
-);
+        <div className="line"></div>
+        <div className="container items-1">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[0].title, items[0].description)}
+            {getItemElement(items[1].title, items[1].description)}
+            {getItemElement(items[2].title, items[2].description)}
+            {getItemElement(items[3].title, items[3].description)}
+          </div>
+        </div>
+        <div className="container items-2">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[0].title, getWithoutBrStr(items[0].description))}
+            {getItemElement(items[1].title, getWithoutBrStr(items[1].description))}
+          </div>
+        </div>
+        <div className="line items-2"></div>
+        <div className="container items-2">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[2].title, getWithoutBrStr(items[2].description))}
+            {getItemElement(items[3].title, getWithoutBrStr(items[3].description))}
+          </div>
+        </div>
+        <div className="container items-3">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[0].title, getWithoutBrStr(items[0].description))}
+          </div>
+        </div>
+        <div className="line items-3"></div>
+        <div className="container items-3">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[1].title, getWithoutBrStr(items[1].description))}
+          </div>
+        </div>
+        <div className="line items-3"></div>
+        <div className="container items-3">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[2].title, getWithoutBrStr(items[2].description))}
+          </div>
+        </div>
+        <div className="line items-3"></div>
+        <div className="container items-3">
+          <div className="verificationLaboratoryDescription__items">
+            {getItemElement(items[3].title, getWithoutBrStr(items[3].description))}
+          </div>
+        </div>
 
-export default VerificationLaboratoryDescription;
+        <div className="line"></div>
+        <div className="container">
+          <div className="verificationLaboratoryDescription__wrapper">
+            <h2 className="verificationLaboratoryDescription__title title-1 black">
+              {texts[0].title}
+            </h2>
+            <p className="verificationLaboratoryDescription__description text-1 gray left">
+              {texts[0].descriptions[0]}
+            </p>
+            <p className="verificationLaboratoryDescription__description text-1 gray right">
+              {texts[0].descriptions[1]}
+            </p>
+          </div>
+          <div className="verificationLaboratoryDescription__wrapper pt paddingTop">
+            <h2 className="verificationLaboratoryDescription__title title-1 black">
+              {texts[1].title}
+            </h2>
+            <p className="verificationLaboratoryDescription__description text-1 gray left">
+              {texts[1].descriptions[0]}
+            </p>
+            <p className="verificationLaboratoryDescription__description text-1 gray right">
+              {texts[1].descriptions[1]}
+            </p>
+          </div>
+        </div>
+        <div className="line"></div>
+      </div>
+    )
+  }
+export default VerificationLaboratoryDescription

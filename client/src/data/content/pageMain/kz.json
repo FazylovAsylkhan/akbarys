@@ -1,19 +1,164 @@
 {
   "lang": "kz",
   "url": "kz",
+  "langButtonsLinks": ["/", "/kz", "/en"],
   "firstBlock": {
     "title": "AKBARYS",
     "description": "Qazaqstan, TMD jáne taıaý shetel aýmaǵyndaǵy gaz qaýipsizdigi jónindegi qyzmetterdi jetekshi jetkizýshi",
-    "image": "../../images/main/akbarys.jpg"
+    "image": "../../images/main/preview.akbarys.jpg"
   },
   "secondBlock": {
     "title": "Munaı-gaz ındýstrıasyndaǵy qaýipsizdik jónindegi keshendi sheshimder",
-    "description": "Bizben birge jetistikterge jetińiz!",
-    "button": { "url": "/h2s-service/", "text": "Подробнее" },
+    "button": { "url": "/h2s-service/kz", "text": "Подробнее" },
     "subtitles": [
       { "digit": "15", "text": "Qyzmet jyldary" },
       { "digit": "67", "text": "Iske asyrylǵan jobalar" }
     ],
-    "image": "../../images/main/h2s.jpg"
+    "image": "../../images/main/preview.h2s.jpg"
+  },
+  "thirdBlock": {
+    "title": "Нейтрализация сероводорода в процессе нефте и газодобычи",
+    "button": { "url": "/sft-service/kz", "text": "Подробнее" },
+    "subtitles": [
+      { "digit": "47", "text": "Тонн сероводорода нейтрализовано" },
+      { "digit": "59", "text": "Проектов реализовано" }
+    ],
+    "image": "../../images/main/preview.sft.jpg"
+  },
+  "fourthBlock": {
+    "title": "О компании",
+    "subtitle": "Быть лучшими, направлять на успех!",
+    "description": "Akbarys является компанией со 100% Казахстанским содержанием, осуществляющим деятельность в области защиты персонала от сероводорода",
+    "button": { "url": "/akbarys-about/kz", "text": "Подробнее" },
+    "image": "../../images/main/about.jpg",
+    "advantages": [
+      {
+        "digit": "15",
+        "description": "Лет успешной работы"
+      },
+      {
+        "digit": "400 +",
+        "description": "Штат компании"
+      },
+      {
+        "digit": "125 +",
+        "description": "Реализованных проектов"
+      },
+      {
+        "digit": "25 млн",
+        "description": "Безопасных человекочасов"
+      }
+    ]
+  },
+  "fivthBlock": {
+    "title": "Ключевые проекты",
+    "slides": [
+      {
+        "title": "Tengizchevroil",
+        "description": "TCO - казахстанское партнерство занимающиеся разведкой, разработкой, добычей и сбытом сырой нефти, сжиженного нефтяного газа, сухого газа и серы",
+        "image": "../../images/main/projects1.jpg",
+        "specifications": [
+          {
+            "digit": "5004",
+            "description": "LTI Days"
+          },
+          {
+            "digit": "158",
+            "description": "Человек задействовано"
+          },
+          {
+            "digit": "18",
+            "description": "Eдиниц оборудования"
+          },
+          {
+            "digit": "102000",
+            "description": "Человеко-часов"
+          }
+        ]
+      },
+      {
+        "title": "Karachaganak Petroleum Operating B.V.",
+        "description": "KPO B.V. - одно из крупнейших в мире месторождение нефтегазового конденсата в Западно-Казахстанcкой области Республики Казахстан",
+        "image": "../../images/main/projects2.jpg",
+        "specifications": [
+          {
+            "digit": "5006",
+            "description": "LTI Days"
+          },
+          {
+            "digit": "120",
+            "description": "Человек задействовано"
+          },
+          {
+            "digit": "14",
+            "description": "Eдиниц оборудования"
+          },
+          {
+            "digit": "92250",
+            "description": "Человеко-часов"
+          }
+        ]
+      },
+      {
+        "title": "North Caspian Operating Company N.V.",
+        "description": "NCOC N.V. представляет собой первый крупный проект освоения морских нефтегазовых месторождений в Казахстане",
+        "image": "../../images/main/projects3.jpg",
+        "specifications": [
+          {
+            "digit": "19000",
+            "description": "LTI Days"
+          },
+          {
+            "digit": "65",
+            "description": "Человек задействовано"
+          },
+          {
+            "digit": "21",
+            "description": "Eдиниц оборудования"
+          },
+          {
+            "digit": "208477",
+            "description": "Человеко-часов"
+          }
+        ]
+      }
+    ]
+  },
+  "sixthBlock": {
+    "title": "Устойчивое развитие",
+    "description": "Наша компания строит свою деятельность на основе гармоничного сочетания интересов заказчиков, сотрудников, акционеров и общества в целом при неукоснительном соблюдении законодательных норм и требований, внедрении новейших технологий и современного оборудования, соблюдении требований охраны труда и окружающей среды",
+    "image": "../../images/main/preview.development.jpg",
+    "stages": [
+      {
+        "digit": "01",
+        "description": "Отвечаем за безопасность сотрудников"
+      },
+      {
+        "digit": "02",
+        "description": "Ответственно подходим к вопросу экологии"
+      },
+      {
+        "digit": "03",
+        "description": "Бережно используем природные ресурсы"
+      },
+      {
+        "digit": "04",
+        "description": "Используем только современные технологии"
+      }
+    ]
+  },
+  "seventhBlock": {
+    "title": "Нам доверяют лидеры отрасли",
+    "description": "Компания формирует, поддерживает и высоко ценит сложившиеся отношения с деловыми партнерами, общественными организациями и потребителями"
+  },
+  "eighthBlock": {
+    "title": ["Карьера в Akbarys", "Будь частью большой команды!"],
+    "description": "Вперед к достижениям вместе с нами",
+    "image": "../../images/main/preview.career.jpg",
+    "button": { "url": "/career/kz", "text": "Подробнее" },
+    "advantage": {
+      "digit": "400+",
+      "description": "Сотрудников уже работают с нами"
+    }
   }
 }

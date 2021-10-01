@@ -1,46 +1,52 @@
-import * as React from 'react';
+import * as React from "react"
 
-import './verificationLaboratory.requires.scss';
-import { StaticImage } from 'gatsby-plugin-image';
+import "./verificationLaboratory.requires.scss"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { FC } from "react"
 
-const VerificationLaboratoryRequires = () => (
-  <div className="verificationLaboratoryRequires">
-    <div className="container">
-      <div className="verificationLaboratoryRequires__wrapper">
-        <div className="verificationLaboratoryRequires__content">
-          <h3 className="verificationLaboratoryRequires__title title-1">
-            Аккредитовано NCA
-          </h3>
-          <p className="verificationLaboratoryRequires__description text-5">
-            Лаборатория аккредитована на соответствие ГОСТ ИСО/МЭК 17025-2009
-            «Общие требования к компетентности испытательных и калибровочных
-            лабораторий» национальным органом по аккредитации в области оценки
-            соответствия ТОО «Национальный центр аккредитации». Аттестат
-            аккредитации № KZ.П.09.1363 от 18 февраля 2018 г.
-          </p>
-        </div>
+interface VerificationLaboratoryRequiresProps {
+  content: any
+}
 
-        <div className="verificationLaboratoryRequires__images">
-          <StaticImage
-            className="verificationLaboratoryRequires__image"
-            placeholder="dominantColor"
-            src="../../../images/verificationLaboratory/nca.jpg"
-            alt="nca"
-            quality={95}
-            formats={['auto', 'webp', 'avif']}
-          />
-          <StaticImage
-            className="verificationLaboratoryRequires__image"
-            placeholder="dominantColor"
-            src="../../../images/verificationLaboratory/mra.jpg"
-            alt="mra"
-            quality={95}
-            formats={['auto', 'webp', 'avif']}
-          />
+const VerificationLaboratoryRequires: FC<VerificationLaboratoryRequiresProps> =
+  ({ content }) => {
+    const { title, description, images } = content
+    const img1 = getImage(images[0])
+    const img2 = getImage(images[1])
+
+    return (
+      <div className="verificationLaboratoryRequires">
+        <div className="container">
+          <div className="verificationLaboratoryRequires__wrapper">
+            <div className="verificationLaboratoryRequires__content">
+              <h3 className="verificationLaboratoryRequires__title title-1">
+                {title}
+              </h3>
+              <p className="verificationLaboratoryRequires__description text-5">
+                {description}
+              </p>
+            </div>
+
+            <div className="verificationLaboratoryRequires__images">
+              {img2 ? (
+                <GatsbyImage
+                  className="verificationLaboratoryRequires__image"
+                  image={img2}
+                  alt={title}
+                />
+              ) : null}
+              {img1 ? (
+                <GatsbyImage
+                  className="verificationLaboratoryRequires__image"
+                  image={img1}
+                  alt={title}
+                />
+              ) : null}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-);
+    )
+  }
 
-export default VerificationLaboratoryRequires;
+export default VerificationLaboratoryRequires

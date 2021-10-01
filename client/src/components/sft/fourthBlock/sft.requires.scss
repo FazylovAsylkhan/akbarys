@@ -1,0 +1,70 @@
+@import "../../../scss/utils";
+
+.sftRequires {
+  padding: 120px 0;
+  background-color: #1564fd;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__description {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__wrapper {
+    grid-column: 1 / span 12;
+  }
+  &__content {
+    width: 923px;
+  }
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    &__content {
+      @include adaptive-value-byX("width", 923, 697, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+    @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    &__content {
+      @include adaptive-value-byX("width", 697, 603, 1440, 1200);
+    }
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+    @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    &__content {
+      @include adaptive-value-byX("width", 697, 603, 1440, 1040);
+    }
+  }
+  @media (max-width: 1040px) {
+    &__content {
+        width: 100%;
+    }
+  }
+  @media (max-width: 860px) {
+    @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+    @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    &__wrapper {
+      grid-column: 1 / span 8;
+    }
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+    @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    &__wrapper {
+      grid-column: 1 / span 6;
+    }
+    &__title {
+      @include adaptive-value-byX("margin-bottom", 40, 30, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    padding: 50px 0;
+    &__title {
+        margin-bottom: 30px;
+    }
+  }
+}

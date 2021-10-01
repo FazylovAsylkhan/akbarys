@@ -1,6 +1,8 @@
 {
     "lang": "en",
     "url": "career/en",
+    "h1": "Career in Akbarys",
+    "langButtonsLinks": ["/career", "/career/kz", "/career/en"],
     "firstBlock": {
       "title": {
         "firstRow": "Career in Akbarys",

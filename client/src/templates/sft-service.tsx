@@ -1,46 +1,52 @@
-import * as React from 'react';
-import { graphql } from 'gatsby';
-import { useEffect } from 'react';
+import * as React from "react"
+import { graphql } from "gatsby"
+import { useEffect } from "react"
 
-import LayoutAdditional from '../components/layer/layerAdditional';
-import Plug from '../components/plug/plug';
-import Seo from '../components/seo';
-import SftPreview from '../components/sft/firstBlock/sft.preview';
-import SftRequires from '../components/sft/fivthBlock/sft.requires';
-import SftDescription from '../components/sft/secondBlock/sft.description';
-import SftPartners from '../components/sft/sixthBlock/sft.partners';
-import SftSourFluidTreatment from '../components/sft/thirdBlock/sft.sourFluidTreatment';
+import LayoutAdditional from "../components/layer/layerAdditional"
+import Seo from "../components/seo"
+import SftPreview from "../components/sft/firstBlock/sft.preview"
+import SftDescription from "../components/sft/secondBlock/sft.description"
+import SftSourFluidTreatment from "../components/sft/thirdBlock/sft.sourFluidTreatment"
+import SftRequires from "../components/sft/fourthBlock/sft.requires"
+import SftPartners from "../components/sft/fivthBlock/sft.partners"
 
 const sftService = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll('.headerAdditional__link')[1]
-      ?.classList.add('active');
-  }, []);
+      .querySelectorAll(".headerAdditional__link")[1]
+      ?.classList.add("active")
+  }, [])
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  };
-  const { firstBlock, secondBlock } = props.data.pageSftServiceJson;
-
+  }
+  const {
+    firstBlock,
+    secondBlock,
+    thirdBlock,
+    fourthBlock,
+    fivthBlock,
+    langButtonsLinks,
+  } = props.data.pageSftServiceJson
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title="Нейтрализация сероводорода" />
       <SftPreview content={firstBlock} />
       <SftDescription content={secondBlock}></SftDescription>
-      <SftSourFluidTreatment />
-      <SftRequires />
-      <SftPartners />
-      <Plug />
+      <SftSourFluidTreatment content={thirdBlock} />
+      <SftRequires content={fourthBlock} />
+      <SftPartners content={fivthBlock} />
     </LayoutAdditional>
-  );
-};
+  )
+}
 
-export default sftService;
+export default sftService
 
 export const query = graphql`
   query PageSftServiceTemplateQuery($lang: String) {
     pageSftServiceJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       lang
       firstBlock {
         title
@@ -69,6 +75,32 @@ export const query = graphql`
           stages
           title
         }
+      }
+      thirdBlock {
+        first {
+          title
+          descriptions
+          images {
+            childImageSharp {
+              gatsbyImageData(
+                formats: [AVIF, WEBP, JPG]
+                placeholder: DOMINANT_COLOR
+                quality: 90
+              )
+            }
+          }
+        }
+        second {
+          title
+          items
+        }
+      }
+      fourthBlock {
+        title
+        descriptions
+      }
+      fivthBlock {
+        title
       }
     }
     headerJson(lang: { eq: $lang }) {
@@ -108,4 +140,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

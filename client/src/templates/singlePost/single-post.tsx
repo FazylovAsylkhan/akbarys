@@ -13,7 +13,7 @@ const SinglePost = (props: any) => {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
-  const { title, date, imagePreview } = props.data.markdownRemark.frontmatter.contentPost;
+  const { title, date, imagePreview, langButtonsLinks } = props.data.markdownRemark.frontmatter.contentPost;
   const img = getImage(imagePreview);
   React.useEffect(() => {
     const body = document.querySelector('.singlePost__body');
@@ -26,7 +26,7 @@ const SinglePost = (props: any) => {
   }, []);
 
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title={title} />
       <Helmet>
         <script
@@ -77,6 +77,8 @@ export const query = graphql`
     markdownRemark(frontmatter: { contentPost: {lang: {eq: $lang}, url: { eq: $url }}}) {
       frontmatter {
         contentPost {
+          h1
+          langButtonsLinks
           title
           url
           date

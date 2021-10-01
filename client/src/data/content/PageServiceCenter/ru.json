@@ -1,6 +1,8 @@
 {
   "lang": "ru",
   "url": "service-center",
+  "h1": "Сервисный центр",
+  "langButtonsLinks": ["/service-center", "/service-center/kz", "/service-center/en"],
   "firstBlock": {
     "title": "Сервисный центр",
     "subtitle": "Вперед к достижениям вместе с нами!",

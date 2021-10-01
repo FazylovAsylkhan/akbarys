@@ -1,6 +1,8 @@
 {
     "lang": "en",
     "url": "service-center/en",
+    "h1": "Service center",
+    "langButtonsLinks": ["/service-center", "/service-center/kz", "/service-center/en"],
     "firstBlock": {
       "title": "Service center",
       "subtitle": "Forward to achievements with us!",

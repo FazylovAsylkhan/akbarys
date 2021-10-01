@@ -1,52 +1,39 @@
-import * as React from 'react';
-import { FC, useEffect } from 'react';
-import { globalHistory } from '@reach/router';
-import { Link, navigate } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import * as React from "react"
+import { FC, useEffect } from "react"
+import { globalHistory } from "@reach/router"
+import { Link, navigate } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-import DarkLogo from '../../images/logo-dark.svg';
-import LightLogo from '../../images/logo-light.svg';
-import './header.scss';
+import DarkLogo from "../../images/logo-dark.svg"
+import LightLogo from "../../images/logo-light.svg"
+import "./header.scss"
+import { showBurgerMenu } from "../../utils/header/showBurgerMenu"
+import { showAdditionalMenu } from "../../utils/header/showAdditionalMenu"
 
-interface HeaderProps {
-  isAdditional?: boolean
-  data?: any
-}
-
-function translatePage(lang: string) {
-  const relativeUrl = globalHistory.location.pathname;
-  const regExp = /\/en|kz/;
-  const currentPageTranslated = regExp.test(relativeUrl);
-  const currentPageUrl = currentPageTranslated
-    ? relativeUrl.slice(0, relativeUrl.length - 3)
-    : relativeUrl;
-  const isMain = relativeUrl.length === 1 || relativeUrl.length === 3;
-  if (lang === 'kz') {
-    isMain ? navigate('/kz') : navigate(`${currentPageUrl}/kz`);
-    navigate(`${currentPageUrl}/kz`);
-  } else if (lang === 'en') {
-    isMain ? navigate('/en') : navigate(`${currentPageUrl}/en`);
-  } else {
-    isMain ? navigate('/') : navigate(currentPageUrl);
-  }
-}
-function getPreviewLangElement(lang: string) {
+function getPreviewLangElement(lang: string, isMobile: boolean) {
   let element = (
     <div className="lang__preview">
-      <span className="lang__text text-header">
+      <span
+        className="lang__text text-header"
+        onClick={e => showSubMenu(e, isMobile)}
+      >
         Рус
         <StaticImage
           className="lang__image"
           src="../../images/lang/russia.jpg"
           alt="russia"
+          style={{ pointerEvents: "none" }}
         ></StaticImage>
       </span>
     </div>
-  );
-  if (lang === 'kz') {
+  )
+  if (lang === "kz") {
     element = (
       <div className="lang__preview">
-        <span className="lang__text text-header">
+        <span
+          className="lang__text text-header"
+          onClick={e => showSubMenu(e, isMobile)}
+        >
           Qaz
           <StaticImage
             className="lang__image"
@@ -55,12 +42,15 @@ function getPreviewLangElement(lang: string) {
           ></StaticImage>
         </span>
       </div>
-    );
+    )
   }
-  if (lang === 'en') {
+  if (lang === "en") {
     element = (
       <div className="lang__preview">
-        <span className="lang__text text-header">
+        <span
+          className="lang__text text-header"
+          onClick={e => showSubMenu(e, isMobile)}
+        >
           Eng
           <StaticImage
             className="lang__image"
@@ -69,130 +59,100 @@ function getPreviewLangElement(lang: string) {
           ></StaticImage>
         </span>
       </div>
-    );
+    )
   }
-  return element;
+  return element
 }
-const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
-  const { links, subMenu, lang } = data;
-  const firstList = subMenu[0];
-  const secondList = subMenu[1];
-  const showMenu = (isAdditional: boolean | undefined) => {
-    const header = document.querySelectorAll('header');
-    if (isAdditional) {
-      header[1]?.classList.toggle('active');
-    } else {
-      header[0]?.classList.toggle('active');
-    }
-    document?.querySelectorAll('.header__logo-image').forEach((img) => {
-      img.classList.toggle('hide');
-    });
-    if (
-      header[1]?.classList.contains('active')
-      || header[0]?.classList.contains('active')
-    ) {
-      document.body.style.overflowY = 'hidden';
-    } else {
-      document.body.style.overflowY = '';
-    }
-  };
-  const showAdditionalMenu = (additionalHeader: any, currentPage: any) => {
-    let prevScrollPosition = 0;
-    document.addEventListener('scroll', () => {
-      if (currentPage !== '') {
-        const currentScrollPosition = window.pageYOffset;
-        const heightScreen = document.documentElement.clientHeight;
-        if (additionalHeader) {
-          if (
-            prevScrollPosition > currentScrollPosition
-            && !document.querySelector('.pressCenterNews')
-            && !document.querySelector('.page404')
-            && !document.querySelector('.politics')
-          ) {
-            additionalHeader.classList.remove('hide');
-            additionalHeader.classList.add('show');
-          } else {
-            additionalHeader.classList.remove('show');
-            additionalHeader.classList.add('hide');
-          }
-          if (
-            heightScreen > window.pageYOffset
-            && !document.querySelector('.pressCenterNews')
-            && !document.querySelector('.page404')
-            && !document.querySelector('.politics')
-          ) {
-            additionalHeader.classList.remove('header_dark');
-            additionalHeader.classList.add('header_transparent');
-          } else {
-            additionalHeader.classList.add('header_dark');
-            additionalHeader.classList.remove('header_transparent');
-          }
-          prevScrollPosition = window.pageYOffset;
-        }
-      }
-    });
-  };
+function showSubMenu(
+  e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
+  isMobile: boolean
+) {
+  if (isMobile) {
+    const toggleSubMenu = e.target as HTMLElement
+    const subMenu = toggleSubMenu.nextSibling as HTMLElement
+    toggleSubMenu?.classList.toggle("active")
+    subMenu?.classList.toggle("open")
+    const langPreview = toggleSubMenu.classList.contains("lang__image")
+      ? toggleSubMenu.parentElement?.parentElement
+      : toggleSubMenu.parentElement
+    const langList = langPreview?.nextSibling as HTMLElement
+    langList?.classList.toggle("open")
+    langPreview?.classList.toggle("active")
+  }
+}
+interface HeaderProps {
+  isAdditional: boolean
+  data?: any
+  langs: any
+}
+
+const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
+  const [stateIsMobile, setStateIsMobile] = React.useState(false)
+  const { links, subMenu, lang } = data
+  const firstList = subMenu[0]
+  const secondList = subMenu[1]
   function updateHeader(
     mainHeader: any,
     additionalHeader: any,
-    currentPage: any,
+    currentPage: any
   ) {
     if (
-      currentPage !== 'ru'
-      && currentPage !== ''
-      && currentPage !== 'kz'
-      && currentPage !== 'en'
+      currentPage !== "ru" &&
+      currentPage !== "" &&
+      currentPage !== "kz" &&
+      currentPage !== "en"
     ) {
-      mainHeader?.classList.add('header_second');
-      additionalHeader?.classList.add('header_second', 'additional');
+      mainHeader?.classList.add("header_second")
+      additionalHeader?.classList.add("header_second", "additional")
       if (
-        !document.querySelector('.pressCenterNews')
-        && !document.querySelector('.page404')
-        && !document.querySelector('.politics')
+        !document.querySelector(".pressCenterNews") &&
+        !document.querySelector(".page404") &&
+        !document.querySelector(".politics")
       ) {
-        mainHeader?.classList.remove('header_dark');
+        mainHeader?.classList.remove("header_dark")
       } else {
-        mainHeader?.classList.add('header_dark');
+        mainHeader?.classList.add("header_dark")
       }
     } else {
-      mainHeader?.classList.remove('header_second');
+      mainHeader?.classList.remove("header_second")
     }
   }
 
   useEffect(() => {
-    const currentPage = window.location.href.split('/')[3];
-    const mainHeader = document.querySelectorAll('header')[0];
-    const additionalHeader = document.querySelectorAll('header')[1];
-    updateHeader(mainHeader, additionalHeader, currentPage);
-    showAdditionalMenu(additionalHeader, currentPage);
-
+    document.body.classList.remove("disable-scroll")
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-        navigator.userAgent,
+        navigator.userAgent
       )
     ) {
-      document.body.classList.add('touch');
-      const subMenus = document.querySelectorAll('.sub-menu');
-      subMenus.forEach((subMenu) => {
-        const thisLink = subMenu.querySelector('.menu__link');
-        const toggleSubMenu = subMenu.querySelector('.menu__toggle');
-        const subMenuList = subMenu.querySelector('.sub-menu__list');
-        thisLink?.classList.add('parent');
-        subMenu.addEventListener('click', () => {
-          subMenuList?.classList.toggle('open');
-          toggleSubMenu?.classList.toggle('active');
-        });
-      });
-      document.querySelector('.lang')?.addEventListener('click', () => {
-        const langList = document.querySelector('.lang__list');
-        const langPreview = document.querySelector('.lang__preview');
-        langList?.classList.toggle('open');
-        langPreview?.classList.toggle('active');
-      });
+      setStateIsMobile(true)
     } else {
-      document.body.classList.add('mouse');
+      setStateIsMobile(false)
     }
-  }, []);
+    const currentPage = window.location.href.split("/")[3]
+    const mainHeader = document.querySelectorAll("header")[0]
+    const additionalHeader = document.querySelectorAll("header")[1]
+    updateHeader(mainHeader, additionalHeader, currentPage)
+    showAdditionalMenu(additionalHeader, currentPage)
+
+    if (stateIsMobile) {
+      document.body.classList.add("touch")
+      document.body.classList.remove("mouse")
+
+      const isMain =
+        currentPage == "ru" ||
+        currentPage == "" ||
+        currentPage == "kz" ||
+        currentPage == "en"
+
+      isMain
+        ? document.body.classList.add("mainPage")
+        : document.body.classList.remove("mainPage")
+    } else {
+      document.body.classList.add("mouse")
+      document.body.classList.remove("touch")
+    }
+  }, [stateIsMobile])
 
   return (
     <>
@@ -208,14 +168,17 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
           />
           <div
             className="header__burger"
-            onClick={() => showMenu(isAdditional)}
+            onClick={e => showBurgerMenu(e, isAdditional)}
           >
             <span></span>
           </div>
           <nav className="header__menu">
             <ul className="menu__list">
               <li className="menu__list-item sub-menu">
-                <span className="menu__toggle text-header">
+                <span
+                  className="menu__toggle text-header"
+                  onClick={e => showSubMenu(e, stateIsMobile)}
+                >
                   {firstList.title}
                 </span>
                 <ul className="sub-menu__list">
@@ -256,7 +219,10 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
                   </li>
                 </ul>
               </li>
-              <li className="menu__list-item sub-menu">
+              <li
+                className="menu__list-item sub-menu"
+                onClick={e => showSubMenu(e, stateIsMobile)}
+              >
                 <span className="menu__toggle text-header">
                   {secondList.title}
                 </span>
@@ -299,13 +265,10 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
             </ul>
             <div className="header__box">
               <div className="lang">
-                {getPreviewLangElement(lang)}
+                {getPreviewLangElement(lang, stateIsMobile)}
                 <ul className="lang__list">
                   <li className="lang__list-item">
-                    <span
-                      className="lang__link"
-                      onClick={() => translatePage('ru')}
-                    >
+                    <Link className="lang__link" to={langs[0]}>
                       <span className="lang__text text-header">
                         Рус
                         <StaticImage
@@ -314,13 +277,10 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
                           alt="russia"
                         ></StaticImage>
                       </span>
-                    </span>
+                    </Link>
                   </li>
                   <li className="lang__list-item">
-                    <span
-                      className="lang__link"
-                      onClick={() => translatePage('en')}
-                    >
+                    <Link className="lang__link" to={langs[2]}>
                       <span className="lang__text text-header">
                         Eng
                         <StaticImage
@@ -329,13 +289,10 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
                           alt="english"
                         ></StaticImage>
                       </span>
-                    </span>
+                    </Link>
                   </li>
                   <li className="lang__list-item">
-                    <span
-                      className="lang__link"
-                      onClick={() => translatePage('kz')}
-                    >
+                    <Link className="lang__link" to={langs[1]}>
                       <span className="lang__text text-header">
                         Qaz
                         <StaticImage
@@ -344,7 +301,7 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
                           alt="kazakh"
                         ></StaticImage>
                       </span>
-                    </span>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -354,7 +311,7 @@ const Header: FC<HeaderProps> = ({ isAdditional, data }) => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

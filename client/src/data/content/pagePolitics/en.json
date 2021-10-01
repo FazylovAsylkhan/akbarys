@@ -1,6 +1,8 @@
 {
   "lang": "en",
   "url": "politics/en",
+  "h1": "Privacy Policy",
+  "langButtonsLinks": ["/politics", "/politics/kz", "/politics/en"],
   "seo": {
     "title": "Privacy Policy"
   },

@@ -1,54 +1,57 @@
-import './fourthBlock.scss';
+import * as React from "react"
 
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import * as React from 'react';
+import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import "./fourthBlock.scss"
+import { FC } from "react"
 
-import data from '../../../utils/constants';
+interface FourthBlockProps {
+  content: any
+}
 
-const FourthBlock = () => {
-  const fourthBlock: any = data.pages.main.blocks[3];
-
+const FourthBlock: FC<FourthBlockProps> = ({ content }) => {
+  const { title, subtitle, description, button, advantages, image } = content
+  const img = getImage(image)
   return (
-    <div className="ppe">
+    <div className="about">
       <div className="screen__content container">
-        <div className="ppe__wrapper">
-          <h2 className="ppe__title title-1 white">{`${fourthBlock.title}`}</h2>
-          <Link className="button ppe__button" to="/ppe-service/">
-            Подробнее
-          </Link>
-          <div className="ppe__box">
-            <h3 className=" ppe__subtitle">
-              <span className="ppe__subtitle-digit text-2 white">
-                {fourthBlock.firstSubtitle.digit}
-              </span>
-              <span className="ppe__subtitle-description text-1 white_dark">
-                {fourthBlock.firstSubtitle.description}
-              </span>
-            </h3>
-            <h3 className=" ppe__subtitle">
-              <span className="ppe__subtitle-digit text-2 white">
-                {fourthBlock.secondSubtitle.digit}
-              </span>
-              <span className="ppe__subtitle-description text-1 white_dark">
-                {fourthBlock.secondSubtitle.description}
-              </span>
-            </h3>
+        <div className="about__wrapper">
+          <h2 className="about__title mainText-3 black">{title}</h2>
+          <div className="about__content">
+            {img ? (
+              <GatsbyImage
+                className="about__content-image"
+                image={img}
+                alt={title}
+              />
+            ) : null}
+            <div className="about__content-box">
+              <h4 className="about__content-title mainText-2 black">{`${subtitle}`}</h4>
+              <p className="about__content-description mainText-6 gray">{`${description}`}</p>
+              <Link className="button about__button" to={button.url}>
+                {button.text}
+              </Link>
+            </div>
+          </div>
+          <div className="about__advantages">
+            {advantages.map((advantage: any) => {
+              return (
+                <h3 className="about__advantages-item">
+                  <span className="about__content-subtitle mainText-7 black">
+                    {advantage.digit}
+                  </span>
+                  <span className="about__content-description mainText-6 gray">
+                    {advantage.description}
+                  </span>
+                </h3>
+              )
+            })}
           </div>
         </div>
       </div>
-      <div className="screen__body">
-        <StaticImage
-          className="screen__image"
-          placeholder="dominantColor"
-          src="../../../images/ppe.jpg"
-          alt="ppe"
-          quality={95}
-          formats={['auto', 'webp', 'avif']}
-        />
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default FourthBlock;
+export default FourthBlock
+

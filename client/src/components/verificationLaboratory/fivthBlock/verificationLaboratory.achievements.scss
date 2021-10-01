@@ -1,0 +1,131 @@
+@import "../../../scss/utils";
+
+.verificationLaboratoryAchievements {
+  &__wrapper {
+    padding: 120px 0;
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__content {
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-description {
+      width: 565px;
+    }
+  }
+  &__items {
+    margin-top: 84px;
+    overflow: hidden;
+    &.show {
+      height: fit-content;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(#000, 0.2);
+    padding-bottom: 30px;
+    padding-right: 40px;
+    cursor: pointer;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover &-link {
+      color: #1665fd;
+    }
+    &:hover &-img path {
+      fill: #1665fd;
+    }
+    &-link {
+      margin-bottom: 10px;
+    }
+    &-img {
+      position: absolute;
+      right: 0;
+      top: 16.5px;
+    }
+  }
+  &__toggle {
+    display: flex;
+    grid-column: 2 / span 1;
+    align-items: center;
+    margin-top: 40px;
+    width: fit-content;
+    &-arrow {
+      margin-left: 15px;
+      pointer-events: none;
+    }
+    &__text {
+      display: block;
+      pointer-events: none;
+    }
+    &.show svg {
+      transform: rotateX(180deg);
+    }
+  }
+  @media (max-width: 1920px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    }
+    &__content {
+      &-description {
+        @include adaptive-value-byX("width", 565, 424, 1920, 1440);
+      }
+    }
+    &__items {
+      @include adaptive-value-byX("margin-top", 84, 69, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    }
+    &__content {
+      &-description {
+        @include adaptive-value-byX("width", 424, 366, 1440, 1200);
+      }
+    }
+  }
+  @media (max-width: 1040px) {
+    &__wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__content {
+      &-description {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+  }
+}

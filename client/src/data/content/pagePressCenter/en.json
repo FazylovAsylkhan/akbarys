@@ -1,6 +1,8 @@
 {
   "lang": "en",
   "url": "press-center/en",
+  "h1": "Press-center",
+  "langButtonsLinks": ["/press-center", "/press-center/kz", "/press-center/en"],
   "title": "Press-center",
   "buttonText": "Read"
 }

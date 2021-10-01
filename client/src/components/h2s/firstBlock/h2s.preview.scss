@@ -1,22 +1,22 @@
-@import '../../../scss/utils';
+@import "../../../scss/utils";
 
 .h2sPreview {
-  @include adaptive-value-byX('height', 800, 680, 1920, 1440);
-  padding-top: calc((242 / 1002) * 100vh);
+  padding-top: 242px;
   position: relative;
+  height: 800px;
   &__content {
     z-index: 2;
     position: relative;
   }
   &__body {
-    top: 0;
     position: absolute;
-    width: 100%;
-    @include adaptive-value-byX('height', 800, 680, 1920, 1440);
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
   }
-  &__body-image{
+  &__body-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -30,21 +30,24 @@
     grid-template-columns: 128px 223px;
   }
   &__wrapper {
-    grid-column: 1 / span 10;
+    grid-column: 1 / span 12;
   }
-  &__box,
-  &__button {
+  &__box {
     margin-top: 60px;
   }
-  @media (max-width: 1440px) {
-    &__wrapper {
-      grid-column: 1 / span 12;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("padding-top", 242, 227, 1920, 1440);
+    @include adaptive-value-byX("height", 800, 680, 1920, 1440);
+    &__box {
+      @include adaptive-value-byX("margin-top", 60, 30, 1920, 1440);
     }
+  }
+  @media (max-width: 1440px) {
+    @include adaptive-value-byX("padding-top", 227, 187, 1440, 1200);
+    @include adaptive-value-byX("height", 680, 600, 1440, 1200);
     &__title {
       max-width: 390px;
     }
-    padding-top: calc((226 / 760) * 100vh);
-    &__button,
     &__box {
       margin-top: 30px;
     }
@@ -53,38 +56,57 @@
     }
   }
   @media (max-width: 1200px) {
-    padding-top: calc((206 / 720) * 100vh);
+    @include adaptive-value-byX("padding-top", 187, 473, 1200, 860);
+    @include adaptive-value-byX("height", 600, 950, 1200, 860);
+    &__box {
+      @include adaptive-value-byX("margin-top", 30, 40, 1200, 1075);
+    }
   }
   @media (max-width: 1075px) {
     &__title {
       max-width: 500px;
     }
-    padding-top: calc((500 / 1200) * 100vh);
-    &__button,
     &__box {
       margin-top: 40px;
-    }
-    &__box {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
     }
     &__subtitle {
-      grid-template-columns: 110px 185px;
+      grid-template-columns: 132px 185px;
     }
   }
   @media (max-width: 860px) {
-    padding-top: calc((757 / 1200) * 100vh);
-  }
-  @media (max-width: 675px) {
-    padding-top: calc((610 / 1140) * 100vh);
-    &__box {
-      display: flex;
-      flex-direction: column;
+    height: 950px;
+    padding-top: 473px;
+    &__wrapper {
+      grid-column: 1 / span 8;
     }
   }
   @media (max-width: 640px) {
-    padding-top: calc(((896 * (610 / 1140)) / 896) * 100vh);
+    @include adaptive-value-byX("padding-top", 473, 288, 640, 320);
+    @include adaptive-value-byX("height", 950, 580, 640, 320);
+    &__subtitle {
+      grid-template-columns: 135px 185px;
+    }
+    &__box {
+      @include adaptive-value-byX("margin-top", 40, 20, 640, 320);
+    }
+  }
+  @media (max-width: 490px) {
+    &__subtitle {
+      grid-template-columns: 106px 185px;
+    }
+  }
+  @media (max-width: 460px) {
+    &__subtitle {
+      grid-template-columns: 88px 185px;
+    }
+  }
+  @media (max-width: 320px) {
+    padding-top: 288px;
+    height: 580px;
+    &__box {
+      margin-top: 20px;
+    }
   }
   &__wrapper.visible {
     opacity: 1;

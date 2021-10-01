@@ -4,6 +4,13 @@ contentPost:
     lang: kz,
     url: lottery-winner/kz,
     title: "Ekpe al, baǵaly syılyqtarǵa ıe bol",
+    h1: "Ekpe al, baǵaly syılyqtarǵa ıe bol",
+    langButtonsLinks:
+      [
+        "/lottery-winner",
+        "/lottery-winner/kz",
+        "/lottery-winner/en",
+      ],
     description: Tolyq vaksınasıalanǵandar arasynda baǵaly syılyqtardyń utys oıyny...,
     date: 25 tamyz 2021,
     image: ../../images/pressCenter/item-2.jpg,

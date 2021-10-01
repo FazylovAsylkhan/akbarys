@@ -16,14 +16,14 @@ const Career = (props: any) => {
       .querySelectorAll('.headerAdditional__link')[7]
       ?.classList.add('active');
   }, []);
-  const { firstBlock, secondBlock, thirdBlock } = props.data.pageCareerJson;
+  const { firstBlock, secondBlock, thirdBlock, langButtonsLinks } = props.data.pageCareerJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
 
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title="Карьера в Akbarys" />
       <CareerPreview content={firstBlock} />
       <CareerDescription content={secondBlock} />
@@ -39,6 +39,8 @@ export default Career;
 export const query = graphql`
   query PageCareerTemplateQuery($lang: String) {
     pageCareerJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       lang
       url
       firstBlock {

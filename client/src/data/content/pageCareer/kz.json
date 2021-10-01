@@ -1,6 +1,8 @@
 {
     "lang": "kz",
     "url": "career/kz",
+    "h1": "Akbarys mansaby",
+    "langButtonsLinks": ["/career", "/career/kz", "/career/en"],
     "firstBlock": {
       "title": {
         "firstRow": "Akbarys mansaby",

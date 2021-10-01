@@ -2,6 +2,7 @@ import * as React from 'react';
 import { FC } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import './verificationLaboratory.preview.scss';
+import id from '../../../utils/randomId';
 
 interface VerificationLaboratoryPreviewProps {
   content: any
@@ -22,7 +23,7 @@ const VerificationLaboratoryPreview: FC<VerificationLaboratoryPreviewProps> = ({
           </h2>
           <div className="verificationLaboratoryPreview__box">
             {subtitles.map((subtitle: any) => (
-                <h3 className=" verificationLaboratoryPreview__subtitle">
+                <h3 className=" verificationLaboratoryPreview__subtitle" key={id()}>
                   <span className="verificationLaboratoryPreview__subtitle-digit text-2 white">
                     {subtitle.digit}
                   </span>

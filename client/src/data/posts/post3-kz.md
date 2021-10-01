@@ -4,6 +4,13 @@ contentPost:
     lang: kz,
     url: system-ashyq/kz,
     title: Ashyq Júıesi,
+    h1: "Ashyq Júıesi",
+    langButtonsLinks:
+      [
+        "/system-ashyq",
+        "/system-ashyq/kz",
+        "/system-ashyq/en",
+      ],
     description: "Keńsede Ashyq júıesi ornatyldy, ol kórsetedi ...",
     date: 28 shilde 2021,
     image: ../../images/pressCenter/item-3.jpg,

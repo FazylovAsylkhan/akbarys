@@ -1,53 +1,114 @@
-import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import * as React from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import {
+  hideSlides,
+  initNav,
+  showPagination,
+  showSlide,
+  validationNav,
+} from "../../../utils/mainUtils"
+import Partners1 from "../../../images/partners/partners1.svg"
+import Partners2 from "../../../images/partners/partners2.svg"
+import Partners3 from "../../../images/partners/partners3.svg"
+import Partners4 from "../../../images/partners/partners4.svg"
+import Partners5 from "../../../images/partners/partners5.svg"
+import Partners6 from "../../../images/partners/partners6.svg"
+import Partners7 from "../../../images/partners/partners7.svg"
+import Partners8 from "../../../images/partners/partners8.svg"
+import Partners9 from "../../../images/partners/partners9.svg"
+import Partners10 from "../../../images/partners/partners10.svg"
+import "./seventhBlock.scss"
+import { FC } from "react"
+interface SeventhBlockProps {
+  content: any
+}
 
-import data from '../../../utils/constants';
-import './seventhBlock.scss';
+const SeventhBlock: FC<SeventhBlockProps> = ({ content }) => {
+  const sliderRef = React.useRef<Element[] | null>(null)
+  const { title, description } = content
 
-const SeventhBlock = () => {
-  const seventhBlock: any = data.pages.main.blocks[6];
-
+  const getPartnersImagesElements = () => {
+    const partnersLogo = [
+      Partners1,
+      Partners2,
+      Partners3,
+      Partners4,
+      Partners5,
+      Partners6,
+      Partners7,
+      Partners8,
+      Partners9,
+      Partners10,
+    ]
+    const imagesElements = partnersLogo.map((Image, index) => (
+      <div className="partners__slide-item" key={`image${index}`}>
+        {<Image />}
+      </div>
+    ))
+    return imagesElements
+  }
   return (
-    <div className="mainDevelopment">
+    <div className="partners">
       <div className="screen__content container">
-        <div className="mainDevelopment__wrapper">
-          <div className="mainDevelopment__content">
-            <h2 className="mainDevelopment__title white">{`${seventhBlock.title}`}</h2>
-            <p className="mainDevelopment__description text-1 white_dark">{`${seventhBlock.description}`}</p>
-          </div>
-          <div className="mainDevelopment__stages">
-            <h3 className="mainDevelopment__stages-item text-1 white_dark">
-              <span className="mainDevelopment__stages-item-digit white">{`${seventhBlock.stages.first.digit}`}</span>
-              {`${seventhBlock.stages.first.description}`}
-            </h3>
-            <h3 className="mainDevelopment__stages-item text-1 white_dark">
-              <span className="mainDevelopment__stages-item-digit white">{`${seventhBlock.stages.second.digit}`}</span>
-              {`${seventhBlock.stages.second.description}`}
-            </h3>
-            <h3 className="mainDevelopment__stages-item text-1 white_dark">
-              <span className="mainDevelopment__stages-item-digit white">{`${seventhBlock.stages.third.digit}`}</span>
-              {`${seventhBlock.stages.third.description}`}
-            </h3>
-            <h3 className="mainDevelopment__stages-item text-1 white_dark">
-              <span className="mainDevelopment__stages-item-digit white">{`${seventhBlock.stages.fourth.digit}`}</span>
-              {`${seventhBlock.stages.fourth.description}`}
-            </h3>
-          </div>
+        <div className="partners__wrapper">
+          <h2 className="partners__title mainText-3 black">{title}</h2>
+          <p className="partners__description mainText-6 gray">{description}</p>
+          <Swiper
+            className="partners__slider"
+            slidesPerView={1}
+            direction="horizontal"
+            nested
+            observer
+            watchOverflow
+            observeSlideChildren
+            observeParents
+            effect="slide"
+            // navigation
+            speed={1500}
+            // pagination={{
+            //   type: 'fraction',
+            // }}
+            onBeforeInit={swiper => {
+              swiper.params.slideToClickedSlide = false
+              swiper.params.simulateTouch = false
+            }}
+            onAfterInit={swiper => {
+              sliderRef.current = swiper.slides as unknown as Element[]
+              // initNav(swiper, "partners")
+              // showPagination(swiper)
+              // validationNav(swiper)
+            }}
+            onSlideChange={swiper => {
+              const slides = sliderRef.current
+              if (slides) {
+                hideSlides(slides, swiper, "partners__slide-item-wrapper")
+
+                const nextSlide = slides[swiper.realIndex + 1]
+
+                if (nextSlide) {
+                  const nextWrapper = nextSlide.querySelector(
+                    ".partners__slide-item-wrapper"
+                  )
+                  nextWrapper?.classList.add("hide")
+                }
+                setTimeout(() => {
+                  showSlide(slides, swiper, "partners__slide-item-wrapper")
+                }, 1000)
+              }
+              validationNav(swiper)
+              showPagination(swiper)
+            }}
+          >
+            <SwiperSlide className="partners__slide">
+              <div className="partners__slide-item-wrapper">
+                {getPartnersImagesElements()}
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
-      <div className="screen__body">
-        <StaticImage
-          className="screen__image"
-          placeholder="dominantColor"
-          src="../../../images/development.jpg"
-          alt="development"
-          quality={50}
-          formats={['auto', 'webp', 'avif']}
-        />
-        <div className="background__header"></div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default SeventhBlock;
+export default SeventhBlock

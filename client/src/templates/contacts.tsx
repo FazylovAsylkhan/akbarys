@@ -15,13 +15,13 @@ const Contacts = (props: any) => {
       .querySelectorAll('.headerAdditional__link')[8]
       ?.classList.add('active');
   }, []);
-  const { firstBlock, secondBlock } = props.data.pageContactsJson;
+  const { firstBlock, secondBlock, langButtonsLinks } = props.data.pageContactsJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title="Контактная информация" />
       <ContactsPreview content={firstBlock} />
       <ContactsDescription content={secondBlock} />
@@ -35,6 +35,8 @@ export default Contacts;
 export const query = graphql`
   query PageContactsTemplateQuery($lang: String) {
     pageContactsJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       url
       lang
       firstBlock {

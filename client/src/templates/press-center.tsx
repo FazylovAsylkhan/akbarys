@@ -16,13 +16,13 @@ const PressCenter = (props: any) => {
   }, []);
 
   const { nodes } = props.data.allMarkdownRemark;
-  const { title, buttonText } = props.data.pagePressCenterJson;
+  const { title, buttonText, langButtonsLinks } = props.data.pagePressCenterJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title="Пресс-центр" />
       <div className="pressCenterNews">
         <div className="container">
@@ -79,6 +79,8 @@ export default PressCenter;
 export const query = graphql`
   query PagePressCenterTemplateQuery($lang: String) {
     pagePressCenterJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       lang
       title
       buttonText

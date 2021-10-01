@@ -1,0 +1,239 @@
+@import "../../../scss/utils";
+
+.gasDetectionSystem {
+  padding: 120px 0;
+  @media(max-width: 1920px) {
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+  }
+  &__wrapper {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    align-items: center;
+  }
+  & rect {
+    pointer-events: none;
+  }
+  &__box {
+    width: 100%;
+    position: relative;
+    &-image {
+      pointer-events: none;
+    }
+  }
+  &__tip {
+    position: absolute;
+    &-text {
+      &.show {
+        display: block;
+      }
+      @include adaptive-value-byX("height", 76, 74, 1920, 1440);
+      @include adaptive-value-byX("width", 256, 246, 1920, 1440);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      background-color: #1564fd;
+      display: none;
+      padding: 20px 25px;
+      padding-bottom: 0;
+    }
+    &-img-1 {
+      right: 0;
+      left: auto;
+      transform: rotateY(180deg);
+    }
+    &-img {
+      z-index: 10;
+      @include adaptive-value-byX("height", 53, 49, 1920, 1440);
+      @include adaptive-value-byX("width", 40, 36, 1920, 1440);
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+    }
+    &-text-0,
+    &-img-0 {
+      @include adaptive-value-byX("top", 515, 315, 1920, 1441);
+      @include adaptive-value-byX("left", 380, 240, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 374, 275, 1440, 1201);
+        @include adaptive-value-byX("left", 280, 215, 1440, 1201);
+      }
+    }
+    &-img-0 {
+      @include adaptive-value-byX("top", 550, 350, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 410, 310, 1440, 1201);
+      }
+    }
+    &-text-1,
+    &-img-1 {
+      @include adaptive-value-byX("top", 665, 415, 1920, 1441);
+      @include adaptive-value-byX("left", 284, 109, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 495, 360, 1440, 1201);
+        @include adaptive-value-byX("left", 165, 72, 1440, 1201);
+      }
+    }
+    &-img-1 {
+      @include adaptive-value-byX("top", 700, 450, 1920, 1441);
+      @include adaptive-value-byX("left", 500, 320, 1920, 1441);
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 530, 395, 1440, 1201);
+        @include adaptive-value-byX("left", 376, 280, 1440, 1201);
+      }
+    }
+  }
+  &__content {
+    &-image {
+      margin: 0 10px;
+    }
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-illustration {
+      margin: 60px 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-text {
+      &.mt {
+        margin-top: 20px;
+      }
+    }
+  }
+  @media(max-width: 1440px) {
+    @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+    @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+  }
+  @media(max-width: 1200px) {
+    @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+    @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+  }
+  @media (max-width: 860px) {
+    @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+    @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    position: relative;
+    &__wrapper {
+      grid-column: 1 / span 8;
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      &-illustration {
+        flex-direction: column;
+        margin: 0;
+        @include adaptive-value-byX("width", 92, 80, 860, 640);
+        @include adaptive-value-byX("margin-bottom", 170, 130, 860, 640);
+        @include adaptive-value-byX("margin-top", 0, 20, 860, 640);
+        align-self: flex-end;
+      }
+      &-image {
+        margin: 10px 0;
+      }
+      &-image-line {
+        transform: rotate(90deg);
+        @include adaptive-value-byX("width", 63, 55, 860, 640);
+        @include adaptive-value-byX("height", 63, 55, 860, 640);
+      }
+      &-image-1 {
+        @include adaptive-value-byX("width", 53, 46, 860, 640);
+        @include adaptive-value-byX("height", 127, 110, 860, 640);
+      }
+      &-image-2 {
+        @include adaptive-value-byX("width", 67, 58, 860, 640);
+        @include adaptive-value-byX("height", 134, 116, 860, 640);
+      }
+      &-image-3 {
+        @include adaptive-value-byX("width", 92, 80, 860, 640);
+        @include adaptive-value-byX("height", 63, 55, 860, 640);
+      }
+    }
+    &__box {
+      position: absolute;
+      left: 0;
+      @include adaptive-value-byX("top", 250, 260, 860, 640);
+      @include adaptive-value-byX("width", 567, 500, 860, 640);
+      @include adaptive-value-byX("height", 700, 626, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+    @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    &__box {
+      @include adaptive-value-byX("top", 260, 240, 640, 320);
+      @include adaptive-value-byX("width", 500, 290, 640, 320);
+      @include adaptive-value-byX("height", 626, 357, 640, 320);
+    }
+    &__content {
+      &-illustration {
+        @include adaptive-value-byX("width", 80, 49, 640, 320);
+        @include adaptive-value-byX("margin-bottom", 130, 90, 640, 320);
+        @include adaptive-value-byX("margin-top", 20, 10, 640, 320);
+      }
+      &-image-line {
+        @include adaptive-value-byX("width", 55, 33, 640, 320);
+        @include adaptive-value-byX("height", 55, 33, 640, 320);
+      }
+      &-image {
+        @include adaptive-value-byX("margin-top", 10, 4, 640, 320);
+        @include adaptive-value-byX("margin-bottom", 10, 4, 640, 320);
+      }
+      &-image-1 {
+        @include adaptive-value-byX("width", 46, 28, 640, 320);
+        @include adaptive-value-byX("height", 110, 67, 640, 320);
+      }
+      &-image-2 {
+        @include adaptive-value-byX("width", 58, 35, 640, 320);
+        @include adaptive-value-byX("height", 116, 70, 640, 320);
+      }
+      &-image-3 {
+        @include adaptive-value-byX("width", 80, 49, 640, 320);
+        @include adaptive-value-byX("height", 55, 33, 640, 320);
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    padding: 50px 0;
+    &__box {
+      width: 290px;
+      height: 357px;
+      top: 240px;
+    }
+    &__content {
+      &-title {
+        margin-bottom: 30px;
+      }
+      &-illustration {
+        width: 49px;
+        margin-top: 10px;
+        margin-bottom: 90px;
+      }
+      &-image {
+        margin: 4px 0;
+      }
+      &-image-line {
+        height: 33px;
+        width: 33px;
+      }
+      &-image-1 {
+        width: 28px;
+        height: 67px;
+      }
+      &-image-2 {
+        width: 35px;
+        height: 70px;
+      }
+      &-image-3 {
+        width: 49px;
+        height: 33px;
+      }
+    }
+  }
+}

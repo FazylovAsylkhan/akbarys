@@ -1,17 +1,18 @@
 .header_dark {
-    .header__logo-image_dark {
-      display: block;
-    }
-    .header__logo-image_light {
-      display: none;
-    }
+  .header__logo-image_dark {
+    display: block;
+  }
+  .header__logo-image_light {
+    display: none;
+  }
   .text-header {
     color: #182027;
   }
   .menu__toggle::after {
     border-top: 5px solid #182027;
   }
-  .sub-menu__list-item, .lang__list-item {
+  .sub-menu__list-item,
+  .lang__list-item {
     border: 1px solid #efefef;
     border-top: none;
     background-color: #fcfcfc;
@@ -24,7 +25,7 @@
       background-color: #fcfcfc;
     }
     &__image::after {
-        border: 2px solid #182027;
+      border: 2px solid #182027;
     }
   }
 }
@@ -34,8 +35,9 @@ body.mouse {
       background: #fcfcfc;
       border-bottom: 1px solid #efefef;
     }
-    .sub-menu__list-item:hover, .lang__list-item:hover {
-        border: 1px solid #1564fd;
+    .sub-menu__list-item:hover,
+    .lang__list-item:hover {
+      border: 1px solid #1564fd;
       .text-header {
         color: #fcfcfc;
       }
@@ -45,7 +47,7 @@ body.mouse {
         color: #fcfcfc;
       }
       .lang__image::after {
-          border: 2px solid #fcfcfc;
+        border: 2px solid #fcfcfc;
       }
     }
   }
@@ -55,10 +57,13 @@ body.touch {
     position: fixed;
   }
   .header.header_dark::before {
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px solid #efefef;
   }
   .header {
     display: none;
+  }
+  &.mainPage .header {
+    display: block;
   }
   header.additional {
     display: block;
@@ -66,15 +71,19 @@ body.touch {
   .header_dark .header__burger::after,
   .header_dark .header__burger::before,
   .header_dark .header__burger span {
-    background-color: #1564FD;
+    background-color: #1564fd;
   }
-  @media(max-width: 1040px) {
+  @media (max-width: 1040px) {
+    .header.header_transparent.additional.hide {
+      transform: translateY(-310%);
+    }
     .header.header_transparent.additional {
       transform: translateY(0%);
       opacity: 1;
-      position: absolute;
+      // position: absolute;
+      position: fixed;
       &::before {
-        background-color:transparent;
+        background-color: transparent;
       }
     }
     .header__menu {

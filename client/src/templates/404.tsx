@@ -6,13 +6,13 @@ import Page404 from '../components/page404/page404';
 import Seo from '../components/seo';
 
 const NotFoundPage = (props: any) => {
-  const { seo, firstBlock } = props.data.page404Json;
+  const { seo, firstBlock, langButtonsLinks } = props.data.page404Json;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
       <Page404 content={firstBlock}></Page404>
     </LayoutAdditional>
@@ -24,6 +24,8 @@ export default NotFoundPage;
 export const query = graphql`
   query Page404TemplateQuery($lang: String) {
     page404Json(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       url
       lang
       firstBlock {

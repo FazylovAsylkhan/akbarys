@@ -4,6 +4,13 @@ contentPost:
     lang: ru,
     url: lottery-winner,
     title: "Вакцинируйся, выйгрывай ценные призы",
+    h1: "Вакцинируйся, выйгрывай ценные призы",
+    langButtonsLinks:
+      [
+        "/lottery-winner",
+        "/lottery-winner/kz",
+        "/lottery-winner/en",
+      ],
     description: Розыгрыш ценных призов среди полностью вакцинированных...,
     date: 25 августа 2021 ,
     image: ../../images/pressCenter/item-2.jpg,

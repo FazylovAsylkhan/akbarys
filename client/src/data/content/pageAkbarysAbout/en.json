@@ -1,6 +1,8 @@
 {
   "lang": "en",
   "url": "akbarys-about/en",
+  "h1": "Akbarys is a leading provider of services to the oil and gas industry",
+  "langButtonsLinks": ["/akbarys-about", "/akbarys-about/kz", "/akbarys-about/en"],
   "firstBlock": {
     "title": "Akbarys is a leading provider of services to the oil and gas industry",
     "description": "Forward to achievements with us!",

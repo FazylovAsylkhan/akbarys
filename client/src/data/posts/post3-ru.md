@@ -4,6 +4,13 @@ contentPost:
     lang: ru,
     url: system-ashyq,
     title: Система Ashyq,
+    h1: "Система Ashyq",
+    langButtonsLinks:
+      [
+        "/system-ashyq",
+        "/system-ashyq/kz",
+        "/system-ashyq/en",
+      ],
     description: "В офисе была установлена система Ashyq, которая показывает ...",
     date: 28 июль 2021,
     image: ../../images/pressCenter/item-3.jpg,

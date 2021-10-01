@@ -1,6 +1,8 @@
 {
     "lang": "kz",
     "url": "service-center/kz",
+    "h1": "Servıs ortalyǵy",
+    "langButtonsLinks": ["/service-center", "/service-center/kz", "/service-center/en"],
     "firstBlock": {
       "title": "Servıs ortalyǵy",
       "subtitle": "Bizben birge jetistikterge jetińiz!",

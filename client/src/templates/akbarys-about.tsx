@@ -14,7 +14,7 @@ import Plug from '../components/plug/plug';
 
 const AboutAkbarys = (props: any) => {
   const {
-    firstBlock, secondBlock, thirdBlock, fouthBlock,
+    firstBlock, secondBlock, thirdBlock, fouthBlock, langButtonsLinks
   } = props.data.pageAkbarysAboutJson;
   const data = {
     header: props.data.headerJson,
@@ -22,7 +22,7 @@ const AboutAkbarys = (props: any) => {
   };
   return (
     <div>
-      <LayoutAdditional data={data}>
+      <LayoutAdditional langs={langButtonsLinks} data={data}>
         <Seo title={secondBlock.title} />
         <AkBarysPreview content={firstBlock} />
         <AkbarysDescription content={secondBlock} />
@@ -42,6 +42,8 @@ export default AboutAkbarys;
 export const query = graphql`
   query PageAkbarysAboutTemplateQuery($lang: String) {
     pageAkbarysAboutJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       lang
       url
       firstBlock {

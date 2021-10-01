@@ -1,6 +1,8 @@
 {
   "lang": "kz",
   "url": "contacts/kz",
+  "h1": "Baılanys aqparaty",
+  "langButtonsLinks": ["/contacts", "/contacts/kz", "/contacts/en"],
   "firstBlock": {
     "title": "Baılanys aqparaty",
     "description": "Biz árqashan baılanystamyz",

@@ -1,0 +1,181 @@
+@import "./utils";
+@import "./vars";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+.mainText-1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 78px;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 64, 48, 1920, 1440);
+    @include adaptive-value-byX("line-height", 78, 59, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 48px;
+    line-height: 59px;
+  }
+  @media (max-width: 860px) {
+    @include adaptive-value-byX("font-size", 64, 48, 860, 640);
+    @include adaptive-value-byX("line-height", 78, 59, 860, 640);
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 48, 32, 640, 320);
+    @include adaptive-value-byX("line-height", 62.4, 41.6, 640, 320);
+  }
+}
+.mainText-2 {
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 22px;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 22, 18, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 18px;
+  }
+  @media (max-width: 860px) {
+    @include adaptive-value-byX("font-size", 22, 18, 860, 640);
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 18, 16, 640, 320);
+  }
+}
+.mainText_additional-3 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 34, 24, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("font-size", 24, 34, 1200, 860);
+  }
+  @media (max-width: 860px) {
+    font-size: 34px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 34, 22, 640, 320);
+  }
+  @media (max-width: 320px) {
+    font-size: 22px;
+  }
+}
+.mainText-3 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 34, 24, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 24, 20, 640, 320);
+  }
+  @media (max-width: 320px) {
+    font-size: 20px;
+  }
+}
+.mainText-4 {
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 96, 72, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 72px;
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("font-size", 72, 96, 1200, 860);
+  }
+  @media (max-width: 860px) {
+    font-size: 96px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 96, 56, 640, 320);
+  }
+  @media (max-width: 320px) {
+    font-size: 56px;
+  }
+}
+.mainText-5 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 18, 16, 1920, 1441);
+  }
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("font-size", 16, 18, 1200, 860);
+  }
+  @media (max-width: 860px) {
+    font-size: 18px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 18, 14, 640, 320);
+  }
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+.mainText-6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 16, 15, 1920, 1441);
+  }
+  @media (max-width: 1440px) {
+    font-size: 15px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 15, 14, 640, 320);
+  }
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+
+.mainText-7 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 36, 30, 1920, 1441);
+  }
+  @media (max-width: 1440px) {
+    font-size: 30px;
+  }
+}
+.mainText-8 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 28, 24, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    @include adaptive-value-byX("font-size", 24, 20, 1440, 1200);
+  }
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media (max-width: 1040px) {
+    font-size: 24px;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("font-size", 24, 16, 640, 320);
+  }
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}

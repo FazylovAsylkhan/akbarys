@@ -4,6 +4,13 @@ contentPost:
     lang: en,
     url: lottery-winner/en,
     title: "Get vaccinated, win valuable prizes",
+    h1: "Get vaccinated, win valuable prizes",
+    langButtonsLinks:
+      [
+        "/lottery-winner",
+        "/lottery-winner/kz",
+        "/lottery-winner/en",
+      ],
     description: A raffle of valuable prizes among the fully vaccinated...,
     date: "August 25, 2021",
     image: ../../images/pressCenter/item-2.jpg,

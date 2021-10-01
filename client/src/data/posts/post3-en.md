@@ -4,6 +4,13 @@ contentPost:
     lang: en,
     url: system-ashyq/en,
     title: Ashyq System,
+    h1: "Ashyq System",
+    langButtonsLinks:
+      [
+        "/system-ashyq",
+        "/system-ashyq/kz",
+        "/system-ashyq/en",
+      ],
     description: "The Ashyq system was installed in the office, which shows ...",
     date: "July 28, 2021",
     image: ../../images/pressCenter/item-3.jpg,

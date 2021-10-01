@@ -9,6 +9,7 @@ const Plug = () => {
       )
     ) {
       document.querySelector('.plug')?.classList.add('active');
+      document.body.style.overflowY = "hidden"
     }
   }, []);
   return (

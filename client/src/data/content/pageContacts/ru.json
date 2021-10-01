@@ -1,6 +1,8 @@
 {
   "lang": "ru",
   "url": "contacts",
+  "h1": "Контактная информация",
+  "langButtonsLinks": ["/contacts", "/contacts/kz", "/contacts/en"],
   "firstBlock": {
     "title": "Контактная информация",
     "description": "Мы всегда на связи",

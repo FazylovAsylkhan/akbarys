@@ -1,12 +1,10 @@
 @import "../../../scss/utils";
 
 .sourFluidTreatment {
-  padding-bottom: 120px;
-  padding-top: 120px;
+  padding: 120px 0;
   background-color: #fff;
-  @media(max-width: 1920px) {
-    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
-    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+  .illustration-2 {
+    display: none;
   }
   & rect {
     pointer-events: none;
@@ -16,19 +14,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 150px;
-    @media(max-width: 1920px) {
-      @include adaptive-value-byX("grid-column-gap", 150, 100, 1920, 1440);
+    @media (max-width: 860px) {
+      grid-column: 1 / span 8;
+    }
+    @media (max-width: 640px) {
+      grid-column: 1 / span 6;
     }
   }
   &__wrapper {
     grid-column: 1 / span 12;
     margin-top: 80px;
     margin-bottom: 80px;
-    @media(max-width: 1920px) {
-      @include adaptive-value-byX("margin-top", 80, 50, 1920, 1440);
-      @include adaptive-value-byX("margin-bottom", 80, 50, 1920, 1440);
-    }
     position: relative;
+    @media (max-width: 860px) {
+      grid-column: 1 / span 8;
+    }
+    @media (max-width: 640px) {
+      grid-column: 1 / span 6;
+    }
   }
   &__title {
     margin-top: 44px;
@@ -38,15 +41,49 @@
   &__img {
     width: 100%;
   }
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    &__content {
+      @include adaptive-value-byX("grid-column-gap", 150, 120, 1920, 1440);
+    }
+    &__wrapper {
+      @include adaptive-value-byX("margin-top", 80, 50, 1920, 1440);
+      @include adaptive-value-byX("margin-bottom", 80, 50, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+    @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    &__content {
+      @include adaptive-value-byX("grid-column-gap", 150, 110, 1440, 1200);
+    }
+    &__wrapper {
+      margin: 50px 0;
+    }
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+    @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+  }
+  @media (max-width: 860px) {
+    grid-column: 1 / span 8;
+    @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+    @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+  }
+  @media (max-width: 640px) {
+    grid-column: 1 / span 6;
+    @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+    @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+  }
+  @media (max-width: 320px) {
+    padding: 50px 0;
+  }
   &__tip {
     position: absolute;
     &-text {
       &.show {
         display: block;
-      }
-      height: 76px;
-      @media(max-width: 1920px) {
-        @include adaptive-value-byX("height", 76, 74, 1920, 1440);
       }
       height: fit-content;
       position: absolute;
@@ -56,14 +93,17 @@
       background-color: #1564fd;
       display: none;
       padding: 20px 25px;
+      @media (max-width: 1200px) {
+        padding: 12px 15px;
+      }
       &-0 {
-        width: 184px;
+        width: 175px;
       }
       &-1 {
         width: 219px;
       }
       &-2 {
-        width: 207px;
+        width: 209px;
       }
       &-3 {
         width: 265px;
@@ -72,7 +112,7 @@
         width: 198px;
       }
       &-5 {
-        width: 265px;
+        width: 256px;
       }
       &-6 {
         width: 249px;
@@ -83,12 +123,99 @@
       &-8 {
         width: 131px;
       }
+      @media (max-width: 1920px) {
+        &-0 {
+          @include adaptive-value-byX("width", 175, 167, 1920, 1440);
+        }
+        &-1 {
+          @include adaptive-value-byX("width", 219, 206, 1920, 1440);
+        }
+        &-2 {
+          @include adaptive-value-byX("width", 209, 198, 1920, 1440);
+        }
+        &-3 {
+          @include adaptive-value-byX("width", 265, 251, 1920, 1440);
+        }
+        &-4 {
+          @include adaptive-value-byX("width", 198, 188, 1920, 1440);
+        }
+        &-5 {
+          @include adaptive-value-byX("width", 256, 241, 1920, 1440);
+        }
+        &-6 {
+          @include adaptive-value-byX("width", 249, 234, 1920, 1440);
+        }
+        &-7 {
+          @include adaptive-value-byX("width", 209, 197, 1920, 1440);
+        }
+        &-8 {
+          @include adaptive-value-byX("width", 131, 125, 1920, 1440);
+        }
+      }
+      @media (max-width: 1440px) {
+        &-0 {
+          width: 167px;
+        }
+        &-1 {
+          width: 206px;
+        }
+        &-2 {
+          width: 198px;
+        }
+        &-3 {
+          width: 251px;
+        }
+        &-4 {
+          width: 188px;
+        }
+        &-5 {
+          width: 241px;
+        }
+        &-6 {
+          width: 234px;
+        }
+        &-7 {
+          width: 197px;
+        }
+        &-8 {
+          width: 125px;
+        }
+      }
+      @media (max-width: 1200px) {
+        &-0 {
+          width: 131px;
+        }
+        &-1 {
+          width: 164px;
+        }
+        &-2 {
+          width: 158px;
+        }
+        &-3 {
+          width: 204px;
+        }
+        &-4 {
+          width: 149px;
+        }
+        &-5 {
+          width: 195px;
+        }
+        &-6 {
+          width: 189px;
+        }
+        &-7 {
+          width: 159px;
+        }
+        &-8 {
+          width: 96px;
+        }
+      }
     }
     &-img {
       z-index: 10;
       height: 53px;
       width: 40px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("height", 53, 49, 1920, 1440);
         @include adaptive-value-byX("width", 40, 36, 1920, 1440);
       }
@@ -113,20 +240,24 @@
     }
     &-text-0 {
       top: 245px;
-      left: 168px;
-      @media(max-width: 1920px) {
+      left: 169px;
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 245, 141, 1920, 1441);
-        @include adaptive-value-byX("left", 168, 49, 1920, 1441);
+        @include adaptive-value-byX("left", 177, 65.5, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 171, 119, 1440, 1201);
-        @include adaptive-value-byX("left", 81, 24, 1440, 1201);
+        @include adaptive-value-byX("left", 98, 41, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 160, 126, 1200, 1040);
+        @include adaptive-value-byX("left", 105, 61, 1200, 1040);
       }
     }
     &-img-0 {
       top: 263px;
       left: 313px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 263, 161, 1920, 1441);
         @include adaptive-value-byX("left", 313, 197, 1920, 1441);
       }
@@ -134,23 +265,31 @@
         @include adaptive-value-byX("top", 192, 140, 1440, 1201);
         @include adaptive-value-byX("left", 230, 174, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 163, 130, 1200, 1040);
+        @include adaptive-value-byX("left", 202, 159, 1200, 1040);
+      }
     }
     &-text-1 {
       top: 320px;
       left: 75px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 320, 187, 1920, 1441);
-        @include adaptive-value-byX("left", 75, -25, 1920, 1441);
+        @include adaptive-value-byX("left", 75, -12, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 227, 159, 1440, 1201);
-        @include adaptive-value-byX("left", 4, -46, 1440, 1201);
+        @include adaptive-value-byX("left", 18, -32, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 206, 163, 1200, 1040);
+        @include adaptive-value-byX("left", 30, -6, 1200, 1040);
       }
     }
     &-img-1 {
       top: 357px;
       left: 255px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 357, 222, 1920, 1441);
         @include adaptive-value-byX("left", 255, 158, 1920, 1441);
       }
@@ -158,34 +297,45 @@
         @include adaptive-value-byX("top", 263, 196, 1440, 1201);
         @include adaptive-value-byX("left", 188, 140, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 224, 182, 1200, 1040);
+        @include adaptive-value-byX("left", 160, 126, 1200, 1040);
+      }
     }
     &-text-2,
     &-img-2 {
-      top: 287px;
+      top: 289px;
       left: 468px;
-      @media(max-width: 1920px) {
-        @include adaptive-value-byX("top", 287, 187, 1920, 1441);
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 306, 182, 1920, 1441);
         @include adaptive-value-byX("left", 468, 321, 1920, 1441);
       }
       @media (max-width: 1440px) {
-        @include adaptive-value-byX("top", 218, 156, 1440, 1201);
+        @include adaptive-value-byX("top", 219, 156, 1440, 1201);
         @include adaptive-value-byX("left", 358, 279, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 203, 157, 1200, 1040);
+        @include adaptive-value-byX("left", 329, 264, 1200, 1040);
       }
     }
     &-img-2 {
       top: 324px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 324, 202, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 238, 177, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 206, 162, 1200, 1040);
       }
     }
     &-text-3,
     &-img-3 {
       top: 265px;
       left: 865px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 265, 141, 1920, 1441);
         @include adaptive-value-byX("left", 865, 576, 1920, 1441);
       }
@@ -193,77 +343,102 @@
         @include adaptive-value-byX("top", 181, 107, 1440, 1201);
         @include adaptive-value-byX("left", 662, 507, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 168, 110, 1200, 1040);
+        @include adaptive-value-byX("left", 570, 473, 1200, 1040);
+      }
     }
     &-img-3 {
       top: 300;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 300, 176, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 217, 145, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 185, 129, 1200, 1040);
+      }
     }
     &-text-4,
     &-img-4 {
-      top: 151px;
+      top: 153px;
       left: 1164px;
-      @media(max-width: 1920px) {
-        @include adaptive-value-byX("top", 151, 80, 1920, 1441);
-        @include adaptive-value-byX("left", 1164, 765, 1920, 1441);
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 153, 81, 1920, 1441);
+        @include adaptive-value-byX("left", 1164, 764, 1920, 1441);
       }
       @media (max-width: 1440px) {
-        @include adaptive-value-byX("top", 103, 62, 1440, 1201);
+        @include adaptive-value-byX("top", 105, 64, 1440, 1201);
         @include adaptive-value-byX("left", 881, 682, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 98, 72, 1200, 1040);
+        @include adaptive-value-byX("left", 764, 630, 1200, 1040);
       }
     }
     &-img-4 {
       top: 170px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 170, 100, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 124, 84, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 100, 75, 1200, 1040);
+      }
     }
     &-text-5,
     &-img-5 {
       top: -5px;
-      left: 960px;
-      @media(max-width: 1920px) {
+      left: 959px;
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", -5, -8, 1920, 1441);
-        @include adaptive-value-byX("left", 960, 643, 1920, 1441);
+        @include adaptive-value-byX("left", 959, 642, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", -11, -28, 1440, 1201);
         @include adaptive-value-byX("left", 743, 577, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 13, 2, 1200, 1040);
+        @include adaptive-value-byX("left", 643, 530, 1200, 1040);
+      }
     }
     &-img-5 {
       top: 30px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 30, 27, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 25, 9, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 30, 20, 1200, 1040);
       }
     }
     &-text-6,
     &-img-6 {
       top: -40px;
       left: 49px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", -40, -47, 1920, 1441);
-        @include adaptive-value-byX("left", 49, 2, 1920, 1441);
+        @include adaptive-value-byX("left", 49, 16, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", -47, -54, 1440, 1201);
-        @include adaptive-value-byX("left", -22, -73, 1440, 1201);
+        @include adaptive-value-byX("left", -7.5, -58.5, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", -30, -36, 1200, 1040);
+        @include adaptive-value-byX("left", 9, -27, 1200, 1040);
       }
     }
     &-img-6 {
       top: -3px;
       left: 258px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", -3, -10, 1920, 1441);
         @include adaptive-value-byX("left", 258, 215, 1920, 1441);
       }
@@ -271,50 +446,208 @@
         @include adaptive-value-byX("top", -10, -17, 1440, 1201);
         @include adaptive-value-byX("left", 191, 142, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", -13, -17, 1200, 1040);
+        @include adaptive-value-byX("left", 164, 130, 1200, 1040);
+      }
     }
     &-text-7,
     &-img-7 {
-      top: 387px;
-      left: 971px;
-      @media(max-width: 1920px) {
-        @include adaptive-value-byX("top", 387, 234, 1920, 1441);
-        @include adaptive-value-byX("left", 971, 634, 1920, 1441);
+      top: 389px;
+      left: 970px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 389, 234, 1920, 1441);
+        @include adaptive-value-byX("left", 970, 634, 1920, 1441);
       }
       @media (max-width: 1440px) {
-        @include adaptive-value-byX("top", 274, 201, 1440, 1201);
+        @include adaptive-value-byX("top", 276, 203, 1440, 1201);
         @include adaptive-value-byX("left", 724, 566, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 251, 200, 1200, 1040);
+        @include adaptive-value-byX("left", 632, 518, 1200, 1040);
       }
     }
     &-img-7 {
       top: 406px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 406, 254, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 295, 223, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 255, 204, 1200, 1040);
+      }
     }
     &-text-8,
     &-img-8 {
-      top: 294px;
+      top: 295px;
       left: 1164px;
-      @media(max-width: 1920px) {
-        @include adaptive-value-byX("top", 294, 176, 1920, 1441);
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 295, 176, 1920, 1441);
         @include adaptive-value-byX("left", 1164, 765, 1920, 1441);
       }
       @media (max-width: 1440px) {
-        @include adaptive-value-byX("top", 215, 151, 1440, 1201);
+        @include adaptive-value-byX("top", 217, 152, 1440, 1201);
         @include adaptive-value-byX("left", 881, 682, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 197, 152, 1200, 1040);
+        @include adaptive-value-byX("left", 766, 633, 1200, 1040);
       }
     }
     &-img-8 {
       top: 313px;
-      @media(max-width: 1920px) {
+      @media (max-width: 1920px) {
         @include adaptive-value-byX("top", 313, 195, 1920, 1441);
       }
       @media (max-width: 1440px) {
         @include adaptive-value-byX("top", 236, 172, 1440, 1201);
       }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 200, 156, 1200, 1040);
+      }
+    }
+  }
+  @media (max-width: 1040px) {
+    .illustration-1 {
+      display: none;
+    }
+    .illustration-2 {
+      display: block;
+      margin: 30px 0;
+    }
+    &__list {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: top;
+    }
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      &-title {
+        margin-bottom: 20px;
+      }
+      &-description:nth-child(2) {
+        margin-top: 20px;
+      }
+    }
+    &__title {
+      margin-top: 20px;
+    }
+    &__list-item {
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 10px;
+      height: 34px;
+      max-width: 232px;
+    }
+    &__list-item::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1564fd;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 121.4%;
+      color: #ffffff;
+    }
+
+    &__list-item:nth-child(1) {
+      order: 1;
+      &::after {
+        content: "1";
+      }
+    }
+    &__list-item:nth-child(2) {
+      order: 3;
+      &::after {
+        content: "2";
+      }
+    }
+    &__list-item:nth-child(3) {
+      order: 5;
+      &::after {
+        content: "3";
+      }
+    }
+    &__list-item:nth-child(4) {
+      order: 7;
+      &::after {
+        content: "4";
+      }
+    }
+    &__list-item:nth-child(5) {
+      order: 9;
+      &::after {
+        content: "5";
+      }
+    }
+    &__list-item:nth-child(6) {
+      order: 2;
+      &::after {
+        content: "6";
+      }
+    }
+    &__list-item:nth-child(7) {
+      order: 4;
+      &::after {
+        content: "7";
+      }
+    }
+    &__list-item:nth-child(8) {
+      order: 6;
+      &::after {
+        content: "8";
+      }
+    }
+    &__list-item:nth-child(9) {
+      order: 8;
+      &::after {
+        content: "9";
+      }
+    }
+  }
+  @media (max-width: 520px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__list-item {
+      max-width: 100%;
+      height: 24px;
+    }
+    &__list-item:nth-child(1) {
+      order: 1;
+    }
+    &__list-item:nth-child(2) {
+      order: 2;
+    }
+    &__list-item:nth-child(3) {
+      order: 3;
+    }
+    &__list-item:nth-child(4) {
+      order: 4;
+    }
+    &__list-item:nth-child(5) {
+      order: 5;
+    }
+    &__list-item:nth-child(6) {
+      order: 6;
+    }
+    &__list-item:nth-child(7) {
+      order: 7;
+    }
+    &__list-item:nth-child(8) {
+      order: 8;
+    }
+    &__list-item:nth-child(9) {
+      order: 9;
     }
   }
 }

@@ -1,6 +1,8 @@
 {
   "lang": "ru",
   "url": "politics",
+  "h1": "Политика конфиденциальности",
+  "langButtonsLinks": ["/politics", "/politics/kz", "/politics/en"],
   "seo": {
     "title": "Политика конфиденциальности"
   },

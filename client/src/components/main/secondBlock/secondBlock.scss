@@ -27,35 +27,33 @@
     &__box,
     &__button {
       @include adaptive-value-byX("margin-top", 60, 30, 1920, 1440);
+      margin-top: calc((60 / 1002) * 100vh);
     }
   }
   @media (max-width: 1440px) {
-    @include adaptive-value-byX("padding-top", 272, 406, 1440, 1200);
+    // @include adaptive-value-byX("padding-top", 272, 406, 1440, 1200);
+    padding-top: calc((226 / 760) * 100vh);
     &__wrapper {
       grid-column: 1 / span 12;
     }
-    &__title {
-      max-width: 390px;
-    }
     &__button,
     &__box {
-      margin-top: 30px;
+      // margin-top: 30px;
+      margin-top: calc((30 / 760) * 100vh);
     }
     &__subtitle {
       grid-template-columns: 100px 230px;
     }
   }
   @media (max-width: 1200px) {
-    @include adaptive-value-byX("padding-top", 406, 828, 1200, 860);
+    // @include adaptive-value-byX("padding-top", 406, 828, 1200, 860);
+    padding-top: calc((206 / 720) * 100vh);
   }
   @media (max-width: 1040px) {
-    &__title {
-      max-width: 500px;
-    }
-    padding-top: calc((601 / 1200) * 100vh);
     &__button,
     &__box {
-      margin-top: 40px;
+      // margin-top: 40px;
+      margin-top: calc((40 / 720) * 100vh);
     }
     &__subtitle {
       grid-template-columns: 110px 185px;
@@ -65,7 +63,8 @@
     &__wrapper {
       grid-column: 1 / span 8;
     }
-    @include adaptive-value-byX("padding-top", 601, 431, 860, 640);
+    // @include adaptive-value-byX("padding-top", 601, 431, 860, 640);
+    padding-top: calc((601 / 1200) * 100vh);
     &__subtitle {
       grid-template-columns: 130px 250px;
     }
@@ -74,29 +73,37 @@
     &__wrapper {
       grid-column: 1 / span 6;
     }
-    @include adaptive-value-byX("padding-top", 431, 179, 640, 320);
+    // @include adaptive-value-byX("padding-top", 431, 179, 640, 320);
+    padding-top: calc((431 / 1000) * 100vh);
     &__box,
     &__button {
-      @include adaptive-value-byX("margin-top", 30, 20, 640, 320);
+      // @include adaptive-value-byX("margin-top", 30, 20, 640, 320);
+      margin-top: calc((30 / 1000) * 100vh);
     }
     &__title {
       max-width: 100%;
     }
-    &__subtitle-digit.text-2 {
+    .mainText-3 {
       @include adaptive-value-byX("font-size", 96, 56, 640, 320);
-      @include adaptive-value-byX("line-height", 117, 68, 640, 320);
     }
   }
   &__wrapper.visible {
     opacity: 1;
     animation: show 1.5s ease;
   }
-  @media (max-width: 320px) {
-    padding-top: 179px;
+  @media (max-width: 500px) {
+    padding-top: calc((179 / 520) * 100vh);
     &__box,
     &__button {
-      margin-top: 20px;
+      margin-top: calc((20 / 520) * 100vh);
     }
+  }
+  @media (max-width: 320px) {
+    // padding-top: 179px;
+    // &__box,
+    // &__button {
+    //   margin-top: 20px;
+    // }
     &__subtitle-digit.text-2 {
       font-size: 56px;
       line-height: 68px;

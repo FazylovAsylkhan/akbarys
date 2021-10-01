@@ -1,45 +1,48 @@
-import * as React from 'react';
-import { useEffect } from 'react';
+import * as React from "react"
+import { useEffect } from "react"
 
-import { graphql } from 'gatsby';
-import H2sPreview from '../components/h2s/firstBlock/h2s.preview';
-import H2sIso from '../components/h2s/fouthBlock/h2s.iso';
-import H2sDescription from '../components/h2s/secondBlock/h2s.description';
-import H2sAboutSft from '../components/h2s/thirdBlock/h2s.aboutSft';
-import GasDetectionSystem from '../components/ppe/fouthBlock/ppe.gasDetectionSystem';
-import LayoutAdditional from '../components/layer/layerAdditional';
-import Seo from '../components/seo';
-import Plug from '../components/plug/plug';
+import { graphql } from "gatsby"
+import H2sPreview from "../components/h2s/firstBlock/h2s.preview"
+import H2sIso from "../components/h2s/fouthBlock/h2s.iso"
+import H2sDescription from "../components/h2s/secondBlock/h2s.description"
+import LayoutAdditional from "../components/layer/layerAdditional"
+import Seo from "../components/seo"
+import H2sAboutSft from "../components/h2s/fivthBlock/h2s.aboutSft"
+import H2sGasDetectionSystem from "../components/h2s/thirdBlock/h2s.gasDetectionSystem"
 
 const H2sService = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll('.headerAdditional__link')[1]
-      ?.classList.add('active');
-  }, []);
-  const { firstBlock, secondBlock } = props.data.pageH2SServiceJson;
+      .querySelectorAll(".headerAdditional__link")[1]
+      ?.classList.add("active")
+  }, [])
+  const { firstBlock, secondBlock, thirdBlock,
+    fourthBlock,
+    fivthBlock, langButtonsLinks } =
+    props.data.pageH2SServiceJson
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  };
+  }
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title="Комплексные решения по безопасности" />
       <H2sPreview content={firstBlock} />
-      <H2sDescription content={secondBlock}></H2sDescription>
-      <GasDetectionSystem />
-      <H2sIso />
-      <H2sAboutSft />
-      <Plug />
+      <H2sDescription content={secondBlock} />
+      <H2sGasDetectionSystem content={thirdBlock} />
+      <H2sIso content={fourthBlock} />
+      <H2sAboutSft content={fivthBlock} />
     </LayoutAdditional>
-  );
-};
+  )
+}
 
-export default H2sService;
+export default H2sService
 
 export const query = graphql`
   query PageH2sServiceTemplateQuery($lang: String) {
     pageH2SServiceJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       url
       lang
       firstBlock {
@@ -51,7 +54,11 @@ export const query = graphql`
         }
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(
+              formats: [AVIF, WEBP, JPG]
+              placeholder: DOMINANT_COLOR
+              quality: 50
+            )
           }
         }
       }
@@ -66,6 +73,35 @@ export const query = graphql`
           description1
           description2
           title
+        }
+      }
+      thirdBlock {
+        title
+        descriptions
+        images {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+      fourthBlock {
+        title
+        descriptions
+      }
+      fivthBlock {
+        slides {
+          title
+          subtitle
+          description
+          image {
+          childImageSharp {
+            gatsbyImageData(
+              formats: [AVIF, WEBP, JPG]
+              placeholder: DOMINANT_COLOR
+              quality: 50
+            )
+          }
+        }
         }
       }
     }
@@ -106,34 +142,4 @@ export const query = graphql`
       }
     }
   }
-`;
-
-// export const query = graphql`
-//   query {
-//     markdownRemark(frontmatter: {contentPage: {h2sService: {lang: {eq: "ru"}}}}) {
-//       frontmatter {
-//         contentPage {
-//           h2sService {
-//             firstBlock {
-//               description
-//               title
-//               subtitles {
-//                 digit
-//                 text
-//               }
-//               image {
-//                 childImageSharp {
-//                   gatsbyImageData(
-//                     formats: [AVIF, WEBP, JPG]
-//                     placeholder: DOMINANT_COLOR
-//                     quality: 50
-//                   )
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+`

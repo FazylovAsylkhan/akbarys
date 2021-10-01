@@ -1,6 +1,8 @@
 {
   "lang": "en",
   "url": "404/en",
+  "h1": "Page not found. 404",
+  "langButtonsLinks": ["/404", "/404/kz", "/404/en"],
   "seo": {
     "title": "Page not found. 404"
   },

@@ -7,13 +7,13 @@ import Seo from '../components/seo';
 import Plug from '../components/plug/plug';
 
 const Politics = (props: any) => {
-  const { seo, firstBlock } = props.data.pagePoliticsJson;
+  const { seo, firstBlock, langButtonsLinks } = props.data.pagePoliticsJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
       <PoliticsPreview content={firstBlock} />
       <Plug />
@@ -26,6 +26,8 @@ export default Politics;
 export const query = graphql`
   query PagePoliticsTemplateQuery($lang: String) {
     pagePoliticsJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       lang
       seo {
           title

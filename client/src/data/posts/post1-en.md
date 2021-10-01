@@ -4,6 +4,13 @@ contentPost:
     lang: en,
     url: akbarys-in-orenburg/en,
     title: Presentation of Akbarys H2S service 2021,
+    h1: "Presentation of Akbarys H2S service 2021",
+    langButtonsLinks:
+      [
+        "/akbarys-in-orenburg",
+        "/akbarys-in-orenburg/kz",
+        "/akbarys-in-orenburg/en",
+      ],
     description: Akbarys held a presentation of services in the city of Orenburg...,
     date: "June 30, 2021",
     image: ../../images/pressCenter/item-1.jpg,

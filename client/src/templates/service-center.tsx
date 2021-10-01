@@ -20,9 +20,9 @@ const ServiceCenter = (props: any) => {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
-  const { firstBlock, secondBlock } = props.data.pageServiceCenterJson;
+  const { firstBlock, secondBlock, langButtonsLinks } = props.data.pageServiceCenterJson;
   return (
-    <LayoutAdditional data={data}>
+    <LayoutAdditional langs={langButtonsLinks} data={data}>
       <Seo title="Сервисный центр" />
       <ServiceCenterPreview content={firstBlock} />
       <ServiceCenterDescription content={secondBlock} />
@@ -38,6 +38,8 @@ export default ServiceCenter;
 export const query = graphql`
   query PageServiceCenterTemplateQuery($lang: String) {
     pageServiceCenterJson(lang: { eq: $lang }) {
+      h1
+      langButtonsLinks
       lang
       firstBlock {
         title

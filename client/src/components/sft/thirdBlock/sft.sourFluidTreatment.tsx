@@ -1,22 +1,31 @@
-import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { useEffect } from 'react';
-import './sft.sourFluidTreatment.scss';
+import * as React from "react"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { FC, useEffect } from "react"
+import "./sft.sourFluidTreatment.scss"
 
-import TIP_IMG from '../../../images/tip.svg';
+import TIP_IMG from "../../../images/tip.svg"
+import id from "../../../utils/randomId"
 
-const SftSourFluidTreatment = () => {
+interface SftSourFluidTreatmentProps {
+  content: any
+}
+
+const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
+  const { first, second } = content
+  const img1 = getImage(first.images[0])
+  const img2 = getImage(first.images[1])
+
   const contentTips = [
-    'Азотная касета',
-    'Рециркуляционный насос',
-    'Линия циркуляции',
-    'Жидкость с содержанием сероводорода',
-    'Очищенные пары',
-    'Резервуар для хранения пластовых вод',
-    'Вентиляционная линия ёмкости',
-    'Линия вентиляции',
-    'Скруббер',
-  ];
+    second.items[0],
+    second.items[1],
+    second.items[2],
+    second.items[5],
+    second.items[8],
+    second.items[4],
+    second.items[3],
+    second.items[6],
+    second.items[7],
+  ]
   const tipsTexts = contentTips.map((content, i) => (
     <div
       key={`keyText-${i}`}
@@ -24,7 +33,7 @@ const SftSourFluidTreatment = () => {
     >
       <span>{content}</span>
     </div>
-  ));
+  ))
   const tipsImgs = new Array(9)
     .fill(1)
     .map((e, i) => (
@@ -32,28 +41,32 @@ const SftSourFluidTreatment = () => {
         key={`keyImg-${i}`}
         className={`sourFluidTreatment__tip-img sourFluidTreatment__tip-img-${i}`}
       />
-    ));
+    ))
   useEffect(() => {
-    const img = document.querySelector('.sourFluidTreatment');
+    const img = document.querySelector(".sourFluidTreatment")
     const tipsTextElements = document.querySelectorAll(
-      '.sourFluidTreatment__tip-text',
-    );
-    let numberTip = -1;
-    img?.addEventListener('mouseover', (e) => {
-      const element = e.target as HTMLElement;
-      if (element.classList.contains('sourFluidTreatment__tip-img')) {
-        tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
-        numberTip = Number(element.classList[1].slice(-1));
-        const textHtmlElement = tipsTextElements[numberTip];
-        textHtmlElement.classList.add('show');
+      ".sourFluidTreatment__tip-text"
+    )
+    let numberTip = -1
+    img?.addEventListener("mouseover", e => {
+      const element = e.target as HTMLElement
+      if (element.classList.contains("sourFluidTreatment__tip-img")) {
+        tipsTextElements.forEach(tipElement =>
+          tipElement.classList.remove("show")
+        )
+        numberTip = Number(element.classList[1].slice(-1))
+        const textHtmlElement = tipsTextElements[numberTip]
+        textHtmlElement.classList.add("show")
       } else if (tipsTextElements[numberTip] === e.target) {
-        true;
+        true
       } else {
-        tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
-        numberTip = -1;
+        tipsTextElements.forEach(tipElement =>
+          tipElement.classList.remove("show")
+        )
+        numberTip = -1
       }
-    });
-  }, []);
+    })
+  }, [])
 
   return (
     <div>
@@ -61,49 +74,60 @@ const SftSourFluidTreatment = () => {
         <div className="container ">
           <div className="sourFluidTreatment__content">
             <h2 className="sourFluidTreatment__content-title title-2 black left">
-              Технология предусматривает орошение газового потока специальными
-              растворами
+              {first.title}
             </h2>
             <p className="sourFluidTreatment__content-description text-1 gray right">
-              Метод основан на орошении отходящего газа целевыми растворами, при
-              максимально развитом контакте жидкости с попутными примесями газа
-              и более интенсивном смешивании очищаемого газа с жидкостью. В
-              результате токсичный газ полностью растворяется в жидкости.
+              {first.descriptions[0]}
             </p>
           </div>
-          <div className="sourFluidTreatment__wrapper">
-            <StaticImage
-              className="sourFluidTreatment__img"
-              src="../../../images/sft/sourFluidTreatment.jpg"
-              alt="sourFluidTreatment"
-              placeholder="dominantColor"
-              quality={95}
-              formats={['auto', 'webp', 'avif']}
-            />
+          <div className="sourFluidTreatment__wrapper illustration-1">
+            {img1 ? (
+              <GatsbyImage
+                className="sourFluidTreatment__img"
+                image={img1}
+                alt={second.title}
+              />
+            ) : null}
             {tipsImgs}
             {tipsTexts}
           </div>
+          <div className="sourFluidTreatment__wrapper illustration-2">
+            {img2 ? (
+              <GatsbyImage
+                className="sourFluidTreatment__img"
+                image={img2}
+                alt={second.title}
+              />
+            ) : null}
+            <h2 className="sourFluidTreatment__title title-2 blue">
+              {second.title}
+            </h2>
+            <ul className="sourFluidTreatment__list">
+              {second.items.map((item: string) => {
+                return (
+                  <li
+                    className="sourFluidTreatment__list-item text-13 gray"
+                    key={id()}
+                  >
+                    {item}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
           <div className="sourFluidTreatment__content">
             <p className="sourFluidTreatment__content-description text-1 gray right">
-              Во время хранения пластовой воды в герметичных емкостях, пары
-              газов испаряются и выходят в вентиляционную линию емкости наружу,
-              линия в свою очередь соединяется со скруббером, где и происходит
-              нейтрализация сероводорода, а на выходе из скруббера выходит газ
-              без содержания сероводорода.
+              {first.descriptions[1]}
             </p>
             <p className="sourFluidTreatment__content-description text-1 gray right">
-              В емкостях всегда поддерживается позитивное давление во избежание
-              создания вакуума в емкости и засасывания воздуха из вне. Давление
-              периодически поддерживается газообразным азотом, тем самым
-              создавая безопасную "азотную подушку" с содержанием кислорода
-              внутри емкости.
+              {first.descriptions[2]}
             </p>
           </div>
         </div>
       </div>
       <div className="line"></div>
     </div>
-  );
-};
+  )
+}
 
-export default SftSourFluidTreatment;
+export default SftSourFluidTreatment

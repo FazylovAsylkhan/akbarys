@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { FC } from 'react';
-import h2s1 from '../../../images/h2sService/h2s-1.svg';
-import h2s2 from '../../../images/h2sService/h2s-2.svg';
-import h2s3 from '../../../images/h2sService/h2s-3.svg';
-import h2s4 from '../../../images/h2sService/h2s-4.svg';
-import h2s5 from '../../../images/h2sService/h2s-5.svg';
+import h2s1 from '../../../data/images/h2s/h2s-1.svg';
+import h2s2 from '../../../data/images/h2s/h2s-2.svg';
+import h2s3 from '../../../data/images/h2s/h2s-3.svg';
+import h2s4 from '../../../data/images/h2s/h2s-4.svg';
+import h2s5 from '../../../data/images/h2s/h2s-5.svg';
 import './h2s.description.scss';
 
 interface H2sDescriptionProps {
@@ -26,7 +26,7 @@ const H2sDescription: FC<H2sDescriptionProps> = ({ content }) => {
   return (
     <div className="h2sDescription">
       <div className="container">
-        <h1 className="transparent">{h1}</h1>
+        <h1 className="h1">{h1}</h1>
         <div className="h2sDescription__wrapper">
           <h2 className="h2sDescription__title title-1 black">
             {first.title}
