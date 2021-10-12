@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import PoliticsPreview from '../components/politics/firstBlock/politics';
 import LayoutAdditional from '../components/layer/layerAdditional';
 import Seo from '../components/seo';
-import Plug from '../components/plug/plug';
 
 const Politics = (props: any) => {
   const { seo, firstBlock, langButtonsLinks } = props.data.pagePoliticsJson;
@@ -13,10 +12,9 @@ const Politics = (props: any) => {
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
       <PoliticsPreview content={firstBlock} />
-      <Plug />
     </LayoutAdditional>
   );
 };
@@ -26,15 +24,21 @@ export default Politics;
 export const query = graphql`
   query PagePoliticsTemplateQuery($lang: String) {
     pagePoliticsJson(lang: { eq: $lang }) {
-      h1
       langButtonsLinks
       lang
       seo {
-          title
+        title
+        h1
       }
       firstBlock {
-          title
-          texts
+        title
+        texts {
+          begin
+          rules {
+            title
+            items
+          }
+        }
       }
     }
     headerJson(lang: { eq: $lang }) {

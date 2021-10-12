@@ -1,28 +1,28 @@
-import React, { useEffect, useRef } from "react"
-import { globalHistory } from "@reach/router"
-import { graphql } from "gatsby"
+import React, { useRef } from 'react';
+import { globalHistory } from '@reach/router';
+import { graphql } from 'gatsby';
 import SwiperCore, {
   EffectCoverflow,
   Keyboard,
   Mousewheel,
   Navigation,
   Pagination,
-} from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
+} from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Header from "../components/header/header"
-import Seo from "../components/seo"
-import SecondBlock from "../components/main/secondBlock/SecondBlock"
-import { PaginationProps } from "../types/mainTypes"
-import { changeMenuHeader, setEffects } from "../utils/mainUtils"
-import "../scss/mainStyle.scss"
-import SixthBlock from "../components/main/sixth/sixthBlock"
-import ThirdBlock from "../components/main/thirdBlock/ThirdBlock"
-import MainAkbarys from "../components/main/firstBlock/mainAkbarys"
-import FourthBlock from "../components/main/fourthBlock/fourthBlock"
-import FivthBlock from "../components/main/fivthBlock/fivthBlock"
-import SeventhBlock from "../components/main/seventhBlock/seventhBlock"
-import EighthBlock from "../components/main/eighthBlock/eighthBlock"
+import Header from '../components/header/header';
+import Seo from '../components/seo';
+import SecondBlock from '../components/main/secondBlock/SecondBlock';
+import { PaginationProps } from '../types/mainTypes';
+import { changeMenuHeader, setEffects } from '../utils/mainUtils';
+import '../scss/mainStyle.scss';
+import SixthBlock from '../components/main/sixth/sixthBlock';
+import ThirdBlock from '../components/main/thirdBlock/ThirdBlock';
+import MainAkbarys from '../components/main/firstBlock/mainAkbarys';
+import FourthBlock from '../components/main/fourthBlock/fourthBlock';
+import FivthBlock from '../components/main/fivthBlock/fivthBlock';
+import SeventhBlock from '../components/main/seventhBlock/seventhBlock';
+import EighthBlock from '../components/main/eighthBlock/eighthBlock';
 
 const IndexPage = (props: any) => {
   // useEffect(() => {
@@ -38,24 +38,24 @@ const IndexPage = (props: any) => {
   //     }
   //   });
   // }, []);
-  let currentPage = ""
+  let currentPage = '';
   globalHistory.listen(({ action }) => {
-    if (action === "PUSH") {
-      currentPage = globalHistory.location.href.split("/")[3]
+    if (action === 'PUSH') {
+      currentPage = globalHistory.location.href.split('/')[3];
     }
-  })
-  const pageSliderRef = useRef<Element | null>(null)
-  const { pagination } = (Pagination as PaginationProps).params
-  pagination.el = "page__pagination"
-  pagination.clickable = true
-  pagination.bulletClass = "page__bullet"
-  pagination.bulletActiveClass = "page__bullet_active"
-  pagination.bulletElement = "div"
+  });
+  const pageSliderRef = useRef<Element | null>(null);
+  const { pagination } = (Pagination as PaginationProps).params;
+  pagination.el = 'page__pagination';
+  pagination.clickable = true;
+  pagination.bulletClass = 'page__bullet';
+  pagination.bulletActiveClass = 'page__bullet_active';
+  pagination.bulletElement = 'div';
   const showActiveLink = () => {
     pageSliderRef.current
-      ?.querySelector(".header__link")
-      ?.classList.add("active")
-  }
+      ?.querySelector('.header__link')
+      ?.classList.add('active');
+  };
 
   SwiperCore.use([
     Mousewheel,
@@ -63,9 +63,10 @@ const IndexPage = (props: any) => {
     Pagination,
     Navigation,
     EffectCoverflow,
-  ])
+  ]);
 
   const {
+    seo,
     langButtonsLinks,
     firstBlock,
     secondBlock,
@@ -75,7 +76,7 @@ const IndexPage = (props: any) => {
     sixthBlock,
     seventhBlock,
     eighthBlock,
-  } = props.data.pageMainJson
+  } = props.data.pageMainJson;
 
   return (
     <Swiper
@@ -94,46 +95,50 @@ const IndexPage = (props: any) => {
       pagination
       scrollbar
       simulateTouch={true}
-      onAfterInit={swiper => {
-        pageSliderRef.current = swiper.el as unknown as Element
-        const parentSliderWrapper = swiper.el.querySelector(".swiper-wrapper")
-        parentSliderWrapper?.classList.add("page__wrapper")
-        const paginationElemeny = swiper.el.querySelector(".swiper-pagination")
-        paginationElemeny?.classList.add("page__pagination")
-        showActiveLink()
+      onAfterInit={(swiper) => {
+        pageSliderRef.current = swiper.el as unknown as Element;
+        const parentSliderWrapper = swiper.el.querySelector('.swiper-wrapper');
+        parentSliderWrapper?.classList.add('page__wrapper');
+        const paginationElemeny = swiper.el.querySelector('.swiper-pagination');
+        paginationElemeny?.classList.add('page__pagination');
+        showActiveLink();
 
-        document.addEventListener("click", () => {
-          const header = document.querySelector("header")
+        document.addEventListener('click', () => {
+          const header = document.querySelector('header');
           if (swiper.mousewheel) {
-            if (header?.classList.contains("active")) {
-              swiper.allowTouchMove = false
-              swiper.mousewheel.disable()
+            if (header?.classList.contains('active')) {
+              swiper.allowTouchMove = false;
+              swiper.mousewheel.disable();
             } else {
-              swiper.allowTouchMove = true
-              swiper.mousewheel.enable()
+              swiper.allowTouchMove = true;
+              swiper.mousewheel.enable();
             }
           }
-        })
+        });
       }}
-      onBeforeInit={pageSlider => {
-        const swiper = pageSlider
-        swiper.params.slideToClickedSlide = false
-        swiper.params.simulateTouch = false
+      onBeforeInit={(pageSlider) => {
+        const swiper = pageSlider;
+        swiper.params.slideToClickedSlide = false;
+        swiper.params.simulateTouch = false;
       }}
-      onInit={pageSlider => {
-        const swiper = pageSlider
-        swiper.params.slideToClickedSlide = false
+      onInit={(pageSlider) => {
+        const swiper = pageSlider;
+        swiper.params.slideToClickedSlide = false;
       }}
-      onSlideChange={swiper => {
-        const paginationElement =
-          document.body.querySelector(".swiper-pagination")
-        changeMenuHeader(swiper, paginationElement)
-        const pageSlider = pageSliderRef.current
-        if (pageSlider) setEffects(pageSlider, swiper)
+      onSlideChange={(swiper) => {
+        const paginationElement = document.body.querySelector('.swiper-pagination');
+        changeMenuHeader(swiper, paginationElement);
+        const pageSlider = pageSliderRef.current;
+        if (pageSlider) setEffects(pageSlider, swiper);
       }}
     >
-      <Seo title="Главная" />
-      <Header langs={langButtonsLinks} data={props.data.headerJson} />
+      <Seo title={seo.title} />
+      <h1 className="h1">{seo.h1}</h1>
+      <Header
+        isAdditional={false}
+        langs={langButtonsLinks}
+        data={props.data.headerJson}
+      />
       <SwiperSlide className="page__screen screen">
         <MainAkbarys content={firstBlock} />
       </SwiperSlide>
@@ -159,15 +164,18 @@ const IndexPage = (props: any) => {
         <EighthBlock content={eighthBlock} />
       </SwiperSlide>
     </Swiper>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query PageMainTemplateQuery($lang: String) {
     pageMainJson(lang: { eq: $lang }) {
-      h1
+      seo {
+        title
+        h1
+      }
       langButtonsLinks
       lang
       url
@@ -324,4 +332,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -15,7 +15,7 @@ const VerificationLaboratoryPreview: FC<VerificationLaboratoryPreviewProps> = ({
   const img = getImage(image);
 
   return (
-    <div className="verificationLaboratoryPreview ">
+    <div className="verificationLaboratoryPreview preview">
       <div className="verificationLaboratoryPreview__wrapper container">
         <div className="verificationLaboratoryPreview__wrapper">
           <h2 className="verificationLaboratoryPreview__title title-1 white">

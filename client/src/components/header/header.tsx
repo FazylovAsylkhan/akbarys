@@ -1,83 +1,95 @@
-import * as React from "react"
-import { FC, useEffect } from "react"
-import { globalHistory } from "@reach/router"
-import { Link, navigate } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from 'react';
+import { FC, useEffect } from 'react';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import DarkLogo from "../../images/logo-dark.svg"
-import LightLogo from "../../images/logo-light.svg"
-import "./header.scss"
-import { showBurgerMenu } from "../../utils/header/showBurgerMenu"
-import { showAdditionalMenu } from "../../utils/header/showAdditionalMenu"
+import DarkLogo from '../../data/images/logo-dark.svg';
+import LightLogo from '../../data/images/logo-light.svg';
+import { handleScroll } from '../../utils/header/handlerScroll';
+import { closeBurgerMenu, openBurgerMenu } from '../../utils/header/BurgerMenu';
+import './header.scss';
 
+function openSubMenu(
+  e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
+  isMobile: boolean,
+) {
+  e.stopPropagation();
+  if (isMobile) {
+    const toggleSubMenu = e.target as HTMLElement;
+    const subMenu = toggleSubMenu.nextSibling as HTMLElement;
+    toggleSubMenu?.classList.toggle('active');
+    subMenu?.classList.toggle('open');
+    const langPreview = toggleSubMenu.classList.contains('lang__image')
+      ? toggleSubMenu.parentElement?.parentElement
+      : toggleSubMenu.parentElement;
+    const langList = langPreview?.nextSibling as HTMLElement;
+    langList?.classList.toggle('open');
+    langPreview?.classList.toggle('active');
+  }
+}
 function getPreviewLangElement(lang: string, isMobile: boolean) {
   let element = (
     <div className="lang__preview">
       <span
         className="lang__text text-header"
-        onClick={e => showSubMenu(e, isMobile)}
+        onClick={(e) => openSubMenu(e, isMobile)}
       >
         Рус
         <StaticImage
           className="lang__image"
-          src="../../images/lang/russia.jpg"
+          src="../../data/images/flags/russia.jpg"
           alt="russia"
-          style={{ pointerEvents: "none" }}
+          style={{ pointerEvents: 'none' }}
         ></StaticImage>
       </span>
     </div>
-  )
-  if (lang === "kz") {
+  );
+  if (lang === 'kz') {
     element = (
       <div className="lang__preview">
         <span
           className="lang__text text-header"
-          onClick={e => showSubMenu(e, isMobile)}
+          onClick={(e) => openSubMenu(e, isMobile)}
         >
-          Qaz
+          Қаз
           <StaticImage
             className="lang__image"
-            src="../../images/lang/kazakh.jpg"
+            src="../../data/images/flags/kazakh.jpg"
             alt="kazakh"
           ></StaticImage>
         </span>
       </div>
-    )
+    );
   }
-  if (lang === "en") {
+  if (lang === 'en') {
     element = (
       <div className="lang__preview">
         <span
           className="lang__text text-header"
-          onClick={e => showSubMenu(e, isMobile)}
+          onClick={(e) => openSubMenu(e, isMobile)}
         >
           Eng
           <StaticImage
             className="lang__image"
-            src="../../images/lang/english.jpg"
+            src="../../data/images/flags/english.jpg"
             alt="english"
           ></StaticImage>
         </span>
       </div>
-    )
+    );
   }
-  return element
+  return element;
 }
-function showSubMenu(
-  e: React.MouseEvent<HTMLSpanElement, MouseEvent>,
-  isMobile: boolean
-) {
+function clickBtn(e: React.MouseEvent<HTMLLIElement, MouseEvent>, isMobile: boolean) {
   if (isMobile) {
-    const toggleSubMenu = e.target as HTMLElement
-    const subMenu = toggleSubMenu.nextSibling as HTMLElement
-    toggleSubMenu?.classList.toggle("active")
-    subMenu?.classList.toggle("open")
-    const langPreview = toggleSubMenu.classList.contains("lang__image")
-      ? toggleSubMenu.parentElement?.parentElement
-      : toggleSubMenu.parentElement
-    const langList = langPreview?.nextSibling as HTMLElement
-    langList?.classList.toggle("open")
-    langPreview?.classList.toggle("active")
+    const li = e.target as HTMLLIElement;
+    const span = li.querySelector('span');
+    const link = li.querySelector('a');
+    if (span) {
+      span.click();
+    } else if (link) {
+      link.click();
+    }
   }
 }
 interface HeaderProps {
@@ -87,72 +99,82 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
-  const [stateIsMobile, setStateIsMobile] = React.useState(false)
-  const { links, subMenu, lang } = data
-  const firstList = subMenu[0]
-  const secondList = subMenu[1]
+  const [stateIsMobile, setStateIsMobile] = React.useState(false);
+  const { links, subMenu, lang } = data;
+  const firstList = subMenu[0];
+  const secondList = subMenu[1];
   function updateHeader(
     mainHeader: any,
     additionalHeader: any,
-    currentPage: any
+    currentPage: any,
   ) {
-    if (
-      currentPage !== "ru" &&
-      currentPage !== "" &&
-      currentPage !== "kz" &&
-      currentPage !== "en"
-    ) {
-      mainHeader?.classList.add("header_second")
-      additionalHeader?.classList.add("header_second", "additional")
-      if (
-        !document.querySelector(".pressCenterNews") &&
-        !document.querySelector(".page404") &&
-        !document.querySelector(".politics")
-      ) {
-        mainHeader?.classList.remove("header_dark")
+    const AreSpecialPages = document.querySelector('.pressCenterNews')
+      || document.querySelector('.page404')
+      || document.querySelector('.politics');
+    const isMain = currentPage === 'ru'
+      || currentPage === ''
+      || currentPage === 'kz'
+      || currentPage === 'en';
+
+    if (!isMain) {
+      mainHeader?.classList.add('header_second');
+      additionalHeader?.classList.add('header_second', 'additional');
+      if (!AreSpecialPages) {
+        mainHeader?.classList.remove('header_dark');
       } else {
-        mainHeader?.classList.add("header_dark")
+        mainHeader?.classList.add('header_dark');
+      }
+      if (AreSpecialPages) {
+        mainHeader?.classList.add('default-white-header');
+        mainHeader?.classList.add('header_dark');
+      } else {
+        mainHeader?.classList.remove('default-white-header');
+        mainHeader?.classList.remove('header_dark');
       }
     } else {
-      mainHeader?.classList.remove("header_second")
+      mainHeader?.classList.remove('header_second');
     }
   }
 
   useEffect(() => {
-    document.body.classList.remove("disable-scroll")
+    const { body } = document;
+    body.classList.remove('ru', 'kz', 'en');
+    body.classList.add(lang);
+    body.style.top = 'auto';
+    body.classList.remove('disable-scroll');
+    body.removeAttribute('data-position');
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )
     ) {
-      setStateIsMobile(true)
+      setStateIsMobile(true);
     } else {
-      setStateIsMobile(false)
+      setStateIsMobile(false);
     }
-    const currentPage = window.location.href.split("/")[3]
-    const mainHeader = document.querySelectorAll("header")[0]
-    const additionalHeader = document.querySelectorAll("header")[1]
-    updateHeader(mainHeader, additionalHeader, currentPage)
-    showAdditionalMenu(additionalHeader, currentPage)
+    const currentPage = window.location.href.split('/')[3];
+    const mainHeader = document.querySelectorAll('header')[0];
+    const additionalHeader = document.querySelectorAll('header')[1];
+    updateHeader(mainHeader, additionalHeader, currentPage);
+    handleScroll(additionalHeader, currentPage);
 
     if (stateIsMobile) {
-      document.body.classList.add("touch")
-      document.body.classList.remove("mouse")
+      document.body.classList.add('touch');
+      document.body.classList.remove('mouse');
 
-      const isMain =
-        currentPage == "ru" ||
-        currentPage == "" ||
-        currentPage == "kz" ||
-        currentPage == "en"
+      const isMain = currentPage === 'ru'
+        || currentPage === ''
+        || currentPage === 'kz'
+        || currentPage === 'en';
 
       isMain
-        ? document.body.classList.add("mainPage")
-        : document.body.classList.remove("mainPage")
+        ? document.body.classList.add('mainPage')
+        : document.body.classList.remove('mainPage');
     } else {
-      document.body.classList.add("mouse")
-      document.body.classList.remove("touch")
+      document.body.classList.add('mouse');
+      document.body.classList.remove('touch');
     }
-  }, [stateIsMobile])
+  }, [stateIsMobile]);
 
   return (
     <>
@@ -168,51 +190,70 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
           />
           <div
             className="header__burger"
-            onClick={e => showBurgerMenu(e, isAdditional)}
+            onClick={(e) => openBurgerMenu(e, isAdditional)}
           >
             <span></span>
           </div>
           <nav className="header__menu">
             <ul className="menu__list">
-              <li className="menu__list-item sub-menu">
+              <li
+                className="menu__list-item sub-menu"
+                onClick={(e) => clickBtn(e, stateIsMobile)}
+              >
                 <span
                   className="menu__toggle text-header"
-                  onClick={e => showSubMenu(e, stateIsMobile)}
+                  onClick={(e) => openSubMenu(e, stateIsMobile)}
                 >
                   {firstList.title}
                 </span>
                 <ul className="sub-menu__list">
-                  <li className="sub-menu__list-item">
+                  <li
+                    className="sub-menu__list-item"
+                    onClick={(e) => clickBtn(e, stateIsMobile)}
+                  >
                     <Link
                       className="sub-menu__link text-header"
                       to={firstList.links[0].url}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
                     >
                       {firstList.links[0].text}
                     </Link>
                   </li>
 
-                  <li className="sub-menu__list-item">
+                  <li
+                    className="sub-menu__list-item"
+                    onClick={(e) => clickBtn(e, stateIsMobile)}
+                  >
                     <Link
                       className="sub-menu__link text-header"
                       to={firstList.links[1].url}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
                     >
                       {firstList.links[1].text}
                     </Link>
                   </li>
 
-                  <li className="sub-menu__list-item">
+                  <li
+                    className="sub-menu__list-item"
+                    onClick={(e) => clickBtn(e, stateIsMobile)}
+                  >
                     <Link
                       className="sub-menu__link text-header"
                       to={firstList.links[2].url}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
                     >
                       {firstList.links[2].text}
                     </Link>
                   </li>
 
-                  <li className="sub-menu__list-item reset-border">
+                  <li
+                    className="sub-menu__list-item reset-border"
+                    onClick={(e) => clickBtn(e, stateIsMobile)}
+                  >
                     <Link
                       className="sub-menu__link text-header"
                       to={firstList.links[3].url}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
                     >
                       {firstList.links[3].text}
                     </Link>
@@ -221,44 +262,70 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
               </li>
               <li
                 className="menu__list-item sub-menu"
-                onClick={e => showSubMenu(e, stateIsMobile)}
+                onClick={(e) => clickBtn(e, stateIsMobile)}
               >
-                <span className="menu__toggle text-header">
+                <span
+                  className="menu__toggle text-header"
+                  onClick={(e) => openSubMenu(e, stateIsMobile)}
+                >
                   {secondList.title}
                 </span>
                 <ul className="sub-menu__list">
-                  <li className="sub-menu__list-item">
+                  <li
+                    className="sub-menu__list-item"
+                    onClick={(e) => clickBtn(e, stateIsMobile)}
+                  >
                     <Link
                       className="sub-menu__link text-header"
                       to={secondList.links[0].url}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
                     >
                       {secondList.links[0].text}
                     </Link>
                   </li>
 
-                  <li className="sub-menu__list-item reset-border">
+                  <li
+                    className="sub-menu__list-item reset-border"
+                    onClick={(e) => clickBtn(e, stateIsMobile)}
+                  >
                     <Link
                       className="sub-menu__link text-header"
                       to={secondList.links[1].url}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
                     >
                       {secondList.links[1].text}
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li className="menu__list-item">
-                <Link className="menu__link text-header" to={links[0].url}>
+              <li className="menu__list-item" onClick={(e) => clickBtn(e, stateIsMobile)}>
+                <Link
+                  className="menu__link text-header"
+                  to={links[0].url}
+                  onClick={(e) => closeBurgerMenu(e, isAdditional)}
+                >
                   {links[0].text}
                 </Link>
               </li>
-              <li className="menu__list-item">
-                <Link className="menu__link text-header" to={links[1].url}>
+              <li className="menu__list-item" onClick={(e) => clickBtn(e, stateIsMobile)}>
+                <Link
+                  className="menu__link text-header"
+                  to={links[1].url}
+                  onClick={(e) => closeBurgerMenu(e, isAdditional)}
+                >
                   {links[1].text}
                 </Link>
               </li>
 
-              <li className="menu__list-item reset-border">
-                <Link className="menu__link text-header" to={links[2].url}>
+              <li
+                className="menu__list-item reset-border"
+                onClick={(e) => clickBtn(e, stateIsMobile)}
+              >
+                <Link
+                  className="menu__link text-header"
+                  to={links[2].url}
+                  onClick={(e) => closeBurgerMenu(e, isAdditional)}
+                >
                   {links[2].text}
                 </Link>
               </li>
@@ -268,36 +335,48 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
                 {getPreviewLangElement(lang, stateIsMobile)}
                 <ul className="lang__list">
                   <li className="lang__list-item">
-                    <Link className="lang__link" to={langs[0]}>
+                    <Link
+                      className="lang__link"
+                      to={langs[0]}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
+                    >
                       <span className="lang__text text-header">
                         Рус
                         <StaticImage
                           className="lang__image"
-                          src="../../images/lang/russia.jpg"
+                          src="../../data/images/flags/russia.jpg"
                           alt="russia"
                         ></StaticImage>
                       </span>
                     </Link>
                   </li>
                   <li className="lang__list-item">
-                    <Link className="lang__link" to={langs[2]}>
+                    <Link
+                      className="lang__link"
+                      to={langs[2]}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
+                    >
                       <span className="lang__text text-header">
                         Eng
                         <StaticImage
                           className="lang__image"
-                          src="../../images/lang/english.jpg"
+                          src="../../data/images/flags/english.jpg"
                           alt="english"
                         ></StaticImage>
                       </span>
                     </Link>
                   </li>
                   <li className="lang__list-item">
-                    <Link className="lang__link" to={langs[1]}>
+                    <Link
+                      className="lang__link"
+                      to={langs[1]}
+                      onClick={(e) => closeBurgerMenu(e, isAdditional)}
+                    >
                       <span className="lang__text text-header">
-                        Qaz
+                        Қаз
                         <StaticImage
                           className="lang__image"
-                          src="../../images/lang/kazakh.jpg"
+                          src="../../data/images/flags/kazakh.jpg"
                           alt="kazakh"
                         ></StaticImage>
                       </span>
@@ -311,7 +390,7 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

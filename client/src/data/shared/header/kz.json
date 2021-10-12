@@ -2,29 +2,29 @@
   "lang": "kz",
   "subMenu": [
     {
-      "title": "Kompanıa",
+      "title": "Компания",
       "links": [
-        { "text": "Basty bet", "url": "/kz" },
+        { "text": "Басты бет ", "url": "/kz" },
         {
-          "text": "Kompanıa týraly",
-          "url": "/akbarys-about/kz"
+          "text": "Компания туралы",
+          "url": "/about-us/kz"
         },
         {
-          "text": "Mansap",
+          "text": "Мансап",
           "url": "/career/kz"
         },
         {
-          "text": "Baspasóz ortalyǵy",
+          "text": "Баспасөз орталығы",
           "url": "/press-center/kz"
         }
       ]
     },
     {
-      "title": "Sheshim",
+      "title": "Шешім",
       "links": [
-        { "text": "Gaz qaýipsizdigi", "url": "/h2s-service/kz" },
+        { "text": "Газ қауіпсіздігі", "url": "/h2s-service/kz" },
         {
-          "text": "Kúkirtsýtekti beıtaraptandyrý",
+          "text": "Күкіртсутекті бейтараптандыру",
           "url": "/sft-service/kz"
         }
       ]
@@ -32,15 +32,15 @@
   ],
   "links": [
     {
-      "text": "Zerthana",
+      "text": "Зертхана",
       "url": "/verification-laboratory/kz"
     },
     {
-      "text": "Servıs ortalyǵy",
+      "text": "Сервис орталығы",
       "url": "/service-center/kz"
     },
     {
-      "text": "Baılanystar",
+      "text": "Байланыс деректері",
       "url": "/contacts/kz"
     }
   ]

@@ -11,7 +11,7 @@ const ServiceCenterPreview: FC<ServiceCenterPreviewProps> = ({ content }) => {
   const { title, subtitle, image } = content;
   const img = getImage(image);
   return (
-    <div className="serviceCenter">
+    <div className="serviceCenter preview">
       <div className="serviceCenter__content container">
         <div className="serviceCenter__wrapper">
           <h2 className="serviceCenter__title title-1 white">{title}</h2>

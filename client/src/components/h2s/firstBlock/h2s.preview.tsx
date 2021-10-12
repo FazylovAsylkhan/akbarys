@@ -1,9 +1,9 @@
-import * as React from "react"
-import { FC } from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as React from 'react';
+import { FC } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import "./h2s.preview.scss"
-import id from "../../../utils/randomId"
+import './h2s.preview.scss';
+import id from '../../../utils/randomId';
 
 interface Subtitle {
   digit: string
@@ -19,16 +19,16 @@ interface H2sPreviewProps {
 }
 
 const H2sPreview: FC<H2sPreviewProps> = ({ content }) => {
-  const { title, subtitles, image } = content
-  const img = getImage(image)
+  const { title, subtitles, image } = content;
+  const img = getImage(image);
 
   return (
-    <div className="h2sPreview">
+    <div className="h2sPreview preview">
       <div className="h2sPreview__content container">
         <div className="h2sPreview__wrapper">
           <h2 className="h2s__title title-1 white">{title}</h2>
           <div className="h2sPreview__box">
-            {subtitles.map(subtitle => (
+            {subtitles.map((subtitle) => (
               <h3 className="h2sPreview__subtitle" key={id()}>
                 <span className="h2sPreview__subtitle-digit text-2 white">
                   {subtitle.digit}
@@ -52,6 +52,6 @@ const H2sPreview: FC<H2sPreviewProps> = ({ content }) => {
         <div className="background__header"></div>
       </div>
     </div>
-  )
-}
-export default H2sPreview
+  );
+};
+export default H2sPreview;

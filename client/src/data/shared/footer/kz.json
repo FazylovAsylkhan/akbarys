@@ -1,67 +1,71 @@
 {
   "lang": "kz",
-  "description": "Qazaqstan, TMD jáne taıaý shetel aýmaǵyndaǵy gaz qaýipsizdigi jónindegi qyzmetterdi jetekshi jetkizýshi",
+  "description": "Қазақстан, ТМД және таяу шетел аумағында газ қауіпсіздігі бойынша қызметтердің жетекші орындағы жеткізушісі",
   "social": {
-    "title": "Biz áleýmettik jelilerde:",
+    "title": "Біз әлеуметтік желілердеміз",
     "links": ["/", "/", "/"]
   },
   "politics": {
-    "title": "«Akbarys» JSHS  2021 ©",
+    "title": "«Akbarys» ЖШС  2021 ©",
     "links": [
       {
-        "text": "Saıt dızaıny-QLAB",
+        "text": "Сайт дизайны -QLAB",
         "url": "/"
       },
       {
-        "text": "Qupıalylyq saıasaty",
+        "text": "Барлық құқықтары қорғалған",
         "url": "/politics/kz"
       }
     ]
   },
   "subMenu": [
     {
-      "title": "Sheshimder",
+      "title": "Шешім",
       "links": [
         {
-          "text": "Gaz qaýipsizdigi",
+          "text": "Газ қауіпсіздігі",
           "url": "/h2s-service/kz"
         },
         {
-          "text": "Kúkirtsýtekti beıtaraptandyrý",
+          "text": "Күкіртсутекті бейтараптандыру",
           "url": "/sft-service/kz"
         }
       ]
     },
     {
-      "title": "Qyzmetter",
+      "title": "Қызметтер",
       "links": [
         {
-          "text": "Tekserý zerthanalary",
+          "text": "Тексеру зертханалары",
           "url": "/verification-laboratory/kz"
         },
         {
-          "text": "Servıs ortalyǵy",
+          "text": "Сервис орталығы",
           "url": "/service-center/kz"
         }
       ]
     },
     {
-      "title": "Kompanıa",
+      "title": "Компания",
       "links": [
         {
-          "text": "Kompanıa týraly",
-          "url": "/akbarys-about/kz"
+          "text": "Басты бет",
+          "url": "/kz"
         },
         {
-          "text": "Mansap",
+          "text": "Компания туралы",
+          "url": "/about-us/kz"
+        },
+        {
+          "text": "Мансап",
           "url": "/career/kz"
         },
         {
-          "text": "Baılanystar",
+          "text": "Байланыс деректері",
           "url": "/contacts/kz"
         },
         {
-          "text": "Baspasóz ortalyǵy",
+          "text": "Баспасөз орталығы",
           "url": "/press-center/kz"
         },
         {

@@ -14,7 +14,7 @@ const SftPreview: FC<SftPreviewProps> = ({ content }) => {
   const img = getImage(image);
 
   return (
-    <div className="sftPreview">
+    <div className="sftPreview preview">
       <div className="screen__content container">
         <div className="sftPreview__wrapper">
           <h2 className="sftPreview__title title-1 white">{title}</h2>
@@ -34,10 +34,10 @@ const SftPreview: FC<SftPreviewProps> = ({ content }) => {
           </div>
         </div>
       </div>
-      <div className="h2sPreview__body">
+      <div className="sftPreview__body">
         {img ? (
           <GatsbyImage
-            className="h2sPreview__body-image"
+            className="sftPreview__body-image"
             image={img}
             alt={title}
           />

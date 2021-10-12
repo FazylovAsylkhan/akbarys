@@ -2,7 +2,8 @@
 
 .akbarysMission {
   position: relative;
-  @include adaptive-value-byX("height", 508, 490, 1920, 1440);
+  height: 510px;
+  background-color: #1564fd;
   &__wrapper {
     z-index: 10;
     grid-column: 1 / span 12;
@@ -12,11 +13,7 @@
     align-items: center;
   }
   &__content {
-    @include adaptive-value-byX("width", 566, 424, 1920, 1440);
-  }
-  &__feats {
-    @include adaptive-value-byX("width", 460, 400, 1920, 1440);
-    @include adaptive-value-byX("height", 426, 370, 1920, 1440);
+    width: 566px;
   }
   &__text {
     margin-top: 40px;
@@ -28,6 +25,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    &.show {
+      opacity: 1;
+    }
   }
   &__slider {
     z-index: 1;
@@ -50,56 +59,201 @@
   }
   &__feats {
     position: relative;
-    &-1,
-    &-2,
-    &-3 {
-      background-color: transparent;
+    width: 460px;
+    height: 426px;
+  }
+  &__feats-item {
+    position: absolute;
+    width: 262px;
+    height: 262px;
+    background-color: blue;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid rgba(#ffffff, 0.1);
+    span {
+      pointer-events: none;
+      z-index: 10;
+    }
+    &::after {
+      content: "";
       position: absolute;
-      @include adaptive-value-byX("width", 262, 227, 1920, 1440);
-      @include adaptive-value-byX("height", 262, 227, 1920, 1440);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      top: calc((262px - 226px) * 0.5);
+      left: calc((262px - 226px) * 0.5);
+      width: 226px;
+      height: 226px;
+      background: #ffffff;
+      opacity: 0.1;
       border-radius: 100%;
-      left: 0;
-      top: 0;
-      border: 2px solid rgba(#fff, 0.1);
-      &::before {
-        content: "";
-        position: absolute;
-        @include adaptive-value-byX("width", 225, 195, 1920, 1440);
-        @include adaptive-value-byX("height", 225, 195, 1920, 1440);
-        border-radius: 100%;
-        background: #ffffff;
-        opacity: 0.1;
-        z-index: 1;
-      }
     }
     &-1 {
-      left: 20%;
-      top: 0%;
-      &::after {
-        z-index: 10;
-        content: "Персонал";
-      }
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
     }
     &-2 {
-      left: 0%;
-      top: 40%;
-      &::after {
-        z-index: 10;
-        content: "Качество";
-      }
+      left: 0;
+      bottom: 0;
     }
     &-3 {
-      left: 43%;
-      top: 38%;
-      &::after {
-        z-index: 10;
-        content: "Эффективность";
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__feats-item:hover {
+    border: 2px solid rgba(#1564fd, 1);
+    z-index: 1000;
+    cursor: pointer;
+    &::after {
+      background: #1564fd;
+      opacity: 1;
+    }
+  }
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("height", 510, 490, 1920, 1440);
+    &__content {
+      @include adaptive-value-byX("width", 566, 424, 1920, 1440);
+    }
+    &__feats {
+      @include adaptive-value-byX("width", 460, 400, 1920, 1440);
+      @include adaptive-value-byX("height", 426, 370, 1920, 1440);
+      &-item {
+        @include adaptive-value-byX("width", 262, 228, 1920, 1440);
+        @include adaptive-value-byX("height", 262, 228, 1920, 1440);
+        &::after {
+          @include adaptive-value-byX("width", 226, 196, 1920, 1440);
+          @include adaptive-value-byX("height", 226, 196, 1920, 1440);
+          @include adaptive-radios("top", 262, 226, 228, 196, 1920, 1440);
+          @include adaptive-radios("left", 262, 226, 228, 196, 1920, 1440);
+        }
       }
     }
   }
+  @media (max-width: 1440px) {
+    @include adaptive-value-byX("height", 490, 490, 1440, 1200);
+    &__content {
+      @include adaptive-value-byX("width", 424, 445, 1440, 1200);
+    }
+    &__feats {
+      @include adaptive-value-byX("width", 400, 324, 1440, 1200);
+      @include adaptive-value-byX("height", 370, 300, 1440, 1200);
+      &-item {
+        @include adaptive-value-byX("width", 228, 184, 1440, 1200);
+        @include adaptive-value-byX("height", 228, 184, 1440, 1200);
+        &::after {
+          @include adaptive-value-byX("width", 196, 158, 1440, 1200);
+          @include adaptive-value-byX("height", 196, 158, 1440, 1200);
+          @include adaptive-radios("top", 228, 196, 184, 158, 1440, 1200);
+          @include adaptive-radios("left", 228, 196, 184, 158, 1440, 1200);
+        }
+      }
+    }
+  }
+  @media (max-width: 1100px) {
+    height: auto;
+    padding: 90px 0;
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__feats {
+      margin-top: 50px;
+      width: 400px;
+      height: 370px;
+      &-item {
+        width: 228px;
+        height: 228px;
+        &::after {
+          width: 195px;
+          height: 195px;
+          top: calc((228px - 195px) * 0.5);
+          left: calc((228px - 195px) * 0.5);
+        }
+      }
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+    }
+    &__feats {
+      @include adaptive-value-byX("width", 400, 260, 640, 320);
+      @include adaptive-value-byX("height", 370, 240, 640, 320);
+      &-item {
+        @include adaptive-value-byX("width", 228, 148, 640, 320);
+        @include adaptive-value-byX("height", 228, 148, 640, 320);
+        &::after {
+          @include adaptive-value-byX("width", 195, 127, 640, 320);
+          @include adaptive-value-byX("height", 195, 127, 640, 320);
+          @include adaptive-radios("top", 228, 195, 148, 130, 640, 320);
+          @include adaptive-radios("left", 228, 195, 148, 130, 640, 320);
+        }
+      }
+    }
+  }
+  // &__feats {
+  //   position: relative;
+  //   width: 460px;
+  //   height: 426px;
+  //   &-1,
+  //   &-2,
+  //   &-3 {
+  //     background-color: transparent;
+  //     position: absolute;
+  //     @include adaptive-value-byX("width", 262, 227, 1920, 1440);
+  //     @include adaptive-value-byX("height", 262, 227, 1920, 1440);
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     border-radius: 100%;
+  //     left: 0;
+  //     top: 0;
+  //     border: 2px solid rgba(#fff, 0.1);
+  //     &::before {
+  //       content: "";
+  //       position: absolute;
+  //       @include adaptive-value-byX("width", 225, 195, 1920, 1440);
+  //       @include adaptive-value-byX("height", 225, 195, 1920, 1440);
+  //       border-radius: 100%;
+  //       background: #ffffff;
+  //       opacity: 0.1;
+  //       z-index: 1;
+  //     }
+  //   }
+  //   &-1 {
+  //     left: 20%;
+  //     top: 0%;
+  //     &::after {
+  //       z-index: 10;
+  //       content: "Персонал";
+  //     }
+  //   }
+  //   &-2 {
+  //     left: 0%;
+  //     top: 40%;
+  //     &::after {
+  //       z-index: 10;
+  //       content: "Качество";
+  //     }
+  //   }
+  //   &-3 {
+  //     left: 43%;
+  //     top: 38%;
+  //     &::after {
+  //       z-index: 10;
+  //       content: "Эффективность";
+  //     }
+  //   }
+  // }
 }
 
 .background {
@@ -118,7 +272,7 @@
   border: 2px solid rgba(#1564fd, 1);
   z-index: 1000;
 }
-.show.akbarysMission__feats-item::before {
+.show.akbarysMission__feats-item::after {
   background: #1564fd;
   opacity: 1;
 }

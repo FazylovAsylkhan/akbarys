@@ -1,0 +1,165 @@
+@import "../../../scss/utils";
+
+.careerForm {
+  position: relative;
+  background-color: #f8f8f8;
+  &__wrapper {
+    padding: 120px 0;
+    grid-column: 1 / span 12;
+    display: flex;
+    justify-content: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 685px;
+    align-items: center;
+    &-items {
+      margin-top: 40px;
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 121.4%;
+      letter-spacing: 0.012em;
+      color: #182027;
+      margin-bottom: 30px;
+    }
+    &-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    &-label {
+      margin-bottom: 10px;
+      display: block;
+    }
+    &-input {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 121.4%;
+      letter-spacing: -0.005em;
+      color: #182027;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #dbdbdb;
+      background-color: #fcfcfc;
+      &.error {
+        border: 1px solid #fd1515;
+      }
+      &:hover {
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+      }
+    }
+    &-file-button {
+      position: absolute;
+      right: 1px;
+      padding: 0 20px;
+      height: 60px;
+      width: 100px;
+      background-color: rgb(252, 252, 252);
+      border-left: 1px solid #dbdbdb;
+      bottom: 1px;
+      path {
+        fill: #182027;
+      }
+      svg {
+        transform: translateY(8%);
+      }
+      &:hover {
+        cursor: pointer;
+        border-left: 1px solid #1564fd;
+        background-color: #1564fd;
+        path {
+          fill: #fff;
+        }
+      }
+      &:focus,
+      &:active {
+        border-left: 1px solid #1564fd;
+        background-color: #1564fd;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &-input.none {
+      &:focus,
+      &:active {
+        border: 1px solid #dbdbdb;
+      }
+    }
+    &-area {
+      border: 1px solid #dbdbdb;
+      display: block;
+      width: 100%;
+      resize: vertical;
+      min-height: 130px;
+      padding: 20px;
+      max-height: 300px;
+      &:hover {
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+      }
+      &.error {
+        border: 1px solid #fd1515;
+      }
+    }
+    &-input:focus,
+    &-area:focus,
+    &-select:focus {
+      outline: none;
+      border: 1px solid #1564fd;
+    }
+    &-button {
+      margin-top: 33px;
+    }
+  }
+  @media (max-width: 1920px) {
+    &__form {
+      @include adaptive-value-byX("width", 685, 514, 1920, 1440);
+    }
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 120, 110, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1440, 1200);
+    }
+  }
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    }
+    &__form {
+      width: 514px;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+  }
+}
+
+@import "./checkbox";
+@import "./alert";
+input[type="file"] {
+  display: none;
+}

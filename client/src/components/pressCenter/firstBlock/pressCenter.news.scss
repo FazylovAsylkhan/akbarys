@@ -1,0 +1,145 @@
+@import "../../../scss/utils";
+
+.pressCenterNews {
+  &__wrapper {
+    padding: 120px 0;
+    grid-column: 1 / span 12;
+    .text-1 {
+      font-size: 14px;
+    }
+  }
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    width: 100%;
+  }
+  &__card {
+    position: relative;
+    &-body {
+      display: grid;
+      grid-template-rows: 50px 70px 25px;
+      grid-row-gap: 20px;
+      position: relative;
+      border: 1px solid #e1e1e1;
+      border-top: none;
+      padding: 40px;
+      padding-right: 20px;
+    }
+    &-body:hover {
+      background-color: #1564fd;
+      & .pressCenterNews__card-title,
+      & .pressCenterNews__card-description,
+      & .pressCenterNews__card-button {
+        color: #ffffff;
+      }
+    }
+    &-head {
+      width: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 1920px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+      @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    }
+    &__title {
+      @include adaptive-value-byX("margin-bottom", 60, 50, 1920, 1440);
+    }
+    // &__card-body {
+    //   @include adaptive-value-byX("padding", 40, 24, 1920, 1440);
+    //   padding-right: 20px;
+    // }
+  }
+  @media (max-width: 1560px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 50px;
+      grid-column-gap: 70px;
+    }
+    .text-1 {
+      font-size: 16px;
+    }
+    .text-11 {
+      font-size: 19px;
+    }
+  }
+  @media (max-width: 1440px) {
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    }
+    &__card-body {
+      @include adaptive-value-byX("padding", 35, 24, 1440, 1200);
+      padding-right: 20px;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+    &__card-body {
+      padding: 24px;
+      padding-right: 20px;
+    }
+    &__cards {
+      grid-column-gap: 30px;
+    }
+    .text-1 {
+      font-size: 16px;
+      @include adaptive-value-byX("font-size", 16, 14, 1200, 860);
+    }
+    .text-11 {
+      font-size: 19px;
+      @include adaptive-value-byX("font-size", 19, 16, 1200, 860);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    .text-1 {
+      font-size: 14px;
+    }
+    .text-11 {
+      font-size: 16px;
+    }
+    &__cards {
+      grid-template-columns: repeat(1, 275px);
+      justify-content: center;
+    }
+    &__title {
+      @include adaptive-value-byX("margin-bottom", 50, 40, 640, 320);
+    }
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__wrapper {
+      padding: 50px 0;
+    }
+  }
+}

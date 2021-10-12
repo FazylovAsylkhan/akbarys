@@ -1,9 +1,9 @@
-@import '../../../scss//utils';
+@import "../../../scss//utils";
 
 .serviceCenter {
   position: relative;
-  @include adaptive-value-byX("height", 800, 680, 1920, 1440);
-  @include adaptive-value-byX("padding-top", 687, 502, 1920, 1440);
+  height: 800px;
+  padding-top: 587px;
   &__wrapper {
     grid-column: 1 / span 12;
     width: fit-content;
@@ -12,23 +12,20 @@
     z-index: 2;
     position: relative;
   }
-  &__title {
-    @include adaptive-value-byX("max-width", 566, 424, 1920, 1440);
-  }
   &__subtitle {
-    @include adaptive-value-byX("margin-top", 60, 30, 1920, 1440);
+    margin-top: 60px;
   }
   &__subtitle-description {
     margin-top: 10px;
   }
   &__title-description {
-    @include adaptive-value-byX("margin-top", 30, 20, 1920, 1440);
+    margin-top: 30px;
   }
   &__body {
     top: 0;
     position: absolute;
     width: 100%;
-    @include adaptive-value-byX("height", 800, 680, 1920, 1440);
+    height: 100%;
     left: 0;
     overflow: hidden;
   }
@@ -37,51 +34,49 @@
     height: 100%;
     object-fit: cover;
   }
-  @media (max-width: 1440px) {
-    &__title {
-      max-width: 390px;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("height", 800, 680, 1920, 1440);
+    @include adaptive-value-byX("padding-top", 587, 502, 1920, 1440);
+    &__subtitle {
+      @include adaptive-value-byX("margin-top", 60, 30, 1920, 1440);
     }
-    &__button,
-    &__box {
+    &__title-description {
+      @include adaptive-value-byX("margin-top", 30, 20, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    @include adaptive-value-byX("padding-top", 445, 413, 1440, 1200);
+    @include adaptive-value-byX("height", 680, 600, 1440, 1200);
+    &__subtitle {
       margin-top: 30px;
     }
-    &__subtitle {
-      grid-template-columns: 101px 185px;
+    &__title-description {
+      margin-top: 20px;
     }
   }
   @media (max-width: 1200px) {
-    padding-top: calc((206 / 720) * 100vh);
+    @include adaptive-value-byX("padding-top", 413, 786, 1200, 860);
+    @include adaptive-value-byX("height", 600, 950, 1200, 860);
   }
-  @media (max-width: 1075px) {
-    &__title {
-      max-width: 500px;
-    }
-    padding-top: calc((500 / 1200) * 100vh);
-    &__button,
-    &__box {
-      margin-top: 40px;
-    }
-    &__box {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    &__subtitle {
-      grid-template-columns: 110px 185px;
+  @media (max-width: 910px) {
+    &__body-image img {
+      object-position: 49% center;
     }
   }
   @media (max-width: 860px) {
-    padding-top: calc((757 / 1200) * 100vh);
-  }
-  @media (max-width: 675px) {
-    padding-top: calc((610 / 1140) * 100vh);
-    &__box {
-      display: flex;
-      flex-direction: column;
+    height: 950px;
+    padding-top: 787px;
+    &__wrapper {
+      grid-column: 1 / span 8;
     }
   }
   @media (max-width: 640px) {
-    padding-top: calc(((896 * (610 / 1140)) / 896) * 100vh);
+    @include adaptive-value-byX("padding-top", 786, 467, 640, 320);
+    @include adaptive-value-byX("height", 950, 580, 640, 320);
+  }
+  @media (max-width: 320px) {
+    padding-top: 467px;
+    height: 580px;
   }
   &__wrapper.visible {
     opacity: 1;

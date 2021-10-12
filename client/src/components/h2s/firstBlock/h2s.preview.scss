@@ -1,9 +1,9 @@
 @import "../../../scss/utils";
 
 .h2sPreview {
+  height: 800px;
   padding-top: 242px;
   position: relative;
-  height: 800px;
   &__content {
     z-index: 2;
     position: relative;
@@ -89,6 +89,9 @@
     }
     &__box {
       @include adaptive-value-byX("margin-top", 40, 20, 640, 320);
+    }
+    &__wrapper {
+      grid-column: 1 / span 6;
     }
   }
   @media (max-width: 490px) {

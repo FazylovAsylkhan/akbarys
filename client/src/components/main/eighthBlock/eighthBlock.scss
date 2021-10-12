@@ -1,7 +1,7 @@
 .career {
   &__wrapper {
     opacity: 0;
-    margin-top: calc((282 / 1002) * 100vh);
+    margin-top: 282px;
     grid-column: 1 / span 12;
   }
   &__description {
@@ -16,64 +16,87 @@
       margin-top: 10px;
     }
   }
-  &__button {
-    margin-top: 60px;
+  @media (max-width: 1920px) {
+    &__wrapper {
+      margin-top: calc((282 / 1002) * 100vh);
+    }
+    &__description {
+      margin-top: calc((30 / 1002) * 100vh);
+    }
+    &__button {
+      margin-top: calc((60 / 1002) * 100vh);
+    }
+    &__subtitle {
+      margin-top: calc((50 / 1002) * 100vh);
+      &-description {
+        margin-top: 10px;
+      }
+    }
   }
   @media (max-width: 1440px) {
     &__wrapper {
-      grid-column: 1 / span 12;
-      margin-top: calc((218 / 760) * 100vh);
+      margin-top: calc((224 / 760) * 100vh);
     }
-
     &__description {
-      margin-top: 20px;
+      margin-top: calc((20 / 760) * 100vh);
     }
     &__button {
-      margin-top: 40px;
+      margin-top: calc((40 / 760) * 100vh);
     }
     &__subtitle {
-      margin-top: 30px;
+      margin-top: calc((30 / 760) * 100vh);
     }
   }
   @media (max-width: 1200px) {
     &__wrapper {
       margin-top: calc((215 / 720) * 100vh);
     }
+    &__description {
+      margin-top: calc((20 / 720) * 100vh);
+    }
+    &__button {
+      margin-top: calc((40 / 720) * 100vh);
+    }
+    &__subtitle {
+      margin-top: calc((30 / 720) * 100vh);
+    }
   }
   @media (max-width: 860px) {
     &__wrapper {
       grid-column: 1 / span 8;
-      margin-top: calc((655 / 1200) * 100vh);
+      margin-top: calc((645 / 1200) * 100vh);
     }
     &__description {
-      margin-top: 30px;
-    }
-    &__subtitle {
-      margin-top: 50px;
+      margin-top: calc((30 / 1200) * 100vh);
     }
     &__button {
-      margin-top: 60px;
+      margin-top: calc((60 / 1200) * 100vh);
+    }
+    &__subtitle {
+      margin-top: calc((50 / 1200) * 100vh);
     }
   }
   @media (max-width: 640px) {
     &__wrapper {
       grid-column: 1 / span 6;
-      margin-top: calc((528 / 1140) * 100vh);
-    }
-  }
-  @media (max-width: 640px) {
-    &__wrapper {
-      grid-column: 1 / span 6;
-      margin-top: calc((227 / 520) * 100vh);
+      margin-top: calc((434 / 1000) * 100vh);
     }
     &__description {
-      display: none;
+      margin-top: calc((30 / 1000) * 100vh);
     }
     &__button {
-      margin-top: 20px;
+      margin-top: calc((30 / 1000) * 100vh);
     }
     &__subtitle {
-      margin-top: 20px;
+      margin-top: calc((30 / 1000) * 100vh);
+      &-description {
+        margin-top: calc((10 / 1000) * 100vh);
+      }
+    }
+  }
+  @media (max-height: 520px) {
+    &__wrapper {
+      margin-top: calc((170 / 520) * 100vh);
     }
   }
 }

@@ -63,7 +63,7 @@
       &:nth-child(2) {
         width: 165px;
       }
-    }
+    } 
     &__content {
       @include adaptive-value-byX("width", 424, 366, 1440, 1200);
     }

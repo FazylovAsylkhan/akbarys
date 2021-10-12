@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Акбарыс`,
+    title: `Akbarys`,
     description: `Ведущий поставщик услуг по газовой безопасности на территории Казахстана, СНГ и Ближнего Зарубежья`,
     author: `fazylov.asylkhan@gmail.com`,
     siteUrl: `https://akbarys.kz/`,
@@ -15,13 +15,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     'swiper',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -38,7 +31,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/data/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {

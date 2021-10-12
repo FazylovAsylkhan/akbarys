@@ -20,9 +20,9 @@ const MainAkbarys:FC<MainAkbarysProps> = ({ content }) => {
     <div className="mainAkbarys">
       <div className="screen__content container">
         <div className="mainAkbarys__wrapper">
-          <h1 className="mainAkbarys__title mainText-1 white">
+          <h2 className="mainAkbarys__title mainText-1 white">
             {title}
-          </h1>
+          </h2>
           <p className="mainAkbarys__description mainText-2 white_dark">
             {description}
           </p>

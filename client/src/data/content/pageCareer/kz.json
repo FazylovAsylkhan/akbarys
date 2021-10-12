@@ -1,49 +1,69 @@
 {
-    "lang": "kz",
-    "url": "career/kz",
-    "h1": "Akbarys mansaby",
-    "langButtonsLinks": ["/career", "/career/kz", "/career/en"],
-    "firstBlock": {
-      "title": {
-        "firstRow": "Akbarys mansaby",
-        "secondRow": "Úlken komandanyń bir bóligi bol!"
+  "lang": "kz",
+  "url": "career/kz",
+  "seo": {
+    "title": "Мансап",
+    "h1": "Akbarys-тағы мансап"
+  },
+  "langButtonsLinks": ["/career", "/career/kz", "/career/en"],
+  "firstBlock": {
+    "title": {
+      "firstRow": "Akbarys-тағы мансап",
+      "secondRow": "Үлкен команданың бір бөлшегі бол! "
+    },
+    "description": "Бізбен бірге белестерді бағындыр ",
+    "subtitle": {
+      "digit": "400+",
+      "text": "Қызметкер бізбен жұмыс істейді"
+    },
+    "image": "../../images/career/preview.jpg"
+  },
+  "secondBlock": {
+    "title": "Біздің құндылықтарымыз ",
+    "subtitle": "Адамдар -біздің энергиямыз және алдағы жетістіктерге жетелейтін басты капиталымыз"
+  },
+  "thirdBlock": {
+    "opportunities": [
+      {
+        "digit": "01",
+        "title": "Кәсіби даму",
+        "description": "Akbarys жұмыскерлердің қажетті білім мен кәсіби дағдыларды игеруіне бағытталған кадрларды даярлау жүйесі жұмыс істейді. Мақсаты үздік тәжірибелерді анықтауға және таратуға, проблемалар бойынша жедел ақпарат алмасуға және оларды шешудің оңтайлы жолдарын бірлесіп табуға мүмкіндік беретін білімді басқарудың корпоративтік жүйесін құру болып табылады."
       },
-      "description": "Bizben birge jetistikterge jetińiz!",
-      "subtitle": { "digit": "400+", "text": "Qyzmetkerler bizben jumys isteýde" },
-      "image": "../../../images/career/careerPreview.jpg"
-    },
-    "secondBlock": {
-      "title": "Bizdiń qundylyqtarymyz",
-      "subtitle": "Adamdar-bizdiń kúsh-qýatymyz jáne bolashaqtaǵy tabystarymyzdy anyqtaıtyn basty kapıtalymyz",
-      "opportunities": [
-        {
-          "digit": "01",
-          "title": "Kásibı damýy",
-          "description": "Akbarys qyzmetkerlerdiń qajetti bilim men kásibı daǵdylardy ıgerýine baǵyttalǵan kadrlardy daıarlaý júıesi jumys isteıdi. Maqsaty úzdik tájirıbelerdi anyqtaýǵa jáne taratýǵa, problemalarmen jedel almasýǵa jáne olardy sheshýdiń ońtaıly joldaryn birlesip tabýǵa múmkindik beretin bilimdi basqarýdyń korporatıvtik júıesin qurý bolyp tabylady."
-        },
-        {
-          "digit": "02",
-          "title": "Jas mamandardy qoldaý",
-          "description": "Jas mamandardy qoldaý personaldy basqarý saıasatynyń basym baǵyttarynyń biri bolyp tabylady. Búgingi tańda kompanıa qyzmetkerleriniń jalpy sanynda 30 jasqa deıingi qyzmetkerlerdiń úlesi shamamen 40% quraıdy%"
-        },
-        {
-          "digit": "03",
-          "title": "Yntalandyrý jáne jeńildikter júıesi",
-          "description": "Biz mynadaı múmkindikterdi usynamyz: biregeı jáne iri jobalarǵa qatysý, Kásibı damý jáne mansaptyq ósý, ózin-ózi iske asyrý"
-        }
-      ]
-    },
-    "thirdBlock": {
-      "title": "Bizdiń mısıamyz",
-      "description": [
-        "Biz tapsyrys berýshilerdiń mindetterin eń jaqsy sapamen jáne eń jaqsy tıimdilikpen sátti sheshe alatyn ıntegrasıalanǵan servıstik kompanıa qurý úshin bir maqsatpen biriktirilgen pikirles uıymbyz.",
-        "Bizdiń qyzmetkerler bıikterge jetkende, kemeldilikke shek qoımaıtyn jáne Akbarys osyndaı kemeldilikke barlyq jaǵdaı jasaıtyn bizdiń basty qundylyǵymyz bolyp tabylady."
+      {
+        "digit": "02",
+        "title": "Жас мамандарды қолдау",
+        "description": "Жас мамандарды қолдау Персоналды басқару саясатының басым бағыттарының бірі болып табылады. Бүгінгі таңда Компания персоналының жалпы құрамындағы 30 жасқа дейінгі жұмыскерлердің үлесі шамамен 40% құрайды"
+      },
+      {
+        "digit": "03",
+        "title": "Ынталандыру және жеңілдіктер жүйесі",
+        "description": "Біз бірегей және ірі жобаларға қатысу, кәсіби даму және мансаптық өсу, өзін-өзі таныта білу мүмкіндіктерін ұсынамыз"
+      }
+    ]
+  },
+  "fourthBlock": {
+    "title": "Өтінім нысаны",
+    "subtitle": "Нысанды толтырыңыз, сосын біз Сізбен хабарласамыз!",
+    "fieldNames": ["Аты:", "Email:", "Түйіндеме:", "Хабарлама:"],
+    "btnText": "Жөнелту",
+    "politica": {
+      "text": [
+        "Мен дербес деректерімнің өңделуіне өз келісімімді беремін",
+        "Құпиялылық саясаты оку"
       ],
-      "images": [
-        "../../../images/akbarys/item-1.jpg",
-        "../../../images/akbarys/item-2.jpg",
-        "../../../images/akbarys/item-3.jpg"
-      ]
+      "link": "/politics/kz"
+    },
+    "popup": {
+      "success": {
+        "title": "Рақмет!",
+        "description": "Сіздің хабарламаңыз ойдағыдай жіберілді!",
+        "btnText": "Жақсы"
+      },
+      "error": {
+        "title": "Қате!",
+        "description": "Жаңсақтық орын алған сияқты... Кейінірек байқап көріңіз. ",
+        "btnText": "Жақсы"
+      }
     }
   }
-  
+}

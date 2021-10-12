@@ -1,51 +1,55 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import { useEffect } from "react"
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import { useEffect } from 'react';
 
-import LayoutAdditional from "../components/layer/layerAdditional"
-import Seo from "../components/seo"
-import SftPreview from "../components/sft/firstBlock/sft.preview"
-import SftDescription from "../components/sft/secondBlock/sft.description"
-import SftSourFluidTreatment from "../components/sft/thirdBlock/sft.sourFluidTreatment"
-import SftRequires from "../components/sft/fourthBlock/sft.requires"
-import SftPartners from "../components/sft/fivthBlock/sft.partners"
+import LayoutAdditional from '../components/layer/layerAdditional';
+import Seo from '../components/seo';
+import SftPreview from '../components/sft/firstBlock/sft.preview';
+import SftDescription from '../components/sft/secondBlock/sft.description';
+import SftSourFluidTreatment from '../components/sft/thirdBlock/sft.sourFluidTreatment';
+import SftRequires from '../components/sft/fourthBlock/sft.requires';
+import SftPartners from '../components/sft/fivthBlock/sft.partners';
 
 const sftService = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll(".headerAdditional__link")[1]
-      ?.classList.add("active")
-  }, [])
+      .querySelectorAll('.headerAdditional__link')[1]
+      ?.classList.add('active');
+  }, []);
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  }
+  };
   const {
+    seo,
     firstBlock,
     secondBlock,
     thirdBlock,
     fourthBlock,
     fivthBlock,
     langButtonsLinks,
-  } = props.data.pageSftServiceJson
+  } = props.data.pageSftServiceJson;
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
-      <Seo title="Нейтрализация сероводорода" />
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
+      <Seo title={seo.title} />
       <SftPreview content={firstBlock} />
       <SftDescription content={secondBlock}></SftDescription>
       <SftSourFluidTreatment content={thirdBlock} />
       <SftRequires content={fourthBlock} />
       <SftPartners content={fivthBlock} />
     </LayoutAdditional>
-  )
-}
+  );
+};
 
-export default sftService
+export default sftService;
 
 export const query = graphql`
   query PageSftServiceTemplateQuery($lang: String) {
     pageSftServiceJson(lang: { eq: $lang }) {
-      h1
+      seo {
+        title
+        h1
+      }
       langButtonsLinks
       lang
       firstBlock {
@@ -65,7 +69,6 @@ export const query = graphql`
         }
       }
       secondBlock {
-        h1
         first {
           subtitle
           title
@@ -140,4 +143,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

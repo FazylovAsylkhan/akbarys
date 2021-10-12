@@ -122,10 +122,16 @@
       @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
       @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
     }
+    &__item-description.text-1 {
+      @include adaptive-value-byX("font-size", 14, 12, 640, 320);
+    }
   }
   @media (max-width: 320px) {
     &__wrapper {
       padding: 50px 0;
+    }
+    &__item-description.text-1 {
+      font-size: 12px;
     }
   }
 }

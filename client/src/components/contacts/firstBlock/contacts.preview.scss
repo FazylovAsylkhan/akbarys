@@ -1,97 +1,82 @@
-@import '../../../scss/utils';
+@import "../../../scss/utils";
 
 .contactsPreview {
-  @include adaptive-value-byX('height', 800, 680, 1920, 1440);
-  padding-top: calc((600 / 1002) * 100vh);
   position: relative;
+  height: 800px;
+  padding-top: 429px;
   &__wrapper {
-      grid-column: 1 / span 12;
-      width: fit-content;
+    grid-column: 1 / span 12;
+    width: fit-content;
   }
   &__content {
     z-index: 2;
     position: relative;
   }
-  &__title {
-    @include adaptive-value-byX('max-width', 566, 424, 1920, 1440);
-  }
   &__title-description {
-    @include adaptive-value-byX('margin-top', 30, 20, 1920, 1440);
+    margin-top: 30px;
   }
   &__body {
     top: 0;
     position: absolute;
     width: 100%;
-    @include adaptive-value-byX('height', 800, 680, 1920, 1440);
+    height: 100%;
     left: 0;
     overflow: hidden;
   }
   &__body-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  }
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("padding-top", 429, 374, 1920, 1440);
+    @include adaptive-value-byX("height", 800, 680, 1920, 1440);
+    &__title-description {
+      @include adaptive-value-byX("margin-top", 30, 20, 1920, 1440);
+    }
   }
   @media (max-width: 1440px) {
-    &__wrapper {
-      grid-column: 1 / span 12;
-    }
-    &__title {
-      max-width: 390px;
-    }
-    padding-top: calc((226 / 760) * 100vh);
-    &__button,
-    &__box {
-      margin-top: 30px;
-    }
-    &__subtitle {
-      grid-template-columns: 101px 185px;
+    @include adaptive-value-byX("padding-top", 374, 344, 1440, 1200);
+    @include adaptive-value-byX("height", 680, 600, 1440, 1200);
+    &__title-description {
+      margin-top: 20px;
     }
   }
   @media (max-width: 1200px) {
-    padding-top: calc((206 / 720) * 100vh);
+    @include adaptive-value-byX("padding-top", 344, 787, 1200, 860);
+    @include adaptive-value-byX("height", 600, 950, 1200, 860);
   }
-  @media (max-width: 1075px) {
-    &__title {
-      max-width: 500px;
+  @media (max-width: 1040px) {
+    &__body-image img {
+      object-position: 64% center;
     }
-    padding-top: calc((500 / 1200) * 100vh);
-    &__button,
-    &__box {
-      margin-top: 40px;
-    }
-    &__box {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    &__subtitle {
-      grid-template-columns: 110px 185px;
+  }
+  @media (max-width: 963px) {
+    &__body-image img {
+      object-position: 70% center;
     }
   }
   @media (max-width: 860px) {
-    padding-top: calc((757 / 1200) * 100vh);
-  }
-  @media (max-width: 675px) {
-    padding-top: calc((610 / 1140) * 100vh);
-    &__box {
-      display: flex;
-      flex-direction: column;
+    height: 950px;
+    padding-top: 787px;
+    &__wrapper {
+      grid-column: 1 / span 8;
     }
   }
   @media (max-width: 640px) {
-    padding-top: calc(((896 * (610 / 1140)) / 896) * 100vh);
+    @include adaptive-value-byX("padding-top", 787, 415, 640, 320);
+    @include adaptive-value-byX("height", 950, 580, 640, 320);
+    &__wrapper {
+      grid-column: 1 / span 6;
+    }
+    &__title-description {
+      @include adaptive-value-byX("margin-top", 20, 15, 640, 320);
+    }
   }
-  &__wrapper.visible {
-    opacity: 1;
-    animation: show 1.5s ease;
-  }
-}
-
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  @media (max-width: 320px) {
+    padding-top: 415px;
+    height: 580px;
+    &__title-description {
+      margin-top: 15px;
+    }
   }
 }

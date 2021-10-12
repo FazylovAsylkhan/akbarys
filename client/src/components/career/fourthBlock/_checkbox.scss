@@ -1,0 +1,47 @@
+.careerForm {
+  &__form {
+    &-checkbox {
+      display: flex;
+    }
+
+    &-checkbox span {
+      width: 100%;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 120%;
+      color: #596b7b;
+      cursor: pointer;
+    }
+    &-checkbox-input {
+      display: none;
+      pointer-events: none;
+    }
+    &-checkbox.error &-checkbox-button {
+      border: 1px solid #fd1515;
+    }
+    &-checkbox-button {
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin-right: 20px;
+      background: #ffffff;
+      border: 1px solid #efefef;
+      cursor: pointer;
+      &::after {
+        transition: transform 0.3s ease;
+        content: "";
+        transform: scale(0);
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 10px;
+        height: 10px;
+        background: #1564fd;
+        z-index: 9;
+      }
+      &_active.careerForm__form-checkbox-button::after {
+        transform: scale(1);
+      }
+    }
+  }
+}

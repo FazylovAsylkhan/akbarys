@@ -1,18 +1,77 @@
+@import "../../../scss/utils";
+
 .politics {
-    padding-top: 240px;
+  &__wrapper {
+    grid-column: 1 / span 12;
+    padding: 120px 0;
+  }
+  &__title {
+    margin-bottom: 65px;
+  }
+  &__description {
+    margin-bottom: 20px;
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+    &-item {
+      margin-top: 10px;
+    }
+  }
+  &__rule {
+    margin-top: 30px;
+    &-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 1920px) {
     &__wrapper {
-        grid-column: 1 / span 12;
-        padding-bottom: 120px;
+      @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
     }
     &__title {
-        margin-bottom: 65px;
+      @include adaptive-value-byX("margin-bottom", 65, 50, 1920, 1440);
     }
-    &__description {
-      p {
-        margin-bottom: 20px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
+  }
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
     }
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+    &__title {
+      @include adaptive-value-byX("margin-bottom", 50, 30, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
 }

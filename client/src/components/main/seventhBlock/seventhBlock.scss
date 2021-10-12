@@ -1,21 +1,18 @@
+@import "../../../scss//utils";
+
 .partners {
   &__wrapper {
-    margin-top: calc((273 / 1002) * 100vh);
+    margin-top: 253px;
     grid-column: 1 / span 12;
   }
   &__description {
-    margin-top: calc((53 / 1002) * 100vh);
     max-width: 850px;
+    margin-top: 40px;
   }
   &__slider {
     position: relative;
     width: 100%;
-    margin-top: calc((50 / 1002) * 100vh);
-  }
-  &__pagination {
-    position: absolute;
-    right: calc((201 / 1920) * 100vw);
-    top: calc((-189 / 1002) * 100vh);
+    margin-top: 50px;
   }
   &__slider-wrapper {
     display: flex;
@@ -56,104 +53,49 @@
     align-items: center;
     justify-content: space-between;
   }
-  &__button {
-    &-next,
-    &-prev {
-      top: calc((-182 / 1002) * 100vh);
-      right: 0;
-      z-index: 1000;
-      position: absolute;
-    }
-    &-next img,
-    &-prev img {
-      width: 29px;
-      height: 29px;
-    }
-    &-next:hover {
-      transform: rotateX(-10px);
-    }
-    &-prev:hover {
-      transform: rotateX(10px);
-    }
-    &-prev {
-      transform: rotateY(180deg);
-      right: 87px;
-    }
-  }
-  @media (max-width: 1570px) {
+  @media (max-width: 1920px) {
     &__wrapper {
-      margin-top: calc((222 / 760) * 100vh);
-      grid-column: 1 / span 12;
+      margin-top: calc((253 / 1002) * 100vh);
     }
-    &__slide {
-      &-item-wrapper {
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 15px;
-        grid-row-gap: 0px;
-        overflow: hidden;
-      }
+    &__description {
+      margin-top: calc((40 / 1002) * 100vh);
+    }
+    &__slider {
+      margin-top: calc((50 / 1002) * 100vh);
     }
   }
   @media (max-width: 1440px) {
+    &__wrapper {
+      margin-top: calc((230 / 1002) * 100vh);
+    }
     &__slider {
+      margin-top: calc((40 / 760) * 100vh);
+    }
+    &__description {
       margin-top: calc((30 / 760) * 100vh);
-    }
-    &__button {
-      &-next,
-      &-prev {
-        top: calc((-132 / 760) * 100vh);
-      }
-      &-next img,
-      &-prev img {
-        width: 24px;
-        height: 24px;
-      }
-      &-prev {
-        transform: rotateY(180deg);
-        right: calc((63 / 1440) * 100vw);
-      }
-    }
-    &__pagination {
-      right: calc((186 / 1920) * 100vw);
-      top: calc((-177 / 1002) * 100vh);
     }
   }
   @media (max-width: 1200px) {
     &__wrapper {
-      margin-top: calc((217 / 760) * 100vh);
+      margin-top: calc((190 / 720) * 100vh);
     }
     &__slider {
-      margin-top: calc((45 / 760) * 100vh);
+      margin-top: calc((30 / 720) * 100vh);
     }
     &__description {
       margin-top: calc((30 / 720) * 100vh);
     }
-    &__pagination {
-      right: calc((135 / 1200) * 100vw);
-      top: calc((-191 / 1002) * 100vh);
-    }
-    &__button {
-      &-next,
-      &-prev {
-        top: calc((-143 / 760) * 100vh);
-      }
-    }
   }
-  @media (max-width: 860px) {
-    &__title {
-      padding-right: 31%;
-    }
-    &__description {
-      margin-top: 35px;
-      width: 100%;
-    }
+  @media (max-width: 1040px) {
     &__wrapper {
       margin-top: calc((332 / 1200) * 100vh);
-      grid-column: 1 / span 8;
+    }
+    &__description {
+      margin-top: calc((35 / 1200) * 100vh);
+      width: 100%;
     }
     &__slider {
       margin-top: calc((30 / 1200) * 100vh);
-      height: calc((452 / 1200) * 100vh);
     }
     &__slide-item:nth-child(10) {
       display: none;
@@ -163,59 +105,38 @@
       grid-column-gap: 30px;
       grid-row-gap: 20px;
     }
-    &__pagination {
-      top: calc((-208 / 1200) * 100vh);
-      right: calc((180 / 860) * 100vw);
-    }
-    &__button {
-      &-next,
-      &-prev {
-        top: calc((-176 / 1200) * 100vh);
-        width: 24px;
-        height: 24px;
-      }
-      &-next img,
-      &-prev img {
-        width: 100%;
-        height: 100%;
-      }
-      &-prev {
-        right: calc((91 / 860) * 100vw);
-      }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
     }
   }
   @media (max-width: 640px) {
-    &__slide-item:nth-child(9) {
-      display: none;
+    &__slide-item {
+      @include adaptive-value-byX("padding-right", 30, 5, 640, 320);
+      @include adaptive-value-byX("padding-left", 30, 5, 640, 320);
+      &:nth-child(9) {
+        display: none;
+      }
     }
     &__wrapper {
       margin-top: calc((256 / 1140) * 100vh);
       grid-column: 1 / span 6;
     }
-    &__description {
-      display: none;
-    }
     &__slide-item-wrapper {
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 0;
-      grid-column-gap: 65px;
+      @include adaptive-value-byX("grid-column-gap", 50, 0, 640, 320);
+      grid-column-gap: 50px;
+      grid-row-gap: 0px;
     }
     &__slider {
       margin-top: calc((32 / 1140) * 100vh);
       height: calc((676 / 1140) * 100vh);
     }
-    &__pagination {
-      top: calc((-103 / 1140) * 100vh);
-      right: calc((134 / 640) * 100vw);
-    }
-    &__button {
-      &-next,
-      &-prev {
-        top: calc((-100 / 1140) * 100vh);
-      }
-    }
-    &-prev {
-      right: calc((91 / 640) * 100vw);
+  }
+  @media (max-height: 638px) {
+    &__description {
+      display: none;
     }
   }
 }

@@ -1,44 +1,74 @@
 {
-    "lang": "kz",
-    "url": "service-center/kz",
-    "h1": "Servıs ortalyǵy",
-    "langButtonsLinks": ["/service-center", "/service-center/kz", "/service-center/en"],
-    "firstBlock": {
-      "title": "Servıs ortalyǵy",
-      "subtitle": "Bizben birge jetistikterge jetińiz!",
-      "image": "../../../images/serviceCenter/serviceCenter.jpg"
-    },
-    "secondBlock": {
-      "h1": "Servıs ortalyǵy",
-      "description": [
-        {
-          "title": "Ýaqytyly qyzmet kórsetý-senimdilik kepili",
-          "text": [
-            "Merzimdi jáne shuǵyl jóndeý jumystaryn oryndaý úshin Akbarys-te servıstik ortalyq uıymdastyryldy."
-          ]
-        },
-        {
-          "title": "Siz senimdi qoldasyz",
-          "text": [
-            "Akbarys servıstik ortalyǵy óz jabdyqtaryna ǵana emes, tapsyrys berýshilerdiń jabdyqtaryna da kásibı servıstik jáne tehnıkalyq qyzmet kórsetedi. Kompanıa qyzmetkerleri jabdyq óndirýshisimen sertıfıkattalǵan",
-            "«Akbarys» servıstik qyzmet kórsetýge qatysatyn barlyq tehnıkalyq quraldar ÓAJ kestesine jáne paıdalaný qujattamasyna sáıkes merzimdi tekserýden jáne tehnıkalyq qyzmet kórsetýden ótedi."
-          ]
-        },
-        {
-          "title": "Виды сервисных работ",
-          "text": ["Мы выполняем обслуживание:"]
-        }
-      ],
-      "typesOfWork": {
-        "title": "Servıstik jumys túrleri",
-        "description": "Biz qyzmet kórsetemiz:",
-        "stages": [
-          "Tynys alý <br /> apparattary",
-          "Gaz deteksıasy <br /> júıeleri",
-          "Áýe <br /> kompresorlar",
-          "Eskertý <br /> júıeleri"
+  "lang": "kz",
+  "url": "service-center/kz",
+  "seo": {
+    "title": "Сервис орталығы",
+    "h1": "Сервис орталығы"
+  },
+  "langButtonsLinks": [
+    "/service-center",
+    "/service-center/kz",
+    "/service-center/en"
+  ],
+  "firstBlock": {
+    "title": "Сервис орталығы",
+    "subtitle": "Техникалық қызмет көрсету, сүйемелдеу және қолдау",
+    "image": "../../images/serviceCenter/preview.jpg"
+  },
+  "secondBlock": {
+    "descriptions": [
+      {
+        "title": "Уақтылы қызмет көрсету - сенімділік кепілі",
+        "text": [
+          "Akbarys компаниясында техникалық қызмет көрсету және жөндеу жұмыстарын орындау үшін сервис орталығы ұйымдастырылған"
+        ]
+      },
+      {
+        "title": "Сіздің сеніміңіз ақталады",
+        "text": [
+          "Akbarys сервис орталығы өз жабдықтарына ғана емес, тапсырыс берушілердің жабдықтарына да кәсіби сервистік және техникалық қызмет көрсетеді. Компания қызметкерлеріне жабдық өндірушісі сертификаттар табыстады",
+          "«Akbarys» сервистік қызмет көрсетуге қатысатын барлық техникалық құралдар  ЖӨЖ кестесіне және пайдалану құжаттамасына сәйкес мерзімді тексеруден және техникалық қызмет көрсетуден өтеді."
         ]
       }
+    ],
+    "typesOfWork": {
+      "title": "Сервистік жұмыс түрлері",
+      "description": "Біз қызмет көрсетеміз:",
+      "items": [
+        {
+          "title": "01",
+          "description": "Тыныс алу <br /> аппараттары"
+        },
+        {
+          "title": "02",
+          "description": "Газ анықтау <br /> жүйелері"
+        },
+        {
+          "title": "03",
+          "description": "Ауа <br /> компрессорлары"
+        },
+        {
+          "title": "04",
+          "description": "Хабарлау <br /> жүйелері"
+        }
+      ]
     }
+  },
+  "thirdBlock": {
+    "title": "Өңірлерде жұмыс істейміз",
+    "descriptions": [
+      "Компания мамандары жұмыстарды тапсырыс берушінің объектілерінде де, Қазақстан өңірлерінде орналасқан мамандандырылған зертханалар жағдайында да жүргізеді.",
+      "Тапсырыс берушілердің сұрауларына неғұрлым толық және жылдам жауап беру және ірі өнеркәсіптік өңірлерде сервистік қызмет көрсету мерзімдерін қысқарту үшін жергілікті сервистік бөлімшелер құрылды, бұл Тапсырыс берушінің жабдығына сервистік қолдауды жедел жүзеге асыруға мүмкіндік береді. Орталық Орал бөлімшесінен басқа, мұндай сервистік қызметтер Астана, Ақсай, Ақтөбе, Атырау, Ақтау қалаларында да құрылды."
+    ]
+  },
+  "fouthBlock": {
+    "title": "Білікті персонал",
+    "description": "СО персоналы үнемі біліктілігін арттырады, сондай-ақ жаңа құрал-саймандар мен сервистік регламенттерді енгізу кезінде кезектен тыс оқулардан өтеді.",
+    "images": [
+      "../../images/serviceCenter/slider-item-1.jpg",
+      "../../images/serviceCenter/slider-item-2.jpg",
+      "../../images/serviceCenter/slider-item-3.jpg",
+      "../../images/serviceCenter/slider-item-4.jpg"
+    ]
   }
-  
+}

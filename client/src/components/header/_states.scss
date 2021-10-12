@@ -7,6 +7,12 @@
   }
   .text-header {
     color: #182027;
+
+    @media (max-width: 1040px) {
+      &.sub-menu__link {
+        color: #fcfcfc;
+      }
+    }
   }
   .menu__toggle::after {
     border-top: 5px solid #182027;
@@ -16,6 +22,9 @@
     border: 1px solid #efefef;
     border-top: none;
     background-color: #fcfcfc;
+    @media (max-width: 1040px) {
+      background-color: #0054fd;
+    }
   }
   .lang {
     &__preview::after {
@@ -62,6 +71,10 @@ body.touch {
   .header {
     display: none;
   }
+  .default-white-header {
+    display: block;
+    position: relative;
+  }
   &.mainPage .header {
     display: block;
   }
@@ -73,15 +86,16 @@ body.touch {
   .header_dark .header__burger span {
     background-color: #1564fd;
   }
-  @media (max-width: 1040px) {
-    .header.header_transparent.additional.hide {
-      transform: translateY(-310%);
+  .header.header_preview.additional {
+    transform: translateY(0%);
+    opacity: 1;
+    position: fixed;
+    &::before {
+      background-color: #2c2b2a;
     }
-    .header.header_transparent.additional {
-      transform: translateY(0%);
-      opacity: 1;
-      // position: absolute;
-      position: fixed;
+  }
+  @media (max-width: 1040px) {
+    .header.header_preview.additional {
       &::before {
         background-color: transparent;
       }
@@ -91,6 +105,9 @@ body.touch {
     }
     .active .header__menu {
       transition: transform 1s ease;
+    }
+    .header.header_dark::before {
+      border-bottom: 1px solid transparent;
     }
   }
 }

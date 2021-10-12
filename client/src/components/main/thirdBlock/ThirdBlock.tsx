@@ -1,16 +1,19 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import "./thirdBlock.scss"
-import id from "../../../utils/randomId"
+import './thirdBlock.scss';
+import id from '../../../utils/randomId';
+
 interface ThirdBlockProps {
   content: any
 }
 
 const ThirdBlock: React.FC<ThirdBlockProps> = ({ content }) => {
-  const { title, button, subtitles, image } = content
-  const img = getImage(image)
+  const {
+    title, button, subtitles, image,
+  } = content;
+  const img = getImage(image);
 
   return (
     <div className="sft">
@@ -21,8 +24,7 @@ const ThirdBlock: React.FC<ThirdBlockProps> = ({ content }) => {
             {button.text}
           </Link>
           <div className="sft__box">
-            {subtitles.map((subtitle: any) => {
-              return (
+            {subtitles.map((subtitle: any) => (
                 <h3 className=" sft__subtitle" key={id()}>
                   <span className="sft__subtitle-digit mainText-4 white">
                     {subtitle.digit}
@@ -31,8 +33,7 @@ const ThirdBlock: React.FC<ThirdBlockProps> = ({ content }) => {
                     {subtitle.text}
                   </span>
                 </h3>
-              )
-            })}
+            ))}
           </div>
         </div>
       </div>
@@ -43,7 +44,7 @@ const ThirdBlock: React.FC<ThirdBlockProps> = ({ content }) => {
         <div className="background__header"></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ThirdBlock
+export default ThirdBlock;

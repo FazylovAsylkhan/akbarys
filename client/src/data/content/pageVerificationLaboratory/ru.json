@@ -1,14 +1,14 @@
 {
   "lang": "ru",
   "url": "verification-laboratory",
-  "h1": "Поверочные лаборатории QHSE Akbarys",
   "langButtonsLinks": [
     "/verification-laboratory",
     "/verification-laboratory/kz",
     "/verification-laboratory/en"
   ],
   "seo": {
-    "title": "Поверочные лаборатории"
+    "title": "Поверочные лаборатории",
+    "h1": "Поверочные лаборатории QHSE Akbarys"
   },
   "firstBlock": {
     "title": "Поверочные лаборатории",

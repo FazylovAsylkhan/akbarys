@@ -2,60 +2,64 @@
   "lang": "en",
   "url": "en",
   "langButtonsLinks": ["/", "/kz", "/en"],
+  "seo": {
+    "title": "Home",
+    "h1": "akbarys, qhse-akbarys"
+  },
   "firstBlock": {
     "title": "AKBARYS",
-    "description": "A leading provider of gas safety services in Kazakhstan, the CIS and neighboring countries",
+    "description": "Leading provider of gas safety services in Kazakhstan, CIS and neighboring countries",
     "image": "../../images/main/preview.akbarys.jpg"
   },
   "secondBlock": {
-    "title": "Comprehensive security solutions in the oil and gas industry",
-    "button": { "url": "/h2s-service/en", "text": "Подробнее" },
+    "title": "Comprehensive safety solutions in petroleum industry",
+    "button": { "url": "/h2s-service/en", "text": "Details" },
     "subtitles": [
-      { "digit": "15", "text": "Years of activity" },
-      { "digit": "67", "text": "Projects implemented" }
+      { "digit": "15", "text": "Years in business" },
+      { "digit": "67", "text": "Projects completed" }
     ],
     "image": "../../images/main/preview.h2s.jpg"
   },
   "thirdBlock": {
-    "title": "Нейтрализация сероводорода в процессе нефте и газодобычи",
-    "button": { "url": "/sft-service/en", "text": "Подробнее" },
+    "title": "H2S neutralization in petroleum production",
+    "button": { "url": "/sft-service/en", "text": "Details" },
     "subtitles": [
-      { "digit": "47", "text": "Тонн сероводорода нейтрализовано" },
-      { "digit": "59", "text": "Проектов реализовано" }
+      { "digit": "47", "text": "Tons of H2S neutralized" },
+      { "digit": "59", "text": "Projects implemented" }
     ],
     "image": "../../images/main/preview.sft.jpg"
   },
   "fourthBlock": {
-    "title": "О компании",
-    "subtitle": "Быть лучшими, направлять на успех!",
-    "description": "Akbarys является компанией со 100% Казахстанским содержанием, осуществляющим деятельность в области защиты персонала от сероводорода",
-    "button": { "url": "/akbarys-about/en", "text": "Подробнее" },
+    "title": "About us",
+    "subtitle": "Be the best, aim for success!",
+    "description": "Akbarys is a 100% Kazakh company in charge of H2S safety for personnel",
+    "button": { "url": "/about-us/en", "text": "Details" },
     "image": "../../images/main/about.jpg",
     "advantages": [
       {
         "digit": "15",
-        "description": "Лет успешной работы"
+        "description": "Years of success"
       },
       {
         "digit": "400 +",
-        "description": "Штат компании"
+        "description": "Headcount"
       },
       {
         "digit": "125 +",
-        "description": "Реализованных проектов"
+        "description": "Projects implemented"
       },
       {
-        "digit": "25 млн",
-        "description": "Безопасных человекочасов"
+        "digit": "25M",
+        "description": "Safe man-hours"
       }
     ]
   },
   "fivthBlock": {
-    "title": "Ключевые проекты",
+    "title": "Key projects",
     "slides": [
       {
         "title": "Tengizchevroil",
-        "description": "TCO - казахстанское партнерство занимающиеся разведкой, разработкой, добычей и сбытом сырой нефти, сжиженного нефтяного газа, сухого газа и серы",
+        "description": "TCO is a Kazakhstan partnership engaged in the exploration, development, production and marketing of crude oil, liquefied petroleum gas, dry gas and sulfur",
         "image": "../../images/main/projects1.jpg",
         "specifications": [
           {
@@ -64,21 +68,21 @@
           },
           {
             "digit": "158",
-            "description": "Человек задействовано"
+            "description": "Person involved"
           },
           {
             "digit": "18",
-            "description": "Eдиниц оборудования"
+            "description": "Units of equipment"
           },
           {
             "digit": "102000",
-            "description": "Человеко-часов"
+            "description": "Man-hours"
           }
         ]
       },
       {
         "title": "Karachaganak Petroleum Operating B.V.",
-        "description": "KPO B.V. - одно из крупнейших в мире месторождение нефтегазового конденсата в Западно-Казахстанcкой области Республики Казахстан",
+        "description": "Karachaganak is one of the world's largest oil and gas condensate fields in the West Kazakhstan Region of Kazakhstan",
         "image": "../../images/main/projects2.jpg",
         "specifications": [
           {
@@ -87,21 +91,21 @@
           },
           {
             "digit": "120",
-            "description": "Человек задействовано"
+            "description": "Person involved"
           },
           {
             "digit": "14",
-            "description": "Eдиниц оборудования"
+            "description": "Units of equipment"
           },
           {
             "digit": "92250",
-            "description": "Человеко-часов"
+            "description": "Man-hours"
           }
         ]
       },
       {
         "title": "North Caspian Operating Company N.V.",
-        "description": "NCOC N.V. представляет собой первый крупный проект освоения морских нефтегазовых месторождений в Казахстане",
+        "description": "NCOC N.V. is the first major offshore oil-and-gas development project in Kazakhstan",
         "image": "../../images/main/projects3.jpg",
         "specifications": [
           {
@@ -110,55 +114,55 @@
           },
           {
             "digit": "65",
-            "description": "Человек задействовано"
+            "description": "Person involved"
           },
           {
             "digit": "21",
-            "description": "Eдиниц оборудования"
+            "description": "Units of equipment"
           },
           {
             "digit": "208477",
-            "description": "Человеко-часов"
+            "description": "Man-hours"
           }
         ]
       }
     ]
   },
   "sixthBlock": {
-    "title": "Устойчивое развитие",
-    "description": "Наша компания строит свою деятельность на основе гармоничного сочетания интересов заказчиков, сотрудников, акционеров и общества в целом при неукоснительном соблюдении законодательных норм и требований, внедрении новейших технологий и современного оборудования, соблюдении требований охраны труда и окружающей среды",
+    "title": "Sustainable development",
+    "description": "Our company bases its activities on a balanced combination of the customers, employees, shareholders and community interests, while strictly complying with legal standards, introducing the latest technology and equipment, as well as following the HSE requirements",
     "image": "../../images/main/preview.development.jpg",
     "stages": [
       {
         "digit": "01",
-        "description": "Отвечаем за безопасность сотрудников"
+        "description": "We are responsible for the safety of employees"
       },
       {
         "digit": "02",
-        "description": "Ответственно подходим к вопросу экологии"
+        "description": "We take a responsible approach to the issue of ecology"
       },
       {
         "digit": "03",
-        "description": "Бережно используем природные ресурсы"
+        "description": "We use natural resources carefully"
       },
       {
         "digit": "04",
-        "description": "Используем только современные технологии"
+        "description": "We use only modern technologies"
       }
     ]
   },
   "seventhBlock": {
-    "title": "Нам доверяют лидеры отрасли",
-    "description": "Компания формирует, поддерживает и высоко ценит сложившиеся отношения с деловыми партнерами, общественными организациями и потребителями"
+    "title": "We are trusted by industry leaders",
+    "description": "The company has been forming, maintaining and appreciating the established relationships with business partners, public organizations and consumers."
   },
   "eighthBlock": {
-    "title": ["Карьера в Akbarys", "Будь частью большой команды!"],
-    "description": "Вперед к достижениям вместе с нами",
+    "title": ["Our careers", "Be part of a great team!"],
+    "description": "We will lead you to the goals",
     "image": "../../images/main/preview.career.jpg",
-    "button": { "url": "/career/en", "text": "Подробнее" },
+    "button": { "url": "/career/en", "text": "Details" },
     "advantage": {
       "digit": "400+",
-      "description": "Сотрудников уже работают с нами"
+      "description": "People are already in our staff"
     }
   }
 }

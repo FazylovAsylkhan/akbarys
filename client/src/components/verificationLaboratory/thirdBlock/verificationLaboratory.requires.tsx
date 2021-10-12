@@ -1,20 +1,19 @@
-import * as React from "react"
+import * as React from 'react';
 
-import "./verificationLaboratory.requires.scss"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import { FC } from "react"
+import './verificationLaboratory.requires.scss';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { FC } from 'react';
 
 interface VerificationLaboratoryRequiresProps {
   content: any
 }
 
-const VerificationLaboratoryRequires: FC<VerificationLaboratoryRequiresProps> =
-  ({ content }) => {
-    const { title, description, images } = content
-    const img1 = getImage(images[0])
-    const img2 = getImage(images[1])
+const VerificationLaboratoryRequires: FC<VerificationLaboratoryRequiresProps> = ({ content }) => {
+  const { title, description, images } = content;
+  const img1 = getImage(images[0]);
+  const img2 = getImage(images[1]);
 
-    return (
+  return (
       <div className="verificationLaboratoryRequires">
         <div className="container">
           <div className="verificationLaboratoryRequires__wrapper">
@@ -46,7 +45,7 @@ const VerificationLaboratoryRequires: FC<VerificationLaboratoryRequiresProps> =
           </div>
         </div>
       </div>
-    )
-  }
+  );
+};
 
-export default VerificationLaboratoryRequires
+export default VerificationLaboratoryRequires;

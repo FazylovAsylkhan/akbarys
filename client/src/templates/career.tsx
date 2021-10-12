@@ -5,10 +5,10 @@ import { graphql } from 'gatsby';
 import AkbarysMission from '../components/akbarys/fouthBlock/akbarys.mission';
 import CareerPreview from '../components/career/firstBlock/career.preview';
 import CareerDescription from '../components/career/secondBlock/career.description';
-import CareerOffer from '../components/career/thirdBlock/career.offer';
+import CareerOffer from '../components/career/fourthBlock/career.offer';
 import LayoutAdditional from '../components/layer/layerAdditional';
 import Seo from '../components/seo';
-import Plug from '../components/plug/plug';
+import CareerBenefits from '../components/career/thirdBlock/career.benefits';
 
 const Career = (props: any) => {
   useEffect(() => {
@@ -16,20 +16,22 @@ const Career = (props: any) => {
       .querySelectorAll('.headerAdditional__link')[7]
       ?.classList.add('active');
   }, []);
-  const { firstBlock, secondBlock, thirdBlock, langButtonsLinks } = props.data.pageCareerJson;
+  const {
+    seo, firstBlock, secondBlock, thirdBlock, fourthBlock, langButtonsLinks,
+  } = props.data.pageCareerJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
 
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
-      <Seo title="Карьера в Akbarys" />
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
+      <Seo title={seo.title} />
       <CareerPreview content={firstBlock} />
       <CareerDescription content={secondBlock} />
-      <AkbarysMission content={thirdBlock} />
-      <CareerOffer />
-      <Plug />
+      <CareerBenefits content={thirdBlock} />
+      <AkbarysMission content={props.data.pageAboutUsJson.fourthBlock} />
+      <CareerOffer content={fourthBlock} />
     </LayoutAdditional>
   );
 };
@@ -38,8 +40,27 @@ export default Career;
 
 export const query = graphql`
   query PageCareerTemplateQuery($lang: String) {
+    pageAboutUsJson(lang: { eq: $lang }) {
+      fourthBlock {
+        description
+        title
+        qualities
+        images {
+          childrenImageSharp {
+            gatsbyImageData(
+              formats: [AVIF, WEBP, JPG]
+              placeholder: DOMINANT_COLOR
+              quality: 50
+            )
+          }
+        }
+      }
+    }
     pageCareerJson(lang: { eq: $lang }) {
-      h1
+      seo {
+        title
+        h1
+      }
       langButtonsLinks
       lang
       url
@@ -66,22 +87,33 @@ export const query = graphql`
       secondBlock {
         subtitle
         title
+      }
+      thirdBlock {
         opportunities {
           description
           digit
           title
         }
       }
-      thirdBlock {
-        description
+      fourthBlock {
         title
-        images {
-          childrenImageSharp {
-            gatsbyImageData(
-              formats: [AVIF, WEBP, JPG]
-              placeholder: DOMINANT_COLOR
-              quality: 50
-            )
+        subtitle
+        fieldNames
+        btnText
+        politica {
+          text
+          link
+        }
+        popup {
+          success {
+            title
+            description
+            btnText
+          }
+          error {
+            title
+            description
+            btnText
           }
         }
       }

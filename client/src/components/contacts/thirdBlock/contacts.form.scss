@@ -3,54 +3,6 @@
 .contactsForm {
   position: relative;
   background-color: #f8f8f8;
-  &__form::after {
-    z-index: 100;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    background: rgba(0, 0, 0, 0.3) url("../../../static/loading.gif") center /
-      200px no-repeat;
-    transition: all 0.5s easy;
-  }
-  &__form.sending::after {
-    opacity: 1;
-    visibility: visible;
-  }
-  &__alert {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-    display: none;
-    &.show {
-      display: flex;
-    }
-    &-content {
-      width: 467px;
-      height: 301px;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    &-title {
-      margin-bottom: 40px;
-    }
-    &-description {
-      margin-bottom: 20px;
-    }
-  }
   &__wrapper {
     padding: 120px 0;
     grid-column: 1 / span 12;
@@ -60,7 +12,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    @include adaptive-value-byX("width", 685, 514, 1920, 1440);
+    width: 685px;
     align-items: center;
     &-items {
       margin-top: 40px;
@@ -97,79 +49,6 @@
         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
       }
     }
-    &-dropdown-wrapper {
-      position: relative;
-      height: fit-content;
-    }
-    &-dropdown-button {
-      display: block;
-      width: 100%;
-      text-align: left;
-      background: #fff;
-      border: 1px solid #dbdbdb;
-      &:hover {
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
-      }
-      padding: 20px;
-      cursor: pointer;
-      &::after {
-        pointer-events: none;
-        content: "";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 15px;
-        width: 0;
-        height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 12px solid #e1e1e1;
-        // border-width: 10.4px 6px 0 6px;
-        // border-color: #e1e1e1 transparent transparent transparent;
-        // border-style: solid;
-      }
-      &:focus,
-      &:active,
-      &_focus {
-        border: 1px solid #1564fd;
-        padding: 20px;
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
-      }
-      &_active.contactsForm__form-dropdown-button::after {
-        transform: rotate(180deg);
-        top: 40%;
-      }
-    }
-    &-dropdown-input {
-      display: none;
-    }
-    &-dropdown-list {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 62px;
-      background: #fff;
-      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      width: 100%;
-      z-index: 10;
-    }
-    &-dropdown-list_visible {
-      display: block;
-    }
-    &-dropdown-item {
-      border-top: 1px solid #dbdbdb;
-      padding: 20px;
-      cursor: pointer;
-      background: #fff;
-      &:hover {
-        background: #1564fd;
-        color: #fff;
-      }
-      &:last-child {
-        border-bottom: 1px solid #dbdbdb;
-      }
-    }
     &-area {
       border: 1px solid #dbdbdb;
       display: block;
@@ -191,49 +70,6 @@
       outline: none;
       border: 1px solid #1564fd;
     }
-    &-checkbox {
-      display: flex;
-    }
-
-    &-checkbox span {
-      width: 100%;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 120%;
-      color: #596b7b;
-      cursor: pointer;
-    }
-    &-checkbox-input {
-      display: none;
-      pointer-events: none;
-    }
-    &-checkbox.error &-checkbox-button {
-      border: 1px solid #fd1515;
-    }
-    &-checkbox-button {
-      position: relative;
-      width: 22px;
-      height: 22px;
-      margin-right: 20px;
-      background: #ffffff;
-      border: 1px solid #efefef;
-      cursor: pointer;
-      &::after {
-        transition: transform 0.3s ease;
-        content: "";
-        transform: scale(0);
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        width: 10px;
-        height: 10px;
-        background: #1564fd;
-        z-index: 9;
-      }
-      &_active.contactsForm__form-checkbox-button::after {
-        transform: scale(1);
-      }
-    }
     &-politica-link {
       font-weight: 500;
       font-size: 13px;
@@ -244,28 +80,50 @@
       margin-top: 33px;
     }
   }
-  &__copyright {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: calc((133 / 1002) * 100vh);
-    background: #f4f4f4;
+  @media (max-width: 1920px) {
+    &__form {
+      @include adaptive-value-byX("width", 685, 514, 1920, 1440);
+    }
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 120, 110, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1440, 1200);
+    }
   }
-  &__copyright-wrapper {
-    grid-column: 1 / span 12;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    }
+    &__form {
+      width: 514px;
+    }
   }
-  &__copyright-text {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    color: #6d7f8e;
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
   }
-  &__copyright-link {
-    margin-right: 30px;
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
   }
 }
+@import "./alert";
+@import "./dropdown";
+@import "./checkbox";

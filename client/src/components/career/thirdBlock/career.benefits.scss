@@ -1,0 +1,204 @@
+@import "../../../scss/utils";
+
+.careerBenefits {
+  .tabs {
+    display: none;
+  }
+  &__item {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    &.show {
+      opacity: 1;
+    }
+  }
+  &__inner {
+    width: 596px;
+  }
+  &__wrapper {
+    grid-column: 1 / span 12;
+    display: flex;
+  }
+  &__box {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    border-right: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    &-description {
+      width: 447px;
+      margin-top: 30px;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 650px;
+  }
+  &__list-item {
+    border-right: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover {
+      background-color: #1564fd;
+      cursor: pointer;
+    }
+    &:hover .careerBenefits__list-item-subtitle,
+    &:hover .careerBenefits__list-item-description {
+      color: #ffffff;
+    }
+    & h3,
+    & p {
+      pointer-events: none;
+    }
+    &-subtitle {
+      margin-bottom: 30px;
+    }
+    &-content {
+      pointer-events: none;
+      @include adaptive-value-byX("padding-left", 118, 90, 1920, 1440);
+    }
+  }
+  @media (max-width: 1920px) {
+    &__inner {
+      @include adaptive-value-byX("width", 596, 454, 1920, 1440);
+    }
+    &__box {
+      &-description {
+        @include adaptive-value-byX("width", 447, 333, 1920, 1440);
+        @include adaptive-value-byX("margin-top", 30, 20, 1920, 1440);
+      }
+    }
+    &__list {
+      @include adaptive-value-byX("height", 650, 542, 1920, 1440);
+    }
+    &__list-item {
+      @include adaptive-value-byX("height", 215, 180, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    &__inner {
+      @include adaptive-value-byX("width", 454, 396, 1440, 1200);
+    }
+    &__box {
+      &-description {
+        @include adaptive-value-byX("width", 333, 287, 1440, 1200);
+        margin-top: 20px;
+      }
+    }
+    &__list {
+      @include adaptive-value-byX("height", 542, 459, 1440, 1200);
+    }
+    &__list-item {
+      @include adaptive-value-byX("height", 180, 152, 1440, 1200);
+    }
+  }
+  @media (max-width: 1130px) {
+    .tabs {
+      display: block;
+      &-non {
+        display: none;
+      }
+    }
+    &__tab {
+      position: relative;
+      padding: 50px 0;
+      &.show &-body {
+        height: auto;
+        margin-top: 50px;
+      }
+      &-head {
+        display: flex;
+        align-items: center;
+      }
+      &-head,
+      &-body {
+        pointer-events: none;
+      }
+      &-body {
+        transition: height ease-in 1s;
+        margin-top: 0px;
+        padding-right: 70px;
+        height: 0;
+        overflow: hidden;
+      }
+      width: 100%;
+      .text-7 {
+        font-size: 18px;
+      }
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 47px;
+        content: "+";
+        line-height: 50px;
+        font-size: 96px;
+        color: #e1e1e1;
+      }
+      &-description {
+        margin-left: 40px;
+      }
+      &.show::after {
+        content: "-";
+        top: 37px;
+        right: 7px;
+        font-size: 115px;
+      }
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+    }
+    .text-7 {
+      @include adaptive-value-byX("font-size", 18, 16, 640, 320);
+    }
+    &__tab {
+      @include adaptive-value-byX("padding-top", 50, 30, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 50, 30, 640, 320);
+      &-head {
+        padding-right: 70px;
+      }
+      &-body {
+        padding: 0;
+      }
+      &-description {
+        @include adaptive-value-byX("margin-left", 56, 26, 640, 320);
+      }
+      &::after {
+        @include adaptive-value-byX("top", 47, 20, 640, 320);
+        @include adaptive-value-byX("font-size", 96, 60, 640, 320);
+      }
+      &.show::after {
+        @include adaptive-value-byX("top", 37, 15, 640, 320);
+        @include adaptive-value-byX("font-size", 115, 70, 640, 320);
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    .text-7 {
+      font-size: 16px;
+    }
+    &__tab {
+      padding: 30px 0;
+      &-description {
+        margin-left: 26px;
+      }
+    }
+    &.show::after {
+      top: 15px;
+      font-size: 70px;
+    }
+  }
+}

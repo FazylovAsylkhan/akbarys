@@ -1,19 +1,19 @@
 {
   "lang": "en",
-  "description": "A leading provider of gas safety services in Kazakhstan, the CIS and neighboring countries",
+  "description": "Leading provider of gas safety services in Kazakhstan, CIS and neighboring countries",
   "social": {
-    "title": "We are in social networks:",
+    "title": "We are in social media:",
     "links": ["/", "/", "/"]
   },
   "politics": {
     "title": "Akbarys LLP 2021 ©",
     "links": [
       {
-        "text": "Website design - QLAB",
+        "text": "Website designed by QLAB",
         "url": "/"
       },
       {
-        "text": "Privacy Policy",
+        "text": "All rights reserved",
         "url": "/politics/en"
       }
     ]
@@ -27,7 +27,7 @@
           "url": "/h2s-service/en"
         },
         {
-          "text": "Neutralization of hydrogen sulfide",
+          "text": "H2S neutralizing",
           "url": "/sft-service/en"
         }
       ]
@@ -49,8 +49,8 @@
       "title": "Company",
       "links": [
         {
-          "text": "About the company",
-          "url": "/akbarys-about/en"
+          "text": "About us",
+          "url": "/about-us/en"
         },
         {
           "text": "Career",
@@ -61,7 +61,7 @@
           "url": "/contacts/en"
         },
         {
-          "text": "Press Center",
+          "text": "PR",
           "url": "/press-center/en"
         },
         {

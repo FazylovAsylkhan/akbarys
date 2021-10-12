@@ -4,27 +4,27 @@
     {
       "title": "Company",
       "links": [
-        { "text": "Main", "url": "/en" },
+        { "text": "Home", "url": "/en" },
         {
-          "text": "About the company",
-          "url": "/akbarys-about/en"
+          "text": "About us",
+          "url": "/about-us/en"
         },
         {
           "text": "Career",
           "url": "/career/en"
         },
         {
-          "text": "Press Center",
+          "text": "PR",
           "url": "/press-center/en"
         }
       ]
     },
     {
-      "title": "Decision",
+      "title": "Solution",
       "links": [
         { "text": "Gas safety", "url": "/h2s-service/en" },
         {
-          "text": "Neutralization of hydrogen sulfide",
+          "text": "H2S neutralizing",
           "url": "/sft-service/en"
         }
       ]

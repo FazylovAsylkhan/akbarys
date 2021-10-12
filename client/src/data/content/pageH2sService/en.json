@@ -1,41 +1,42 @@
 {
   "url": "h2s-service/en",
   "lang": "en",
-  "h1": "Comprehensive security solutions in the oil and gas industry",
+  "seo": {
+    "title": "Gas safety",
+    "h1": "Comprehensive safety solutions in petroleum industry"
+  },
   "langButtonsLinks": ["/h2s-service", "/h2s-service/kz", "/h2s-service/en"],
   "firstBlock": {
-    "title": "Comprehensive security solutions in the oil and gas industry",
-    "description": "Forward to achievements with us!",
+    "title": "Comprehensive safety solutions in petroleum industry",
     "subtitles": [
-      { "digit": "15", "text": "Years of activity" },
-      { "digit": "67", "text": "Projects implemented" }
+      { "digit": "15", "text": "Years in business" },
+      { "digit": "67", "text": "Projects completed" }
     ],
     "image": "../../images/h2s/preview.jpg"
   },
   "secondBlock": {
-    "h1": "Comprehensive security solutions",
     "first": {
-      "title": "Many years of experience",
-      "subtitle": "Since its foundation, we have become one of the leading and effective providers of services in emergency situations related to the manifestation of hydrogen sulfide.",
-      "description": "We see a future in which technologies can help all workers who are in dangerous and life-critical situations to safely return home to their families. We will build on our strengths in our core market and expand into new industries that need our technologies, experience and knowledge in the field of industrial safety."
+      "title": "Years of experience ",
+      "subtitle": "Since our foundation, we have become one of the leading and effective service providers in hydrogen sulfide safety.",
+      "description": "We see a future in which technology can help all personnel in dangerous and life-threatening situations return home safely to their families. We will develop our strengths in the core market and expand into new industries that need our industrial safety technology, experience and expertise."
     },
     "second": {
-      "title": "A wide range of gas safety services",
-      "description1": "The Akbarys Group of Companies is a leading provider of gas safety services in the CIS and neighboring countries.",
-      "description2": "Our experience covers a wide range of operations in areas with high concentrations of H2S and the most common toxic gases, such as SO2, CO, CO2 and CH4."
+      "title": "Wide range of gas safety services",
+      "description1": "Akbarys Group is a leading provider of gas safety services in the CIS and neighboring countries.",
+      "description2": "Our experience covers a wide range of operations related to high concentrations of H2S and the most common toxic gases such as SO2, CO, CO2 and CH4."
     }
   },
   "thirdBlock": {
-    "title": "Система газообнаружения",
+    "title": "Gas detection system",
     "descriptions": [
-      "Из-за высоких концентраций H2S, обнаруживаемых во время операций по бурению, испытанию, ремонтных работ и производственных операций, сероводород являются серьезной проблемой в нефтегазовой промышленности.",
-      "Мы являемся профессионалами в области раннего обнаружения наиболее распространенных токсичных и взрывоопасных газов, встречающихся на опасно-производственных объектах в нефтегазовой отрасли, включая H2S, SO2, CO, CO2 и CH4. Современные системы газообнаружения Akbarys обеспечивают ранее обнаружение газов, коллективное оповещение и сбор данных путем записи на всех устройствах газообнаружения.",
-      "При работе в среде токсичных газов использование систем газообнаружения является необходимой мерой предосторожности. Системы газообнаружения ориентированы на ранее предупреждение о проявлении низких концентрации газа в воздухе, позволяя персоналу участка немедленно среагировать и покинуть опасную зону до того, как концентрация газа достигнет смертельного уровня.",
-      "Система газообнаружения Akbarys включает в себя 3 типа решений:",
-      "Стационарные беспроводные системы газообнаружения",
-      "Портативные мультигазовые детекторы",
-      "Персональные детекторы газа",
-      "При работе с очень высокими концентрациями газа или при работе в суровых условиях с очень низким уровнем кислорода можно использовать насосы для отбора проб газа с трубками для широкого диапазона газов."
+      "Because of the high H2S levels detected when drilling, testing, performing workover and production operations, hydrogen sulfide is a serious problem in the oil and gas industry.",
+      "We are professionals in the early detection of common toxic and explosive gases encountered at petroleum facilities including H2S, SO2, CO, CO2 and CH4. Our advanced gas detection systems provide early gas detection, public address and data collection by recording on all gas detection devices.",
+      "When working in a toxic gas environment, the use of gas detection systems is a vital precaution. Gas detection systems focus on early warning of low gas concentrations in the air, allowing site personnel to react immediately and leave the hazardous area before gas concentrations reach lethal levels.",
+      "Akbarys gas detection system includes 3 types of solutions:",
+      "Stationary wireless gas detection systems",
+      "Portable multi-gas analyzers",
+      "Personal gas analyzers",
+      "When working with very high gas concentrations or when working in harsh environments with very low oxygen levels, gas sampling pumps with tubes for a wide range of gases can be used."
     ],
     "images": [
       "../../images/h2s/gasDetectionSystem.png",
@@ -45,37 +46,37 @@
     ]
   },
   "fourthBlock": {
-    "title": "Стандарты ISO",
+    "title": "ISO standards",
     "descriptions": [
-      "Уже более 10 лет в компании успешно работают международные стандарты ISO 9001 cистема менеджмента качества, ISO 45001 cистема менеджмента охраны здоровья и безопасности труда и ISO 14001 cистема экологического менеджмента.",
-      "Мы прилагаем постоянные усилия для улучшения интегрированного управления окружающей средой и сокращения выбросов, эффективного управления и контроля основных экологических рисков."
+      "Over last 10 years the company has been successfully maintaining international standards such as ISO 9001 for quality management system, ISO 45001 for health and safety management system and ISO 14001 for environmental management system.",
+      "We make continuous efforts to improve integrated environmental management and reduce emissions, effectively managing and controlling major environmental risks."
     ]
   },
   "fivthBlock": {
     "slides": [
       {
-        "title": "Обучение по Курсу H2S",
-        "subtitle": "Комплексное обесепечние газовой безопасности",
+        "title": "H2S training",
+        "subtitle": "Integrated gas safety",
         "image": "../../images/h2s/h2s-img-1.jpg",
-        "description": "Задачей курса является предоставление информации о свойствах и опасности сероводорода, о его воздействия на человека, а также об использовании средств защиты органов дыхания, при воздействии сероводорода"
+        "description": "The purpose is to provide information about the hydrogen sulfide properties and hazards, effects on human, as well as on the use of respiratory protection when exposed to this gas"
       },
       {
-        "title": "Практическое применение СИЗОД",
-        "subtitle": "Комплексное обесепечние газовой безопасности",
+        "title": "Practical use of RPE",
+        "subtitle": "Integrated gas safety",
         "image": "../../images/h2s/h2s-img-2.jpg",
-        "description": "Персоналу необходимо иметь практические навыки применения СИЗОД. Для этих целей проводятся курсы а так же ежедневные учебно-практические занятия с персоналом."
+        "description": "Personnel need to have practical skills in using RPE. For this purpose, training courses and daily drills are held with staff."
       },
       {
-        "title": "Учебно-тренировочные занятия",
-        "subtitle": "Комплексное обесепечние газовой безопасности",
+        "title": "Drills",
+        "subtitle": "Integrated gas safety",
         "image": "../../images/h2s/h2s-img-3.jpg",
-        "description": "Проведения учебно-тренировочных занятий с персоналом по выработке практических навыков выполнения действий при использовании СИЗОД в аварийной ситуации. УТЗ проводятся согласно утвержденному графику."
+        "description": "Conducting drills with staff to work out practical skills in using RPE if an emergency occurs. Drills are held as per the approved schedule."
       },
       {
-        "title": "Аудиты и инспекции",
-        "subtitle": "Комплексное обесепечние газовой безопасности",
+        "title": "Audits and inspections",
+        "subtitle": "Integrated gas safety",
         "image": "../../images/h2s/h2s-img-4.jpg",
-        "description": "Аудиты и инспекции помогают руководству проверять состояние бизнеса и достоверность отчётности. Главная цель аудита — выявить риски и усовершенствовать процессы после консультации аудитора."
+        "description": "Audits and inspections help management verify the health of the business and the reporting accuracy. The key purpose of audit is to identify risks and improve processes following the auditor's recommendations."
       }
     ]
   }

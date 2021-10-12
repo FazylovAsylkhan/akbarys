@@ -1,39 +1,146 @@
-@import '../../../scss/utils';
+@import "../../../scss/utils";
 
 .akbarysAdvantages {
+  .items-2,
+  .items-3 {
+    display: none;
+  }
   &__wrapper {
     grid-column: 1 / span 12;
     display: flex;
     align-items: center;
   }
   &__label {
-    @include adaptive-value-byX('padding-top', 80, 70, 1920, 1440);
-    @include adaptive-value-byX('padding-bottom', 140, 114, 1920, 1440);
+    padding: 120px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-right: 1px solid #e1e1e1;
-    @include adaptive-value-byX('width', 566, 455, 1920, 1440);
+    width: 566px;
   }
   &__content {
-    @include adaptive-value-byX('width', 600, 606, 1920, 1440);
+    width: 803px;
     display: grid;
-    @include adaptive-value-byX('padding-left', 118, 90, 1920, 1440);
+    padding-left: 118px;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
-    @include adaptive-value-byX('grid-row-gap', 80, 60, 1920, 1440);
+    grid-row-gap: 80px;
   }
   &__title {
     font-weight: bold;
-    @include adaptive-value-byX('font-size', 288, 200, 1920, 1440);
-    @include adaptive-value-byX('line-height', 351, 244, 1920, 1440);
+    font-size: 288px;
+    line-height: 351px;
   }
   &__subtitle {
     display: flex;
     flex-direction: column;
     &-description {
       margin-top: 15px;
+    }
+  }
+  @media (max-width: 1920px) {
+    &__label {
+      @include adaptive-value-byX("padding-top", 80, 70, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 140, 115, 1440, 1200);
+      @include adaptive-value-byX("width", 566, 455, 1920, 1440);
+    }
+    &__content {
+      @include adaptive-value-byX("padding-left", 149, 90, 1920, 1440);
+      @include adaptive-value-byX("grid-row-gap", 80, 60, 1920, 1440);
+      @include adaptive-value-byX("width", 803, 605, 1920, 1440);
+    }
+    &__title {
+      @include adaptive-value-byX("font-size", 288, 200, 1920, 1440);
+      @include adaptive-value-byX("line-height", 351, 244, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    &__label {
+      @include adaptive-value-byX("padding-top", 70, 60, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 115, 90, 1440, 1200);
+      @include adaptive-value-byX("width", 455, 366, 1440, 1200);
+    }
+    &__content {
+      @include adaptive-value-byX("padding-left", 90, 78, 1440, 1200);
+      grid-row-gap: 60px;
+      @include adaptive-value-byX("width", 605, 523, 1440, 1200);
+    }
+    &__title {
+      @include adaptive-value-byX("font-size", 200, 180, 1440, 1200);
+      @include adaptive-value-byX("line-height", 244, 220, 1440, 1200);
+    }
+    .text-1 {
+      @include adaptive-value-byX("font-size", 15, 14, 1440, 1200);
+    }
+  }
+  @media (max-width: 1200px) {
+    &__label {
+      padding-top: 60px;
+      padding-bottom: 90px;
+    }
+    .text-1 {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1186px) {
+    .items-1 {
+      display: none;
+    }
+    .items-2 {
+      display: block;
+    }
+    &__label {
+      width: 100%;
+      border-right: none;
+      padding-bottom: 60px;
+    }
+    &__content {
+      width: 100%;
+      padding: 40px 0;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+    }
+    &__label {
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+    }
+    &__label {
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 581px) {
+    .items-2 {
+      display: none;
+    }
+    .items-3 {
+      display: block;
+    }
+    &__label {
+      padding-top: 30px;
+      padding-bottom: 75px;
+    }
+    &__content {
+      padding: 20px 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__subtitle {
+      align-items: center;
+    }
+  }
+  @media (max-width: 320px) {
+    &__label {
+      padding: 50px 0;
     }
   }
 }

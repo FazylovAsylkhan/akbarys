@@ -1,0 +1,432 @@
+
+  .sourFluidTreatment__tip {
+    position: absolute;
+    &-text {
+      &.show {
+        display: block;
+      }
+      height: fit-content;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      background-color: #1564fd;
+      display: none;
+      padding: 20px 25px;
+      @media (max-width: 1200px) {
+        padding: 12px 15px;
+      }
+      &-0 {
+        width: 175px;
+      }
+      &-1 {
+        width: 219px;
+      }
+      &-2 {
+        width: 209px;
+      }
+      &-3 {
+        width: 265px;
+      }
+      &-4 {
+        width: 198px;
+      }
+      &-5 {
+        width: 256px;
+      }
+      &-6 {
+        width: 249px;
+      }
+      &-7 {
+        width: 209px;
+      }
+      &-8 {
+        width: 131px;
+      }
+      @media (max-width: 1920px) {
+        &-0 {
+          @include adaptive-value-byX("width", 175, 167, 1920, 1440);
+        }
+        &-1 {
+          @include adaptive-value-byX("width", 219, 206, 1920, 1440);
+        }
+        &-2 {
+          @include adaptive-value-byX("width", 209, 198, 1920, 1440);
+        }
+        &-3 {
+          @include adaptive-value-byX("width", 265, 251, 1920, 1440);
+        }
+        &-4 {
+          @include adaptive-value-byX("width", 198, 188, 1920, 1440);
+        }
+        &-5 {
+          @include adaptive-value-byX("width", 256, 241, 1920, 1440);
+        }
+        &-6 {
+          @include adaptive-value-byX("width", 249, 234, 1920, 1440);
+        }
+        &-7 {
+          @include adaptive-value-byX("width", 209, 197, 1920, 1440);
+        }
+        &-8 {
+          @include adaptive-value-byX("width", 131, 125, 1920, 1440);
+        }
+      }
+      @media (max-width: 1440px) {
+        &-0 {
+          width: 167px;
+        }
+        &-1 {
+          width: 206px;
+        }
+        &-2 {
+          width: 198px;
+        }
+        &-3 {
+          width: 251px;
+        }
+        &-4 {
+          width: 188px;
+        }
+        &-5 {
+          width: 241px;
+        }
+        &-6 {
+          width: 234px;
+        }
+        &-7 {
+          width: 197px;
+        }
+        &-8 {
+          width: 125px;
+        }
+      }
+      @media (max-width: 1200px) {
+        &-0 {
+          width: 131px;
+        }
+        &-1 {
+          width: 164px;
+        }
+        &-2 {
+          width: 158px;
+        }
+        &-3 {
+          width: 204px;
+        }
+        &-4 {
+          width: 149px;
+        }
+        &-5 {
+          width: 195px;
+        }
+        &-6 {
+          width: 189px;
+        }
+        &-7 {
+          width: 159px;
+        }
+        &-8 {
+          width: 96px;
+        }
+      }
+    }
+    &-img {
+      z-index: 10;
+      height: 53px;
+      width: 40px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("height", 53, 49, 1920, 1440);
+        @include adaptive-value-byX("width", 40, 36, 1920, 1440);
+      }
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+    }
+    &-img-0 {
+      right: 0;
+      left: auto;
+      transform: rotateY(180deg);
+    }
+    &-img-1 {
+      right: 0;
+      left: auto;
+      transform: rotateY(180deg);
+    }
+    &-img-6 {
+      right: 0;
+      left: auto;
+      transform: rotateY(180deg);
+    }
+    &-text-0 {
+      top: 247px;
+      left: 177px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 247, 141, 1920, 1441);
+        @include adaptive-value-byX("left", 177, 66.5, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 171, 119, 1440, 1201);
+        @include adaptive-value-byX("left", 98, 40.5, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 160, 126, 1200, 1040);
+        @include adaptive-value-byX("left", 105, 61, 1200, 1040);
+      }
+    }
+    &-img-0 {
+      top: 263px;
+      left: 313px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 263, 161, 1920, 1441);
+        @include adaptive-value-byX("left", 313, 197, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 192, 140, 1440, 1201);
+        @include adaptive-value-byX("left", 230, 174, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 163, 130, 1200, 1040);
+        @include adaptive-value-byX("left", 202, 159, 1200, 1040);
+      }
+    }
+    &-text-1 {
+      top: 322px;
+      left: 76px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 322, 187, 1920, 1441);
+        @include adaptive-value-byX("left", 76, -12, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 227, 159, 1440, 1201);
+        @include adaptive-value-byX("left", 18, -32, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 206, 163, 1200, 1040);
+        @include adaptive-value-byX("left", 30, -6, 1200, 1040);
+      }
+    }
+    &-img-1 {
+      top: 357px;
+      left: 255px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 357, 222, 1920, 1441);
+        @include adaptive-value-byX("left", 255, 158, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 263, 196, 1440, 1201);
+        @include adaptive-value-byX("left", 188, 140, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 224, 182, 1200, 1040);
+        @include adaptive-value-byX("left", 160, 126, 1200, 1040);
+      }
+    }
+    &-text-2,
+    &-img-2 {
+      top: 307px;
+      left: 468px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 307, 182, 1920, 1441);
+        @include adaptive-value-byX("left", 468, 321, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 219, 156, 1440, 1201);
+        @include adaptive-value-byX("left", 358, 279, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 203, 157, 1200, 1040);
+        @include adaptive-value-byX("left", 329, 264, 1200, 1040);
+      }
+    }
+    &-img-2 {
+      top: 324px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 324, 202, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 238, 177, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 206, 162, 1200, 1040);
+      }
+    }
+    &-text-3,
+    &-img-3 {
+      top: 265px;
+      left: 865px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 265, 141, 1920, 1441);
+        @include adaptive-value-byX("left", 865, 576, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 181, 107, 1440, 1201);
+        @include adaptive-value-byX("left", 662, 507, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 168, 110, 1200, 1040);
+        @include adaptive-value-byX("left", 570, 473, 1200, 1040);
+      }
+    }
+    &-img-3 {
+      top: 300px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 300, 176, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 217, 145, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 185, 129, 1200, 1040);
+      }
+    }
+    &-text-4,
+    &-img-4 {
+      top: 153px;
+      left: 1164px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 153, 81, 1920, 1441);
+        @include adaptive-value-byX("left", 1164, 764, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 105, 64, 1440, 1201);
+        @include adaptive-value-byX("left", 881, 682, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 98, 72, 1200, 1040);
+        @include adaptive-value-byX("left", 764, 630, 1200, 1040);
+      }
+    }
+    &-img-4 {
+      top: 170px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 170, 100, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 124, 84, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 100, 75, 1200, 1040);
+      }
+    }
+    &-text-5,
+    &-img-5 {
+      top: -5px;
+      left: 959px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", -5, -8, 1920, 1441);
+        @include adaptive-value-byX("left", 959, 642, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", -11, -28, 1440, 1201);
+        @include adaptive-value-byX("left", 743, 577, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 13, 2, 1200, 1040);
+        @include adaptive-value-byX("left", 643, 530, 1200, 1040);
+      }
+    }
+    &-img-5 {
+      top: 30px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 30, 27, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 25, 9, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 30, 20, 1200, 1040);
+      }
+    }
+    &-text-6,
+    &-img-6 {
+      top: -39px;
+      left: 49px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", -39, -47, 1920, 1441);
+        @include adaptive-value-byX("left", 49, 16, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", -47, -54, 1440, 1201);
+        @include adaptive-value-byX("left", -7.5, -58.5, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", -30, -36, 1200, 1040);
+        @include adaptive-value-byX("left", 9, -27, 1200, 1040);
+      }
+    }
+    &-img-6 {
+      top: -3px;
+      left: 258px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", -3, -10, 1920, 1441);
+        @include adaptive-value-byX("left", 258, 215, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", -10, -17, 1440, 1201);
+        @include adaptive-value-byX("left", 191, 142, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", -13, -17, 1200, 1040);
+        @include adaptive-value-byX("left", 164, 130, 1200, 1040);
+      }
+    }
+    &-text-7,
+    &-img-7 {
+      top: 389px;
+      left: 970px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 389, 234, 1920, 1441);
+        @include adaptive-value-byX("left", 970, 634, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 276, 203, 1440, 1201);
+        @include adaptive-value-byX("left", 724, 566, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 251, 200, 1200, 1040);
+        @include adaptive-value-byX("left", 632, 518, 1200, 1040);
+      }
+    }
+    &-img-7 {
+      top: 406px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 406, 254, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 295, 223, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 255, 204, 1200, 1040);
+      }
+    }
+    &-text-8,
+    &-img-8 {
+      top: 295px;
+      left: 1164px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 295, 176, 1920, 1441);
+        @include adaptive-value-byX("left", 1164, 765, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 217, 152, 1440, 1201);
+        @include adaptive-value-byX("left", 881, 682, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 197, 152, 1200, 1040);
+        @include adaptive-value-byX("left", 766, 633, 1200, 1040);
+      }
+    }
+    &-img-8 {
+      top: 313px;
+      @media (max-width: 1920px) {
+        @include adaptive-value-byX("top", 313, 195, 1920, 1441);
+      }
+      @media (max-width: 1440px) {
+        @include adaptive-value-byX("top", 236, 172, 1440, 1201);
+      }
+      @media (max-width: 1200px) {
+        @include adaptive-value-byX("top", 200, 156, 1200, 1040);
+      }
+    }
+  }

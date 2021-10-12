@@ -1,0 +1,128 @@
+.kz .sourFluidTreatment__tip {
+  &-text {
+    &-0 {
+      width: 177px;
+      left: 175px;
+    }
+    &-1 {
+      width: 177px;
+      left: 175px;
+    }
+    &-2 {
+      width: 200px;
+    }
+    &-3 {
+      width: 256px;
+    }
+    &-4 {
+      width: 220px;
+    }
+    &-5 {
+      width: 234px;
+    }
+    &-6 {
+      width: 181px;
+      left: 116.5px;
+    }
+    &-7 {
+      width: 180px;
+    }
+    @media (max-width: 1920px) {
+      &-0 {
+        @include adaptive-value-byX("width", 177, 169, 1920, 1440);
+        @include adaptive-value-byX("left", 175, 64.5, 1920, 1441);
+      }
+      &-1 {
+        @include adaptive-value-byX("width", 211, 197, 1920, 1440);
+        @include adaptive-value-byX("left", 84, -3, 1920, 1441);
+      }
+      &-2 {
+        @include adaptive-value-byX("width", 200, 190, 1920, 1440);
+      }
+      &-3 {
+        @include adaptive-value-byX("width", 256, 237, 1920, 1440);
+      }
+      &-4 {
+        @include adaptive-value-byX("width", 220, 210, 1920, 1440);
+      }
+      &-5 {
+        @include adaptive-value-byX("width", 234, 222, 1920, 1440);
+      }
+      &-6 {
+        @include adaptive-value-byX("width", 181, 172, 1920, 1440);
+        @include adaptive-value-byX("left", 116.5, 78.5, 1920, 1441);
+      }
+      &-7 {
+        @include adaptive-value-byX("width", 180, 172, 1920, 1440);
+      }
+    }
+    @media (max-width: 1440px) {
+      &-0 {
+        width: 169px;
+        @include adaptive-value-byX("left", 96, 38.5, 1440, 1201);
+      }
+      &-1 {
+        width: 197px;
+        @include adaptive-value-byX("left", 27, -22, 1440, 1201);
+      }
+      &-2 {
+        width: 190px;
+      }
+      &-3 {
+        width: 237px;
+      }
+      &-4 {
+        width: 210px;
+      }
+      &-5 {
+        width: 223px;
+      }
+      &-6 {
+        width: 172px;
+        @include adaptive-value-byX("left", 54.5, 3.5, 1440, 1201);
+      }
+      &-7 {
+        width: 172px;
+      }
+    }
+    @media (max-width: 1200px) {
+      &-0 {
+        width: 132px;
+        @include adaptive-value-byX("left", 103, 59, 1200, 1040);
+      }
+      &-1 {
+        width: 155px;
+        @include adaptive-value-byX("left", 38, 4, 1200, 1040);
+      }
+      &-2 {
+        width: 151px;
+      }
+      &-3 {
+        width: 217px;
+      }
+      &-4 {
+        width: 167px;
+      }
+      &-5 {
+        width: 175px;
+      }
+      &-6 {
+        width: 136px;
+        @include adaptive-value-byX("left", 62, 27, 1200, 1040);
+      }
+      &-7 {
+        width: 133px;
+      }
+
+    }
+  }
+
+  &-text-0 {
+    @media (max-width: 1920px) {
+    }
+    @media (max-width: 1440px) {
+    }
+    @media (max-width: 1200px) {
+    }
+  }
+}

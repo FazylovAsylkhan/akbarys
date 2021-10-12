@@ -1,20 +1,20 @@
-import * as React from "react"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import "./h2s.gasDetectionSystem.scss"
+import * as React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import './h2s.gasDetectionSystem.scss';
 
-import Line from "../../../data/images/h2s/illustration/line.svg"
-import { FC } from "react"
+import { FC } from 'react';
+import Line from '../../../data/images/h2s/illustration/line.svg';
 
 interface H2sGasDetectionSystemProps {
   content: any
 }
 
 const H2sGasDetectionSystem: FC<H2sGasDetectionSystemProps> = ({ content }) => {
-  const { title, descriptions, images } = content
-  const img1 = getImage(images[0])
-  const img2 = getImage(images[1])
-  const img3 = getImage(images[2])
-  const img4 = getImage(images[3])
+  const { title, descriptions, images } = content;
+  const img1 = getImage(images[0]);
+  const img2 = getImage(images[1]);
+  const img3 = getImage(images[2]);
+  const img4 = getImage(images[3]);
 
   return (
     <div className="H2sGasDetectionSystem container">
@@ -79,7 +79,7 @@ const H2sGasDetectionSystem: FC<H2sGasDetectionSystemProps> = ({ content }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default H2sGasDetectionSystem
+export default H2sGasDetectionSystem;

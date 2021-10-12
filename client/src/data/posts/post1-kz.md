@@ -3,23 +3,26 @@ contentPost:
   {
     lang: kz,
     url: akbarys-in-orenburg/kz,
-    title: Akbarys H2S service prezentasıasy 2021,
-    h1: "Akbarys H2S service prezentasıasy 2021",
+    title: Akbarys H2S service 2021 таныстырылымы,
+    seo: {
+      title: "Пост: Akbarys H2S service 2021 таныстырылымы",
+      h1: "Akbarys H2S service 2021 таныстырылымы",
+    },
     langButtonsLinks:
       [
-        "/akbarys-in-orenburg",
-        "/akbarys-in-orenburg/kz",
-        "/akbarys-in-orenburg/en",
+        "/press-center/akbarys-in-orenburg",
+        "/press-center/akbarys-in-orenburg/kz",
+        "/press-center/akbarys-in-orenburg/en",
       ],
-    description: Akbarys Orynbor qalasynda qyzmetterdiń tusaýkeserin ótkizdi...,
-    date: 30 maýsym 2021 ,
-    image: ../../images/pressCenter/item-1.jpg,
-    imagePreview: ../../images/pressCenter/preview-item-1.jpg,
+    description: Akbarys Орынбор қаласында қызметтерінің таныстырылымын өткізді...,
+    date: 30 тамыз 2021,
+    image: ../images/posts/item-1.jpg,
+    imagePreview: ../images/posts/preview-item-1.jpg,
   }
 ---
 
-2021 jylǵy 30 maýsymda Orynbor qalasynda "Akbarys" kompanıalar toby "Akbarys H2S service 2021"konferensıasy sheńberinde munaı-gaz ken oryndarynda kúkirtsýtekten qorǵaý boıynsha qyzmetterdiń tusaýkeserin ótkizdi. Tusaýkeserge "Gazprom-Neft Orynbor" kompanıasynyń ókilderi, sondaı-aq Sankt - Peterbýrg qalasynyń bas keńsesiniń "Gazprom-Neft" ókilderi qatysty.
+2021 жылғы 30 маусымда Орынбор қаласында "Ақбарыс" компаниялар тобы "Akbarys H2S service 2021" конференциясы шеңберінде мұнай-газ кен орындарында күкіртсутектен қорғау жөніндегі қызметтерімен таныстырды. Таныстырылымға "Газпром-Нефть Орынбор" компаниясының өкілдері, сондай-ақ Санкт - Петербург қаласындағы "Газпром-Нефть" бас кеңсесінің өкілдері қатысты.
 
-Konferensıaǵa "Aqbarys" kompanıalar tobynyń jetekshi mamandary qatysty, olar tyńdaýshylardy kúkirtsýtekten qorǵaý boıynsha qyzmetter keshenimen, kompanıa qyzmetiniń negizgi túrlerimen, óndiretin ónimderimen tanystyrdy, qyzmet tájirıbesimen bólisti, sondaı-aq kúkirtsýtegi qaýipsizdigi sheńberinde munaı-gaz salasynda paıdalanylatyn ádister men ınovasıalyq tehnologıalar týraly aıtyp berdi. "Akbarys" kompanıasynyń mamandary serodorod boıynsha oqytý kýrsyn ótkizdi jáne is júzinde kásibı jabdyqtar men júıelerdi kórsetti. Tusaýkeser sońynda konferensıanyń barlyq qatysýshylary daıyn ónimniń úlgilerin qarap shyǵýǵa, aýa-tynys alý jabdyqtaryn jáne zamanaýı gaz tabý jáne habarlaý júıeleri salasyndaǵy kóptegen sheshimderdi tekserýge múmkindik aldy.
+Конференцияға "Ақбарыс" компаниялар тобының жетекші мамандары қатысты, олар тыңдаушыларды күкіртсутектен қорғау жөніндегі қызметтер кешенімен, компания қызметінің негізгі түрлерімен, өндіретін өнімдерімен таныстырды, қызмет тәжірибесімен бөлісті, сондай-ақ күкіртсутегі қауіпсіздігі шеңберінде мұнай-газ саласында пайдаланылатын әдістер мен инновациялық технологиялар туралы айтып берді. "Ақбарыс" компаниясының мамандары күкіртсутек бойынша оқыту курсын өткізді және кәсіби жабдықтар мен жүйелердің қалай жұмыс істейтінін көрсетті. Таныстырылым соңында конференцияның барлық қатысушылары дайын өнімнің үлгілерін қарап шығуға, ауамен тыныс алу жабдықтарын және заманауи газ анықтау және хабарлау жүйелері саласындағы көптеген шешімдерді тексеруге мүмкіндік алды.
 
-«Aqbarys» kompanıalar toby - TMD aýmaǵyndaǵy gaz qaýipsizdigi boıynsha qyzmetterdiń jetekshi jetkizýshisi bolyp tabylady. Kásibı tájirıbe H2S joǵary konsentrasıasy bar salalarda jer ústi jáne teńiz jobalary sheńberindegi operasıalardyń keń spektrin qamtıdy.
+«Aqbarys» компаниялар тобы - ТМД аумағындағы газ қауіпсіздігі бойынша қызметтердің жетекші жеткізушісі болып табылады. Кәсіби тәжірибеміз H2S концентрациясы жоғары аудандардағы құрлық және теңіз жобалары шеңберіндегі операциялардың кең спектрін қамтиды.

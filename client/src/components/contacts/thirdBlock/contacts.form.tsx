@@ -1,6 +1,6 @@
 // import { handlerSubmit, resetInput } from "../../../utils/mainUtils"
 import * as React from 'react';
-import { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { Link } from 'gatsby';
 
 import { formValidate } from '../../../utils/validation';
@@ -13,7 +13,11 @@ function getSubjectData(name: string) {
   const yyyy = today.getFullYear();
   const currentDate = `${mm}/${dd}/${yyyy}`;
 
-  const hour = today.getHours() > 12 ? today.getHours() - 12 : (today.getHours() < 10 ? `0${today.getHours()}` : today.getHours());
+  const hour = today.getHours() > 12
+    ? today.getHours() - 12
+    : today.getHours() < 10
+      ? `0${today.getHours()}`
+      : today.getHours();
   const minute = today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes();
   const currentTime = `${hour}:${minute}`;
 
@@ -23,9 +27,15 @@ function getSubjectData(name: string) {
 async function handlerSubmit() {
   const form = document.querySelector('.contactsForm__form') as HTMLFormElement;
   const error = formValidate(form as HTMLElement);
-  const inputName = document.querySelector('#contactsFormName') as HTMLInputElement;
-  const inputEmail = document.querySelector('#contactsFormEmail') as HTMLInputElement;
-  const inputMessage = document.querySelector('#contactsFormMessage') as HTMLInputElement;
+  const inputName = document.querySelector(
+    '#contactsFormName',
+  ) as HTMLInputElement;
+  const inputEmail = document.querySelector(
+    '#contactsFormEmail',
+  ) as HTMLInputElement;
+  const inputMessage = document.querySelector(
+    '#contactsFormMessage',
+  ) as HTMLInputElement;
   const formData = {
     name: inputName.value,
     email: inputEmail.value,
@@ -94,7 +104,14 @@ async function handlerSubmit() {
   }
 }
 
-const ContactsForm = () => {
+interface ContactsFormProps {
+  content: any
+}
+
+const ContactsForm: FC<ContactsFormProps> = ({ content }) => {
+  const {
+    title, subtitle, fieldNames, politica, btnText, popup,
+  } = content;
   useEffect(() => {
     const checkboxWrapperClass = 'contactsForm__form-checkbox';
     const checkboxBtnClass = 'contactsForm__form-checkbox-button';
@@ -134,11 +151,9 @@ const ContactsForm = () => {
             className="contactsForm__form"
             onSubmit={(e) => e.preventDefault()}
           >
-            <h3 className="contactsForm__form-title title-1">
-              Форма обратной связи
-            </h3>
+            <h3 className="contactsForm__form-title title-1">{title}</h3>
             <p className="contactsForm__form-description text-1 gray">
-              Заполните форму и мы с Вами свяжемся!
+              {subtitle}
             </p>
             <div className="contactsForm__form-items">
               <div className="contactsForm__form-item">
@@ -146,7 +161,7 @@ const ContactsForm = () => {
                   htmlFor="contactsFormName"
                   className="contactsForm__form-label title-3 black"
                 >
-                  Имя:
+                  {fieldNames[0]}
                 </label>
                 <input
                   id="contactsFormName"
@@ -161,7 +176,7 @@ const ContactsForm = () => {
                   htmlFor="contactsFormEmail"
                   className="contactsForm__form-label title-3 black"
                 >
-                  Email:
+                  {fieldNames[1]}
                 </label>
                 <input
                   id="contactsFormEmail"
@@ -176,7 +191,7 @@ const ContactsForm = () => {
                   htmlFor="contactsFormMessage"
                   className="contactsForm__form-label title-3 black"
                 >
-                  Сообщение:
+                  {fieldNames[2]}
                 </label>
                 <textarea
                   id="contactsFormMessage"
@@ -195,15 +210,14 @@ const ContactsForm = () => {
                     className="contactsForm__form-checkbox-input require"
                   />
                   <div className="contactsForm__form-checkbox-button contactsForm__form-checkbox-button_active"></div>
-                  <span className="contactsForm__form-checkbox-text">
-                    Я даю свое согласие на обработку персональных данных в
-                    соответствии с{' '}
+                  <span className="contactsForm__form-checkbox-text text-1 gray">
+                    {politica.text[0]}{' '}
                     <Link
-                      to="/politics"
-                      className="contactsForm__form-politica-link"
+                      to={politica.link}
+                      className="contactsForm__form-politica-link blue"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      политикой конфидециальности
+                      {politica.text[1]}
                     </Link>
                   </span>
                 </div>
@@ -214,29 +228,33 @@ const ContactsForm = () => {
               className="button contactsForm__form-button"
               onClick={() => handlerSubmit()}
             >
-              Отправить
+              {btnText}
             </button>
           </form>
           <div className="contactsForm__alert">
             <div className="contactsForm__alert-content">
               <div className="contactsForm__alert-title title-1 black">
-                Ошибка!
+                {popup.error.title}
               </div>
               <div className="contactsForm__alert-description text-1 gray">
-                Что-то пошло не так... Попробуйте позже.
+                {popup.error.description}
               </div>
-              <div className="contactsForm__alert-button button">Ок</div>
+              <div className="contactsForm__alert-button button">
+                {popup.error.btnText}
+              </div>
             </div>
           </div>
           <div className="contactsForm__alert">
             <div className="contactsForm__alert-content">
               <div className="contactsForm__alert-title title-1 black">
-                Спасибо!
+                {popup.success.title}
               </div>
               <div className="contactsForm__alert-description text-1 gray">
-                Ваше сообщение было успешно отправлено!
+                {popup.success.description}
               </div>
-              <div className="contactsForm__alert-button button">Ок</div>
+              <div className="contactsForm__alert-button button">
+                {popup.success.btnText}
+              </div>
             </div>
           </div>
         </div>

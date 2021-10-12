@@ -1,35 +1,38 @@
-import { graphql } from "gatsby"
-import * as React from "react"
-import { useEffect } from "react"
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import { useEffect } from 'react';
 
-import LayoutAdditional from "../components/layer/layerAdditional"
-import Seo from "../components/seo"
-import VerificationLaboratoryPreview from "../components/verificationLaboratory/firstBlock/verificationLaboratory.preview"
-import VerificationLaboratoryAchievements from "../components/verificationLaboratory/fivthBlock/verificationLaboratory.achievements"
-import VerificationLaboratoryDevelopment from "../components/verificationLaboratory/fouthBlock/verificationLaboratory.development"
-import VerificationLaboratoryDescription from "../components/verificationLaboratory/secondBlock/verificationLaboratory.description"
-import VerificationLaboratoryRequires from "../components/verificationLaboratory/thirdBlock/verificationLaboratory.requires"
+import LayoutAdditional from '../components/layer/layerAdditional';
+import Seo from '../components/seo';
+import VerificationLaboratoryPreview from '../components/verificationLaboratory/firstBlock/verificationLaboratory.preview';
+import VerificationLaboratoryAchievements from '../components/verificationLaboratory/fivthBlock/verificationLaboratory.achievements';
+import VerificationLaboratoryDevelopment from '../components/verificationLaboratory/fouthBlock/verificationLaboratory.development';
+import VerificationLaboratoryDescription from '../components/verificationLaboratory/secondBlock/verificationLaboratory.description';
+import VerificationLaboratoryRequires from '../components/verificationLaboratory/thirdBlock/verificationLaboratory.requires';
 
 const VerificationLaboratory = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll(".headerAdditional__link")[1]
-      ?.classList.add("active")
-  }, [])
+      .querySelectorAll('.headerAdditional__link')[1]
+      ?.classList.add('active');
+  }, []);
 
-  const { seo, firstBlock, secondBlock,
+  const {
+    seo,
+    firstBlock,
+    secondBlock,
     thirdBlock,
     fourthBlock,
-    fivthBlock, langButtonsLinks } =
-    props.data.pageVerificationLaboratoryJson
+    fivthBlock,
+    langButtonsLinks,
+  } = props.data.pageVerificationLaboratoryJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  }
+  };
 
-  console.log(props.data.pageVerificationLaboratoryJson)
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
       <VerificationLaboratoryPreview content={firstBlock} />
       <VerificationLaboratoryDescription content={secondBlock} />
@@ -37,10 +40,10 @@ const VerificationLaboratory = (props: any) => {
       <VerificationLaboratoryDevelopment content={fourthBlock} />
       <VerificationLaboratoryAchievements content={fivthBlock} />
     </LayoutAdditional>
-  )
-}
+  );
+};
 
-export default VerificationLaboratory
+export default VerificationLaboratory;
 
 export const query = graphql`
   query PageVerificationLaboratoryTemplateQuery($lang: String) {
@@ -63,7 +66,7 @@ export const query = graphql`
             gatsbyImageData(
               formats: [AVIF, WEBP, JPG]
               placeholder: DOMINANT_COLOR
-              quality: 50
+              quality: 90
             )
           }
         }
@@ -153,4 +156,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

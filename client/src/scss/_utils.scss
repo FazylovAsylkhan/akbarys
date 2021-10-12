@@ -2,7 +2,10 @@
     $addSize: $startSize - $minSize;
     #{$property}: calc((#{$minSize + px}) + #{$addSize} * ((100vw - #{$minWidthContainer + px}) / #{$maxWidthContainer - $minWidthContainer}));
 }
-@mixin adaptive-value-byY($property, $startSize, $minSize, $maxHeightContainer) {
+
+@mixin adaptive-radios($property, $startRadios1, $minRadios1, $startRadios2, $minRadios2, $maxWidthContainer, $minWidthContainer) {
+    $startSize: ($startRadios1 - $minRadios1) * 0.5;
+    $minSize: ($startRadios2 - $minRadios2) * 0.5;
     $addSize: $startSize - $minSize;
-    #{$property}: calc((#{$minSize + px}) + #{$addSize} * ((100vw - 320px) / #{$maxHeightContainer - 320}));
+    #{$property}: calc((#{$minSize + px}) + #{$addSize} * ((100vw - #{$minWidthContainer + px}) / #{$maxWidthContainer - $minWidthContainer}));
 }

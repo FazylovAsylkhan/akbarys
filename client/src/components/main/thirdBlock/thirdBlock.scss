@@ -26,4 +26,9 @@
       display: block;
     }
   }
+  @media (max-width: 1040px)  {
+    .screen__image img {
+      object-position: 68% center;
+    }
+  }
 }

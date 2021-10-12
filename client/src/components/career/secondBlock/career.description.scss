@@ -2,74 +2,74 @@
 
 .careerDescription {
   &__content {
-    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
-    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    padding: 120px 0;
     grid-column: 1 / span 12;
     display: flex;
     width: 100%;
     justify-content: space-between;
     &-description {
-      @include adaptive-value-byX("width", 685, 514, 1920, 1440);
+      width: 685px;
     }
   }
-  &__benefits {
-    grid-column: 1 / span 12;
-    display: flex;
-
-    &-item {
-      position: absolute;
-      @include adaptive-value-byX("top", 130, 100, 1920, 1440);
-      left: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      &.show {
-        opacity: 1;
-      }
-    }
-    &-wrapper {
-      @include adaptive-value-byX("width", 596, 500, 1920, 1440);
-    }
-    &-box {
-      position: relative;
-      width: fit-content;
-      height: 100%;
-      border-right: 1px solid #e1e1e1;
-      display: flex;
-      flex-direction: column;
-      &-title {
-        margin-top: 50px;
-      }
+  @media (max-width: 1920px) {
+    &__content {
+      @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
       &-description {
-        @include adaptive-value-byX("width", 447, 333, 1920, 1440);
-        margin-top: 30px;
+        @include adaptive-value-byX("width", 685, 514, 1920, 1440);
       }
     }
-    &-list {
-      width: 100%;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      @include adaptive-value-byX("height", 650, 542, 1920, 1440);
-      &-item {
-        @include adaptive-value-byX("height", 215, 180, 1920, 1440);
-        border-right: 1px solid #e1e1e1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        &:hover {
-        cursor: pointer;
-        }
-        & h3,
-        & p {
-          pointer-events: none;
-        }
-        &-subtitle {
-          margin-bottom: 30px;
-        }
-        &-content {
-          pointer-events: none;
-          @include adaptive-value-byX("padding-left", 118, 90, 1920, 1440);
-        }
+  }
+  @media (max-width: 1440px) {
+    &__content {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+      &-description {
+        @include adaptive-value-byX("width", 514, 445, 1920, 1440);
       }
+    }
+  }
+  @media (max-width: 1200px) {
+    &__content {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+    &-description {
+      width: 445px;
+    }
+  }
+  @media (max-width: 1040px) {
+    &__content {
+      flex-direction: column;
+      grid-row-gap: 40px;
+      &-description {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 860px) {
+    &__content {
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+    &__content {
+      grid-column: 1 / span 8;
+    }
+  }
+  @media (max-width: 640px) {
+    &__content {
+      @include adaptive-value-byX("grid-row-gap", 40, 30, 640, 320);
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+    &__content {
+      grid-column: 1 / span 6;
+    }
+  }
+  @media (max-width: 320px) {
+    &__content {
+      padding: 50px 0;
+      grid-row-gap: 30px;
     }
   }
 }

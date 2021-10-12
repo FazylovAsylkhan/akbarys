@@ -13,7 +13,9 @@ const SinglePost = (props: any) => {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
-  const { title, date, imagePreview, langButtonsLinks } = props.data.markdownRemark.frontmatter.contentPost;
+  const {
+    seo, title, date, imagePreview, langButtonsLinks,
+  } = props.data.markdownRemark.frontmatter.contentPost;
   const img = getImage(imagePreview);
   React.useEffect(() => {
     const body = document.querySelector('.singlePost__body');
@@ -26,8 +28,8 @@ const SinglePost = (props: any) => {
   }, []);
 
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
-      <Seo title={title} />
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
+      <Seo title={seo.title} />
       <Helmet>
         <script
           type="text/javascript"
@@ -35,7 +37,7 @@ const SinglePost = (props: any) => {
           defer={true}
         ></script>
       </Helmet>
-      <div className="singlePost">
+      <div className="singlePost preview">
         <div className="singlePost__background">
           {img ? (
             <GatsbyImage
@@ -77,7 +79,10 @@ export const query = graphql`
     markdownRemark(frontmatter: { contentPost: {lang: {eq: $lang}, url: { eq: $url }}}) {
       frontmatter {
         contentPost {
-          h1
+          seo {
+            title
+            h1
+          }
           langButtonsLinks
           title
           url

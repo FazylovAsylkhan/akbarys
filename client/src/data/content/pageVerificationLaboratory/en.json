@@ -2,7 +2,8 @@
   "lang": "en",
   "url": "verification-laboratory/en",
   "seo": {
-    "title": "Verification laboratories"
+    "title": "Verification laboratories",
+    "h1": "Verification laboratories Akbarys"
   },
   "h1": "Verification laboratories",
   "langButtonsLinks": [
@@ -14,57 +15,60 @@
     "title": "Verification laboratories",
     "subtitles": [
       { "digit": "8", "description": "Specialists" },
-      { "digit": "23", "description": "Types of laboratory tests" }
+      { "digit": "23", "description": "Types of lab tests" }
     ],
     "image": "../../images/verificationLaboratory/preview.jpg"
   },
   "secondBlock": {
-    "title": "Точность измерения – залог безопасности",
-    "description": "Лаборатория осуществляет услуги по первичной и периодической поверке газоаналитического оборудования и калибровке всех видов приборов, включающих в себя стационарные, переносные и портативные газоаналитические средства измерений (газоанализаторы, газосигнализаторы, детекторы и датчики) для контроля содержания концентрации одного или нескольких веществ в воздухе или газовых средах.",
-    "subtitle": "Для калибровки и поверки средств измерительной техники (СИТ), в компании Akbarys организована собственная лаборатория",
+    "title": "Measurement accuracy ensures safety ",
+    "description": "The laboratory provides services of initial and periodic verification for gas analytical equipment, and calibration of all types of instrumentation, including stationary, portable and mobile gas analytical equipment (gas analyzers, detectors and sensors) to monitor concentration of one or more substances in the air or gaseous environments.",
+    "subtitle": "Akbarys has its own laboratory to calibrate and verify measuring instrumentation (MI)",
     "texts": [
       {
-        "title": "Современное оборудование",
+        "title": "Advanced equipment",
         "descriptions": [
-          "Лаборатория оснащена современным оборудованием ведущих отечественных и мировых производителей, в которой в процессе поверки применяются сертифицированные поверочные газовые смеси.",
-          "Располагает средствами поверки, состоящими из исходных и измерительных принадлежностей, позволяющими проводить поверки в соответствии с областью аккредитации. При этом учитываются условия их работы, установленные в технической (эксплуатационной) документации и определен персонал, осуществляющий обслуживание средств поверки."
+          "The laboratory is equipped with state-of-the-art equipment of leading domestic and world manufacturers, in which certified cal gas mixtures are used for verification.",
+          "It has the means of verification, consisting of initial and measuring accessories, allowing to perform verifications under the accreditation scope. This takes into account the conditions of their operation established in the technical (operating) documents, and also personnel is dedicated to maintain such means."
         ]
       },
       {
-        "title": "Квалифицированный персонал",
+        "title": "Qualified personnel",
         "descriptions": [
-          "В составе лаборатории работают 8 специалистов, имеющих квалификацию «Поверитель средств физико-химических измерений».",
-          "Сотрудники поверочной лаборатории - квалифицированные поверители, которые проходят периодическую аттестацию и повышают свой профессиональный уровень в области метрологического обеспечения."
+          "The laboratory employs 8 specialists qualified as «Physical and Chemical Measurement Verifier».",
+          "The verification lab personnel are qualified verifiers taking regular certification and improving their professional level on metrology."
         ]
       }
     ],
     "items": [
       {
         "title": "01",
-        "description": "Современное <br /> оборудование"
+        "description": "Advanced <br /> equipment "
       },
       {
         "title": "02",
-        "description": "Опытный <br /> персонал"
+        "description": "Experienced <br /> personnel"
       },
       {
         "title": "03",
-        "description": "Поверенный <br /> инструмент"
+        "description": "Proven <br /> tools "
       },
       {
         "title": "04",
-        "description": "Достоверные <br /> результаты"
+        "description": "Reliable <br /> results"
       }
     ]
   },
   "thirdBlock": {
-    "title": "Аккредитовано NCA",
-    "description": "Лаборатория аккредитована на соответствие ГОСТ ИСО/МЭК 17025-2009 «Общие требования к компетентности испытательных и калибровочных лабораторий» национальным органом по аккредитации в области оценки соответствия ТОО «Национальный центр аккредитации». Аттестат аккредитации № KZ.П.09.1363 от 18 февраля 2018 г.",
-    "images": ["../../images/verificationLaboratory/mra.jpg", "../../images/verificationLaboratory/nca.jpg"]
+    "title": "Accredited by NAC",
+    "description": "The laboratory is accredited for GOST ISO / IEC 17025-2009 «General requirements for the competence of testing and calibration laboratories» by the National Accreditation Center, national accreditation body in the field of conformity assessment. Accreditation certificate No. KZ.P.09.1363 dated February 18, 2018.",
+    "images": [
+      "../../images/verificationLaboratory/mra.jpg",
+      "../../images/verificationLaboratory/nca.jpg"
+    ]
   },
   "fourthBlock": {
-    "title": "Непрерывное развитие",
-    "description": "В область аккредитации поверочной лаборатории внесено большое количество различных типов средств измерений. Ежегодно лаборатория расширяет свою область аккредитации, путем освоения новых видов поверок средств измерения.",
+    "title": "Continuous development",
+    "description": "A large number of different types of measuring instruments are included in the scope of accreditation of the verification laboratory. Every year, the laboratory expands its scope of accreditation by mastering new types of verifications of measuring instruments.",
     "images": [
       "../../images/verificationLaboratory/img-1.jpg",
       "../../images/verificationLaboratory/img-2.jpg",
@@ -73,16 +77,16 @@
     ]
   },
   "fivthBlock": {
-    "title": "Разрешительные документы",
-    "description": "Поверки средств измерений проводится не только в соответствии с требованиями ГОСТ ИСО/МЭК 17025-2009 «Общие требования к компетентности испытательных и калибровочных лабораторий», но и на основании Законов Республики Казахстан (ЗРК) «Об обеспечении единства измерений» и «Об аккредитации в области оценки соответствия».",
+    "title": "Permits",
+    "description": "Measuring instrumentation are verified not only as per GOST ISO / IEC 17025-2009 «General requirements for the competence of testing and calibration laboratories», but also under the Laws of the Republic of Kazakhstan (LRK) «On ensuring the uniformity of measurements» and «On accreditation in the field of conformity assessment».",
     "certificates": [
       {
-        "title": "Аккредитация поверочной лаборатории",
-        "description": "Поверочная лаборатория имеет аккредитацию на соответствие требованиям ГОСТ ISO/IEC 17025-2019"
+        "title": "Verification laboratory accreditation",
+        "description": "The verification laboratory is accredited for compliance with GOST ISO/IEC 17025-2019"
       },
       {
-        "title": "Аккредитация калибровочной лаборатории",
-        "description": "Калибровочная лаборатория имеет аккредитацию на соответствие требованиям ГОСТ ISO/IEC 17025-2019"
+        "title": "Calibration laboratory accreditation",
+        "description": "Calibration laboratory is accredited for compliance with GOST ISO/IEC 17025-2019"
       }
     ]
   }

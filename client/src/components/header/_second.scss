@@ -2,11 +2,12 @@
   &.header {
     z-index: 1000;
     position: relative;
-    @media(max-width: 1040px) {
+    @media (max-width: 1040px) {
       overflow: hidden;
     }
   }
-  & .header__logo-image, .header__menu {
+  & .header__logo-image,
+  .header__menu {
     z-index: 10;
   }
   transition: transform 1s ease;
@@ -16,7 +17,7 @@
     z-index: 10;
     position: absolute;
     left: 0;
-    top: 1px;    
+    top: 1px;
     width: 100%;
     height: 100%;
     background: #2c2b2a;
@@ -25,6 +26,32 @@
   }
   &.header_dark::before {
     background: #fcfcfc;
+  }
+  @media (max-width: 1040px) {
+    &.header::before {
+      background-color: transparent;
+    }
+    .lang {
+      .text-header {
+        color: #fcfcfc;
+      }
+      &__preview::after {
+        border-top-color: #fcfcfc;
+      }
+      &__image::after {
+        border-color: #fcfcfc;
+      }
+      &__list-item {
+        border: 1px solid #0054fd;
+        border-top-color: transparent;
+        .lang__text {
+          color: #2c2b2a;
+        }
+        .lang__image::after {
+          border-color: #2c2b2a;
+        }
+      }
+    }
   }
   &.additional.header_dark::before {
     top: 0;

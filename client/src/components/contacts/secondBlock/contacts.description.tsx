@@ -2,66 +2,85 @@ import * as React from 'react';
 import { FC } from 'react';
 import './contacts.description.scss';
 
-import Img1 from '../../../images/contacts/contacts-item-1.svg';
-import Img2 from '../../../images/contacts/contacts-item-2.svg';
-import Img3 from '../../../images/contacts/contacts-item-3.svg';
+import Img1 from '../../../data/images/contacts/contacts-item-1.svg';
+import Img2 from '../../../data/images/contacts/contacts-item-3.svg';
+import id from '../../../utils/randomId';
 
 interface ContactsPreviewProps {
   content: any
 }
 const ContactsDescription: FC<ContactsPreviewProps> = ({ content }) => {
   const { contacts } = content;
-  const title1 = contacts[0].title;
-  const text1 = contacts[0].text;
-  const title2 = contacts[1].title;
-  const text2 = contacts[1].text;
+  const getContactElement = (contact: any, index: number) => (
+      <div className="contactsDescription__item" key={id()}>
+        {index ? (
+          <Img2 className="contactsDescription__image" />
+        ) : (
+          <Img1 className="contactsDescription__image" />
+        )}
 
+        <div className="contactsDescription__content">
+          <h2 className="contactsDescription__title title-3 black">
+            {contact.title}
+          </h2>
+          <div className="contactsDescription__content-box">
+            <p
+              className="contactsDescription__address text-1 gray"
+              dangerouslySetInnerHTML={{ __html: contact.address }}
+            ></p>
+
+            <p className="contactsDescription__phones">
+              {contact.phones.map((phone: any) => (
+                  <a
+                    className="contactsDescription__phone text-1 gray"
+                    href={`tel:${phone.link}`}
+                    target="_blank"
+                    key={id()}
+                  >
+                    {phone.number}
+                  </a>
+              ))}
+            </p>
+
+            {contact.email ? (
+              <a
+                className="contactsDescription__email text-1 gray"
+                href={`mailto:${contact.email}`}
+                target="_blank"
+              >
+                {contact.email}
+              </a>
+            ) : (
+              <a
+                className="contactsDescription__site text-1 gray"
+                href={`https://${contact.site}`}
+                target="_blank"
+              >
+                {contact.site}
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+  );
   return (
     <div className="contactsDescription">
-      <div className="contactsDescription__wrapper container">
+      <div className="contactsDescription__wrapper container items-1">
         <div className="contactsDescription__items">
-          <div className="contactsDescription__item">
-            <Img1 />
-            <div className="contactsDescription__item-title title-3 black">
-              {title1}
-            </div>
-            <p className="contactsDescription__item-text text-1 gray">
-              {text1[0]}
-            </p>
-            <p className="contactsDescription__item-text text-1 gray">
-            {text1[1]}
-            </p>
-            <p className="contactsDescription__item-text mt text-1 gray">
-            {text1[2]}
-            </p>
-            <p className="contactsDescription__item-text mt text-1 gray">
-            {text1[3]}
-            </p>
-            <p className="contactsDescription__item-text text-1 gray">
-            {text1[4]}
-            </p>
-          </div>
-          <div className="contactsDescription__item">
-            <Img3 />
-            <div className="contactsDescription__item-title title-3 black">
-              {title2}
-            </div>
-            <p className="contactsDescription__item-text text-1 gray">
-              {text2[0]}
-            </p>
-            <p className="contactsDescription__item-text text-1 gray">
-            {text2[1]}
-            </p>
-            <p className="contactsDescription__item-text text-1 mt gray">
-            {text2[2]}
-            </p>
-            <p className="contactsDescription__item-text text-1 gray">
-            {text2[3]}
-            </p>
-            <p className="contactsDescription__item-text text-1 mt gray">
-            {text2[4]}
-            </p>
-          </div>
+          {getContactElement(contacts[0], 0)}
+          {getContactElement(contacts[1], 1)}
+        </div>
+      </div>
+      <div className="contactsDescription__wrapper container items-2">
+        <div className="contactsDescription__items">
+          {getContactElement(contacts[0], 0)}
+        </div>
+      </div>
+      <div className="line items-2"></div>
+
+      <div className="contactsDescription__wrapper container items-2">
+        <div className="contactsDescription__items">
+          {getContactElement(contacts[1], 1)}
         </div>
       </div>
       <div className="line"></div>

@@ -13,7 +13,7 @@ const ContactsPreview: FC<ContactsPreviewProps> = ({ content }) => {
   const img = getImage(image);
 
   return (
-    <div className="contactsPreview">
+    <div className="contactsPreview preview">
       <div className="contactsPreview__content container">
         <div className="contactsPreview__wrapper">
           <h2 className="contactsPreview__title title-1 white">

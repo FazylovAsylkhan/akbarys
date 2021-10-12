@@ -12,7 +12,7 @@ const NotFoundPage = (props: any) => {
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
       <Page404 content={firstBlock}></Page404>
     </LayoutAdditional>

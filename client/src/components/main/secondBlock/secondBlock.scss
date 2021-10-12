@@ -1,8 +1,7 @@
 @import "../../../scss/utils";
 
 .h2s,
-.sft,
-.ppe {
+.sft {
   padding-top: 272px;
   height: 100%;
   &__title {
@@ -31,14 +30,12 @@
     }
   }
   @media (max-width: 1440px) {
-    // @include adaptive-value-byX("padding-top", 272, 406, 1440, 1200);
     padding-top: calc((226 / 760) * 100vh);
     &__wrapper {
       grid-column: 1 / span 12;
     }
     &__button,
     &__box {
-      // margin-top: 30px;
       margin-top: calc((30 / 760) * 100vh);
     }
     &__subtitle {
@@ -46,13 +43,11 @@
     }
   }
   @media (max-width: 1200px) {
-    // @include adaptive-value-byX("padding-top", 406, 828, 1200, 860);
     padding-top: calc((206 / 720) * 100vh);
   }
   @media (max-width: 1040px) {
     &__button,
     &__box {
-      // margin-top: 40px;
       margin-top: calc((40 / 720) * 100vh);
     }
     &__subtitle {
@@ -63,7 +58,6 @@
     &__wrapper {
       grid-column: 1 / span 8;
     }
-    // @include adaptive-value-byX("padding-top", 601, 431, 860, 640);
     padding-top: calc((601 / 1200) * 100vh);
     &__subtitle {
       grid-template-columns: 130px 250px;
@@ -73,11 +67,9 @@
     &__wrapper {
       grid-column: 1 / span 6;
     }
-    // @include adaptive-value-byX("padding-top", 431, 179, 640, 320);
     padding-top: calc((431 / 1000) * 100vh);
     &__box,
     &__button {
-      // @include adaptive-value-byX("margin-top", 30, 20, 640, 320);
       margin-top: calc((30 / 1000) * 100vh);
     }
     &__title {
@@ -92,18 +84,13 @@
     animation: show 1.5s ease;
   }
   @media (max-width: 500px) {
-    padding-top: calc((179 / 520) * 100vh);
+    padding-top: calc((120 / 520) * 100vh);
     &__box,
     &__button {
       margin-top: calc((20 / 520) * 100vh);
     }
   }
   @media (max-width: 320px) {
-    // padding-top: 179px;
-    // &__box,
-    // &__button {
-    //   margin-top: 20px;
-    // }
     &__subtitle-digit.text-2 {
       font-size: 56px;
       line-height: 68px;

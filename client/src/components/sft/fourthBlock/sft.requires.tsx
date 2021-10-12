@@ -1,14 +1,14 @@
-import "./sft.requires.scss"
+import './sft.requires.scss';
 
-import * as React from "react"
-import { FC } from "react"
+import * as React from 'react';
+import { FC } from 'react';
 
 interface SftRequiresProps {
   content: any
 }
 
 const SftRequires: FC<SftRequiresProps> = ({ content }) => {
-  const { title, descriptions } = content
+  const { title, descriptions } = content;
 
   return (
     <div className="sftRequires">
@@ -28,7 +28,7 @@ const SftRequires: FC<SftRequiresProps> = ({ content }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SftRequires
+export default SftRequires;

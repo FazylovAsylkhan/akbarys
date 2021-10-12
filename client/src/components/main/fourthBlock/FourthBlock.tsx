@@ -1,17 +1,20 @@
-import * as React from "react"
+import * as React from 'react';
 
-import { Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import "./fourthBlock.scss"
-import { FC } from "react"
+import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import './fourthBlock.scss';
+import { FC } from 'react';
+import id from '../../../utils/randomId';
 
 interface FourthBlockProps {
   content: any
 }
 
 const FourthBlock: FC<FourthBlockProps> = ({ content }) => {
-  const { title, subtitle, description, button, advantages, image } = content
-  const img = getImage(image)
+  const {
+    title, subtitle, description, button, advantages, image,
+  } = content;
+  const img = getImage(image);
   return (
     <div className="about">
       <div className="screen__content container">
@@ -26,17 +29,16 @@ const FourthBlock: FC<FourthBlockProps> = ({ content }) => {
               />
             ) : null}
             <div className="about__content-box">
-              <h4 className="about__content-title mainText-2 black">{`${subtitle}`}</h4>
-              <p className="about__content-description mainText-6 gray">{`${description}`}</p>
+              <h4 className="about__content-title mainText-2 black">{subtitle}</h4>
+              <p className="about__content-description mainText-6 gray">{description}</p>
               <Link className="button about__button" to={button.url}>
                 {button.text}
               </Link>
             </div>
           </div>
           <div className="about__advantages">
-            {advantages.map((advantage: any) => {
-              return (
-                <h3 className="about__advantages-item">
+            {advantages.map((advantage: any) => (
+                <h3 className="about__advantages-item" key={id()}>
                   <span className="about__content-subtitle mainText-7 black">
                     {advantage.digit}
                   </span>
@@ -44,14 +46,12 @@ const FourthBlock: FC<FourthBlockProps> = ({ content }) => {
                     {advantage.description}
                   </span>
                 </h3>
-              )
-            })}
+            ))}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FourthBlock
-
+export default FourthBlock;

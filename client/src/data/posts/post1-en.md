@@ -3,23 +3,26 @@ contentPost:
   {
     lang: en,
     url: akbarys-in-orenburg/en,
-    title: Presentation of Akbarys H2S service 2021,
-    h1: "Presentation of Akbarys H2S service 2021",
+    title: Akbarys H2S Service 2021 presentation,
+    seo: {
+      title: "Пост: Akbarys H2S Service 2021 presentation",
+      h1: "Akbarys H2S Service 2021 presentation",
+    },
     langButtonsLinks:
       [
-        "/akbarys-in-orenburg",
-        "/akbarys-in-orenburg/kz",
-        "/akbarys-in-orenburg/en",
+        "/press-center/akbarys-in-orenburg",
+        "/press-center/akbarys-in-orenburg/kz",
+        "/press-center/akbarys-in-orenburg/en",
       ],
-    description: Akbarys held a presentation of services in the city of Orenburg...,
+    description: Akbarys presented their services in Orenburg...,
     date: "June 30, 2021",
-    image: ../../images/pressCenter/item-1.jpg,
-    imagePreview: ../../images/pressCenter/preview-item-1.jpg,
+    image: ../images/posts/item-1.jpg,
+    imagePreview: ../images/posts/preview-item-1.jpg,
   }
 ---
 
-On June 30, 2021, in the city of Orenburg, the Akbarys Group of Companies held a presentation of services for protection against hydrogen sulfide in oil and gas fields within the framework of the Akbarys H2S service 2021 conference. The presentation was attended by representatives of Gazprom-Neft Orenburg, as well as representatives of Gazprom-Neft's main office from St. Petersburg.
+On June 30, 2021 in Orenburg, Akbarys Group presented their H2S services at oil and gas fields during the "Akbarys H2S Service 2021" conference. The presentation was attended by Gazprom Neft Orenburg and Gazprom Neft HQ from St. Petersburg.
 
-The conference was attended by leading specialists of the Akbarys group of companies, who introduced the audience to the complex of services for protection against hydrogen sulfide, the main activities of the company, the products produced, shared their experience, and also told about the methods and innovative technologies that are used in the oil and gas industry within the framework of hydrogen sulfide safety. Akbarys specialists conducted a training course on hydrogen sulfide and demonstrated professional equipment and systems in practice. At the end of the presentation, all participants of the conference had the opportunity to inspect samples of finished products, test air-breathing equipment and multiple solutions in the field of modern gas detection and warning systems.
+Akbarys Group lead experts introduced a range of services on H2S safety, company basic activities and products manufactured, shared their experience and also spoke about methods and innovative technologies used in petroleum industry within the scope of hydrogen sulfide safety. Akbarys specialists conducted an H2S induction and demonstrated professional equipment and systems in practice. At the end of the presentation all delegates had chance to view the finished product samples, test breathing equipment as well as multiple solutions in the field of advanced gas detection and warning systems.
 
-The Akbarys Group of Companies is a leading provider of gas safety services in the CIS. Professional experience covers a wide range of operations within the framework of land and offshore projects in areas with a high concentration of H2S.
+Akbarys Group is the leading provider of gas safety services in the CIS. Our professional experience covers a wide range of operations for onshore and offshore projects with high H2S concentrations.

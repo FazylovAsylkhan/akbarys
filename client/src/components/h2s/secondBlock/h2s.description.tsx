@@ -12,7 +12,7 @@ interface H2sDescriptionProps {
 }
 
 const H2sDescription: FC<H2sDescriptionProps> = ({ content }) => {
-  const { h1, first, second } = content;
+  const { first, second } = content;
   const images = [h2s1, h2s2, h2s3, h2s4, h2s5];
   const getPartnersImagesElements = () => {
     const copyImages: Function[] = images.slice();
@@ -26,7 +26,6 @@ const H2sDescription: FC<H2sDescriptionProps> = ({ content }) => {
   return (
     <div className="h2sDescription">
       <div className="container">
-        <h1 className="h1">{h1}</h1>
         <div className="h2sDescription__wrapper">
           <h2 className="h2sDescription__title title-1 black">
             {first.title}

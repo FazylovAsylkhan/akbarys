@@ -1,7 +1,10 @@
 {
   "lang": "ru",
   "url": "press-center",
-  "h1": "Пресс-центр",
+  "seo": {
+    "title": "Пресс-центр",
+    "h1": "Пресс-центр"
+  },
   "langButtonsLinks": ["/press-center", "/press-center/kz", "/press-center/en"],
   "title": "Пресс-центр",
   "buttonText": "Читать"

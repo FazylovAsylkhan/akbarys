@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import './akbarys.description.scss';
 import id from '../../../utils/randomId';
@@ -14,28 +14,10 @@ interface AkbarysDescriptionProps {
 const AkbarysDescription: FC<AkbarysDescriptionProps> = ({ content }) => {
   const { description, title, image } = content;
   const img = getImage(image);
-  useEffect(() => {
-    const buttonWrapper = document.querySelector('.akbarysDescription__toggle');
-    const button = document.querySelector('.akbarysDescription__toggle-text');
-    buttonWrapper?.addEventListener('click', () => {
-      const wrapper = document.querySelector('.akbarysDescription__box');
-
-      wrapper?.classList.toggle('show');
-      buttonWrapper.classList.toggle('show');
-      if (wrapper?.classList.contains('show') && button) {
-        button.textContent = 'Скрыть';
-      } else if (button) {
-        button.textContent = 'Раскрыть';
-      }
-    });
-  }, []);
   const getTexts = () => description.map((text) => (
-        <p
-          key={id()}
-          className="akbarysDescription__text text-1 gray"
-        >
-          {text}
-        </p>
+      <p key={id()} className="akbarysDescription__text text-1 gray">
+        {text}
+      </p>
   ));
   return (
     <div className="akbarysDescription ">

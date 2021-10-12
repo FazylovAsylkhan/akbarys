@@ -24,7 +24,7 @@ const CareerPreview: FC<CareerPreviewProps> = ({ content }) => {
   } = content;
   const img = getImage(image);
   return (
-    <div className="careerPreview">
+    <div className="careerPreview preview">
       <div className="careerPreview__content container">
         <div className="careerPreview__wrapper">
           <h2 className="careerPreview__title title-1 white">

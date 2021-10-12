@@ -55,6 +55,9 @@
   @media (max-width: 640px) {
     @include adaptive-value-byX("font-size", 24, 18, 640, 320);
   }
+  @media (max-width: 320px) {
+    font-size: 18px;
+  }
 }
 .title-3 {
   font-weight: 600;
@@ -281,6 +284,23 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
+}
+.text-14 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 120%;
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("font-size", 36, 30, 1920, 1440);
+  }
+  @media (max-width: 1440px) {
+    font-size: 30px;
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("font-size", 30, 28, 1200, 860);
+  }
+  @media (max-width: 860px) {
+    font-size: 28px;
+  }
 }
 .text-header {
   font-weight: 500;

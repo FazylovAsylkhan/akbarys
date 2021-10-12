@@ -8,7 +8,7 @@ const AkBarysPreview = (props: any) => {
   } = props.content;
   const img = getImage(image);
   return (
-    <div className="akbarysPreview">
+    <div className="akbarysPreview preview">
       <div className="akbarysPreview__content container">
         <div className="akbarysPreview__wrapper">
           <h2 className="akbarysPreview__title title-1 white">

@@ -1,31 +1,87 @@
 {
   "lang": "en",
   "url": "politics/en",
-  "h1": "Privacy Policy",
   "langButtonsLinks": ["/politics", "/politics/kz", "/politics/en"],
   "seo": {
-    "title": "Privacy Policy"
+    "title": "Privacy Policy",
+    "h1": "Privacy Policy"
   },
   "firstBlock": {
     "title": "Privacy Policy",
-    "texts": [
-      "Resolution of the Government of the Republic of Kazakhstan No. 1272 of October 8, 2012",
-      "According to the calculations of the SRO, the cost of one workplace",
-      "On approval of the maximum price of wholesale sale of liquefied petroleum gas on the domestic market In accordance with subparagraph 6. of Article 5 of the Law of the Republic of Kazakhstan dated January 9, 2012 'On Gas and gas supply', the Government of the Republic of Kazakhstan decides:",
-      "To approve the maximum price of wholesale sale of liquefied petroleum gas in the domestic market of the Republic of Kazakhstan for the period up to December 31, 2012 in the amount of 35,805 tenge per ton, excluding value added tax.",
-      "This resolution shall enter into force upon the expiration of fifteen calendar days after the first official publication.Astana Kazinform-The Government of the Republic of Kazakhstan has approved the maximum price for the wholesale sale of liquefied petroleum gas on the domestic market, official media reports.",
-      "Resolution of the Government of the Republic of Kazakhstan No. 1272 of October 8, 2012",
-      "According to the calculations of the SRO, the cost of one workplace",
-      "On approval of the maximum price of wholesale sale of liquefied petroleum gas on the domestic market In accordance with subparagraph 6. of Article 5 of the Law of the Republic of Kazakhstan dated January 9, 2012 'On Gas and gas supply', the Government of the Republic of Kazakhstan decides:",
-      "To approve the maximum price of wholesale sale of liquefied petroleum gas in the domestic market of the Republic of Kazakhstan for the period up to December 31, 2012 in the amount of 35,805 tenge per ton, excluding value added tax.",
-      "This resolution shall enter into force upon the expiration of fifteen calendar days after the first official publication.Astana Kazinform-The Government of the Republic of Kazakhstan has approved the maximum price for the wholesale sale of liquefied petroleum gas on the domestic market, official media reports.",
-      "Resolution of the Government of the Republic of Kazakhstan No. 1272 of October 8, 2012",
-      "According to the calculations of the SRO, the cost of one workplace",
-      "On approval of the maximum price of wholesale sale of liquefied petroleum gas on the domestic market In accordance with subparagraph 6. of Article 5 of the Law of the Republic of Kazakhstan dated January 9, 2012 'On Gas and gas supply', the Government of the Republic of Kazakhstan decides:",
-      "To approve the maximum price of wholesale sale of liquefied petroleum gas in the domestic market of the Republic of Kazakhstan for the period up to December 31, 2012 in the amount of 35,805 tenge per ton, excluding value added tax.",
-      "This resolution shall enter into force upon the expiration of fifteen calendar days after the first official publication.Astana Kazinform-The Government of the Republic of Kazakhstan has approved the maximum price for the wholesale sale of liquefied petroleum gas on the domestic market, official media reports.",
-      "Resolution of the Government of the Republic of Kazakhstan No. 1272 of October 8, 2012",
-      "According to the calculations of the SRO, the cost of one workplace"
-    ]
+    "texts": {
+      "begin": [
+        "Privacy and Personal Data Policy",
+        "This Policy shall regulate the order of processing and using personal and other data on the Akbarys website. ",
+        "By submitting personal and other data to the Operator through the Website, the User hereby confirms his/her consent to the use of such data on the terms set forth in this Privacy Policy.",
+        "If the User does not agree with the terms of this Privacy Policy, he/she must stop using the Website.",
+        "Unconditional acceptance of this Privacy Policy shall be when the User starts using the Website."
+      ],
+      "rules": [
+        {
+          "title": "TERMS",
+          "items": [
+            "Website is a website available on the Internet at https://www.akbarys.kz. All exclusive rights to the Website and its certain elements (including software and design) are fully owned by the Operator. Assignment of such exclusive rights to the User is not subject to this Privacy Policy.",
+            "User is a person using the Website.",
+            "Applicable Law is the current legislation of the Republic of Kazakhstan.",
+            "Personal Data are the User's personal data, which the User provides independently upon registration or when using the Website functionality.",
+            "Data are other data about the User (not included in the Personal Data concept).",
+            "Registration is filling by the User of the Registration form available on the Website by indicating the required information and sending the scanned documents.",
+            "Registration form is a form available on the Website, which the User must fill out to be able to use the Website in full.",
+            "Service(s) are services provided by the Operator on the basis of an agreement."
+          ]
+        },
+        {
+          "title": "PERSONAL DATA COLLECTION AND PROCESSING",
+          "items": [
+            "The Operator shall collect and store only those Personal Data that are necessary for the provision of Services by the Operator and interaction with the User.",
+            "Personal information may be used for the following purposes:",
+            "1 provision of Services to the User;",
+            "2 User identification;",
+            "3 interaction with the User;",
+            "4 sending promotional materials, information and requests to the User;",
+            "5 conducting statistical and other studies;",
+            "The Operator, among other things, will process the following data:",
+            "1 first name, second name and patronymic;",
+            "2 e-mail address;",
+            "3 phone number (including cell one).",
+            "The User shall not provide the Website with any personal data of third parties (except when representing interests of these persons, with documented consent of the third parties to perform such actions)."
+          ]
+        },
+        {
+          "title": "PERSONAL AND OTHER DATA PROCESSING PROCEDURE",
+          "items": [
+            "The Operator shall use Personal Data in accordance with the Personal Data Law of the Republic of Kazakhstan and the Operator's internal documents.",
+            "Personal Data and other User's Data shall be kept confidential, except when such data is publicly available.",
+            "The Operator has the right to keep an archive copy of Personal Data. The Operator has the right to store Personal Data and Data on servers outside the Republic of Kazakhstan.",
+            "The Operator has the right to transfer Personal Data and User Data without User's consent to the following parties:",
+            "1 authorities, including bodies of inquiry and investigation, as well as local self-government bodies at their motivated request;",
+            "2 in other cases expressly provided for by applicable laws of the Republic of Kazakhstan.",
+            "The Operator has the right to transfer Personal Data and Data to third parties not specified in clause 3.4. of this Privacy Policy in the following cases:",
+            "Данные — иные данные о Пользователе (не входящие в понятие Персональных данных).",
+            "1 the User has expressed his/her consent to such actions;",
+            "2 the transfer is required as part of the User's application of the Website or the provision of Services to the User;",
+            "The Operator automatically processes Personal Data and Data."
+          ]
+        },
+        {
+          "title": "PERSONAL DATA PROTECTION",
+          "items": [
+            "The Operator shall provide adequate protection of Personal and other data in accordance with the Legislation, and shall take necessary and sufficient organizational and technical measures to protect Personal Data.",
+            "The applied protection measures allow, among other things, to protect Personal Data from unauthorized or accidental access, destruction, modification, blocking, copying, distribution, as well as from other unlawful actions of third parties therewith."
+          ]
+        },
+        {
+          "title": "OTHER PROVISIONS",
+          "items": [
+            "The laws of the Republic of Kazakhstan shall apply to this Privacy Policy and the relations between the User and the Operator arising in connection with this Privacy Policy.",
+            "Any possible disputes arising from this Agreement shall be resolved under the applicable law at the Operator's residence. Before applying to court, the User must follow the mandatory pre-litigation procedure and send the corresponding claim to the Operator in writing. The responding deadline to such claim is thirty (30) business days.",
+            "If, for any reason, one or more provisions of this Privacy Policy are deemed invalid or unenforceable, the validity or enforceability of the remaining provisions of this Privacy Policy shall not be affected.",
+            "The Operator has the right to change the Privacy Policy (in whole or in part) unilaterally at any time without prior agreement with the User. All changes shall take effect as soon as these are posted on the Website.",
+            "The User shall on his/her own track changes in the Privacy Policy by reading the current edition.",
+            "Please email any suggestions or questions on this Privacy Policy to info@akbarys.kz or call +7 705 790 48 56"
+          ]
+        }
+      ]
+    }
   }
 }

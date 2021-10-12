@@ -6,7 +6,6 @@ import ContactsPreview from '../components/contacts/firstBlock/contacts.preview'
 import ContactsDescription from '../components/contacts/secondBlock/contacts.description';
 import ContactsForm from '../components/contacts/thirdBlock/contacts.form';
 import LayoutAdditional from '../components/layer/layerAdditional';
-import Plug from '../components/plug/plug';
 import Seo from '../components/seo';
 
 const Contacts = (props: any) => {
@@ -15,18 +14,19 @@ const Contacts = (props: any) => {
       .querySelectorAll('.headerAdditional__link')[8]
       ?.classList.add('active');
   }, []);
-  const { firstBlock, secondBlock, langButtonsLinks } = props.data.pageContactsJson;
+  const {
+    seo, firstBlock, secondBlock, thirdBlock, langButtonsLinks,
+  } = props.data.pageContactsJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
   };
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
-      <Seo title="Контактная информация" />
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
+      <Seo title={seo.title} />
       <ContactsPreview content={firstBlock} />
       <ContactsDescription content={secondBlock} />
-      <ContactsForm />
-      <Plug />
+      <ContactsForm content={thirdBlock} />
     </LayoutAdditional>
   );
 };
@@ -35,7 +35,10 @@ export default Contacts;
 export const query = graphql`
   query PageContactsTemplateQuery($lang: String) {
     pageContactsJson(lang: { eq: $lang }) {
-      h1
+      seo {
+        title
+        h1
+      }
       langButtonsLinks
       url
       lang
@@ -54,8 +57,36 @@ export const query = graphql`
       }
       secondBlock {
         contacts {
-          text
           title
+          address
+          phones {
+            number
+            link
+          }
+          email
+          site
+        }
+      }
+      thirdBlock {
+        title
+        subtitle
+        fieldNames
+        btnText
+        politica {
+          text
+          link
+        }
+        popup {
+          success {
+            title
+            description
+            btnText
+          }
+          error {
+            title
+            description
+            btnText
+          }
         }
       }
     }

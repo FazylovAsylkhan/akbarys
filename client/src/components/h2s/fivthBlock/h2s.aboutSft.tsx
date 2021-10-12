@@ -1,24 +1,25 @@
-import * as React from "react"
-import { FC, useRef } from "react"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
-import showPaginationBackground from "../../../utils/h2s"
+import * as React from 'react';
+import { FC, useRef } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import showPaginationBackground from '../../../utils/h2s';
 import {
   initNav,
   showPagination,
   validationNav,
-} from "../../../utils/mainUtils"
-import "./h2s.aboutSft.scss"
+} from '../../../utils/mainUtils';
+import './h2s.aboutSft.scss';
+import id from '../../../utils/randomId';
 
 interface H2sAboutSftProps {
   content: any
 }
 
 const H2sAboutSft: FC<H2sAboutSftProps> = ({ content }) => {
-  const { slides } = content
-  const currentSlidesRef = useRef<Element[] | null>(null)
-  SwiperCore.use([Pagination, Navigation, EffectFade])
+  const { slides } = content;
+  const currentSlidesRef = useRef<Element[] | null>(null);
+  SwiperCore.use([Pagination, Navigation, EffectFade]);
   return (
     <div className="h2sAboutSft">
       <div className="container">
@@ -40,31 +41,33 @@ const H2sAboutSft: FC<H2sAboutSftProps> = ({ content }) => {
             navigation
             effect="fade"
             pagination={{
-              type: "fraction",
+              type: 'fraction',
             }}
-            onAfterInit={swiper => {
-              currentSlidesRef.current = swiper.slides as unknown as Element[]
-              initNav(swiper, "h2sAboutSft")
-              showPagination(swiper)
+            onAfterInit={(swiper) => {
+              currentSlidesRef.current = swiper.slides as unknown as Element[];
+              initNav(swiper, 'h2sAboutSft');
+              showPagination(swiper);
               if (currentSlidesRef.current) {
-                showPaginationBackground(swiper, currentSlidesRef.current)
+                showPaginationBackground(swiper, currentSlidesRef.current);
               }
-              validationNav(swiper)
+              validationNav(swiper);
             }}
-            onSlideChange={swiper => {
-              validationNav(swiper)
-              showPagination(swiper)
+            onSlideChange={(swiper) => {
+              validationNav(swiper);
+              showPagination(swiper);
               if (currentSlidesRef.current) {
-                showPaginationBackground(swiper, currentSlidesRef.current)
+                showPaginationBackground(swiper, currentSlidesRef.current);
               }
             }}
           >
             {slides.map((slide: any) => {
-              const { title, subtitle, image, description } = slide
-              const img = getImage(image)
+              const {
+                title, subtitle, image, description,
+              } = slide;
+              const img = getImage(image);
 
               return (
-                <SwiperSlide className="h2sAboutSft__slide">
+                <SwiperSlide className="h2sAboutSft__slide" key={id()}>
                   <div className="h2sAboutSft__content">
                     {img ? (
                       <GatsbyImage
@@ -88,13 +91,13 @@ const H2sAboutSft: FC<H2sAboutSftProps> = ({ content }) => {
                     </div>
                   </div>
                 </SwiperSlide>
-              )
+              );
             })}
           </Swiper>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default H2sAboutSft
+export default H2sAboutSft;

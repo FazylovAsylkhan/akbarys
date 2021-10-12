@@ -1,35 +1,60 @@
 {
   "lang": "en",
   "url": "contacts/en",
-  "h1": "Contact information",
+  "seo": {
+    "title": "Contact information",
+    "h1": "Contact information"
+  },
   "langButtonsLinks": ["/contacts", "/contacts/kz", "/contacts/en"],
   "firstBlock": {
     "title": "Contact information",
     "description": "We are always in touch",
-    "image": "../../../images/contacts/contactsPreview.jpg"
+    "image": "../../images/contacts/contactsPreview.jpg"
   },
   "secondBlock": {
     "contacts": [
       {
-        "title": "Akbarys Head Office",
-        "text": [
-          "Republic of Kazakhstan, Uralsk,",
-          "he. Sharuashly, 15",
-          "+7 (771) 949 90 11",
-          "info@akbarys.kz",
-          "akbarys.kz"
-        ]
+        "title": "Akbarus HQ",
+        "address": "15 Sharuashylyk Street, Uralsk,  <br/> Republic of Kazakhstan ",
+        "phones": [{ "number": "+7 (771) 949 90 11", "link": "+77719499011" }],
+        "email": "info@akbarys.kz",
+        "site": "akbarys.kz"
       },
       {
         "title": "Akbarys Protection Plant",
-        "text": [
-          "The Republic of Kazakhstan, the city of Nursultan,",
-          "92nd, 5, Almaty district",
-          "+7 (7172) 67‒70‒39",
-          "+7 (7172) 67‒70‒38",
-          "akbarys-protection.kz"
-        ]
+        "address": "92nd Street 5, Almaty District, Nur-Sultan, <br/> Republic of Kazakhstan",
+        "phones": [
+          { "number": "+7 (7172) 67 70 39", "link": "+77172677039" },
+          { "number": "+7 (7172) 67 70 38", "link": "+77172677038" }
+        ],
+        "email": "",
+        "site": "akbarys-protection.kz"
       }
     ]
+  },
+  "thirdBlock": {
+    "title": "Feedback form ",
+    "subtitle": "Fill out the form and we will contact you!",
+    "fieldNames": ["Name:", "Email:", "Message:"],
+    "btnText": "Send",
+    "politica": {
+      "text": [
+        "Hereby I consent to the processing of my personal data in accordance with",
+        "the privacy policy"
+      ],
+      "link": "/politics/en"
+    },
+    "popup": {
+      "success": {
+        "title": "Thank you!",
+        "description": "Your message was sent!",
+        "btnText": "Ok"
+      },
+      "error": {
+        "title": "Error!",
+        "description": "Something went wrong... Try again later.",
+        "btnText": "Ok"
+      }
+    }
   }
 }

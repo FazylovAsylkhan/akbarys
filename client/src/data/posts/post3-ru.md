@@ -4,17 +4,20 @@ contentPost:
     lang: ru,
     url: system-ashyq,
     title: Система Ashyq,
-    h1: "Система Ashyq",
+    seo: {
+      title: "Пост: Система Ashyq",
+      h1: "Система Ashyq",
+    },
     langButtonsLinks:
       [
-        "/system-ashyq",
-        "/system-ashyq/kz",
-        "/system-ashyq/en",
+        "/press-center/system-ashyq",
+        "/press-center/system-ashyq/kz",
+        "/press-center/system-ashyq/en",
       ],
     description: "В офисе была установлена система Ashyq, которая показывает ...",
     date: 28 июль 2021,
-    image: ../../images/pressCenter/item-3.jpg,
-    imagePreview: ../../images/pressCenter/preview-item-3.jpg,
+    image: ../images/posts/item-3.jpg,
+    imagePreview: ../images/posts/preview-item-3.jpg,
   }
 ---
 

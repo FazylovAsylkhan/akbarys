@@ -2,17 +2,20 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import './eighthBlock.scss';
+
 interface EighthBlockProps {
   content: any
 }
 
-const EighthBlock: React.FC<EighthBlockProps> = ({content}) => {
-  const {title,
+const EighthBlock: React.FC<EighthBlockProps> = ({ content }) => {
+  const {
+    title,
     description,
     image,
     button,
-    advantage} = content
-    const img = getImage(image);
+    advantage,
+  } = content;
+  const img = getImage(image);
 
   return (
     <div className="career">
@@ -30,7 +33,7 @@ const EighthBlock: React.FC<EighthBlockProps> = ({content}) => {
         </div>
       </div>
       <div className="screen__body">
-        {img ? <GatsbyImage className="screen__image" image={img} alt={title} /> : null}
+        {img ? <GatsbyImage className="screen__image" image={img} alt={title[0]} /> : null}
         <div className="background__header"></div>
       </div>
     </div>

@@ -4,20 +4,23 @@ contentPost:
     lang: en,
     url: lottery-winner/en,
     title: "Get vaccinated, win valuable prizes",
-    h1: "Get vaccinated, win valuable prizes",
+    seo: {
+      title: "Post: Get vaccinated",
+      h1: "Get vaccinated and win valuable prizes",
+    },
     langButtonsLinks:
       [
-        "/lottery-winner",
-        "/lottery-winner/kz",
-        "/lottery-winner/en",
+        "/press-center/lottery-winner",
+        "/press-center/lottery-winner/kz",
+        "/press-center/lottery-winner/en",
       ],
-    description: A raffle of valuable prizes among the fully vaccinated...,
+    description: Awarding valuable prizes to fully vaccinated personnel...,
     date: "August 25, 2021",
-    image: ../../images/pressCenter/item-2.jpg,
-    imagePreview: ../../images/pressCenter/preview-item-2.jpg,
+    image: ../images/posts/item-2.jpg,
+    imagePreview: ../images/posts/preview-item-2.jpg,
   }
 ---
 
-Raffle of valuable prizes among fully vaccinated employees of Akbarys company
+Awarding valuable prizes to the fully vaccinated Akbarys personnel
 
-Among the company's employees who have completed a full course of vaccination against COVID-19, a draw of 10 Apple iPads was held on 03.09.2021. The company supports, thanks and encourages all vaccinated employees who help create collective immunity. Social responsibility is not just words. Protect yourself and your loved ones, get vaccinated!
+On 03.09.2021 we held a drawing of 10 Apple iPads among the employees with a full COVID-19 vaccination. The company supports, appreciates and encourages all their vaccinated people who help create collective immunity. Social responsibility is not just words. Protect yourself and your beloved, get vaccinated!

@@ -1,8 +1,11 @@
 {
   "lang": "kz",
   "url": "press-center/kz",
-  "h1": "Baspasóz ortalyǵy",
+  "seo": {
+    "title": "Баспасөз орталығы",
+    "h1": "Баспасөз орталығы"
+  },
   "langButtonsLinks": ["/press-center", "/press-center/kz", "/press-center/en"],
-  "title": "Baspasóz ortalyǵy",
-  "buttonText": "Ári qaraı"
+  "title": "Баспасөз орталығы",
+  "buttonText": "Оқу"
 }

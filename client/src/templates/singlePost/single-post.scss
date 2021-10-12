@@ -1,4 +1,4 @@
-@import '../../scss/utils';
+@import "../../scss/utils";
 
 .singlePost {
   &__background {
@@ -27,8 +27,7 @@
     }
   }
   &__wrapper {
-    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
-    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    padding: 120px 0;
     grid-column: 1 / span 12;
   }
   &__title {
@@ -40,45 +39,88 @@
   &__text {
     margin-bottom: 20px;
   }
+  @media (max-width: 1440px) {
+  }
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+  }
 }
 
 .singlePost__social {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 40px;
-    .ya-share2 {
-      &__container {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+  .ya-share2 {
+    &__container {
+      width: 100%;
+      height: 100%;
+    }
+    &__list {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      justify-content: center;
+    }
+    &__item {
+      margin: 0 !important;
+      display: flex !important;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    &__link {
+      width: 100%;
+      height: 100%;
+      span {
         width: 100%;
         height: 100%;
-      }
-      &__list {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        display: flex;
         align-items: center;
         justify-content: center;
-      }
-      &__item {
-        margin: 0 !important;
-        display: flex !important;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-      }
-      &__link {
-        width: 100%;
-        height: 100%;
-        span {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 0%;
-        }
+        border-radius: 0%;
       }
     }
   }
-  
+  @media (max-width: 740px) {
+    @include adaptive-value-byX("height", 100, 80, 740, 320);
+    .ya-share2 {
+      &__list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    height: 80px;
+  }
+}

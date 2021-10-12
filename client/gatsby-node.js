@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
           url
         }
       }
-      allPageAkbarysAboutJson {
+      allPageAboutUsJson {
         nodes {
           url
           lang
@@ -93,13 +93,13 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     }
   })
-  // Create AkbarysAbout Page
-  data.allPageAkbarysAboutJson.nodes.forEach(node => {
+  // Create AboutUs Page
+  data.allPageAboutUsJson.nodes.forEach(node => {
     const { url, lang } = node
     if (url) {
       actions.createPage({
         path: url,
-        component: path.resolve("./src/templates/akbarys-about.tsx"),
+        component: path.resolve("./src/templates/about-us.tsx"),
         context: { lang },
       })
     }

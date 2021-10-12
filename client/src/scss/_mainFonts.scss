@@ -109,13 +109,13 @@
   font-size: 18px;
   line-height: 120%;
   @media (max-width: 1920px) {
-    @include adaptive-value-byX("font-size", 18, 16, 1920, 1441);
+    @include adaptive-value-byX("font-size", 18, 15, 1920, 1441);
   }
   @media (max-width: 1440px) {
-    font-size: 16px;
+    font-size: 15px;
   }
   @media (max-width: 1200px) {
-    @include adaptive-value-byX("font-size", 16, 18, 1200, 860);
+    @include adaptive-value-byX("font-size", 15, 18, 1200, 860);
   }
   @media (max-width: 860px) {
     font-size: 18px;

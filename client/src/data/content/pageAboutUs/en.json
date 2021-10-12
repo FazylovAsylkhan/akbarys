@@ -1,0 +1,108 @@
+{
+  "lang": "en",
+  "url": "about-us/en",
+  "seo": {
+    "title": "About us",
+    "h1": "Akbarys is a leading provider of services to the oil and gas industry"
+  },
+  "langButtonsLinks": [
+    "/about-us",
+    "/about-us/kz",
+    "/about-us/en"
+  ],
+  "firstBlock": {
+    "title": "Leading provider of gas safety services in Kazakhstan, CIS and the neighboring countries",
+    "description": "We will lead you to the goals!",
+    "subtitle": {
+      "digit": "100%",
+      "text": "Kazakh shared capital"
+    },
+    "image": "../../images/aboutUs/preview.jpg"
+  },
+  "secondBlock": {
+    "title": "About us",
+    "description": [
+      "One of the biggest hazards and serious concerns in oil and gas fields is toxic and explosive gases, and constant preparedness for such challenges is the key. Ensuring safety under such conditions is the foundation of all our activities.",
+      "The major focus and objective for our services are earlier detection of gas concentrations in the atmosphere, avoiding negative impact on personnel health as well as preventing man-made disasters.",
+      "What are our services about?",
+      "Akbarys H2S Protection is a suite of professional services and innovative solutions that includes the basic barriers consisting of supervisory, gas detection systems, PA systems, PPE and BA supply systems, muster points and shelters-in-place, as well as training, regular drills and site access control.",
+      "Akbarys Group is the leading provider of gas safety services in the CIS. Our experience covers a wide range of operations for onshore and offshore projects with high H2S concentrations."
+    ],
+    "image": "../../images/aboutUs/about-us.jpg"
+  },
+  "thirdBlock": {
+    "preview": { "digit": "125", "text": "Projects implemented " },
+    "advantages": [
+      { "digit": "15", "text": "Years of success" },
+      { "digit": "400+", "text": "Employees" },
+      { "digit": "2500", "text": "Hydrotests performed" },
+      { "digit": "25M", "text": "Safe man-hours" }
+    ]
+  },
+  "fourthBlock": {
+    "title": "Our mission",
+    "description": [
+      "We are a team of like-minded people united by one goal to create an Integrated Service Company capable of solving customers' problems with the best quality and efficiency.",
+      "Our Employees are the key value. They reach heights with no limit of perfection, and QHSE-Akbarys creates all conditions for such one."
+    ],
+    "qualities": ["Personnel", "Efficiency", "Quality"],
+    "images": [
+      "../../images/aboutUs/item-1.jpg",
+      "../../images/aboutUs/item-2.jpg",
+      "../../images/aboutUs/item-3.jpg"
+    ]
+  },
+  "fivthBlock": {
+    "title": "Achievements and certificates",
+    "description": "Every day we strive to improve the quality of our services, develop the professional skills of our staff and contribute to the development of the region and country as a whole.",
+    "certificates": [
+      {
+        "title": "Best KPO Contractor",
+        "description": "Best HSE Contractor 2018, KPO B.V. Award"
+      },
+      {
+        "title": "HSE Annual Award",
+        "description": "KPO B.V. Award for 2017"
+      },
+      {
+        "title": "PARYZ 2016 Winner",
+        "description": "Awarded as «Best HSE Company»"
+      },
+      {
+        "title": "Certificate of Confidence",
+        "description": "«Certificate of Confidence» for HSE compliance."
+      },
+      {
+        "title": "Best KPO B.V. Contractor",
+        "description": "Best HSE Contractor 2016, KPO B.V. Award"
+      },
+      {
+        "title": "Best Score in 2015",
+        "description": "Best HSE contractor performance in 2015"
+      }
+    ],
+    "btnText": ["Expand the list", "Hide the list"]
+  },
+  "sixthBlock": {
+    "title": "Akbarys Protection",
+    "descriptions": [
+      "As part of a strategy to develop the domestic market of manufacturers of goods needed for petroleum industry, under the TCO leadership and initiative, supported by KPO B.V, Kazakh company Akbarys invested in establishing a new asset and building a factory  to manufacture NH15-K escape hoods.",
+      "On 9th August 2019, Akbarys Protection's new factory was inaugurated in Nur-Sultan.",
+      "The factory capacity with using new innovative technologies will amount to over 40,000 masks a year, thereby providing local customers with world-class quality products and ability to export to the Caspian Sea region.",
+      "The total investment into the project, which started in 2017, has been equal to 1 billion Tenge around."
+    ],
+    "button": {
+      "text": "Go to the website",
+      "link": "https://akbarys-protection.kz/ru"
+    }
+  },
+  "seventhBlock": {
+    "title": ["Our careers", "Be part of a great team!"],
+    "description": "We will lead you to the goals Title",
+    "subtitle": ["400+", "People are already in our staff"],
+    "button": {
+      "text": "Leave a request",
+      "link": "/career/en"
+    }
+  }
+}

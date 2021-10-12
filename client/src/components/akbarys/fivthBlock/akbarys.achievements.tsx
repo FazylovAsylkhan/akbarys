@@ -1,10 +1,9 @@
+import * as React from 'react';
+import { FC } from 'react';
 import './akbarys.achievements.scss';
 
-import * as React from 'react';
-import { useEffect } from 'react';
-
-import EyeImg from '../../../images/eye.svg';
-import ArrowImg from '../../../images/toggle-arrow.svg';
+import EyeImg from '../../../data/images/eye.svg';
+import ArrowImg from '../../../data/images/toggle-arrow.svg';
 import certificate1 from '../../../static/argjkyrg.pdf';
 import certificate2 from '../../../static/vzksxnwu.pdf';
 import certificate3 from '../../../static/dfmJqwmb.pdf';
@@ -16,37 +15,50 @@ function openCertificate(id: string) {
   const link = document.getElementById(id) as HTMLLinkElement;
   link.click();
 }
-const AkbarysAchievements = () => {
-  useEffect(() => {
-    const arrow = document.querySelector('.akbarysAchievments__toggle');
-    const button = document.querySelector('.akbarysAchievments__toggle-text');
-    arrow?.addEventListener('click', () => {
-      const wrapper = document.querySelector('.akbarysAchievments__items');
-      wrapper?.classList.toggle('show');
-      arrow.classList.toggle('show');
-      if (wrapper?.classList.contains('show') && button) {
-        button.textContent = 'Скрыть';
-      } else if (button) {
-        button.textContent = 'Раскрыть';
+function openList(btnTexts: any) {
+  const arrow = document.querySelector('.akbarysAchievments__toggle');
+  const button = document.querySelector('.akbarysAchievments__toggle-text');
+  const items = document.querySelectorAll('.akbarysAchievments__item');
+  arrow?.classList.toggle('opened');
+
+  if (button && arrow?.classList.contains('opened')) {
+    button.textContent = btnTexts[1];
+    items.forEach((item) => {
+      if (!item.classList.contains('default')) {
+        item.classList.add('show');
       }
     });
-  }, []);
+  } else if (button) {
+    button.textContent = btnTexts[0];
+    items.forEach((item) => {
+      if (!item.classList.contains('default')) {
+        item.classList.remove('show');
+      }
+    });
+  }
+}
+interface AkbarysAchievementsProps {
+  content: any
+}
+
+const AkbarysAchievements: FC<AkbarysAchievementsProps> = ({ content }) => {
+  const {
+    title, description, certificates, btnText,
+  } = content;
   return (
     <div className="akbarysAchievemnets container">
       <div className="akbarysAchievments__wrapper">
         <div className="akbarysAchievments__content">
           <h2 className="akbarysAchievments__content-title title-1 black">
-            Достижения и сертификаты
+            {title}
           </h2>
           <div className="akbarysAchievments__content-description text-1 gray">
-            Каждый день мы стремимся повышать качество наших услуг, улучшать
-            профессиональные навыки наших сотрудников и вносить свой вклад в
-            развитие региона и страны в целом.
+            {description}
           </div>
         </div>
         <div className="akbarysAchievments__items">
           <div
-            className="akbarysAchievments__item"
+            className="akbarysAchievments__item default"
             onClick={() => openCertificate('certificate1')}
           >
             <a
@@ -58,19 +70,19 @@ const AkbarysAchievements = () => {
               className="akbarysAchievments__item-link text-6 gray"
               onClick={(e) => e.stopPropagation()}
             >
-              Лучший Подрядчик КПО
+              {certificates[0].title}
             </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              Награда Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2018
+              {certificates[0].description}
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
 
           <div
-            className="akbarysAchievments__item"
+            className="akbarysAchievments__item default"
             onClick={() => openCertificate('certificate3')}
           >
             <a
@@ -82,19 +94,19 @@ const AkbarysAchievements = () => {
               className="akbarysAchievments__item-link text-6 gray"
               onClick={(e) => e.stopPropagation()}
             >
-              Ежегодная премия HSE
+              {certificates[1].title}
             </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              Награда KPO B. V. за заслуги 2017
+              {certificates[1].description}
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
 
           <div
-            className="akbarysAchievments__item"
+            className="akbarysAchievments__item default"
             onClick={() => openCertificate('certificate2')}
           >
             <a
@@ -106,20 +118,19 @@ const AkbarysAchievements = () => {
               className="akbarysAchievments__item-link text-6 gray"
               onClick={(e) => e.stopPropagation()}
             >
-              Лауреат ПАРЫЗ-2016
+              {certificates[2].title}
             </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              Награда в номинации «Лучшее предприятие в области охраны труда и
-              техники безопасности»
+              {certificates[2].description}
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
 
           <div
-            className="akbarysAchievments__item"
+            className="akbarysAchievments__item default"
             onClick={() => openCertificate('certificate4')}
           >
             <a
@@ -131,14 +142,13 @@ const AkbarysAchievements = () => {
               className="akbarysAchievments__item-link text-6 gray"
               onClick={(e) => e.stopPropagation()}
             >
-              Сертификат доверия
+              {certificates[3].title}
             </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              “Сертификатом доверия” о соблюдении требований охраны труда
-              работников.
+              {certificates[3].description}
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
@@ -156,13 +166,13 @@ const AkbarysAchievements = () => {
               className="akbarysAchievments__item-link text-6 gray"
               onClick={(e) => e.stopPropagation()}
             >
-              Лучший Подрядчик KPO B. V.
+              {certificates[4].title}
             </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2016г
+              {certificates[4].description}
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
@@ -180,21 +190,23 @@ const AkbarysAchievements = () => {
               className="akbarysAchievments__item-link text-6 gray"
               onClick={(e) => e.stopPropagation()}
             >
-              Лучший показатель 2015
+              {certificates[5].title}
             </a>
             <span
               className="akbarysAchievments__item-description text-1"
               style={{ color: '#C4C4C4' }}
             >
-              Лучший показатель 2015 года в области ОТ, ТБ и ООС среди подрядных
-              организаций
+              {certificates[5].description}
             </span>
             <EyeImg className="akbarysAchievments__item-img" />
           </div>
         </div>
-        <div className="akbarysAchievments__toggle">
+        <div
+          className="akbarysAchievments__toggle"
+          onClick={() => openList(btnText)}
+        >
           <span className="akbarysAchievments__toggle-text text-6 blue">
-            Раскрыть
+            {btnText[0]}
           </span>
           {<ArrowImg className="akbarysAchievments__toggle-arrow" />}
         </div>

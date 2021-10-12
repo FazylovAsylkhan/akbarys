@@ -1,47 +1,51 @@
-import * as React from "react"
-import { useEffect } from "react"
+import * as React from 'react';
+import { useEffect } from 'react';
 
-import { graphql } from "gatsby"
-import H2sPreview from "../components/h2s/firstBlock/h2s.preview"
-import H2sIso from "../components/h2s/fouthBlock/h2s.iso"
-import H2sDescription from "../components/h2s/secondBlock/h2s.description"
-import LayoutAdditional from "../components/layer/layerAdditional"
-import Seo from "../components/seo"
-import H2sAboutSft from "../components/h2s/fivthBlock/h2s.aboutSft"
-import H2sGasDetectionSystem from "../components/h2s/thirdBlock/h2s.gasDetectionSystem"
+import { graphql } from 'gatsby';
+import H2sPreview from '../components/h2s/firstBlock/h2s.preview';
+import H2sIso from '../components/h2s/fouthBlock/h2s.iso';
+import H2sDescription from '../components/h2s/secondBlock/h2s.description';
+import LayoutAdditional from '../components/layer/layerAdditional';
+import Seo from '../components/seo';
+import H2sAboutSft from '../components/h2s/fivthBlock/h2s.aboutSft';
+import H2sGasDetectionSystem from '../components/h2s/thirdBlock/h2s.gasDetectionSystem';
 
 const H2sService = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll(".headerAdditional__link")[1]
-      ?.classList.add("active")
-  }, [])
-  const { firstBlock, secondBlock, thirdBlock,
+      .querySelectorAll('.headerAdditional__link')[1]
+      ?.classList.add('active');
+  }, []);
+  const {
+    seo, firstBlock, secondBlock, thirdBlock,
     fourthBlock,
-    fivthBlock, langButtonsLinks } =
-    props.data.pageH2SServiceJson
+    fivthBlock, langButtonsLinks,
+  } = props.data.pageH2SServiceJson;
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  }
+  };
   return (
-    <LayoutAdditional langs={langButtonsLinks} data={data}>
-      <Seo title="Комплексные решения по безопасности" />
+    <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
+      <Seo title={seo.title} />
       <H2sPreview content={firstBlock} />
       <H2sDescription content={secondBlock} />
       <H2sGasDetectionSystem content={thirdBlock} />
       <H2sIso content={fourthBlock} />
       <H2sAboutSft content={fivthBlock} />
     </LayoutAdditional>
-  )
-}
+  );
+};
 
-export default H2sService
+export default H2sService;
 
 export const query = graphql`
   query PageH2sServiceTemplateQuery($lang: String) {
     pageH2SServiceJson(lang: { eq: $lang }) {
-      h1
+      seo {
+        title,
+        h1
+      }
       langButtonsLinks
       url
       lang
@@ -63,7 +67,6 @@ export const query = graphql`
         }
       }
       secondBlock {
-        h1
         first {
           description
           subtitle
@@ -142,4 +145,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

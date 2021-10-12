@@ -1,35 +1,60 @@
 {
   "lang": "ru",
   "url": "contacts",
-  "h1": "Контактная информация",
+  "seo": {
+    "title": "Контактная информация",
+    "h1": "Контактная информация"
+  },
   "langButtonsLinks": ["/contacts", "/contacts/kz", "/contacts/en"],
   "firstBlock": {
     "title": "Контактная информация",
     "description": "Мы всегда на связи",
-    "image": "../../../images/contacts/contactsPreview.jpg"
+    "image": "../../images/contacts/contactsPreview.jpg"
   },
   "secondBlock": {
     "contacts": [
       {
         "title": "Головной офис Akbarys",
-        "text": [
-          "Республика Казахстан, г. Уральск,",
-          "ул. Шаруашылык, 15",
-          "+7 (771) 949 90 11",
-          "info@akbarys.kz",
-          "akbarys.kz"
-        ]
+        "address": "Республика Казахстан, г. Уральск, <br/> ул. Шаруашылык, 15",
+        "phones": [{ "number": "+7 (771) 949 90 11", "link": "+77719499011" }],
+        "email": "info@akbarys.kz",
+        "site": "akbarys.kz"
       },
       {
         "title": "Завод Akbarys Protection",
-        "text": [
-          "Республика Казахстан, г. Нур-Султан,",
-          "92-я, 5, р-н Алматы",
-          "+7 (7172) 67‒70‒39",
-          "+7 (7172) 67‒70‒38",
-          "akbarys-protection.kz"
-        ]
+        "address": "Республика Казахстан, г. Нур-Султан, <br/> 92-я, 5, р-н Алматы",
+        "phones": [
+          { "number": "+7 (7172) 67 70 39", "link": "+77172677039" },
+          { "number": "+7 (7172) 67 70 38", "link": "+77172677038" }
+        ],
+        "email": "",
+        "site": "akbarys-protection.kz"
       }
     ]
+  },
+  "thirdBlock": {
+    "title": "Форма обратной связи",
+    "subtitle": "Заполните форму и мы с Вами свяжемся!",
+    "fieldNames": ["Имя:", "Email:", "Сообщение:"],
+    "btnText": "Отправить",
+    "politica": {
+      "text": [
+        "Я даю свое согласие на обработку персональных данных в соответствии с",
+        "политикой конфидециальности"
+      ],
+      "link": "/politics"
+    },
+    "popup": {
+      "success": {
+        "title": "Спасибо!",
+        "description": "Ваше сообщение было успешно отправлено!",
+        "btnText": "Ок"
+      },
+      "error": {
+        "title": "Ошибка!",
+        "description": "Что-то пошло не так... Попробуйте позже.",
+        "btnText": "Ок"
+      }
+    }
   }
 }

@@ -1,23 +1,22 @@
-@import '../../../scss/utils';
+@import "../../../scss/utils";
 
 .serviceCenterOpportunities {
   &__wrapper {
-    @include adaptive-value-byX('padding-top', 120, 110, 1920, 1440);
-    @include adaptive-value-byX('padding-bottom', 120, 110, 1920, 1440);
+    padding: 120px 0;
     grid-column: 1 / span 12;
     display: flex;
     flex-direction: column;
   }
   &__slider {
     width: 100%;
-    @include adaptive-value-byX('height', 700, 530, 1920, 1440);
+    height: 700px;
     position: relative;
     &-title {
       margin-bottom: 40px;
     }
     &-description {
-      @include adaptive-value-byX('width', 1043, 788, 1920, 1440);
-      @include adaptive-value-byX('margin-bottom', 60, 50, 1920, 1440);
+      width: 804px;
+      margin-bottom: 50px;
     }
   }
   .swiper-wrapper {
@@ -31,13 +30,12 @@
   &__pagination {
     position: absolute;
     right: 192px;
-    top: -180px;
-    @include adaptive-value-byX('top', -180, -160, 1920, 1440);
+    top: -195px;
   }
   &__button {
     &-next,
     &-prev {
-      @include adaptive-value-byX('top', -176, -156, 1920, 1440);
+      top: -193px;
       right: 0;
       z-index: 10;
       position: absolute;
@@ -48,6 +46,134 @@
     &-prev {
       transform: rotateY(180deg);
       right: 84px;
+    }
+  }
+  @media (max-width: 1920px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+      @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    }
+    &__slider {
+      @include adaptive-value-byX("height", 700, 530, 1920, 1440);
+      &-description {
+        @include adaptive-value-byX("width", 804, 788, 1920, 1440);
+      }
+    }
+    &__pagination {
+      @include adaptive-value-byX("top", -195, -178, 1920, 1440);
+      @include adaptive-value-byX("right", 192, 145, 1920, 1440);
+    }
+    &__button {
+      &-next,
+      &-prev {
+        @include adaptive-value-byX("top", -193, -174, 1920, 1440);
+      }
+      &-prev {
+        @include adaptive-value-byX("right", 84, 65, 1920, 1440);
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+      @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+    }
+    &__slider {
+      @include adaptive-value-byX("height", 530, 460, 1440, 1200);
+      &-description {
+        @include adaptive-value-byX("width", 788, 683, 1440, 1200);
+      }
+    }
+    &__pagination {
+      top: -178px;
+      right: 145px;
+    }
+    &__button {
+      &-next,
+      &-prev {
+        top: -174px;
+      }
+      &-prev {
+        right: 65px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    &__wrapper {
+      @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+      @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+    }
+    &__slider {
+      @include adaptive-value-byX("height", 460, 360, 1200, 860);
+      &-description {
+        width: 683px;
+      }
+      img {
+        height: 100%;
+      }
+    }
+    &__pagination {
+      @include adaptive-value-byX("top", -178, -190, 1200, 860);
+      @include adaptive-value-byX("right", 145, 130, 1200, 860);
+    }
+    &__button {
+      &-next,
+      &-prev {
+        @include adaptive-value-byX("top", -174, -182, 1200, 860);
+      }
+    }
+  }
+  @media (max-width: 1040px) {
+    &__slider {
+      height: auto;
+      margin-bottom: 60px;
+      &-description {
+        width: 100%;
+      }
+    }
+    &__pagination {
+      top: auto;
+      bottom: -60px;
+      right: 15px;
+    }
+    &__button {
+      &-next,
+      &-prev {
+        top: auto;
+        bottom: -60px;
+        left: 0;
+        right: auto;
+      }
+      &-next {
+        left: 60px;
+      }
+    }
+  }
+  @media (max-width: 860px) {
+    &__wrapper {
+      grid-column: 1 / span 8;
+      @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+      @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    }
+  }
+  @media (max-width: 640px) {
+    &__wrapper {
+      grid-column: 1 / span 6;
+      @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+      @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    }
+    &-title,
+    &-description {
+      @include adaptive-value-byX("margin-bottom", 40, 30, 640, 320);
+    }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+    &-title,
+    &-description {
+      margin-bottom: 30px;
     }
   }
 }

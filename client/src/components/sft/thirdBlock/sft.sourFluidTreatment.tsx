@@ -1,19 +1,19 @@
-import * as React from "react"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
-import { FC, useEffect } from "react"
-import "./sft.sourFluidTreatment.scss"
+import * as React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { FC, useEffect } from 'react';
+import './sft.sourFluidTreatment.scss';
 
-import TIP_IMG from "../../../images/tip.svg"
-import id from "../../../utils/randomId"
+import TIP_IMG from '../../../data/images/sft/tip.svg';
+import id from '../../../utils/randomId';
 
 interface SftSourFluidTreatmentProps {
   content: any
 }
 
 const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
-  const { first, second } = content
-  const img1 = getImage(first.images[0])
-  const img2 = getImage(first.images[1])
+  const { first, second } = content;
+  const img1 = getImage(first.images[0]);
+  const img2 = getImage(first.images[1]);
 
   const contentTips = [
     second.items[0],
@@ -25,15 +25,15 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
     second.items[3],
     second.items[6],
     second.items[7],
-  ]
-  const tipsTexts = contentTips.map((content, i) => (
+  ];
+  const tipsTexts = contentTips.map((contentTip, i) => (
     <div
       key={`keyText-${i}`}
       className={`sourFluidTreatment__tip-text sourFluidTreatment__tip-text-${i} text-9`}
     >
-      <span>{content}</span>
+      <span>{contentTip}</span>
     </div>
-  ))
+  ));
   const tipsImgs = new Array(9)
     .fill(1)
     .map((e, i) => (
@@ -41,32 +41,28 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
         key={`keyImg-${i}`}
         className={`sourFluidTreatment__tip-img sourFluidTreatment__tip-img-${i}`}
       />
-    ))
+    ));
   useEffect(() => {
-    const img = document.querySelector(".sourFluidTreatment")
+    const img = document.querySelector('.sourFluidTreatment');
     const tipsTextElements = document.querySelectorAll(
-      ".sourFluidTreatment__tip-text"
-    )
-    let numberTip = -1
-    img?.addEventListener("mouseover", e => {
-      const element = e.target as HTMLElement
-      if (element.classList.contains("sourFluidTreatment__tip-img")) {
-        tipsTextElements.forEach(tipElement =>
-          tipElement.classList.remove("show")
-        )
-        numberTip = Number(element.classList[1].slice(-1))
-        const textHtmlElement = tipsTextElements[numberTip]
-        textHtmlElement.classList.add("show")
+      '.sourFluidTreatment__tip-text',
+    );
+    let numberTip = -1;
+    img?.addEventListener('mouseover', (e) => {
+      const element = e.target as HTMLElement;
+      if (element.classList.contains('sourFluidTreatment__tip-img')) {
+        tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
+        numberTip = Number(element.classList[1].slice(-1));
+        const textHtmlElement = tipsTextElements[numberTip];
+        textHtmlElement.classList.add('show');
       } else if (tipsTextElements[numberTip] === e.target) {
-        true
+        true;
       } else {
-        tipsTextElements.forEach(tipElement =>
-          tipElement.classList.remove("show")
-        )
-        numberTip = -1
+        tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
+        numberTip = -1;
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div>
@@ -103,16 +99,14 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
               {second.title}
             </h2>
             <ul className="sourFluidTreatment__list">
-              {second.items.map((item: string) => {
-                return (
+              {second.items.map((item: string) => (
                   <li
                     className="sourFluidTreatment__list-item text-13 gray"
                     key={id()}
                   >
                     {item}
                   </li>
-                )
-              })}
+              ))}
             </ul>
           </div>
           <div className="sourFluidTreatment__content">
@@ -127,7 +121,7 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
       </div>
       <div className="line"></div>
     </div>
-  )
-}
+  );
+};
 
-export default SftSourFluidTreatment
+export default SftSourFluidTreatment;

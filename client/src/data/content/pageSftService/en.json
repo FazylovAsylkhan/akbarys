@@ -1,67 +1,69 @@
 {
     "lang": "en",
     "url": "sft-service/en",
-    "h1": "Neutralization of hydrogen sulfide in the process of oil and gas production",
+    "seo": {
+      "title": "H2S neutralizing",
+      "h1": "H2S neutralization in petroleum production"
+    },
     "langButtonsLinks": ["/sft-service", "/sft-service/kz", "/sft-service/en"],
     "firstBlock": {
-      "title": "Neutralization of hydrogen sulfide in the process of oil and gas production",
+      "title": "H2S neutralization in petroleum production",
       "subtitles": [
-        { "digit": "25", "description": "Tons of hydrogen sulfide neutralized" },
+        { "digit": "25", "description": "Tons of H2S neutralized" },
         { "digit": "59", "description": "Projects implemented" }
       ],
       "image": "../../images/sft/preview.jpg"
     },
     "secondBlock": {
-      "h1": "Neutralization of hydrogen sulfide in the process of oil and gas production",
       "first": {
-        "title": "Odorless, no emissions",
-        "subtitle": "Akbarys offers solutions for the neutralization of hydrogen sulfide by providing a closed system for the storage and treatment of reservoir water."
+        "title": "Odorless, emission-free ",
+        "subtitle": "Akbarys offers solutions to neutralize hydrogen sulfide by providing a closed-loop storage and treatment system for produced water."
       },
       "second": {
-        "title": "We provide security",
-        "description": "The activity of Akbarys is based on a systematic approach to ensuring security",
+        "title": "We ensure safety",
+        "description": "Akbarys is based on a systematic approach to safety ",
         "stages": [
-          "No emissions and odors",
-          "Placement on a small area",
-          "Compact and capacious storage",
-          "Economic efficiency"
+          "No emissions and no odors ",
+          "Small footprint ",
+          "Compact and spacious storage",
+          "Cost-effective"
         ]
       }
     },
     "thirdBlock": {
       "first": {
-        "title": "Технология предусматривает орошение газового потока специальными растворами",
+        "title": "The technology involves irrigation of the gas stream with special solutions",
         "descriptions": [
-          "Метод основан на орошении отходящего газа целевыми растворами, при максимально развитом контакте жидкости с попутными примесями газа и более интенсивном смешивании очищаемого газа с жидкостью. В результате токсичный газ полностью растворяется в жидкости.",
-          "Во время хранения пластовой воды в герметичных емкостях, пары газов испаряются и выходят в вентиляционную линию емкости наружу, линия в свою очередь соединяется со скруббером, где и происходит нейтрализация сероводорода, а на выходе из скруббера выходит газ без содержания сероводорода.",
-          "В емкостях всегда поддерживается позитивное давление во избежание создания вакуума в емкости и засасывания воздуха из вне. Давление периодически поддерживается газообразным азотом, тем самым создавая безопасную «азотную подушку» с содержанием кислорода внутри емкости."
+          "The method is based on irrigating off gas with target solutions to ensure maximum contact of the liquid with gas impurities and more intensive mixing of the purified gas with the foremost. As a result, the toxic gas is completely dissolved in the liquid.",
+          "When storing produced water in sealed tanks, vapors emit and come out to a vent line of the tank, the line in turn goes to a scrubber, where hydrogen sulfide is neutralized, and the scrubber outlet provides gas without hydrogen sulfide content.",
+          "Positive pressure is always maintained in the tanks to avoid vacuum in the tank and coming the ambient air from outside. The pressure is regularly maintained with nitrogen, thus creating a safe «nitrogen blanket» with oxygen content inside the tank."
         ],
         "images": ["../../images/sft/sourFluidTreatment.jpg", "../../images/sft/sourFluidTreatment-2.jpg"]
       },
       "second": {
         "title": "Sour Fluid Treatment",
         "items": [
-          "Азотная касета",
-          "Рециркуляционный насос",
-          "Линия циркуляции",
-          "Вентиляционная линия ёмкости",
-          "Резервуар для хранения пластовых вод",
-          "Жидкость с содержанием сероводорода",
-          "Линия вентиляции",
-          "Скруббер",
-          "Очищенные пары"
+          "Nitrogen cassette",
+          "Recirculation pump",
+          "Circulation line",
+          "Ventilation line capacity",
+          "Reservoir for storage of reservoir waters",
+          "Liquid with hydrogen sulfide content",
+          "Ventilation line",
+          "Scrubber",
+          "Cleansed couples"
         ]
       }
     },
     "fourthBlock": {
-      "title": "Законодательные требования",
+      "title": "Legislative Requirements",
       "descriptions": [
-        "Требования к утилизации сероводорода определены в Приказе Министра по инвестициям и развитию РК от 30.12.2014 г. № 355 «Об утверждении Правил обеспечения промышленной безопасности для опасных производственных объектов нефтяной и газовой отраслей промышленности».",
-        "Согласно нормативных документов, не допускается выброс в атмосферу вредных веществ, в том числе газов, без их нейтрализации и сжигания."
+        "Requirements to dispose hydrogen sulfide are defined in the RoK Minister of Investment and Development Order #355 «On approving the Rules of industrial safety for hazardous facilities of petroleum industry» dated 30.12.2014..",
+        "According to regulatory documents, no harmful substances, including gases, may be released into the atmosphere without neutralization and combustion."
       ]
     },
     "fivthBlock": {
-      "title": "Нам доверяют лидеры отрасли"
+      "title": "Integrated gas safety"
     }
   }
   

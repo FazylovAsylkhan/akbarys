@@ -1,8 +1,11 @@
 {
   "lang": "en",
   "url": "press-center/en",
-  "h1": "Press-center",
+  "seo": {
+    "title": "Public Relations",
+    "h1": "Public Relations"
+  },
   "langButtonsLinks": ["/press-center", "/press-center/kz", "/press-center/en"],
-  "title": "Press-center",
+  "title": "Public Relations",
   "buttonText": "Read"
 }

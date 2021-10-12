@@ -1,36 +1,33 @@
+import * as React from 'react';
+import { FC } from 'react';
 import './serviceCenter.diagnostics.scss';
 
-import * as React from 'react';
+interface ServiceCenterDiagnosticsProps {
+  content: any
+}
 
-// import ItemImg1 from '../../../images/serviceCenter/serviceCenterDiagnostics-item-1.svg';
-// import ItemImg2 from '../../../images/serviceCenter/serviceCenterDiagnostics-item-2.svg';
-// import ItemImg3 from '../../../images/serviceCenter/serviceCenterDiagnostics-item-3.svg';
-// import ItemImg4 from '../../../images/serviceCenter/serviceCenterDiagnostics-item-4.svg';
-// import ItemImg5 from '../../../images/serviceCenter/serviceCenterDiagnostics-item-5.svg';
+const ServiceCenterDiagnostics: FC<ServiceCenterDiagnosticsProps> = ({
+  content,
+}) => {
+  const { title, descriptions } = content;
 
-const ServiceCenterDiagnostics = () => (
-  <div className="serviceCenterDiagnostics">
-    <div className="container">
-      <div className="serviceCenterDiagnostics__wrapper ">
-        <div className="serviceCenterDiagnostics__title title-1 white">
-          Работаем в регионах
+  return (
+    <div className="serviceCenterDiagnostics">
+      <div className="container">
+        <div className="serviceCenterDiagnostics__wrapper ">
+          <div className="serviceCenterDiagnostics__title title-1 white">
+            {title}
+          </div>
+          <p className="serviceCenterDiagnostics__description text-1 mb white">
+            {descriptions[0]}
+          </p>
+          <p className="serviceCenterDiagnostics__description text-1 white">
+            {descriptions[1]}
+          </p>
         </div>
-        <p className="serviceCenterDiagnostics__description text-1 white left">
-          Специалисты компании проводят работы как на объектах заказчика, так и
-          в условиях специализированных лабораторий, расположенных в регионах
-          Казахстана.
-        </p>
-        <p className="serviceCenterDiagnostics__description text-1 white right">
-          Для наиболее полного и быстрого реагирования на запросы заказчиков и
-          сокращения сроков сервисного обслуживания в крупных промышленных
-          регионах созданы локальные сервисные подразделения, что позволяет
-          оперативно осуществлять сервисную поддержку оборудования заказчика.
-          Кроме центрального Уральского подразделения, такие сервисные службы
-          созданы в Астане, Аксае, Актобе, Атырау, Актау.
-        </p>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ServiceCenterDiagnostics;

@@ -4,17 +4,20 @@ contentPost:
     lang: ru,
     url: akbarys-in-orenburg,
     title: Презентация Akbarys H2S service 2021,
-    h1: "Презентация Akbarys H2S service 2021",
+    seo: {
+      title: "Пост: Презентация Akbarys H2S service 2021",
+      h1: "Презентация Akbarys H2S service 2021",
+    },
     langButtonsLinks:
       [
-        "/akbarys-in-orenburg",
-        "/akbarys-in-orenburg/kz",
-        "/akbarys-in-orenburg/en",
+        "/press-center/akbarys-in-orenburg",
+        "/press-center/akbarys-in-orenburg/kz",
+        "/press-center/akbarys-in-orenburg/en",
       ],
     description: Akbarys провела презентацию услуг в городе Оренбург...,
     date: 30 июня 2021,
-    image: ../../images/pressCenter/item-1.jpg,
-    imagePreview: ../../images/pressCenter/preview-item-1.jpg,
+    image: ../images/posts/item-1.jpg,
+    imagePreview: ../images/posts/preview-item-1.jpg,
   }
 ---
 

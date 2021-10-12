@@ -2,7 +2,10 @@
   "lang": "ru",
   "url": "",
   "langButtonsLinks": ["/", "/kz", "/en"],
-  "h1": "akbarys, qhse-akbarys",
+  "seo": {
+    "title": "Главная",
+    "h1": "akbarys, qhse-akbarys"
+  },
   "firstBlock": {
     "title": "AKBARYS",
     "description": "Ведущий поставщик услуг по газовой безопасности на территории Казахстана, СНГ и Ближнего Зарубежья",
@@ -30,7 +33,7 @@
     "title": "О компании",
     "subtitle": "Быть лучшими, направлять на успех!",
     "description": "Akbarys является компанией со 100% Казахстанским содержанием, осуществляющим деятельность в области защиты персонала от сероводорода",
-    "button": { "url": "/akbarys-about/", "text": "Подробнее" },
+    "button": { "url": "/about-us/", "text": "Подробнее" },
     "image": "../../images/main/about.jpg",
     "advantages": [
       {

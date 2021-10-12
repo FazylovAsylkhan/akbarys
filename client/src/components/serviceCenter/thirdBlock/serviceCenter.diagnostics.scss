@@ -1,39 +1,67 @@
-@import '../../../scss/utils';
+@import "../../../scss/utils";
 
 .serviceCenterDiagnostics {
-    background: #1564FD;
-    @include adaptive-value-byX('padding-top', 120, 110, 1920, 1440);
-    @include adaptive-value-byX('padding-bottom', 120, 110, 1920, 1440);
+  padding: 120px 0;
+  background: #1564fd;
+  &__wrapper {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    grid-column: 1 / span 2;
+  }
+  &__description {
+    width: 100%;
+  }
+  @media (max-width: 1920px) {
+    @include adaptive-value-byX("padding-top", 120, 110, 1920, 1440);
+    @include adaptive-value-byX("padding-bottom", 120, 110, 1920, 1440);
+    &__title {
+      @include adaptive-value-byX("margin-bottom", 40, 30, 1920, 1440);
+    }
+  }
+  @media (max-width: 1440px) {
+    &__title {
+      margin-bottom: 30px;
+    }
+    @include adaptive-value-byX("padding-top", 110, 100, 1440, 1200);
+    @include adaptive-value-byX("padding-bottom", 110, 100, 1440, 1200);
+  }
+  @media (max-width: 1200px) {
+    @include adaptive-value-byX("padding-top", 100, 90, 1200, 860);
+    @include adaptive-value-byX("padding-bottom", 100, 90, 1200, 860);
+  }
+  @media (max-width: 1040px) {
     &__wrapper {
-        grid-column: 1 / span 12;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 30px;
-        .left {
-            grid-column: 1 / span 1;
-        }
-        .right {
-            grid-column: 2 / span 1;
-        }
+      grid-template-columns: repeat(1, 1fr);
     }
     &__title {
-        margin-bottom: 40px;
+      grid-column: 1 / span 1;
     }
-    &__description {
-        width: 100%;
+    .mb {
+      margin-bottom: 20px;
     }
-    &__items {
-        grid-column: 1 / span 12;
-        @include adaptive-value-byX('height', 202, 158, 1920, 1440);
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+  }
+  @media (max-width: 860px) {
+    @include adaptive-value-byX("padding-top", 90, 80, 860, 640);
+    @include adaptive-value-byX("padding-bottom", 90, 80, 860, 640);
+    &__wrapper {
+      grid-column: 1 / span 8;
     }
-    &__item {
-        border-left: 1px solid #4584FF;
-        border-right: 1px solid #4584FF;
-        height: 100%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+  }
+  @media (max-width: 640px) {
+    @include adaptive-value-byX("padding-top", 80, 50, 640, 320);
+    @include adaptive-value-byX("padding-bottom", 80, 50, 640, 320);
+    &__wrapper {
+      grid-column: 1 / span 6;
     }
+  }
+  @media (max-width: 320px) {
+    &__wrapper {
+      padding: 50px 0;
+    }
+  }
 }

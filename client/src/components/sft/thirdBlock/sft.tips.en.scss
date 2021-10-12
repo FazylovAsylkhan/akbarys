@@ -1,0 +1,106 @@
+.en .sourFluidTreatment__tip {
+  &-text {
+    &-0 {
+      width: 190px;
+      left: 162px;
+    }
+    &-1 {
+      width: 157px;
+      left: 137px;
+    }
+    &-2 {
+      width: 173px;
+    }
+    &-3 {
+      width: 227px;
+    }
+    &-5 {
+      width: 218px;
+    }
+    &-6 {
+      width: 170px;
+      left: 126.5px;
+    }
+    &-7 {
+      width: 176px;
+    }
+    @media (max-width: 1920px) {
+      &-6 {
+        @include adaptive-value-byX("width", 170, 162, 1920, 1440);
+        @include adaptive-value-byX("left", 126.5, 88.5, 1920, 1441);
+      }
+      &-7 {
+        @include adaptive-value-byX("width", 176, 165, 1920, 1440);
+      }
+      &-0 {
+        @include adaptive-value-byX("width", 190, 181, 1920, 1440);
+        @include adaptive-value-byX("left", 162, 52, 1920, 1441);
+      }
+      &-1 {
+        @include adaptive-value-byX("width", 157, 150, 1920, 1440);
+        @include adaptive-value-byX("left", 137, 44, 1920, 1441);
+      }
+      &-2 {
+        @include adaptive-value-byX("width", 173, 163, 1920, 1440);
+      }
+      &-3 {
+        @include adaptive-value-byX("width", 227, 210, 1920, 1440);
+      }
+      &-5 {
+        @include adaptive-value-byX("width", 218, 206, 1920, 1440);
+      }
+    }
+    @media (max-width: 1440px) {
+      &-0 {
+        width: 181px;
+        @include adaptive-value-byX("left", 85, 27, 1440, 1201);
+      }
+      &-1 {
+        width: 150px;
+        @include adaptive-value-byX("left", 74, 24, 1440, 1201);
+      }
+      &-2 {
+        width: 163px;
+      }
+      &-3 {
+        width: 210px;
+      }
+      &-5 {
+        width: 206px;
+      }
+      &-6 {
+        width: 162px;
+        @include adaptive-value-byX("left", 64.5, 13.5, 1440, 1201);
+      }
+      &-7 {
+        width: 165px;
+      }
+    }
+    @media (max-width: 1200px) {
+      &-0 {
+        width: 142px;
+        @include adaptive-value-byX("left", 93, 50, 1200, 1040);
+      }
+      &-1 {
+        width: 117px;
+        @include adaptive-value-byX("left", 77, 42, 1200, 1040);
+      }
+      &-2 {
+        width: 130px;
+      }
+      &-3 {
+        width: 167px;
+      }
+      &-5 {
+        width: 181px;
+      }
+      &-6 {
+        width: 126px;
+        @include adaptive-value-byX("left", 71.5, 36, 1200, 1040);
+      }
+      &-7 {
+        width: 128px;
+      }
+    }
+  }
+}
