@@ -63,13 +63,13 @@ async function handlerSubmit(uriState: string) {
         body: JSON.stringify({
           bccEmailAddresses: [],
           ccEmailAddresses: [],
-          toEmailAddresses: ['fazylov.asylkhan@gmail.com'],
+          toEmailAddresses: ['hr@akbarys.kz', 'fazylov.asylkhan@gmail.com'],
           bodyData: formData,
           bodyCharset: 'UTF-8',
           subjectdata: getSubjectData(formData.name),
           subjectCharset: 'UTF-8',
           sourceEmail: 'web@akbarys.kz',
-          replyToAddresses: ['fazylov.asylkhan@gmail.com'],
+          replyToAddresses: ['hr@akbarys.kz', 'fazylov.asylkhan@gmail.com'],
         }),
       },
     );

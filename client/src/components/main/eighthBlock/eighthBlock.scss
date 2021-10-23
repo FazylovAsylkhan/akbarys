@@ -1,4 +1,7 @@
 .career {
+  .screen__body {
+    height: 110%;
+  }
   &__wrapper {
     opacity: 0;
     margin-top: 282px;
@@ -15,6 +18,9 @@
     &-description {
       margin-top: 10px;
     }
+  }
+  .screen__body {
+    bottom: -2px;
   }
   @media (max-width: 1920px) {
     &__wrapper {

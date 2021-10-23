@@ -4,6 +4,7 @@ contentPost:
     lang: ru,
     url: system-ashyq,
     title: Система Ashyq,
+    postNumber: "third",
     seo: {
       title: "Пост: Система Ashyq",
       h1: "Система Ashyq",

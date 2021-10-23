@@ -129,10 +129,10 @@ const IndexPage = (props: any) => {
         <MainAkbarys content={firstBlock} />
       </SwiperSlide>
       <SwiperSlide className="page__screen screen">
-        <SecondBlock content={secondBlock} />
+        <ThirdBlock content={secondBlock} />
       </SwiperSlide>
       <SwiperSlide className="page__screen screen">
-        <ThirdBlock content={thirdBlock} />
+        <SecondBlock content={thirdBlock} />
       </SwiperSlide>
       <SwiperSlide className="page__screen screen">
         <FourthBlock content={fourthBlock} />

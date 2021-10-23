@@ -58,27 +58,33 @@
     "certificates": [
       {
         "title": "Best KPO Contractor",
-        "description": "Best HSE Contractor 2018, KPO B.V. Award"
+        "description": "Best HSE Contractor 2018, KPO B.V. Award",
+        "images": ["../../images/aboutUs/certificates/item-1.jpg"]
       },
       {
         "title": "HSE Annual Award",
-        "description": "KPO B.V. Award for 2017"
+        "description": "KPO B.V. Award for 2017",
+        "images": ["../../images/aboutUs/certificates/item-2.jpg"]
       },
       {
         "title": "PARYZ 2016 Winner",
-        "description": "Awarded as «Best HSE Company»"
+        "description": "Awarded as «Best HSE Company»",
+        "images": ["../../images/aboutUs/certificates/item-3.jpg"]
       },
       {
         "title": "Certificate of Confidence",
-        "description": "«Certificate of Confidence» for HSE compliance."
+        "description": "«Certificate of Confidence» for HSE compliance.",
+        "images": ["../../images/aboutUs/certificates/item-4.jpg"]
       },
       {
         "title": "Best KPO B.V. Contractor",
-        "description": "Best HSE Contractor 2016, KPO B.V. Award"
+        "description": "Best HSE Contractor 2016, KPO B.V. Award",
+        "images": ["../../images/aboutUs/certificates/item-5.jpg"]
       },
       {
         "title": "Best Score in 2015",
-        "description": "Best HSE contractor performance in 2015"
+        "description": "Best HSE contractor performance in 2015",
+        "images": ["../../images/aboutUs/certificates/item-6.jpg"]
       }
     ],
     "btnText": ["Expand the list", "Hide the list"]

@@ -8,6 +8,7 @@ contentPost:
       title: "Пост: Вакцинируйся",
       h1: "Вакцинируйся, выйгрывай ценные призы",
     },
+    postNumber: "second",
     langButtonsLinks:
       [
         "/press-center/lottery-winner",

@@ -11,7 +11,7 @@ function getSubjectData(name: string) {
   const dd = String(today.getDate()).padStart(2, '0');
   const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
   const yyyy = today.getFullYear();
-  const currentDate = `${mm}/${dd}/${yyyy}`;
+  const currentDate = `${dd}/${mm}/${yyyy}`;
 
   const hour = today.getHours() > 12
     ? today.getHours() - 12
@@ -53,13 +53,13 @@ async function handlerSubmit() {
         body: JSON.stringify({
           bccEmailAddresses: [],
           ccEmailAddresses: [],
-          toEmailAddresses: ['fazylov.asylkhan@gmail.com'],
+          toEmailAddresses: ['hr@akbarys.kz', 'fazylov.asylkhan@gmail.com'],
           bodyData: formData,
           bodyCharset: 'UTF-8',
           subjectdata: getSubjectData(formData.name),
           subjectCharset: 'UTF-8',
           sourceEmail: 'web@akbarys.kz',
-          replyToAddresses: ['fazylov.asylkhan@gmail.com'],
+          replyToAddresses: ['hr@akbarys.kz', 'fazylov.asylkhan@gmail.com'],
         }),
       },
     );

@@ -114,6 +114,7 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
     const isMain = currentPage === 'ru'
       || currentPage === ''
       || currentPage === 'kz'
+      || currentPage === 'test-main'
       || currentPage === 'en';
 
     if (!isMain) {

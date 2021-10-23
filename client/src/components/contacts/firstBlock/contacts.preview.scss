@@ -3,7 +3,7 @@
 .contactsPreview {
   position: relative;
   height: 800px;
-  padding-top: 429px;
+  padding-top: 600px;
   &__wrapper {
     grid-column: 1 / span 12;
     width: fit-content;
@@ -28,21 +28,21 @@
     height: 100%;
   }
   @media (max-width: 1920px) {
-    @include adaptive-value-byX("padding-top", 429, 374, 1920, 1440);
+    @include adaptive-value-byX("padding-top", 600, 530, 1920, 1440);
     @include adaptive-value-byX("height", 800, 680, 1920, 1440);
     &__title-description {
       @include adaptive-value-byX("margin-top", 30, 20, 1920, 1440);
     }
   }
   @media (max-width: 1440px) {
-    @include adaptive-value-byX("padding-top", 374, 344, 1440, 1200);
+    @include adaptive-value-byX("padding-top", 530, 455, 1440, 1200);
     @include adaptive-value-byX("height", 680, 600, 1440, 1200);
     &__title-description {
       margin-top: 20px;
     }
   }
   @media (max-width: 1200px) {
-    @include adaptive-value-byX("padding-top", 344, 787, 1200, 860);
+    @include adaptive-value-byX("padding-top", 455, 787, 1200, 860);
     @include adaptive-value-byX("height", 600, 950, 1200, 860);
   }
   @media (max-width: 1040px) {

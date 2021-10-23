@@ -1,15 +1,15 @@
-import * as React from "react"
-import { FC } from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
+import * as React from 'react';
+import { FC } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import SwiperCore, { EffectFade, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   initNav,
   showPagination,
   validationNav,
-} from "../../../utils/mainUtils"
-import "./verificationLaboratory.development.scss"
-import id from "../../../utils/randomId"
+} from '../../../utils/mainUtils';
+import './verificationLaboratory.development.scss';
+import id from '../../../utils/randomId';
 
 interface LaboratoryDevelopmentProps {
   content: any
@@ -18,8 +18,8 @@ interface LaboratoryDevelopmentProps {
 const VerificationLaboratoryDevelopment: FC<LaboratoryDevelopmentProps> = ({
   content,
 }) => {
-  const { title, description, images } = content
-  SwiperCore.use([Pagination, Navigation, EffectFade])
+  const { title, description, images } = content;
+  SwiperCore.use([Pagination, Navigation, EffectFade]);
   return (
     <div className="verificationLaboratoryDevelopment">
       <div className="container">
@@ -39,22 +39,22 @@ const VerificationLaboratoryDevelopment: FC<LaboratoryDevelopmentProps> = ({
             }}
             pagination={{
               clickable: true,
-              type: "fraction",
+              type: 'fraction',
             }}
             navigation
             effect="fade"
-            onAfterInit={swiper => {
-              initNav(swiper, "verificationLaboratoryDevelopment")
-              showPagination(swiper)
-              validationNav(swiper)
+            onAfterInit={(swiper) => {
+              initNav(swiper, 'verificationLaboratoryDevelopment');
+              showPagination(swiper);
+              validationNav(swiper);
             }}
-            onSlideChange={swiper => {
-              validationNav(swiper)
-              showPagination(swiper)
+            onSlideChange={(swiper) => {
+              validationNav(swiper);
+              showPagination(swiper);
             }}
           >
             {images.map((image: any) => {
-              const img = getImage(image)
+              const img = getImage(image);
               return (
                 <SwiperSlide
                   key={id()}
@@ -68,14 +68,14 @@ const VerificationLaboratoryDevelopment: FC<LaboratoryDevelopmentProps> = ({
                     />
                   ) : null}
                 </SwiperSlide>
-              )
+              );
             })}
           </Swiper>
         </div>
       </div>
       <div className="line"></div>
     </div>
-  )
-}
+  );
+};
 
-export default VerificationLaboratoryDevelopment
+export default VerificationLaboratoryDevelopment;

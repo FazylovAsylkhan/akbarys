@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './pressCenter.news.scss';
 import { FC } from 'react';
+import id from '../../../utils/randomId';
 
 interface PressCenterNewsProps {
   content: any
@@ -19,29 +20,41 @@ const PressCenterNews: FC<PressCenterNewsProps> = ({ content }) => {
           <div className="pressCenterNews__cards">
             {(news as any[]).map((post) => {
               const {
-                url, image, description,
+                url, image, description, postNumber,
               } = post.frontmatter.contentPost;
               const img = getImage(image);
               return (
-                <div key={post.id} className="pressCenterNews__card">
+                <div
+                  key={id()}
+                  className={`pressCenterNews__card ${postNumber}`}
+                >
                   <div className="pressCenterNews__card-head">
-                    {img ? <GatsbyImage image={img} alt={post.title} /> : ''}
+                    {img ? (
+                      <GatsbyImage
+                        className="pressCenterNews__card-head-img"
+                        image={img}
+                        alt={post.frontmatter.contentPost.title}
+                      />
+                    ) : (
+                      ''
+                    )}
+                    <div className="background"></div>
                   </div>
                   <div className="pressCenterNews__card-body">
-                    <h3 className="pressCenterNews__card-title text-11 black">
+                    <h3 className="pressCenterNews__card-title text-3 white">
                       <span
                         style={{ cursor: 'pointer' }}
                         onClick={() => navigate(`/press-center/${url}`)}
                       >
-                        {post.title}
+                        {post.frontmatter.contentPost.title}
                       </span>
                     </h3>
-                    <p className="pressCenterNews__card-description text-1 gray">
+                    <p className="pressCenterNews__card-description text-6 white">
                       {description}
                     </p>
 
                     <span
-                      className="pressCenterNews__card-button blue"
+                      className="pressCenterNews__card-button button white"
                       style={{ cursor: 'pointer' }}
                       onClick={() => navigate(`/press-center/${url}`)}
                     >

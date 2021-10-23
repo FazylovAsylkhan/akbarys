@@ -8,6 +8,7 @@ contentPost:
       title: "Post: Get vaccinated",
       h1: "Get vaccinated and win valuable prizes",
     },
+    postNumber: "second",
     langButtonsLinks:
       [
         "/press-center/lottery-winner",

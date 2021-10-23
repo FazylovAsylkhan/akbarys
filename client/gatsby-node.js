@@ -81,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-
+  
   // Create Main Page
   data.allPageMainJson.nodes.forEach(node => {
     const { url, lang } = node

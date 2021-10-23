@@ -8,6 +8,7 @@ contentPost:
       title: "Post: Екпе ал",
       h1: "Екпе алып, бағалы сыйлықтарға ие болыңыз",
     },
+    postNumber: "second",
     langButtonsLinks:
       [
         "/press-center/lottery-winner",

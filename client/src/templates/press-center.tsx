@@ -56,6 +56,7 @@ export const query = graphql`
         frontmatter {
           contentPost {
             url
+            postNumber
             title
             description
             date

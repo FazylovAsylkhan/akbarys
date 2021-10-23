@@ -115,6 +115,15 @@ export const query = graphql`
         certificates {
           title
           description
+          images {
+            childImageSharp {
+              gatsbyImageData(
+                formats: [AVIF, WEBP, JPG]
+                placeholder: DOMINANT_COLOR
+                quality: 90
+              )
+            }
+          }
         }
         btnText
       }

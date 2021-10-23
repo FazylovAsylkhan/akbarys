@@ -3,7 +3,7 @@
 .verificationLaboratoryPreview {
   position: relative;
   height: 800px;
-  padding-top: 291px;
+  padding-top: 425px;
   &__wrapper {
     z-index: 2;
     position: relative;
@@ -39,14 +39,14 @@
     margin-top: 60px;
   }
   @media (max-width: 1920px) {
-    @include adaptive-value-byX("padding-top", 291, 267, 1920, 1440);
+    @include adaptive-value-byX("padding-top", 480, 430, 1920, 1440);
     @include adaptive-value-byX("height", 800, 680, 1920, 1440);
     &__box {
       @include adaptive-value-byX("margin-top", 60, 30, 1920, 1440);
     }
   }
   @media (max-width: 1440px) {
-    @include adaptive-value-byX("padding-top", 267, 227, 1440, 1200);
+    @include adaptive-value-byX("padding-top", 430, 227, 1440, 1200);
     @include adaptive-value-byX("height", 680, 600, 1440, 1200);
     &__box {
       margin-top: 30px;
@@ -56,7 +56,7 @@
     }
   }
   @media (max-width: 1200px) {
-    @include adaptive-value-byX("padding-top", 227, 672, 1200, 860);
+    @include adaptive-value-byX("padding-top", 360, 480, 1200, 860);
     @include adaptive-value-byX("height", 600, 950, 1200, 860);
     &__box {
       @include adaptive-value-byX("margin-top", 30, 40, 1200, 1075);
@@ -88,7 +88,7 @@
     padding-top: calc(((896 * (610 / 1140)) / 896) * 100vh);
   }
   @media (max-width: 640px) {
-    @include adaptive-value-byX("padding-top", 672, 405, 640, 320);
+    @include adaptive-value-byX("padding-top", 672, 420, 640, 320);
     @include adaptive-value-byX("height", 950, 580, 640, 320);
     &__subtitle {
       grid-template-columns: 135px 185px;
@@ -108,7 +108,7 @@
     }
   }
   @media (max-width: 320px) {
-    padding-top: 288px;
+    padding-top: 420px;
     height: 580px;
     &__box {
       margin-top: 20px;

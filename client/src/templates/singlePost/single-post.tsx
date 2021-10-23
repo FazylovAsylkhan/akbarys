@@ -14,7 +14,7 @@ const SinglePost = (props: any) => {
     footer: props.data.footerJson,
   };
   const {
-    seo, title, date, imagePreview, langButtonsLinks,
+    seo, title, date, imagePreview, langButtonsLinks, postNumber,
   } = props.data.markdownRemark.frontmatter.contentPost;
   const img = getImage(imagePreview);
   React.useEffect(() => {
@@ -37,7 +37,7 @@ const SinglePost = (props: any) => {
           defer={true}
         ></script>
       </Helmet>
-      <div className="singlePost preview">
+      <div className={`singlePost preview ${postNumber}`}>
         <div className="singlePost__background">
           {img ? (
             <GatsbyImage
@@ -75,8 +75,10 @@ const SinglePost = (props: any) => {
 export default SinglePost;
 
 export const query = graphql`
-  query PostQuery($url: String $lang: String) {
-    markdownRemark(frontmatter: { contentPost: {lang: {eq: $lang}, url: { eq: $url }}}) {
+  query PostQuery($url: String, $lang: String) {
+    markdownRemark(
+      frontmatter: { contentPost: { lang: { eq: $lang }, url: { eq: $url } } }
+    ) {
       frontmatter {
         contentPost {
           seo {
@@ -86,6 +88,7 @@ export const query = graphql`
           langButtonsLinks
           title
           url
+          postNumber
           date
           imagePreview {
             childImageSharp {

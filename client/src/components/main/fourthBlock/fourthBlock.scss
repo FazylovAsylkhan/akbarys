@@ -120,7 +120,7 @@
       &-box {
         padding-top: calc((20 / 720) * 100vh);
         padding-left: calc((30 / 1200) * 100vw);
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         width: 480px;
       }
       &-description {
@@ -150,6 +150,7 @@
         width: 100%;
         padding: 0;
         position: static;
+        box-shadow: none;
       }
       &-description {
         margin-top: calc((20 / 1200) * 100vh);

@@ -8,6 +8,7 @@ contentPost:
       title: "Пост: Akbarys H2S service 2021 таныстырылымы",
       h1: "Akbarys H2S service 2021 таныстырылымы",
     },
+    postNumber: "first",
     langButtonsLinks:
       [
         "/press-center/akbarys-in-orenburg",

@@ -57,27 +57,33 @@
     "certificates": [
       {
         "title": "Лучший Подрядчик КПО",
-        "description": "Награда Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2018"
+        "description": "Награда Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2018",
+        "images": ["../../images/aboutUs/certificates/item-1.jpg"]
       },
       {
         "title": "Ежегодная премия HSE",
-        "description": "Награда KPO B. V. за заслуги 2017"
+        "description": "Награда KPO B. V. за заслуги 2017",
+        "images": ["../../images/aboutUs/certificates/item-2.jpg"]
       },
       {
         "title": "Лауреат ПАРЫЗ-2016",
-        "description": "Награда в номинации «Лучшее предприятие в области охраны труда и техники безопасности»"
+        "description": "Награда в номинации «Лучшее предприятие в области охраны труда и техники безопасности»",
+        "images": ["../../images/aboutUs/certificates/item-3.jpg", "../../images/aboutUs/certificates/item-4.jpg"]
       },
       {
         "title": "Сертификат доверия",
-        "description": "“Сертификатом доверия” о соблюдении требований охраны труда работников."
+        "description": "“Сертификатом доверия” о соблюдении требований охраны труда работников.",
+        "images": ["../../images/aboutUs/certificates/item-5.jpg"]
       },
       {
         "title": "Лучший Подрядчик KPO B. V.",
-        "description": "Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2016г"
+        "description": "Лучший Подрядчик KPO B. V. в области ОТ, ТБ и ООС за 2016г",
+        "images": ["../../images/aboutUs/certificates/item-6.jpg"]
       },
       {
         "title": "Лучший показатель 2015",
-        "description": "Лучший показатель 2015 года в области ОТ, ТБ и ООС среди подрядных организаций"
+        "description": "Лучший показатель 2015 года в области ОТ, ТБ и ООС среди подрядных организаций",
+        "images": ["../../images/aboutUs/certificates/item-7.jpg"]
       }
     ],
     "btnText": ["Раскрыть список", "Скрыть список"]

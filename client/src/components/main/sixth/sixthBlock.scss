@@ -1,4 +1,7 @@
 .mainDevelopment {
+  .screen__body {
+    top: 2px;
+  }
   &__wrapper {
     margin-top: 280px;
     grid-column: 1 / span 12;

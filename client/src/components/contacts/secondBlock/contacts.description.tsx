@@ -13,11 +13,11 @@ const ContactsDescription: FC<ContactsPreviewProps> = ({ content }) => {
   const { contacts } = content;
   const getContactElement = (contact: any, index: number) => (
       <div className="contactsDescription__item" key={id()}>
-        {index ? (
+        {/* {index ? (
           <Img2 className="contactsDescription__image" />
         ) : (
           <Img1 className="contactsDescription__image" />
-        )}
+        )} */}
 
         <div className="contactsDescription__content">
           <h2 className="contactsDescription__title title-3 black">

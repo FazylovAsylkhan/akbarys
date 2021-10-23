@@ -82,11 +82,13 @@
     "certificates": [
       {
         "title": "Verification laboratory accreditation",
-        "description": "The verification laboratory is accredited for compliance with GOST ISO/IEC 17025-2019"
+        "description": "The verification laboratory is accredited for compliance with GOST ISO/IEC 17025-2019",
+        "images": ["../../images/verificationLaboratory/PL.jpg"]
       },
       {
         "title": "Calibration laboratory accreditation",
-        "description": "Calibration laboratory is accredited for compliance with GOST ISO/IEC 17025-2019"
+        "description": "Calibration laboratory is accredited for compliance with GOST ISO/IEC 17025-2019",
+        "images": ["../../images/verificationLaboratory/KL.jpg"]
       }
     ]
   }

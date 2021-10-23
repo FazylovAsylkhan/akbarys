@@ -1,16 +1,32 @@
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import { FC, useEffect } from 'react';
 
 import EyeImg from '../../../data/images/eye.svg';
-
-import certificate1 from '../../../static/eiikqegw.pdf';
-import certificate2 from '../../../static/wmssygkj.pdf';
+import id from '../../../utils/randomId';
 
 import './verificationLaboratory.achievements.scss';
 
-function openCertificate(id: string) {
-  const link = document.getElementById(id) as HTMLLinkElement;
-  link.click();
+function disableScroll() {
+  const { body } = document;
+  const headers = document.querySelectorAll('header');
+  headers.forEach((header) => header.classList.add('achievments-disable'));
+  const pagePosition = window.scrollY;
+  body.classList.add('disable-scroll');
+  body.dataset.position = String(pagePosition);
+  body.style.top = `${-pagePosition}px`;
+}
+function enableScroll() {
+  const { body } = document;
+  const headers = document.querySelectorAll('header');
+  headers.forEach((header) => header.classList.remove('achievments-disable'));
+  const pagePosition = body.dataset.position
+    ? parseInt(body.dataset.position, 10)
+    : 0;
+  body.style.top = 'auto';
+  body.classList.remove('disable-scroll');
+  window.scroll({ top: pagePosition, left: 0 });
+  body.removeAttribute('data-position');
 }
 
 interface LaboratoryProps {
@@ -41,6 +57,17 @@ const VerificationLaboratoryAchievements: FC<LaboratoryProps> = ({
       }
     });
   }, []);
+
+  const openModalWindow = (n: number) => {
+    disableScroll();
+    const window = document.querySelectorAll('.verificationLaboratoryAchievements__window')[n];
+    window.classList.add('active');
+  };
+  const closeModalWindow = (n: number) => {
+    const window = document.querySelectorAll('.verificationLaboratoryAchievements__window')[n];
+    window.classList.remove('active');
+    enableScroll();
+  };
   return (
     <div className="verificationLaboratoryAchievements ">
       <div className="container">
@@ -55,55 +82,64 @@ const VerificationLaboratoryAchievements: FC<LaboratoryProps> = ({
           </div>
 
           <div className="verificationLaboratoryAchievements__items">
-            <div
-              className="verificationLaboratoryAchievements__item"
-              onClick={() => openCertificate('certificate1')}
-            >
-              <a
-                href={certificate1}
-                target="_blank"
-                rel="noreferrer"
-                id="certificate1"
-                style={{ display: 'block' }}
-                className="verificationLaboratoryAchievements__item-link text-6 gray"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {certificates[0].title}
-              </a>
-              <span
-                className="verificationLaboratoryAchievements__item-description text-1"
-                style={{ color: '#C4C4C4' }}
-              >
-                {certificates[0].description}
-              </span>
-              <EyeImg className="verificationLaboratoryAchievements__item-img" />
-            </div>
-            <div
-              className="verificationLaboratoryAchievements__item"
-              onClick={() => openCertificate('certificate2')}
-            >
-              <a
-                href={certificate2}
-                target="_blank"
-                rel="noreferrer"
-                id="certificate2"
-                style={{ display: 'block' }}
-                className="verificationLaboratoryAchievements__item-link text-6 gray"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {certificates[1].title}
-              </a>
-              <span
-                className="verificationLaboratoryAchievements__item-description text-1"
-                style={{ color: '#C4C4C4' }}
-              >
-                {certificates[1].description}
-              </span>
-              <EyeImg className="verificationLaboratoryAchievements__item-img" />
-            </div>
+            {certificates.map((certificate: any, index: number) => (
+                <div
+                  className="verificationLaboratoryAchievements__item"
+                  onClick={() => openModalWindow(index)}
+                  key={id()}
+                >
+                  <span
+                    style={{ display: 'block' }}
+                    className="verificationLaboratoryAchievements__item-link text-6 gray"
+                  >
+                    {certificate.title}
+                  </span>
+                  <span
+                    className="verificationLaboratoryAchievements__item-description text-1"
+                    style={{ color: '#C4C4C4' }}
+                  >
+                    {certificate.description}
+                  </span>
+                  <EyeImg className="verificationLaboratoryAchievements__item-img" />
+                </div>
+            ))}
           </div>
         </div>
       </div>
+      {certificates.map((certificate: any, index: number) => (
+          <div className="verificationLaboratoryAchievements__window" key={id()}>
+            <div className="verificationLaboratoryAchievements__window-content">
+              <h2 className="verificationLaboratoryAchievements__window-title text-3 white">
+                {certificate.title}
+              </h2>
+              <button
+                className="verificationLaboratoryAchievements__window-button"
+                onClick={() => closeModalWindow(index)}
+              >
+                <span className="cross-line"></span>
+                <span className="cross-line"></span>
+              </button>
+              <div className="verificationLaboratoryAchievements__window-inner">
+                {certificate.images.map((image: any) => {
+                  const img = getImage(image);
+                  if (img) {
+                    return (
+                      <GatsbyImage
+                        className="verificationLaboratoryAchievements__window-image"
+                        image={img}
+                        alt={certificate.title}
+                        key={id()}
+                      />
+                    );
+                  }
+                })}
+              </div>
+              <p className="verificationLaboratoryAchievements__window-description text-1 black">
+                {certificate.description}
+              </p>
+            </div>
+          </div>
+      ))}
       <div className="line"></div>
     </div>
   );

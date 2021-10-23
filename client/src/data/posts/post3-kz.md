@@ -5,6 +5,7 @@ contentPost:
     url: system-ashyq/kz,
     title: Ashyq жүйесі,
     seo: { title: "Post: Ashyq жүйесі", h1: "Ashyq жүйесі" },
+    postNumber: "third",
     langButtonsLinks:
       [
         "/press-center/system-ashyq",
