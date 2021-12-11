@@ -125,6 +125,7 @@ export const query = graphql`
     footerJson(lang: { eq: $lang }) {
       lang
       description
+      logoLink
       politics {
         links {
           text

@@ -35,6 +35,12 @@ const H2sGasDetectionSystem: FC<H2sGasDetectionSystemProps> = ({ content }) => {
           <p className="H2sGasDetectionSystem__content-text text-1 gray">
             {descriptions[0]}
           </p>
+          <p className="H2sGasDetectionSystem__content-text mt text-1 gray">
+            {descriptions[1]}
+          </p>
+          <p className="H2sGasDetectionSystem__content-text mt text-1 gray">
+            {descriptions[2]}
+          </p>
           <div className="H2sGasDetectionSystem__content-illustration">
             {img2 ? (
               <GatsbyImage
@@ -61,12 +67,6 @@ const H2sGasDetectionSystem: FC<H2sGasDetectionSystemProps> = ({ content }) => {
             ) : null}
           </div>
 
-          <p className="H2sGasDetectionSystem__content-text mt text-1 gray">
-            {descriptions[1]}
-          </p>
-          <p className="H2sGasDetectionSystem__content-text mt text-1 gray">
-            {descriptions[2]}
-          </p>
           <ul className="H2sGasDetectionSystem__content-text mt text-1 gray">
             {descriptions[3]}
             <li>{descriptions[4]}</li>

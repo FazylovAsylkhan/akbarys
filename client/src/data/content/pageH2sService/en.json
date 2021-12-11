@@ -9,8 +9,8 @@
   "firstBlock": {
     "title": "Comprehensive safety solutions in petroleum industry",
     "subtitles": [
-      { "digit": "15", "text": "Years in business" },
-      { "digit": "67", "text": "Projects completed" }
+      { "digit": "15", "text": "years in business" },
+      { "digit": "67", "text": "projects completed" }
     ],
     "image": "../../images/h2s/preview.jpg"
   },
@@ -18,25 +18,25 @@
     "first": {
       "title": "Years of experience ",
       "subtitle": "Since our foundation, we have become one of the leading and effective service providers in hydrogen sulfide safety.",
-      "description": "We see a future in which technology can help all personnel in dangerous and life-threatening situations return home safely to their families. We will develop our strengths in the core market and expand into new industries that need our industrial safety technology, experience and expertise."
+      "description": "We see a future in which technology will help people in dangerous and life-threatening circumstances return home safely to their families. We are building up our strengths in the core market and heading to new industries. We come to where our safety techs, experience and knowledge are needed."
     },
     "second": {
       "title": "Wide range of gas safety services",
-      "description1": "Akbarys Group is a leading provider of gas safety services in the CIS and neighboring countries.",
-      "description2": "Our experience covers a wide range of operations related to high concentrations of H2S and the most common toxic gases such as SO2, CO, CO2 and CH4."
+      "description1": "QHSE-Akbarys is a leading provider of gas safety services in the CIS and neighboring countries.",
+      "description2": "Our experience covers a great range of operations related to high concentrations of H2S and the most common toxic gases such as SO2, CO, CO2 and CH4."
     }
   },
   "thirdBlock": {
     "title": "Gas detection system",
     "descriptions": [
-      "Because of the high H2S levels detected when drilling, testing, performing workover and production operations, hydrogen sulfide is a serious problem in the oil and gas industry.",
-      "We are professionals in the early detection of common toxic and explosive gases encountered at petroleum facilities including H2S, SO2, CO, CO2 and CH4. Our advanced gas detection systems provide early gas detection, public address and data collection by recording on all gas detection devices.",
-      "When working in a toxic gas environment, the use of gas detection systems is a vital precaution. Gas detection systems focus on early warning of low gas concentrations in the air, allowing site personnel to react immediately and leave the hazardous area before gas concentrations reach lethal levels.",
-      "Akbarys gas detection system includes 3 types of solutions:",
+      "Hydrogen sulfide is a challenge in the oil and gas industry because of the its high concentration found upon drilling, testing, workover and production operations.",
+      "We are professionals in the early detection of the most common toxic and explosive gases. In other words, the substances being encountered at hazardous facilities in the oil and gas industry, including H2S, SO2, CO, CO2 and CH4. Our advanced systems provide early gas detection, public address and data collection by recording on all specific devices.",
+      "When working in a toxic chemical environment, the use of gas detection systems is a vital precaution. This equipment is focused on early warning of low gas concentrations in the air. It allows site personnel to response immediately and leave the hazardous area before the concentration of the substance turns lethal.",
+      "QHSE-Akbarys gas detection system includes 3 types of solutions:",
       "Stationary wireless gas detection systems",
       "Portable multi-gas analyzers",
       "Personal gas analyzers",
-      "When working with very high gas concentrations or when working in harsh environments with very low oxygen levels, gas sampling pumps with tubes for a wide range of gases can be used."
+      "When dealing with extreme gas concentrations or in harsh environment with low oxygen levels, sampling pumps with tubes for a wide range of toxic substances can be used."
     ],
     "images": [
       "../../images/h2s/gasDetectionSystem.png",
@@ -48,8 +48,8 @@
   "fourthBlock": {
     "title": "ISO standards",
     "descriptions": [
-      "Over last 10 years the company has been successfully maintaining international standards such as ISO 9001 for quality management system, ISO 45001 for health and safety management system and ISO 14001 for environmental management system.",
-      "We make continuous efforts to improve integrated environmental management and reduce emissions, effectively managing and controlling major environmental risks."
+      "Over last 10 years the company has been successfully maintaining international standards such as ISO 9001 for quality management systems, ISO 45001 for health and safety management systems and ISO 14001 for environmental management systems.",
+      "We are constantly improving our integrated environmental management. We are keeping an eye on emission reduction. Effectively managing and controlling major environmental risks."
     ]
   },
   "fivthBlock": {
@@ -58,7 +58,7 @@
         "title": "H2S training",
         "subtitle": "Integrated gas safety",
         "image": "../../images/h2s/h2s-img-1.jpg",
-        "description": "The purpose is to provide information about the hydrogen sulfide properties and hazards, effects on human, as well as on the use of respiratory protection when exposed to this gas"
+        "description": "The purpose is to provide information about the hydrogen sulfide properties and hazards, effects on human, as well as on the use of respiratory protection."
       },
       {
         "title": "Practical use of RPE",
@@ -70,7 +70,7 @@
         "title": "Drills",
         "subtitle": "Integrated gas safety",
         "image": "../../images/h2s/h2s-img-3.jpg",
-        "description": "Conducting drills with staff to work out practical skills in using RPE if an emergency occurs. Drills are held as per the approved schedule."
+        "description": "Personnel need to learn how to use PPE in an emergency situation. For this purpose, drills are conducted according to the approved schedule."
       },
       {
         "title": "Audits and inspections",

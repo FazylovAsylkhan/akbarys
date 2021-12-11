@@ -11,7 +11,7 @@ const SftDescription: FC<SftDescriptionProps> = ({ content }) => {
   const { first, second } = content;
   const getStagesElements = (number: number) => (
       <h3 className="sftDescription__item" key={id()}>
-        <span className="sftDescription__digit text-12 black">{`0${number}`}</span>
+        <span className="sftDescription__digit text-12 black">{`${number}`}</span>
         <span className="sftDescription__digit-description text-7 black">
           {second.stages[number - 1]}
         </span>

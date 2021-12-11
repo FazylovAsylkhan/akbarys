@@ -9,19 +9,19 @@
     "firstBlock": {
       "title": "H2S neutralization in petroleum production",
       "subtitles": [
-        { "digit": "25", "description": "Tons of H2S neutralized" },
-        { "digit": "59", "description": "Projects implemented" }
+        { "digit": "25", "description": "tons of H2S neutralized" },
+        { "digit": "59", "description": "projects implemented" }
       ],
       "image": "../../images/sft/preview.jpg"
     },
     "secondBlock": {
       "first": {
         "title": "Odorless, emission-free ",
-        "subtitle": "Akbarys offers solutions to neutralize hydrogen sulfide by providing a closed-loop storage and treatment system for produced water."
+        "subtitle": "QHSE-Akbarys offers solutions to neutralize hydrogen sulfide by providing a closed-loop storage and treatment system for produced water."
       },
       "second": {
         "title": "We ensure safety",
-        "description": "Akbarys is based on a systematic approach to safety ",
+        "description": "QHSE-Akbarys is based on a systematic approach to ensure safety.",
         "stages": [
           "No emissions and no odors ",
           "Small footprint ",
@@ -34,9 +34,9 @@
       "first": {
         "title": "The technology involves irrigation of the gas stream with special solutions",
         "descriptions": [
-          "The method is based on irrigating off gas with target solutions to ensure maximum contact of the liquid with gas impurities and more intensive mixing of the purified gas with the foremost. As a result, the toxic gas is completely dissolved in the liquid.",
-          "When storing produced water in sealed tanks, vapors emit and come out to a vent line of the tank, the line in turn goes to a scrubber, where hydrogen sulfide is neutralized, and the scrubber outlet provides gas without hydrogen sulfide content.",
-          "Positive pressure is always maintained in the tanks to avoid vacuum in the tank and coming the ambient air from outside. The pressure is regularly maintained with nitrogen, thus creating a safe «nitrogen blanket» with oxygen content inside the tank."
+          "The method is based on irrigating off gas with the dedicated solutions. Toxic gas is completely dissolved in the liquid, when it is in maximum contact with associated solids and mixing is more intensive.",
+          "While storing produced water in sealed tanks, vapors escape through a vent line to the atmosphere. The line in turn goes to a scrubber, where hydrogen sulfide is neutralized. The scrubber will then produce H2S-free gas.",
+          "Positive pressure is always maintained in the tank to avoid vacuum and air entrainment. The pressure is regularly maintained with nitrogen gas, thus creating a safe «nitrogen blanket» with oxygen content inside the tank."
         ],
         "images": ["../../images/sft/sourFluidTreatment.jpg", "../../images/sft/sourFluidTreatment-2.jpg"]
       },
@@ -58,7 +58,7 @@
     "fourthBlock": {
       "title": "Legislative Requirements",
       "descriptions": [
-        "Requirements to dispose hydrogen sulfide are defined in the RoK Minister of Investment and Development Order #355 «On approving the Rules of industrial safety for hazardous facilities of petroleum industry» dated 30.12.2014..",
+        "Requirements to dispose hydrogen sulfide are defined by the RoK Minister of Investment and Development Order #355 «On approving the Rules of industrial safety for hazardous facilities of petroleum industry» dated 30.12.2014.",
         "According to regulatory documents, no harmful substances, including gases, may be released into the atmosphere without neutralization and combustion."
       ]
     },

@@ -1,6 +1,7 @@
 {
   "lang": "en",
   "description": "Leading provider of gas safety services in Kazakhstan, CIS and neighboring countries",
+  "logoLink": "/ru",
   "social": {
     "title": "We are in social media:",
     "links": ["/", "/", "/"]
@@ -10,7 +11,7 @@
     "links": [
       {
         "text": "Website designed by QLAB",
-        "url": "/"
+        "url": "https://qlab.kz/"
       },
       {
         "text": "All rights reserved",
@@ -20,7 +21,7 @@
   },
   "subMenu": [
     {
-      "title": "Decisions",
+      "title": "B2B solutions",
       "links": [
         {
           "text": "Gas safety",

@@ -4,10 +4,10 @@
   "langButtonsLinks": ["/", "/kz", "/en"],
   "seo": {
     "title": "Home",
-    "h1": "akbarys, qhse-akbarys"
+    "h1": "QHSE-AKBARYS"
   },
   "firstBlock": {
-    "title": "AKBARYS",
+    "title": "QHSE-AKBARYS ",
     "description": "Leading provider of gas safety services in Kazakhstan, CIS and neighboring countries",
     "image": "../../images/main/preview.akbarys.jpg"
   },
@@ -15,8 +15,8 @@
     "title": "Comprehensive safety solutions in petroleum industry",
     "button": { "url": "/h2s-service/en", "text": "Details" },
     "subtitles": [
-      { "digit": "15", "text": "Years in business" },
-      { "digit": "67", "text": "Projects completed" }
+      { "digit": "15", "text": "years in business" },
+      { "digit": "67", "text": "projects implemented" }
     ],
     "image": "../../images/main/preview.h2s.jpg"
   },
@@ -24,33 +24,33 @@
     "title": "H2S neutralization in petroleum production",
     "button": { "url": "/sft-service/en", "text": "Details" },
     "subtitles": [
-      { "digit": "47", "text": "Tons of H2S neutralized" },
-      { "digit": "59", "text": "Projects implemented" }
+      { "digit": "47", "text": "tons of H2S neutralized" },
+      { "digit": "59", "text": "projects implemented" }
     ],
     "image": "../../images/main/preview.sft.jpg"
   },
   "fourthBlock": {
     "title": "About us",
-    "subtitle": "Be the best, aim for success!",
-    "description": "Akbarys is a 100% Kazakh company in charge of H2S safety for personnel",
+    "subtitle": "Be the best, strive for success!",
+    "description": "QHSE-Akbarys is a 100% Kazakh company in charge of H2S safety for personnel",
     "button": { "url": "/about-us/en", "text": "Details" },
     "image": "../../images/main/about.jpg",
     "advantages": [
       {
         "digit": "15",
-        "description": "Years of success"
+        "description": "years of success"
       },
       {
-        "digit": "400 +",
-        "description": "Headcount"
+        "digit": "500+",
+        "description": "headcount"
       },
       {
-        "digit": "125 +",
-        "description": "Projects implemented"
+        "digit": "125+",
+        "description": "projects implemented"
       },
       {
-        "digit": "25M",
-        "description": "Safe man-hours"
+        "digit": "25 M",
+        "description": "man-hours"
       }
     ]
   },
@@ -59,70 +59,70 @@
     "slides": [
       {
         "title": "Tengizchevroil",
-        "description": "TCO is a Kazakhstan partnership engaged in the exploration, development, production and marketing of crude oil, liquefied petroleum gas, dry gas and sulfur",
+        "description": "TCO is a Kazakhstan partnership engaged in the exploration, development, production and marketing of crude oil, liquefied petroleum gas, dry gas and sulfur.",
         "image": "../../images/main/projects1.jpg",
         "specifications": [
           {
-            "digit": "5004",
-            "description": "LTI Days"
+            "digit": "2476",
+            "description": "WLTI"
           },
           {
             "digit": "158",
-            "description": "Person involved"
+            "description": "person involved"
           },
           {
             "digit": "18",
-            "description": "Units of equipment"
+            "description": "units of equipment"
           },
           {
-            "digit": "102000",
-            "description": "Man-hours"
+            "digit": "1,53 М",
+            "description": "man-hours"
           }
         ]
       },
       {
         "title": "Karachaganak Petroleum Operating B.V.",
-        "description": "Karachaganak is one of the world's largest oil and gas condensate fields in the West Kazakhstan Region of Kazakhstan",
+        "description": "KPO B.V. is a consortium formed to implement the Karachaganak project on developing the pertroleum industry in Kazakhstan.",
         "image": "../../images/main/projects2.jpg",
         "specifications": [
           {
-            "digit": "5006",
-            "description": "LTI Days"
+            "digit": "3661",
+            "description": "WLTI"
           },
           {
             "digit": "120",
-            "description": "Person involved"
+            "description": "person involved"
           },
           {
             "digit": "14",
-            "description": "Units of equipment"
+            "description": "units of equipment"
           },
           {
-            "digit": "92250",
-            "description": "Man-hours"
+            "digit": "1,47 М",
+            "description": "man-hours"
           }
         ]
       },
       {
         "title": "North Caspian Operating Company N.V.",
-        "description": "NCOC N.V. is the first major offshore oil-and-gas development project in Kazakhstan",
+        "description": "NCOC N.V. is one of the largest companies delivering the offshore field development.",
         "image": "../../images/main/projects3.jpg",
         "specifications": [
           {
-            "digit": "19000",
-            "description": "LTI Days"
+            "digit": "728",
+            "description": "WLTI"
           },
           {
             "digit": "65",
-            "description": "Person involved"
+            "description": "person involved"
           },
           {
             "digit": "21",
-            "description": "Units of equipment"
+            "description": "units of equipment"
           },
           {
-            "digit": "208477",
-            "description": "Man-hours"
+            "digit": "235350",
+            "description": "man-hours"
           }
         ]
       }
@@ -130,23 +130,23 @@
   },
   "sixthBlock": {
     "title": "Sustainable development",
-    "description": "Our company bases its activities on a balanced combination of the customers, employees, shareholders and community interests, while strictly complying with legal standards, introducing the latest technology and equipment, as well as following the HSE requirements",
+    "description": "Our company bases its activities on a balanced combination of the customers, employees, shareholders and community interests, while strictly complying with legal standards, introducing the latest technology and equipment, as well as following the HSE requirements.",
     "image": "../../images/main/preview.development.jpg",
     "stages": [
       {
-        "digit": "01",
+        "digit": "1",
         "description": "We are responsible for the safety of employees"
       },
       {
-        "digit": "02",
-        "description": "We take a responsible approach to the issue of ecology"
+        "digit": "2",
+        "description": "We are committed to the environment protection"
       },
       {
-        "digit": "03",
+        "digit": "3",
         "description": "We use natural resources carefully"
       },
       {
-        "digit": "04",
+        "digit": "4",
         "description": "We use only modern technologies"
       }
     ]
@@ -156,13 +156,13 @@
     "description": "The company has been forming, maintaining and appreciating the established relationships with business partners, public organizations and consumers."
   },
   "eighthBlock": {
-    "title": ["Our careers", "Be part of a great team!"],
+    "title": ["Careers in QHSE-Akbarys", "Be part of a great team!"],
     "description": "We will lead you to the goals",
     "image": "../../images/main/preview.career.jpg",
     "button": { "url": "/career/en", "text": "Details" },
     "advantage": {
-      "digit": "400+",
-      "description": "People are already in our staff"
+      "digit": "500+",
+      "description": "people are already in our staff"
     }
   }
 }

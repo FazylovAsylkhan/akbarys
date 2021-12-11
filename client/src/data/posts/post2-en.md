@@ -15,7 +15,7 @@ contentPost:
         "/press-center/lottery-winner/kz",
         "/press-center/lottery-winner/en",
       ],
-    description: Awarding valuable prizes to fully vaccinated personnel...,
+    description: Awarding valuable prizes to fully vaccinated personnel.,
     date: "August 25, 2021",
     image: ../images/posts/item-2.jpg,
     imagePreview: ../images/posts/preview-item-2.jpg,
@@ -23,5 +23,5 @@ contentPost:
 ---
 
 Awarding valuable prizes to the fully vaccinated Akbarys personnel
+We held a drawing of ten Apple iPads among QHSE-Akbarys employees with a full COVID-19 vaccination. The company supports, appreciates and encourages people who help create collective immunity. Social responsibility is not just words. Protect yourself and your beloved, get vaccinated!
 
-On 03.09.2021 we held a drawing of 10 Apple iPads among the employees with a full COVID-19 vaccination. The company supports, appreciates and encourages all their vaccinated people who help create collective immunity. Social responsibility is not just words. Protect yourself and your beloved, get vaccinated!

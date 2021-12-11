@@ -20,14 +20,14 @@
       {
         "title": "Timely maintenance guarantees reliability",
         "text": [
-          "Akbarys has a service center to perform maintenance and repairs"
+          "A service center has been organized at QHSE-Akbarys to perform periodic and emergency repairs."
         ]
       },
       {
         "title": "You are in the right hands",
         "text": [
-          "Akbarys Service Center delivers professional servicing and maintenance not only for our own equipment, but also customers' equipment. The company's personnel are certified by the equipment manufacturer",
-          "All technical tools involved in the servicing take regular inspections and maintenance as per the schedule and operating manuals."
+          "The service center of QHSE-Akbarys company professionally services its own equipment and equipment of customers. The company's employees are certified by the equipment manufacturer.",
+          "All technical means involved in the maintenance of QHSE-Akbarys undergo periodic inspection and maintenance in accordance with the PPR schedule and operational documentation."
         ]
       }
     ],
@@ -36,19 +36,19 @@
       "description": "We are servicing:",
       "items": [
         {
-          "title": "01",
+          "title": "1",
           "description": "BA <br /> sets"
         },
         {
-          "title": "02",
+          "title": "2",
           "description": "Gas detection <br /> systems"
         },
         {
-          "title": "03",
+          "title": "3",
           "description": "Air <br /> compressors "
         },
         {
-          "title": "04",
+          "title": "4",
           "description": "PA <br /> systems"
         }
       ]
@@ -57,13 +57,13 @@
   "thirdBlock": {
     "title": "Regional operations",
     "descriptions": [
-      "Company experts work both at the customer sites and in specialized laboratories located in the Kazakhstan regions.",
-      "For the most complete and rapid response to customer requests, and to reduce service time in large industrial regions, we established local service units, which allows to provide servicing and support for customer equipment in a quickest manner. In addition to the central Uralsk division, such units were made in Astana, Aksai, Aktobe, Atyrau, and Aktau."
+      "The company's specialists work at the customer's facilities and in specialized laboratories located in the regions of Kazakhstan.",
+      "Local service units have been established in large industrial regions. They fully and quickly respond to requests and reduce the service time. This allows you to quickly carry out service support of the customer's equipment. In addition to the central Ural division, such service services have been established in Astana, Aksai, Aktobe, Atyrau, Aktau."
     ]
   },
   "fouthBlock": {
     "title": "Qualified personnel",
-    "description": "The Service Center personnel recurrently improve their qualification and get unplanned training when new tools and service regulations are introduced.",
+    "description": "The staff of the SC regularly improves their qualifications, and also undergoes extraordinary training when implementing a new tool and service regulations.",
     "images": [
       "../../images/serviceCenter/slider-item-1.jpg",
       "../../images/serviceCenter/slider-item-2.jpg",

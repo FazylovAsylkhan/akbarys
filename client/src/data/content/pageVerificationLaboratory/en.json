@@ -3,7 +3,7 @@
   "url": "verification-laboratory/en",
   "seo": {
     "title": "Verification laboratories",
-    "h1": "Verification laboratories Akbarys"
+    "h1": "Verification laboratories QHSE-Akbarys"
   },
   "h1": "Verification laboratories",
   "langButtonsLinks": [
@@ -14,46 +14,46 @@
   "firstBlock": {
     "title": "Verification laboratories",
     "subtitles": [
-      { "digit": "8", "description": "Specialists" },
-      { "digit": "23", "description": "Types of lab tests" }
+      { "digit": "8", "description": "specialists" },
+      { "digit": "23", "description": "types of lab tests" }
     ],
     "image": "../../images/verificationLaboratory/preview.jpg"
   },
   "secondBlock": {
     "title": "Measurement accuracy ensures safety ",
-    "description": "The laboratory provides services of initial and periodic verification for gas analytical equipment, and calibration of all types of instrumentation, including stationary, portable and mobile gas analytical equipment (gas analyzers, detectors and sensors) to monitor concentration of one or more substances in the air or gaseous environments.",
-    "subtitle": "Akbarys has its own laboratory to calibrate and verify measuring instrumentation (MI)",
+    "description": "The laboratories perform primary and periodic verification of gas analytical equipment as well as calibration of all types of instruments. Among those are stationary, portable and mobile gas analytical equipment (gas analyzers, detectors and sensors) to monitor concentration of one or more substances in the air or gaseous environments.",
+    "subtitle": "QHSE-Akbarys has its own laboratory to calibrate and verify measuring instrumentation (MI)",
     "texts": [
       {
         "title": "Advanced equipment",
         "descriptions": [
-          "The laboratory is equipped with state-of-the-art equipment of leading domestic and world manufacturers, in which certified cal gas mixtures are used for verification.",
-          "It has the means of verification, consisting of initial and measuring accessories, allowing to perform verifications under the accreditation scope. This takes into account the conditions of their operation established in the technical (operating) documents, and also personnel is dedicated to maintain such means."
+          "The laboratory is provided with state-of-the-art equipment by leading domestic and world manufacturers. Certified calibration gases are used in the verification process.",
+          "The laboratory has the means consisting of initial and measuring accessories, allowing to perform verifications under the accreditation scope. This takes into account the conditions of their operation established in the technical (operating) documents, and also personnel is dedicated to maintain such means."
         ]
       },
       {
         "title": "Qualified personnel",
         "descriptions": [
           "The laboratory employs 8 specialists qualified as «Physical and Chemical Measurement Verifier».",
-          "The verification lab personnel are qualified verifiers taking regular certification and improving their professional level on metrology."
+          "The verification lab personnel are experts taking regular certification and improving their professional knowledge in metrology."
         ]
       }
     ],
     "items": [
       {
-        "title": "01",
+        "title": "1",
         "description": "Advanced <br /> equipment "
       },
       {
-        "title": "02",
+        "title": "2",
         "description": "Experienced <br /> personnel"
       },
       {
-        "title": "03",
+        "title": "3",
         "description": "Proven <br /> tools "
       },
       {
-        "title": "04",
+        "title": "4",
         "description": "Reliable <br /> results"
       }
     ]
@@ -68,7 +68,7 @@
   },
   "fourthBlock": {
     "title": "Continuous development",
-    "description": "A large number of different types of measuring instruments are included in the scope of accreditation of the verification laboratory. Every year, the laboratory expands its scope of accreditation by mastering new types of verifications of measuring instruments.",
+    "description": "The scope of accreditation for the verification laboratory includes many different types of measuring instruments. Each year the scope of accreditation is expanding, with new methods of verification mastered.",
     "images": [
       "../../images/verificationLaboratory/img-1.jpg",
       "../../images/verificationLaboratory/img-2.jpg",

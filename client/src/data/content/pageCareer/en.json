@@ -3,17 +3,17 @@
   "url": "career/en",
   "seo": {
     "title": "Career",
-    "h1": "Our careers"
+    "h1": "Careers in QHSE-Akbarys"
   },
   "langButtonsLinks": ["/career", "/career/kz", "/career/en"],
   "firstBlock": {
     "title": {
-      "firstRow": "Our careers",
+      "firstRow": "Careers in QHSE-Akbarys",
       "secondRow": "Be part of a great team!"
     },
     "description": "We will lead you to the goals",
     "subtitle": {
-      "digit": "400+",
+      "digit": "500+",
       "text": "People are already in our staff"
     },
     "image": "../../images/career/preview.jpg"
@@ -25,19 +25,19 @@
   "thirdBlock": {
     "opportunities": [
       {
-        "digit": "01",
+        "digit": "1",
         "title": "Professional development",
-        "description": "Akbarys operates a training system focused on getting the required knowledge and professional skills.Our goal is to build a Corporate Knowledge Management System to identify and disseminate best practices, immediately share problems and work together to find the best ways to solve those."
+        "description": "QHSE-Akbarys operates a training system focused on getting the required knowledge and professional skills. Our goal is to build a Corporate Knowledge Management System to identify and disseminate best practices, immediately communicate problems and work together to find the best ways to solve those."
       },
       {
-        "digit": "02",
+        "digit": "2",
         "title": "Supporting young professionals",
         "description": "Supporting young professionals is one of the priority areas of HR Management Policy. Today the total Company's headcount comprises around 40% of people under 30 y.o."
       },
       {
-        "digit": "03",
+        "digit": "3",
         "title": "Motivation and benefit system",
-        "description": "We offer chances: to participate in unique and major projects, professional development and career growth, personal fulfillment"
+        "description": "We offer chances: to participate in unique and major projects, personal fulfillment, professional development and career growth."
       }
     ]
   },

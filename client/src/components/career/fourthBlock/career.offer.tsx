@@ -1,188 +1,149 @@
-import * as React from 'react';
-import { FC, useEffect } from 'react';
-import { Link } from 'gatsby';
-import SVGImage from '../../../data/images/download.svg';
+import * as React from "react"
+import { FC, useEffect } from "react"
+import { Link } from "gatsby"
+import SVGImage from "../../../data/images/download.svg"
 
-import { formValidate } from '../../../utils/validation';
-import './career.offer.scss';
+import { formValidate } from "../../../utils/validation"
+import "./career.offer.scss"
 
-// function downloadURI(uri: string, name: string) {
-//   const link = document.createElement('a');
-//   link.download = name;
-//   link.href = uri;
-//   document.body.appendChild(link);
-//   link.click();
-//   document.body.removeChild(link);
-// }
-function getSubjectData(name: string) {
-  const today = new Date();
-  const dd = String(today.getDate()).padStart(2, '0');
-  const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-  const yyyy = today.getFullYear();
-  const currentDate = `${dd}/${mm}/${yyyy}`;
-
-  const hour = today.getHours() > 12
-    ? today.getHours() - 12
-    : today.getHours() < 10
-      ? `0${today.getHours()}`
-      : today.getHours();
-  const minute = today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes();
-  const currentTime = `${hour}:${minute}`;
-
-  return `Сайт Akbarys. Сообщение от ${name}. Дата: ${currentDate} / ${currentTime}`;
-}
-async function handlerSubmit(uriState: string) {
-  const form = document.querySelector('.careerForm__form') as HTMLFormElement;
-  const error = formValidate(form as HTMLElement);
-  const inputName = document.querySelector(
-    '#careerFormName',
-  ) as HTMLInputElement;
-  const inputEmail = document.querySelector(
-    '#careerFormEmail',
-  ) as HTMLInputElement;
-  const inputMessage = document.querySelector(
-    '#careerFormMessage',
-  ) as HTMLInputElement;
-  const formData = {
-    name: inputName.value,
-    email: inputEmail.value,
-    message: inputMessage.value,
-    link: uriState,
-  };
-
-  if (error === 0) {
-    document.body.style.overflowY = 'hidden';
-    form.classList.add('sending');
-    const response = await fetch(
-      'https://6a2gmcyh8c.execute-api.us-east-1.amazonaws.com/development/sendMail',
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-        body: JSON.stringify({
-          bccEmailAddresses: [],
-          ccEmailAddresses: [],
-          toEmailAddresses: ['hr@akbarys.kz', 'fazylov.asylkhan@gmail.com'],
-          bodyData: formData,
-          bodyCharset: 'UTF-8',
-          subjectdata: getSubjectData(formData.name),
-          subjectCharset: 'UTF-8',
-          sourceEmail: 'web@akbarys.kz',
-          replyToAddresses: ['hr@akbarys.kz', 'fazylov.asylkhan@gmail.com'],
-        }),
-      },
-    );
-    if (response.ok) {
-      const result = await response.json();
-      // const resultAfterSeinding = result.message;
-      form.reset();
-      form.classList.remove('sending');
-      const alert = document.querySelector(
-        '.careerForm__alert',
-      ) as HTMLDivElement;
-      const header = document.querySelector('header') as HTMLElement;
-      header.classList.remove('show');
-      alert.nextElementSibling?.classList.add('show');
-      alert.nextElementSibling?.addEventListener('click', (e) => {
-        const elementTarget = e.target as HTMLDivElement;
-        if (elementTarget.classList.contains('careerForm__alert-button')) {
-          alert.nextElementSibling?.classList.remove('show');
-          document.body.style.overflowY = '';
-        }
-      });
-    } else {
-      // const resultAfterSeinding = `${response.status}: ${response.statusText}`;
-      form.classList.remove('sending');
-      form.reset();
-      const alert = document.querySelector(
-        '.careerForm__alert',
-      ) as HTMLDivElement;
-      const header = document.querySelector('header') as HTMLElement;
-      header.classList.remove('show');
-      alert.classList.add('show');
-      document.body.style.overflowY = 'hidden';
-      alert.addEventListener('click', (e) => {
-        const elementTarget = e.target as HTMLDivElement;
-        if (elementTarget.classList.contains('careerForm__alert-button')) {
-          alert.classList.remove('show');
-          document.body.style.overflowY = '';
-        }
-      });
-    }
+function handleSubmit(
+  e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  uriState: string
+) {
+  e.preventDefault()
+  const form = document.querySelector(".careerForm__form") as HTMLFormElement
+  const formData = new FormData()
+  const email = document.querySelector(
+    'input[name="email"]'
+  ) as HTMLInputElement
+  const name = document.querySelector('input[name="name"]') as HTMLInputElement
+  const message = document.querySelector(
+    'textarea[name="message"]'
+  ) as HTMLInputElement
+  const file = document.querySelector(
+    'input[name="file"]'
+  ) as HTMLInputElement
+  
+  const isValidForm = formValidate(form)
+  if (email && name && isValidForm) {
+    formData.append("name", name.value)
+    formData.append("email", email.value)
+    formData.append("message", message.value)
+    formData.append("mail_file", uriState)
+    form.classList.add("sending")
+    fetch("https://akbarys.kz/email.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then(response => {
+        console.log(response);
+        
+        form.reset()
+        form.classList.remove("sending")
+        const alert = document.querySelector(
+          ".careerForm__alert"
+        ) as HTMLDivElement
+        const header = document.querySelector("header") as HTMLElement
+        header.classList.remove("show")
+        alert.nextElementSibling?.classList.add("show")
+        document.body.style.overflowY = "hidden"
+        alert.nextElementSibling?.addEventListener("click", e => {
+          const elementTarget = e.target as HTMLDivElement
+          if (elementTarget.classList.contains("careerForm__alert-button")) {
+            alert.nextElementSibling?.classList.remove("show")
+            document.body.style.overflowY = ""
+          }
+        })
+      })
+      .catch(error => {
+        console.log(error);
+        form.classList.remove("sending")
+        form.reset()
+        const alert = document.querySelector(
+          ".careerForm__alert"
+        ) as HTMLDivElement
+        const header = document.querySelector("header") as HTMLElement
+        header.classList.remove("show")
+        alert.classList.add("show")
+        document.body.style.overflowY = "hidden"
+        alert.addEventListener("click", e => {
+          const elementTarget = e.target as HTMLDivElement
+          if (elementTarget.classList.contains("careerForm__alert-button")) {
+            alert.classList.remove("show")
+            document.body.style.overflowY = ""
+          }
+        })
+      })
   }
 }
-
 interface CareerFormProps {
   content: any
 }
 
 const CareerForm: FC<CareerFormProps> = ({ content }) => {
-  const {
-    title, subtitle, fieldNames, politica, btnText, popup,
-  } = content;
-  const [uriState, setUriState] = React.useState('');
+  const { title, subtitle, fieldNames, politica, btnText, popup } = content
+  const [uriState, setUriState] = React.useState("")
   useEffect(() => {
-    const checkboxWrapperClass = 'careerForm__form-checkbox';
-    const checkboxBtnClass = 'careerForm__form-checkbox-button';
-    const checkboxBtnClassActive = 'careerForm__form-checkbox-button_active';
-    const checkboxInputClass = 'careerForm__form-checkbox-input';
-    const checkboxtextClass = 'careerForm__form-checkbox-text';
-    const checkboxWrapper = document.querySelector(`.${checkboxWrapperClass}`);
+    const checkboxWrapperClass = "careerForm__form-checkbox"
+    const checkboxBtnClass = "careerForm__form-checkbox-button"
+    const checkboxBtnClassActive = "careerForm__form-checkbox-button_active"
+    const checkboxInputClass = "careerForm__form-checkbox-input"
+    const checkboxtextClass = "careerForm__form-checkbox-text"
+    const checkboxWrapper = document.querySelector(`.${checkboxWrapperClass}`)
     const checkboxInput = document.querySelector(
-      `.${checkboxInputClass}`,
-    ) as HTMLInputElement;
+      `.${checkboxInputClass}`
+    ) as HTMLInputElement
     const checkboxBtn = checkboxWrapper?.querySelector(
-      `.${checkboxBtnClass}`,
-    ) as HTMLElement;
-    checkboxWrapper?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const element = e.target as HTMLElement;
+      `.${checkboxBtnClass}`
+    ) as HTMLElement
+    checkboxWrapper?.addEventListener("click", e => {
+      e.stopPropagation()
+      const element = e.target as HTMLElement
       if (
-        element.classList[0] === checkboxBtnClass
-        || element.classList[0] === checkboxtextClass
+        element.classList[0] === checkboxBtnClass ||
+        element.classList[0] === checkboxtextClass
       ) {
         checkboxBtn.classList.contains(checkboxBtnClassActive)
           ? checkboxBtn.classList.remove(checkboxBtnClassActive)
-          : checkboxBtn.classList.add(checkboxBtnClassActive);
+          : checkboxBtn.classList.add(checkboxBtnClassActive)
         checkboxInput.checked
           ? (checkboxInput.checked = false)
-          : (checkboxInput.checked = true);
+          : (checkboxInput.checked = true)
       }
-    });
+    })
     const changeHandler = (e: Event) => {
-      const inputFile = e.target as HTMLInputElement;
+      const inputFile = e.target as HTMLInputElement
       const preview = document.querySelector(
-        '#careerFormFilePreview',
-      ) as HTMLInputElement;
+        "#careerFormFilePreview"
+      ) as HTMLInputElement
       if (inputFile.files && preview) {
-        const file = inputFile.files[0];
+        const file = inputFile.files[0]
         if (file) {
-          preview.value = file.name;
-          const reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = (event) => {
-            const json = JSON.stringify({ dataURL: reader.result });
-            const fileURL = JSON.parse(json).dataURL;
-            setUriState(fileURL);
+          preview.value = file.name
+          const reader = new FileReader()
+          reader.readAsDataURL(file)
+          reader.onload = event => {
+            const json = JSON.stringify({ dataURL: reader.result })
+            const fileURL = JSON.parse(json).dataURL
+            setUriState(fileURL)
             // downloadURI(fileURL, 'asylkhan')
-          };
+          }
         } else {
-          preview.value = '';
+          preview.value = ""
         }
       }
-    };
+    }
     const triggerInput = () => {
       const inputFile = document.getElementById(
-        'careerFormFile',
-      ) as HTMLInputElement;
-      inputFile.click();
-      inputFile.addEventListener('change', (e) => changeHandler(e));
-    };
+        "careerFormFile"
+      ) as HTMLInputElement
+      inputFile.click()
+      inputFile.addEventListener("change", e => changeHandler(e))
+    }
     document
-      .querySelector('.careerForm__form-file-button')
-      ?.addEventListener('click', () => triggerInput());
-  }, []);
+      .querySelector(".careerForm__form-file-button")
+      ?.addEventListener("click", () => triggerInput())
+  }, [])
 
   return (
     <div className="careerForm ">
@@ -191,7 +152,8 @@ const CareerForm: FC<CareerFormProps> = ({ content }) => {
           <form
             action="#"
             className="careerForm__form"
-            onSubmit={(e) => e.preventDefault()}
+            encType="multipart/form-data"
+            onSubmit={e => e.preventDefault()}
           >
             <h3 className="careerForm__form-title title-1">{title}</h3>
             <p className="careerForm__form-description text-1 gray">
@@ -280,11 +242,11 @@ const CareerForm: FC<CareerFormProps> = ({ content }) => {
                   />
                   <div className="careerForm__form-checkbox-button careerForm__form-checkbox-button_active"></div>
                   <span className="careerForm__form-checkbox-text text-1 gray">
-                    {politica.text[0]}{' '}
+                    {politica.text[0]}{" "}
                     <Link
                       to={politica.link}
                       className="careerForm__form-politica-link text-1 blue"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={e => e.stopPropagation()}
                     >
                       {politica.text[1]}
                     </Link>
@@ -295,7 +257,7 @@ const CareerForm: FC<CareerFormProps> = ({ content }) => {
             <button
               type="submit"
               className="button careerForm__form-button"
-              onClick={() => handlerSubmit(uriState)}
+              onClick={e => handleSubmit(e, uriState)}
             >
               {btnText}
             </button>
@@ -330,7 +292,7 @@ const CareerForm: FC<CareerFormProps> = ({ content }) => {
       </div>
       <div className="line"></div>
     </div>
-  );
-};
+  )
+}
 
-export default CareerForm;
+export default CareerForm

@@ -3,7 +3,7 @@
   "url": "about-us/en",
   "seo": {
     "title": "About us",
-    "h1": "Akbarys is a leading provider of services to the oil and gas industry"
+    "h1": "QHSE-Akbarys is leading provider of safety services in oil and gas"
   },
   "langButtonsLinks": [
     "/about-us",
@@ -11,8 +11,8 @@
     "/about-us/en"
   ],
   "firstBlock": {
-    "title": "Leading provider of gas safety services in Kazakhstan, CIS and the neighboring countries",
-    "description": "We will lead you to the goals!",
+    "title": "QHSE-Akbarys is leading provider of safety services in oil and gas",
+    "description": "Be the best, strive for success!",
     "subtitle": {
       "digit": "100%",
       "text": "Kazakh shared capital"
@@ -22,11 +22,10 @@
   "secondBlock": {
     "title": "About us",
     "description": [
-      "One of the biggest hazards and serious concerns in oil and gas fields is toxic and explosive gases, and constant preparedness for such challenges is the key. Ensuring safety under such conditions is the foundation of all our activities.",
-      "The major focus and objective for our services are earlier detection of gas concentrations in the atmosphere, avoiding negative impact on personnel health as well as preventing man-made disasters.",
-      "What are our services about?",
-      "Akbarys H2S Protection is a suite of professional services and innovative solutions that includes the basic barriers consisting of supervisory, gas detection systems, PA systems, PPE and BA supply systems, muster points and shelters-in-place, as well as training, regular drills and site access control.",
-      "Akbarys Group is the leading provider of gas safety services in the CIS. Our experience covers a wide range of operations for onshore and offshore projects with high H2S concentrations."
+      "Toxic and explosive gases are the most threatening hazards and a serios problem in field operations. Therefore, permanent mobilization for such challenges is the key. The foundation of our activities is to ensure safety under these circumstances. The major focuses and objectives of QHSE-Akbarys are earlier detection of gas concentrations in the atmosphere, avoiding negative impact on personnel health as well as preventing man-made disasters.",
+      "Our services are a suite of professional measures and innovative solutions for hydrogen sulfide protection.",
+      "This includes the basic barriers consisting of: supervisory, gas detection and PAGA systems; PPE and BA air supply systems, muster points and shelters-in-place; training, regular drills and site access control.",
+      "QHSE-Akbarys is a leading provider of gas safety services in the CIS countries. Our experience covers a wide range of operations for onshore and offshore projects with high H2S concentrations."
     ],
     "image": "../../images/aboutUs/about-us.jpg"
   },
@@ -36,14 +35,32 @@
       { "digit": "15", "text": "Years of success" },
       { "digit": "400+", "text": "Employees" },
       { "digit": "2500", "text": "Hydrotests performed" },
-      { "digit": "25M", "text": "Safe man-hours" }
+      { "digit": "25M", "text": "Safe  " }
+    ],
+    "items": [
+      {
+        "title": "15",
+        "description": "years  of <br /> success"
+      },
+      {
+        "title": "125",
+        "description": "projects  <br /> implemented"
+      },
+      {
+        "title": "500+",
+        "description": "headcount "
+      },
+      {
+        "title": "25M",
+        "description": "man-hours"
+      }
     ]
   },
   "fourthBlock": {
     "title": "Our mission",
     "description": [
-      "We are a team of like-minded people united by one goal to create an Integrated Service Company capable of solving customers' problems with the best quality and efficiency.",
-      "Our Employees are the key value. They reach heights with no limit of perfection, and QHSE-Akbarys creates all conditions for such one."
+      "We are a team of like-minded people united by one goal to create an integrated service company capable of solving customers' problems efficiently.",
+      "The QHSE-Akbarys core value is the employees who strive for excellence. And the Company's Management System is creating everything to implement such aspirations."
     ],
     "qualities": ["Personnel", "Efficiency", "Quality"],
     "images": [
@@ -54,7 +71,7 @@
   },
   "fivthBlock": {
     "title": "Achievements and certificates",
-    "description": "Every day we strive to improve the quality of our services, develop the professional skills of our staff and contribute to the development of the region and country as a whole.",
+    "description": "Every day we improve the quality of services, and our people enhance their professional skills. QHSE-Akbarys is consistently contributing to the regional development and national one as a whole. <br/> <br/> The company's achievements have been marked with prizes, awards, certificates and honorary titles. We are recognized as the best contractor, and trusted to maintain safety and health requirements. QHSE-Akbarys is continuously obtaining high annual results for the key indicators and has a great potential to deliver large-scale goals.",
     "certificates": [
       {
         "title": "Best KPO Contractor",
@@ -92,22 +109,22 @@
   "sixthBlock": {
     "title": "Akbarys Protection",
     "descriptions": [
-      "As part of a strategy to develop the domestic market of manufacturers of goods needed for petroleum industry, under the TCO leadership and initiative, supported by KPO B.V, Kazakh company Akbarys invested in establishing a new asset and building a factory  to manufacture NH15-K escape hoods.",
-      "On 9th August 2019, Akbarys Protection's new factory was inaugurated in Nur-Sultan.",
-      "The factory capacity with using new innovative technologies will amount to over 40,000 masks a year, thereby providing local customers with world-class quality products and ability to export to the Caspian Sea region.",
-      "The total investment into the project, which started in 2017, has been equal to 1 billion Tenge around."
+      "QHSE-Akbarys have invested into a new facility, i.e. the construction of a factory to produce NH15-K hoods. This was implemented within the domestic market improvement strategy aimed at producers of goods for oil and gas industry. The project was initiated and managed by Tengizchevroil and supported by Karachaganak Petroleum Operating B.V.",
+      "On 9th August 2019, Akbarys Protection's new factory for NH15-K hood production was inaugurated in Nur-Sultan.",
+      "The factory is using innovative technologies. Its design capacity is more than 40000 hoods per year. Thus local customers are provided by world-class quality products with an export option to the Caspian Sea countries.",
+      "Total investments amounted to 1 billion Tenge around."
     ],
     "button": {
-      "text": "Go to the website",
+      "text": "Visit the website",
       "link": "https://akbarys-protection.kz/ru"
     }
   },
   "seventhBlock": {
-    "title": ["Our careers", "Be part of a great team!"],
-    "description": "We will lead you to the goals Title",
-    "subtitle": ["400+", "People are already in our staff"],
+    "title": ["Careers in QHSE-Akbarys", "Be part of a great team!"],
+    "description": "We will lead you to the goals",
+    "subtitle": ["500+", "People are already in our staff"],
     "button": {
-      "text": "Leave a request",
+      "text": "Leave an application",
       "link": "/career/en"
     }
   }

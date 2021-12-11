@@ -2,12 +2,12 @@
   "lang": "en",
   "url": "contacts/en",
   "seo": {
-    "title": "Contact information",
-    "h1": "Contact information"
+    "title": "Contact details",
+    "h1": "Contact details"
   },
   "langButtonsLinks": ["/contacts", "/contacts/kz", "/contacts/en"],
   "firstBlock": {
-    "title": "Contact information",
+    "title": "Contact details",
     "description": "We are always in touch",
     "image": "../../images/contacts/contactsPreview.jpg"
   },

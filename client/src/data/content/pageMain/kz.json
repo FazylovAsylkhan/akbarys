@@ -4,53 +4,53 @@
   "langButtonsLinks": ["/", "/kz", "/en"],
   "seo": {
     "title": "Басты бет",
-    "h1": "akbarys, qhse-akbarys"
+    "h1": "QHSE-AKBARYS"
   },
   "firstBlock": {
-    "title": "AKBARYS",
+    "title": "QHSE-AKBARYS",
     "description": "Қазақстан, ТМД және таяу шетел аумағында газ қауіпсіздігі бойынша қызметтердің жетекші орындағы жеткізушісі",
     "image": "../../images/main/preview.akbarys.jpg"
   },
   "secondBlock": {
-    "title": "Мұнай-газ индустриясындағы қауіпсіздік жөніндегі кешенді шешімдер ",
+    "title": "Мұнай-газ индустриясындағы қауіпсіздік жөніндегі кешенді шешімдер",
     "button": { "url": "/h2s-service/kz", "text": "Толығырақ" },
     "subtitles": [
-      { "digit": "15", "text": "Жылғы қызмет" },
-      { "digit": "67", "text": "Жоба жүзеге асырылды" }
+      { "digit": "15", "text": "жылғы қызмет" },
+      { "digit": "67", "text": "жоба жүзеге асырылды" }
     ],
     "image": "../../images/main/preview.h2s.jpg"
   },
   "thirdBlock": {
-    "title": "Мұнай және газ өндіру процесінде күкіртсутекті бейтараптандыру ",
+    "title": "Мұнай және газ өндіру процесінде күкіртсутекті бейтараптандыру",
     "button": { "url": "/sft-service/kz", "text": "Толығырақ" },
     "subtitles": [
-      { "digit": "47", "text": "Тонна күкіртсутек бейтараптандырылды" },
-      { "digit": "59", "text": "Жоба жүзеге асырылды" }
+      { "digit": "47", "text": "тонна күкіртсутек бейтараптандырылды" },
+      { "digit": "59", "text": "жоба жүзеге асырылды" }
     ],
     "image": "../../images/main/preview.sft.jpg"
   },
   "fourthBlock": {
     "title": "Компания туралы",
-    "subtitle": "Үздіктер қатарынан табылу, табысқа жетелеу!",
-    "description": "Akbarys персоналды күкіртсутектен қорғау саласындағы қызметті жүзеге асыратын, 100% қазақстандық үлесті қамтитын компания болып табылады",
+    "subtitle": "Үздік атану, табысқа ұмтылу!",
+    "description": "QHSE-Akbarys — персоналды күкіртсутектен қорғау саласында жұмыс істейтін, 100% қазақстандық үлесті қамтитын компания",
     "button": { "url": "/about-us/kz", "text": "Толығырақ" },
     "image": "../../images/main/about.jpg",
     "advantages": [
       {
         "digit": "15",
-        "description": "Жылғы жемісті жұмыс"
+        "description": "жылғы жемісті жұмыс"
       },
       {
-        "digit": "400 +",
-        "description": "Компания штаты"
+        "digit": "500+",
+        "description": "компания штаты"
       },
       {
-        "digit": "125 +",
-        "description": "Іске асырылған жобалар"
+        "digit": "125+",
+        "description": "іске асырылған жобалар"
       },
       {
         "digit": "25 млн",
-        "description": "Қауіпсіз адам-сағат"
+        "description": "адам-сағат"
       }
     ]
   },
@@ -59,70 +59,70 @@
     "slides": [
       {
         "title": "Tengizchevroil",
-        "description": "TCO -шикі мұнайды, сұйытылған газды, құрғақ газды және күкіртті барлау, игеру, өндіру және сатумен айналысатын қазақстандық серіктестік",
+        "description": "TCO — шикі мұнайды, сұйытылған газды, құрғақ газды және күкіртті барлау, игеру, өндіру және сатумен айналысатын қазақстандық серіктестік.",
         "image": "../../images/main/projects1.jpg",
         "specifications": [
           {
-            "digit": "5004",
-            "description": "LTI Days"
+            "digit": "2476",
+            "description": "WLTI"
           },
           {
             "digit": "158",
-            "description": "Адам жұмылдырылды"
+            "description": "адам жұмылдырылды"
           },
           {
             "digit": "18",
-            "description": "Бірлік жабдық"
+            "description": "бірлік жабдық"
           },
           {
-            "digit": "102000",
-            "description": "Адам-сағат"
+            "digit": "1,53 млн",
+            "description": "адам-сағат"
           }
         ]
       },
       {
         "title": "Karachaganak Petroleum Operating B.V.",
-        "description": "KPO B.V. -Қазақстан Республикасының Батыс Қазақстан облысындағы әлемдегі ең ірі мұнай-газ конденсаты кен орнының бірі",
+        "description": "КPO B. V. — Қазақстанның мұнай саласын дамыту жөніндегі Қарашығанақ жобасын іске асыру үшін біріккен компаниялар консорциумы",
         "image": "../../images/main/projects2.jpg",
         "specifications": [
           {
-            "digit": "5006",
-            "description": "LTI Days"
+            "digit": "3661",
+            "description": "WLTI"
           },
           {
             "digit": "120",
-            "description": "Адам жұмылдырылды"
+            "description": "адам жұмылдырылды"
           },
           {
             "digit": "14",
-            "description": "Бірлік жабдық"
+            "description": "бірлік жабдық"
           },
           {
-            "digit": "92250",
-            "description": "Адам-сағат"
+            "digit": "1,47 млн",
+            "description": "адам-сағат"
           }
         ]
       },
       {
         "title": "North Caspian Operating Company N.V.",
-        "description": "NCOC N.V. Қазақстандағы теңіз мұнай-газ кен орындарын игерудің алғашқы ірі жобасы болып табылады",
+        "description": "NCOC N. V. — теңіз мұнай-газ кен орындарын игеру жөніндегі жобаны іске асырумен айналысатын ірі кәсіпорындардың бірі",
         "image": "../../images/main/projects3.jpg",
         "specifications": [
           {
-            "digit": "19000",
-            "description": "LTI Days"
+            "digit": "728",
+            "description": "WLTI"
           },
           {
             "digit": "65",
-            "description": "Адам жұмылдырылды"
+            "description": "адам жұмылдырылды"
           },
           {
             "digit": "21",
-            "description": "Бірлік жабдық"
+            "description": "бірлік жабдық"
           },
           {
-            "digit": "208477",
-            "description": "Адам-сағат"
+            "digit": "235350",
+            "description": "адам-сағат"
           }
         ]
       }
@@ -134,19 +134,19 @@
     "image": "../../images/main/preview.development.jpg",
     "stages": [
       {
-        "digit": "01",
+        "digit": "1",
         "description": "Қызметкерлердің қауіпсіздігіне жауап береміз"
       },
       {
-        "digit": "02",
+        "digit": "2",
         "description": "Экология мәселесіне жауапкершілікпен қараймыз"
       },
       {
-        "digit": "03",
+        "digit": "3",
         "description": "Табиғи ресурстарды ұқыпты пайдаланамыз"
       },
       {
-        "digit": "04",
+        "digit": "4",
         "description": "Біз тек заманауи технологияларды қолданамыз"
       }
     ]
@@ -156,13 +156,13 @@
     "description": "Компания іскерлік серіктестермен, қоғамдық ұйымдармен және тұтынушылармен қарым-қатынасты қалыптастырады, қолдайды және жоғары бағалайды."
   },
   "eighthBlock": {
-    "title": ["Akbarys-тағы мансап", "Үлкен команданың бір бөлшегі бол! "],
+    "title": ["QHSE-Akbarys компаниясындағы мансап", "Үлкен команданың бір бөлшегі бол! "],
     "description": "Бізбен бірге белестерді бағындыр ",
     "image": "../../images/main/preview.career.jpg",
     "button": { "url": "/career/kz", "text": "Толығырақ" },
     "advantage": {
-      "digit": "400+",
-      "description": "Қызметкер бізбен жұмыс істейді"
+      "digit": "500+",
+      "description": "қызметкер бізбен жұмыс істейді"
     }
   }
 }

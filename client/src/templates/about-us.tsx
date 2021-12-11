@@ -93,6 +93,10 @@ export const query = graphql`
         preview {
           digit
           text
+        } 
+        items {
+          title
+          description
         }
       }
       fourthBlock {
@@ -162,6 +166,7 @@ export const query = graphql`
     footerJson(lang: { eq: $lang }) {
       lang
       description
+      logoLink
       politics {
         links {
           text

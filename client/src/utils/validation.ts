@@ -41,5 +41,5 @@ export function formValidate(form: HTMLElement) {
     }
   });
 
-  return error;
+  return error === 0;
 }
