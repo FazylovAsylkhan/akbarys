@@ -102,8 +102,8 @@ export function showPagination(swiper: SwiperCore) {
     '.swiper-pagination-total',
   ) as HTMLImageElement;
 
-  currentNumberSlide.textContent = `${`0${swiper.realIndex + 1}`}`;
-  totalNumberSlide.textContent = `${`0${swiper.slides.length}`}`;
+  currentNumberSlide.textContent = `${`${swiper.realIndex + 1}`}`;
+  totalNumberSlide.textContent = `${`${swiper.slides.length}`}`;
 }
 
 function validateInputs() {

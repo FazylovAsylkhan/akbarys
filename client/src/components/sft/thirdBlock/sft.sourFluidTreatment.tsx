@@ -15,54 +15,54 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
   const img1 = getImage(first.images[0]);
   const img2 = getImage(first.images[1]);
 
-  const contentTips = [
-    second.items[0],
-    second.items[1],
-    second.items[2],
-    second.items[5],
-    second.items[8],
-    second.items[4],
-    second.items[3],
-    second.items[6],
-    second.items[7],
-  ];
-  const tipsTexts = contentTips.map((contentTip, i) => (
-    <div
-      key={`keyText-${i}`}
-      className={`sourFluidTreatment__tip-text sourFluidTreatment__tip-text-${i} text-9`}
-    >
-      <span>{contentTip}</span>
-    </div>
-  ));
-  const tipsImgs = new Array(9)
-    .fill(1)
-    .map((e, i) => (
-      <TIP_IMG
-        key={`keyImg-${i}`}
-        className={`sourFluidTreatment__tip-img sourFluidTreatment__tip-img-${i}`}
-      />
-    ));
-  useEffect(() => {
-    const img = document.querySelector('.sourFluidTreatment');
-    const tipsTextElements = document.querySelectorAll(
-      '.sourFluidTreatment__tip-text',
-    );
-    let numberTip = -1;
-    img?.addEventListener('mouseover', (e) => {
-      const element = e.target as HTMLElement;
-      if (element.classList.contains('sourFluidTreatment__tip-img')) {
-        tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
-        numberTip = Number(element.classList[1].slice(-1));
-        const textHtmlElement = tipsTextElements[numberTip];
-        textHtmlElement.classList.add('show');
-      } else if (tipsTextElements[numberTip] === e.target) {
-        true;
-      } else {
-        tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
-        numberTip = -1;
-      }
-    });
-  }, []);
+  // const contentTips = [
+  //   second.items[0],
+  //   second.items[1],
+  //   second.items[2],
+  //   second.items[5],
+  //   second.items[8],
+  //   second.items[4],
+  //   second.items[3],
+  //   second.items[6],
+  //   second.items[7],
+  // ];
+  // const tipsTexts = contentTips.map((contentTip, i) => (
+  //   <div
+  //     key={`keyText-${i}`}
+  //     className={`sourFluidTreatment__tip-text sourFluidTreatment__tip-text-${i} text-9`}
+  //   >
+  //     <span>{contentTip}</span>
+  //   </div>
+  // ));
+  // const tipsImgs = new Array(9)
+  //   .fill(1)
+  //   .map((e, i) => (
+  //     <TIP_IMG
+  //       key={`keyImg-${i}`}
+  //       className={`sourFluidTreatment__tip-img sourFluidTreatment__tip-img-${i}`}
+  //     />
+  //   ));
+  // useEffect(() => {
+  //   const img = document.querySelector('.sourFluidTreatment');
+  //   const tipsTextElements = document.querySelectorAll(
+  //     '.sourFluidTreatment__tip-text',
+  //   );
+  //   let numberTip = -1;
+  //   img?.addEventListener('mouseover', (e) => {
+  //     const element = e.target as HTMLElement;
+  //     if (element.classList.contains('sourFluidTreatment__tip-img')) {
+  //       tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
+  //       numberTip = Number(element.classList[1].slice(-1));
+  //       const textHtmlElement = tipsTextElements[numberTip];
+  //       textHtmlElement.classList.add('show');
+  //     } else if (tipsTextElements[numberTip] === e.target) {
+  //       true;
+  //     } else {
+  //       tipsTextElements.forEach((tipElement) => tipElement.classList.remove('show'));
+  //       numberTip = -1;
+  //     }
+  //   });
+  // }, []);
 
   return (
     <div>
@@ -84,18 +84,25 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
                 alt={second.title}
               />
             ) : null}
-            {tipsImgs}
-            {tipsTexts}
+            {/* {tipsImgs}
+            {tipsTexts} */}
           </div>
           <div className="sourFluidTreatment__wrapper illustration-2">
-            {img2 ? (
+            {img1 ? (
+              <GatsbyImage
+                className="sourFluidTreatment__img"
+                image={img1}
+                alt={second.title}
+              />
+            ) : null}
+            {/* {img2 ? (
               <GatsbyImage
                 className="sourFluidTreatment__img"
                 image={img2}
                 alt={second.title}
               />
-            ) : null}
-            <h2 className="sourFluidTreatment__title title-2 blue">
+            ) : null} */}
+            {/* <h2 className="sourFluidTreatment__title title-2 blue">
               {second.title}
             </h2>
             <ul className="sourFluidTreatment__list">
@@ -107,7 +114,7 @@ const SftSourFluidTreatment: FC<SftSourFluidTreatmentProps> = ({ content }) => {
                     {item}
                   </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div className="sourFluidTreatment__content">
             <p className="sourFluidTreatment__content-description text-1 gray right">

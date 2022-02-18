@@ -92,7 +92,7 @@ const Footer: FC<FooterProps> = ({ data }) => {
             <p className="footer__content-description text-1 gray">
               {description}
             </p>
-            <div className="footer__content-social">
+            {/* <div className="footer__content-social">
               <h2 className="footer__content-social-title text-1 gray">
                 {social.title}
               </h2>
@@ -107,7 +107,7 @@ const Footer: FC<FooterProps> = ({ data }) => {
                   <Youtube className="footer__content-social-icon" />
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
