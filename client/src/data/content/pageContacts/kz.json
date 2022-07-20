@@ -14,14 +14,14 @@
   "secondBlock": {
     "contacts": [
       {
-        "title": "Akbarys бас кеңсесі",
+        "title": "QHSE-Akbarys",
         "address": "Қазақстан Республикасы, Орал қ., <br/> Шаруашылық көш., 15",
         "phones": [{ "number": "+7 (771) 949 90 11", "link": "+77719499011" }],
         "email": "info@akbarys.kz",
         "site": "akbarys.kz"
       },
       {
-        "title": "Akbarys Protection зауыты",
+        "title": "Akbarys Protection",
         "address": "Республикасы, Нұр-Сұлтан қ., <br/> 92-ші көше, 5, Алматы ауданы",
         "phones": [
           { "number": "+7 (7172) 67 70 39", "link": "+77172677039" },

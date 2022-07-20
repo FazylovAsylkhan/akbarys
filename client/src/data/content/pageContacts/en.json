@@ -14,14 +14,14 @@
   "secondBlock": {
     "contacts": [
       {
-        "title": "Akbarus HQ",
+        "title": "QHSE-Akbarys",
         "address": "15 Sharuashylyk Street, Uralsk,  <br/> Republic of Kazakhstan ",
         "phones": [{ "number": "+7 (771) 949 90 11", "link": "+77719499011" }],
         "email": "info@akbarys.kz",
         "site": "akbarys.kz"
       },
       {
-        "title": "Akbarys Protection Plant",
+        "title": "Akbarys Protection",
         "address": "92nd Street 5, Almaty District, Nur-Sultan, <br/> Republic of Kazakhstan",
         "phones": [
           { "number": "+7 (7172) 67 70 39", "link": "+77172677039" },
