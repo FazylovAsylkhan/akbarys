@@ -37,6 +37,8 @@ const Footer: FC<FooterProps> = ({ data }) => {
     return linksElements
   }
 
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="footer">
       <div className="container">
@@ -126,7 +128,9 @@ const Footer: FC<FooterProps> = ({ data }) => {
               <span className="footer__copyright-link text-1 gray">
                 {politics.links[1].text}
               </span>
-              <span className="text-1 gray">{politics.title}</span>
+              <span className="text-1 gray">
+                {politics.title} 2021-{currentYear} ©
+              </span>
             </p>
           </div>
         </div>
