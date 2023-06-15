@@ -64,23 +64,30 @@ const Footer: FC<FooterProps> = ({ data }) => {
                   {thirdList.title}
                 </span>
                 {thirdList.links.map((link: any) => {
-                  if (link.text === "Akbarys Protection") {
-                    return (
-                      <li className="footer__list-item" key={id()}>
+                  const isAkbarysProtection =
+                    link.url === "https://akbarys-protection.kz/ru"
+                  const isPressCenter = link.url === "/press-center"
+
+                  if (isPressCenter) {
+                    return
+                  }
+                  return (
+                    <li className="footer__list-item" key={id()}>
+                      {isAkbarysProtection ? (
                         <a
                           className="footer__link text-1 black"
                           href={link.url}
                         >
                           {link.text}
                         </a>
-                      </li>
-                    )
-                  }
-                  return (
-                    <li className="footer__list-item" key={id()}>
-                      <Link className="footer__link text-1 black" to={link.url}>
-                        {link.text}
-                      </Link>
+                      ) : (
+                        <Link
+                          className="footer__link text-1 black"
+                          to={link.url}
+                        >
+                          {link.text}
+                        </Link>
+                      )}
                     </li>
                   )
                 })}
