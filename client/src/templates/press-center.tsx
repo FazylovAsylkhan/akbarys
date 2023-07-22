@@ -1,40 +1,39 @@
-import * as React from 'react';
-import { useEffect } from 'react';
-import { graphql } from 'gatsby';
+import * as React from "react"
+import { useEffect } from "react"
+import { graphql } from "gatsby"
 
-import LayoutAdditional from '../components/layer/layerAdditional';
-import Seo from '../components/seo';
-import PressCenterNews from '../components/pressCenter/firstBlock/pressCenter.news';
+import LayoutAdditional from "../components/layer/layerAdditional"
+import Seo from "../components/seo"
+import PressCenterNews from "../components/pressCenter/firstBlock/pressCenter.news"
 
 const PressCenter = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll('.headerAdditional__link')[6]
-      ?.classList.add('active');
-  }, []);
+      .querySelectorAll(".headerAdditional__link")[6]
+      ?.classList.add("active")
+  }, [])
 
-  const { nodes } = props.data.allMarkdownRemark;
-  const {
-    seo, title, buttonText, langButtonsLinks,
-  } = props.data.pagePressCenterJson;
+  const { nodes } = props.data.allMarkdownRemark
+  const { seo, title, buttonText, langButtonsLinks } =
+    props.data.pagePressCenterJson
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  };
+  }
   const content = {
     news: nodes,
     title,
     buttonText,
-  };
+  }
   return (
     <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
       <PressCenterNews content={content} />
     </LayoutAdditional>
-  );
-};
+  )
+}
 
-export default PressCenter;
+export default PressCenter
 
 export const query = graphql`
   query PagePressCenterTemplateQuery($lang: String) {
@@ -111,4 +110,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

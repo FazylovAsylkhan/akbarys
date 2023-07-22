@@ -81,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  
+
   // Create Main Page
   data.allPageMainJson.nodes.forEach(node => {
     const { url, lang } = node
@@ -170,17 +170,17 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     }
   })
-  // Create Press Center Page
-  data.allPagePressCenterJson.nodes.forEach(node => {
-    const { url, lang } = node
-    if (url) {
-      actions.createPage({
-        path: url,
-        component: path.resolve("./src/templates/press-center.tsx"),
-        context: { lang },
-      })
-    }
-  })
+  // // Create Press Center Page
+  // data.allPagePressCenterJson.nodes.forEach(node => {
+  //   const { url, lang } = node
+  //   if (url) {
+  //     actions.createPage({
+  //       path: url,
+  //       component: path.resolve("./src/templates/press-center.tsx"),
+  //       context: { lang },
+  //     })
+  //   }
+  // })
   // Create Politics Page
   data.allPagePoliticsJson.nodes.forEach(node => {
     const { url, lang } = node
@@ -192,21 +192,21 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     }
   })
-  // Create Posts
-  data.allMarkdownRemark.nodes.forEach(node => {
-    const { url, lang } = node.frontmatter.contentPost
-    if (url) {
-      try {
-        actions.createPage({
-          path: `press-center/${url}`,
-          component: path.resolve("./src/templates/singlePost/single-post.tsx"),
-          context: { url, lang },
-        })
-      } catch (e) {
-        throw e
-      }
-    }
-  })
+  // // Create Posts
+  // data.allMarkdownRemark.nodes.forEach(node => {
+  //   const { url, lang } = node.frontmatter.contentPost
+  //   if (url) {
+  //     try {
+  //       actions.createPage({
+  //         path: `press-center/${url}`,
+  //         component: path.resolve("./src/templates/singlePost/single-post.tsx"),
+  //         context: { url, lang },
+  //       })
+  //     } catch (e) {
+  //       throw e
+  //     }
+  //   }
+  // })
   // Create 404 page
   data.allPage404Json.nodes.forEach(node => {
     const { url, lang } = node

@@ -192,18 +192,14 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
             className="header__logo-image header__logo-image_dark"
             onClick={e => closeBurgerMenu(e, isAdditional)}
           >
-            <DarkLogo
-              alt="logo"
-            />
+            <DarkLogo alt="logo" />
           </Link>
           <Link
             to={firstList.links[0].url}
             className="header__logo-image header__logo-image_light"
             onClick={e => closeBurgerMenu(e, isAdditional)}
           >
-            <LightLogo
-              alt="logo"
-            />
+            <LightLogo alt="logo" />
           </Link>
           <div
             className="header__burger"
@@ -224,57 +220,33 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
                   {firstList.title}
                 </span>
                 <ul className="sub-menu__list">
-                  <li
-                    className="sub-menu__list-item"
-                    onClick={e => clickBtn(e, stateIsMobile)}
-                  >
-                    <Link
-                      className="sub-menu__link text-header"
-                      to={firstList.links[0].url}
-                      onClick={e => closeBurgerMenu(e, isAdditional)}
-                    >
-                      {firstList.links[0].text}
-                    </Link>
-                  </li>
+                  {firstList.links.map((item, i, arr) => {
+                    const isLastItem = arr.length - 2 === i
+                    const classNameItem = `sub-menu__list-item ${
+                      isLastItem ? "reset-border" : ""
+                    }`
+                    const isPressCenter =
+                      item.url.split("/")[1] === "press-center"
+                    if (isPressCenter) {
+                      return
+                    }
 
-                  <li
-                    className="sub-menu__list-item"
-                    onClick={e => clickBtn(e, stateIsMobile)}
-                  >
-                    <Link
-                      className="sub-menu__link text-header"
-                      to={firstList.links[1].url}
-                      onClick={e => closeBurgerMenu(e, isAdditional)}
-                    >
-                      {firstList.links[1].text}
-                    </Link>
-                  </li>
-
-                  <li
-                    className="sub-menu__list-item"
-                    onClick={e => clickBtn(e, stateIsMobile)}
-                  >
-                    <Link
-                      className="sub-menu__link text-header"
-                      to={firstList.links[2].url}
-                      onClick={e => closeBurgerMenu(e, isAdditional)}
-                    >
-                      {firstList.links[2].text}
-                    </Link>
-                  </li>
-
-                  <li
-                    className="sub-menu__list-item reset-border"
-                    onClick={e => clickBtn(e, stateIsMobile)}
-                  >
-                    <Link
-                      className="sub-menu__link text-header"
-                      to={firstList.links[3].url}
-                      onClick={e => closeBurgerMenu(e, isAdditional)}
-                    >
-                      {firstList.links[3].text}
-                    </Link>
-                  </li>
+                    return (
+                      <li
+                        className={classNameItem}
+                        onClick={e => clickBtn(e, stateIsMobile)}
+                        key={item.url}
+                      >
+                        <Link
+                          className="sub-menu__link text-header"
+                          to={item.url}
+                          onClick={e => closeBurgerMenu(e, isAdditional)}
+                        >
+                          {item.text}
+                        </Link>
+                      </li>
+                    )
+                  })}
                 </ul>
               </li>
               <li

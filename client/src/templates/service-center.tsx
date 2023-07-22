@@ -1,30 +1,35 @@
-import * as React from 'react';
-import { useEffect } from 'react';
-import { graphql } from 'gatsby';
+import * as React from "react"
+import { useEffect } from "react"
+import { graphql } from "gatsby"
 
-import LayoutAdditional from '../components/layer/layerAdditional';
-import Seo from '../components/seo';
-import ServiceCenterPreview from '../components/serviceCenter/firstBlock/serviceCenter,preview';
-import ServiceCenterOpportunities from '../components/serviceCenter/fouthBlock/serviceCenter.opportunities';
-import ServiceCenterDescription from '../components/serviceCenter/secondBlock/serviceCenter.description';
-import ServiceCenterDiagnostics from '../components/serviceCenter/thirdBlock/serviceCenter.diagnostics';
-import SftPartners from '../components/sft/fivthBlock/sft.partners';
+import LayoutAdditional from "../components/layer/layerAdditional"
+import Seo from "../components/seo"
+import ServiceCenterPreview from "../components/serviceCenter/firstBlock/serviceCenter,preview"
+import ServiceCenterOpportunities from "../components/serviceCenter/fouthBlock/serviceCenter.opportunities"
+import ServiceCenterDescription from "../components/serviceCenter/secondBlock/serviceCenter.description"
+import ServiceCenterDiagnostics from "../components/serviceCenter/thirdBlock/serviceCenter.diagnostics"
+import SftPartners from "../components/sft/fivthBlock/sft.partners"
 
 const ServiceCenter = (props: any) => {
   useEffect(() => {
     document
-      .querySelectorAll('.headerAdditional__link')[1]
-      ?.classList.add('active');
-  }, []);
+      .querySelectorAll(".headerAdditional__link")[1]
+      ?.classList.add("active")
+  }, [])
   const data = {
     header: props.data.headerJson,
     footer: props.data.footerJson,
-  };
+  }
   const {
-    seo, firstBlock, secondBlock, thirdBlock, fouthBlock, langButtonsLinks,
-  } = props.data.pageServiceCenterJson;
+    seo,
+    firstBlock,
+    secondBlock,
+    thirdBlock,
+    fouthBlock,
+    langButtonsLinks,
+  } = props.data.pageServiceCenterJson
 
-  const { fivthBlock } = props.data.pageSftServiceJson;
+  const { fivthBlock } = props.data.pageSftServiceJson
   return (
     <LayoutAdditional h1={seo.h1} langs={langButtonsLinks} data={data}>
       <Seo title={seo.title} />
@@ -34,10 +39,10 @@ const ServiceCenter = (props: any) => {
       <ServiceCenterOpportunities content={fouthBlock} />
       <SftPartners content={fivthBlock} />
     </LayoutAdditional>
-  );
-};
+  )
+}
 
-export default ServiceCenter;
+export default ServiceCenter
 
 export const query = graphql`
   query PageServiceCenterTemplateQuery($lang: String) {
@@ -128,4 +133,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
