@@ -225,8 +225,8 @@ const Header: FC<HeaderProps> = ({ isAdditional, data, langs }) => {
                     const classNameItem = `sub-menu__list-item ${
                       isLastItem ? "reset-border" : ""
                     }`
-
-                    const isPressCenter = item.url === "/press-center"
+                    const isPressCenter =
+                      item.url.split("/")[1] === "press-center"
                     if (isPressCenter) {
                       return
                     }

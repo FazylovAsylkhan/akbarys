@@ -66,11 +66,13 @@ const Footer: FC<FooterProps> = ({ data }) => {
                 {thirdList.links.map((link: any) => {
                   const isAkbarysProtection =
                     link.url === "https://akbarys-protection.kz/ru"
-                  const isPressCenter = link.url === "/press-center"
 
+                  const isPressCenter =
+                    link.url.split("/")[1] === "press-center"
                   if (isPressCenter) {
                     return
                   }
+
                   return (
                     <li className="footer__list-item" key={id()}>
                       {isAkbarysProtection ? (
